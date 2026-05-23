@@ -1,0 +1,13 @@
+{
+  "name": "wherearethecarriers.com",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape": "node scripts/scrape.mjs",
+    "serve": "python3 -m http.server 8080 --directory docs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

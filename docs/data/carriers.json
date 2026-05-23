@@ -1,0 +1,308 @@
+{
+  "generatedAt": "2026-05-23T15:49:50.825Z",
+  "sourceStatus": {
+    "usni": "ok",
+    "stratfor": "ok",
+    "gonavy": "ok"
+  },
+  "carriers": [
+    {
+      "hull": "CVN-68",
+      "name": "USS Nimitz",
+      "status": "deployed",
+      "locationName": "South Atlantic",
+      "position": {
+        "lat": -24,
+        "lon": -35
+      },
+      "confidence": "medium",
+      "lastSeen": "2026-05-20",
+      "summary": "GoNavy's latest table entry places USS Nimitz in or near South Atlantic: 11May-18May2026, off the eastern coast of Brazil",
+      "sources": [
+        {
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
+          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
+          "publishedAt": "2026-05-18",
+          "note": "Text context: South Atlantic",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+        },
+        {
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-05-20",
+          "note": "Latest row: 11May-18May2026, off the eastern coast of Brazil"
+        }
+      ]
+    },
+    {
+      "hull": "CVN-69",
+      "name": "USS Dwight D. Eisenhower",
+      "status": "port",
+      "locationName": "Norfolk, Virginia",
+      "position": {
+        "lat": 36.946,
+        "lon": -76.322
+      },
+      "confidence": "medium",
+      "lastSeen": "2026-05-20",
+      "summary": "GoNavy's latest table entry places USS Dwight D. Eisenhower in or near Norfolk, Virginia: 15May2026, returned to Norfolk",
+      "sources": [
+        {
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
+          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
+          "publishedAt": "2026-05-18",
+          "note": "Text context: Norfolk, Virginia",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+        },
+        {
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-05-20",
+          "note": "Latest row: 15May2026, returned to Norfolk"
+        }
+      ]
+    },
+    {
+      "hull": "CVN-70",
+      "name": "USS Carl Vinson",
+      "status": "port",
+      "locationName": "San Diego, California",
+      "position": {
+        "lat": 32.715,
+        "lon": -117.173
+      },
+      "confidence": "medium",
+      "lastSeen": "2025-10-08",
+      "summary": "GoNavy's latest table entry places USS Carl Vinson in or near San Diego, California: 16Sep2025, returned to San Diego",
+      "sources": [
+        {
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2025-10-08",
+          "note": "Latest row: 16Sep2025, returned to San Diego"
+        }
+      ]
+    },
+    {
+      "hull": "CVN-71",
+      "name": "USS Theodore Roosevelt",
+      "status": "port",
+      "locationName": "San Diego, California",
+      "position": {
+        "lat": 32.715,
+        "lon": -117.173
+      },
+      "confidence": "medium",
+      "lastSeen": "2026-05-20",
+      "summary": "GoNavy's latest table entry places USS Theodore Roosevelt in or near San Diego, California: 14May2026, returned to San Diego",
+      "sources": [
+        {
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
+          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
+          "publishedAt": "2026-05-18",
+          "note": "Text context: San Diego, California",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+        },
+        {
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-05-20",
+          "note": "Latest row: 14May2026, returned to San Diego"
+        }
+      ]
+    },
+    {
+      "hull": "CVN-72",
+      "name": "USS Abraham Lincoln",
+      "status": "deployed",
+      "locationName": "Arabian Sea",
+      "position": {
+        "lat": 18,
+        "lon": 63
+      },
+      "confidence": "medium",
+      "lastSeen": "2026-05-20",
+      "summary": "GoNavy's latest table entry places USS Abraham Lincoln in or near Arabian Sea: 28Feb-18May2026, North Arabian Sea in support of Operation Epic Fury",
+      "sources": [
+        {
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
+          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
+          "publishedAt": "2026-05-18",
+          "note": "Text context: Arabian Sea",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+        },
+        {
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-05-20",
+          "note": "Latest row: 28Feb-18May2026, North Arabian Sea in support of Operation Epic Fury"
+        }
+      ]
+    },
+    {
+      "hull": "CVN-73",
+      "name": "USS George Washington",
+      "status": "port",
+      "locationName": "Yokosuka, Japan",
+      "position": {
+        "lat": 35.281,
+        "lon": 139.672
+      },
+      "confidence": "medium",
+      "lastSeen": "2026-05-20",
+      "summary": "GoNavy's latest table entry places USS George Washington in or near Yokosuka, Japan: 17May2026, returned to Yokosuka",
+      "sources": [
+        {
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
+          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
+          "publishedAt": "2026-05-18",
+          "note": "Text context: Yokosuka, Japan",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+        },
+        {
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-05-20",
+          "note": "Latest row: 17May2026, returned to Yokosuka"
+        }
+      ]
+    },
+    {
+      "hull": "CVN-74",
+      "name": "USS John C. Stennis",
+      "status": "maintenance",
+      "locationName": "Newport News, Virginia",
+      "position": {
+        "lat": 36.986,
+        "lon": -76.432
+      },
+      "confidence": "medium",
+      "lastSeen": "2025-10-22",
+      "summary": "GoNavy's latest table entry places USS John C. Stennis in or near Newport News, Virginia: 08Apr2024, moved to an outfitting berth at Newport News Shipbuilding in Newport News, Virginia",
+      "sources": [
+        {
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2025-10-22",
+          "note": "Latest row: 08Apr2024, moved to an outfitting berth at Newport News Shipbuilding in Newport News, Virginia"
+        }
+      ]
+    },
+    {
+      "hull": "CVN-75",
+      "name": "USS Harry S. Truman",
+      "status": "port",
+      "locationName": "Norfolk, Virginia",
+      "position": {
+        "lat": 36.946,
+        "lon": -76.322
+      },
+      "confidence": "medium",
+      "lastSeen": "2025-10-01",
+      "summary": "GoNavy's latest table entry places USS Harry S. Truman in or near Norfolk, Virginia: 26Sep2025, returned to Norfolk",
+      "sources": [
+        {
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2025-10-01",
+          "note": "Latest row: 26Sep2025, returned to Norfolk"
+        }
+      ]
+    },
+    {
+      "hull": "CVN-76",
+      "name": "USS Ronald Reagan",
+      "status": "maintenance",
+      "locationName": "Bremerton, Washington",
+      "position": {
+        "lat": 47.561,
+        "lon": -122.648
+      },
+      "confidence": "medium",
+      "lastSeen": "2026-03-11",
+      "summary": "GoNavy's latest table entry places USS Ronald Reagan in or near Bremerton, Washington: 17Mar2025, entered the Dry Dock in Puget Sound Naval Shipyard and Intermediate Maintenance Facility (PSNS&IMF)",
+      "sources": [
+        {
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-03-11",
+          "note": "Latest row: 17Mar2025, entered the Dry Dock in Puget Sound Naval Shipyard and Intermediate Maintenance Facility (PSNS&IMF)"
+        }
+      ]
+    },
+    {
+      "hull": "CVN-77",
+      "name": "USS George H.W. Bush",
+      "status": "deployed",
+      "locationName": "Arabian Sea",
+      "position": {
+        "lat": 18,
+        "lon": 63
+      },
+      "confidence": "medium",
+      "lastSeen": "2026-05-20",
+      "summary": "GoNavy's latest table entry places USS George H.W. Bush in or near Arabian Sea: 27Apr-18May2026, North Arabian Sea in support of Operation Epic Fury",
+      "sources": [
+        {
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
+          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
+          "publishedAt": "2026-05-18",
+          "note": "Text context: Arabian Sea",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+        },
+        {
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-05-20",
+          "note": "Latest row: 27Apr-18May2026, North Arabian Sea in support of Operation Epic Fury"
+        }
+      ]
+    },
+    {
+      "hull": "CVN-78",
+      "name": "USS Gerald R. Ford",
+      "status": "port",
+      "locationName": "Norfolk, Virginia",
+      "position": {
+        "lat": 36.946,
+        "lon": -76.322
+      },
+      "confidence": "medium",
+      "lastSeen": "2026-05-20",
+      "summary": "GoNavy's latest table entry places USS Gerald R. Ford in or near Norfolk, Virginia: 16May2026, returned to Norfolk",
+      "sources": [
+        {
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
+          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
+          "publishedAt": "2026-05-18",
+          "note": "Text context: Norfolk, Virginia",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+        },
+        {
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-05-20",
+          "note": "Latest row: 16May2026, returned to Norfolk"
+        }
+      ]
+    }
+  ]
+}

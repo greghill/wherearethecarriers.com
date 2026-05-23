@@ -1,0 +1,12 @@
+{
+  "assessments": [
+    {
+      "sourceKey": "stratfor",
+      "hull": "CVN-72",
+      "locationName": "Arabian Sea",
+      "position": { "lat": 18.0, "lon": 63.0 },
+      "confidence": "high",
+      "note": "Point read from public Stratfor naval update map image."
+    }
+  ]
+}

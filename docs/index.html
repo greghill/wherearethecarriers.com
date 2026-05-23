@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Where Are the Carriers?</title>
+    <link rel="preconnect" href="https://unpkg.com">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQezbVF+joYp8zzL7E2gXfP4zCxyvN8=" crossorigin="">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="map-panel" aria-label="Carrier map">
+        <div id="map"></div>
+        <div class="topbar">
+          <div>
+            <h1>Where Are the Carriers?</h1>
+            <p id="updated">Loading public-source assessment...</p>
+          </div>
+          <div class="filters" aria-label="Map filters">
+            <button class="chip active" data-filter="all" type="button">All</button>
+            <button class="chip" data-filter="deployed" type="button">Deployed</button>
+            <button class="chip" data-filter="port" type="button">Port</button>
+            <button class="chip" data-filter="maintenance" type="button">Maintenance</button>
+            <button class="chip" data-filter="unknown" type="button">Unknown</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="details-panel" aria-label="Carrier details">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Assessment</p>
+            <h2 id="ship-name">Select a carrier</h2>
+          </div>
+          <span id="confidence" class="confidence muted">--</span>
+        </div>
+        <div id="ship-summary" class="ship-summary">
+          Public-source positions are approximate and may lag real movements.
+        </div>
+        <dl class="facts">
+          <div>
+            <dt>Status</dt>
+            <dd id="ship-status">--</dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd id="ship-location">--</dd>
+          </div>
+          <div>
+            <dt>Last seen</dt>
+            <dd id="ship-seen">--</dd>
+          </div>
+        </dl>
+        <div class="source-block">
+          <h3>Sources</h3>
+          <ul id="source-list"></ul>
+        </div>
+        <div class="source-block">
+          <h3>Fleet</h3>
+          <ul id="fleet-list" class="fleet-list"></ul>
+        </div>
+      </aside>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
