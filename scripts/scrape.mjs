@@ -3,6 +3,9 @@ import { existsSync } from "node:fs";
 
 const DATA_PATH = new URL("../docs/data/carriers.json", import.meta.url);
 const IMAGE_POINTS_PATH = new URL("./image-points.json", import.meta.url);
+const IMAGE_ANALYSIS_CACHE_PATH = new URL("./map-image-cache.json", import.meta.url);
+const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4.1";
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 const SOURCE_URLS = {
   gonavy: "http://www.gonavy.jp/CVLocation.html",
@@ -178,6 +181,10 @@ function articleDateFromTitle(title) {
 
 function sourceFromArticle({ publisher, title, url, publishedAt, note, imageUrl }) {
   return { publisher, title, url, publishedAt, note, imageUrl };
+}
+
+function sourceKeyToPublisher(sourceKey) {
+  return sourceKey === "usni" ? "USNI News" : sourceKey === "stratfor" ? "Stratfor Worldview" : sourceKey === "twz" ? "The War Zone" : "GoNavy.jp";
 }
 
 function articleTextFromHtml(html, stopPattern) {
@@ -356,6 +363,7 @@ function blankCarrier(record) {
     status: "unknown",
     locationName: "Unknown",
     position: null,
+    positionPrecision: "unknown",
     confidence: "unknown",
     lastSeen: null,
     summary: "No current public-source assessment has been attached yet.",
@@ -367,10 +375,19 @@ function applyAssessment(carrier, assessment) {
   const currentWeight = confidenceWeight(carrier.confidence);
   const nextWeight = confidenceWeight(assessment.confidence);
   const nextNewer = !carrier.lastSeen || (assessment.lastSeen && assessment.lastSeen >= carrier.lastSeen);
-  if (carrier.confidence === "unknown" || nextWeight > currentWeight || (nextWeight === currentWeight && nextNewer)) {
+  const nextIsImage = isImageAssessment(assessment);
+  const currentIsImage = carrier.positionPrecision === "image_estimate";
+  const imageCanRefine = nextIsImage && nextWeight >= 2 && isBroadRegionalAssessment(carrier) && nextNewer;
+  const imageCanReplaceImage = nextIsImage && currentIsImage && (nextWeight > currentWeight || (nextWeight === currentWeight && nextNewer));
+  const shouldReplace = nextIsImage
+    ? carrier.confidence === "unknown" || imageCanRefine || imageCanReplaceImage
+    : carrier.confidence === "unknown" || nextWeight > currentWeight || (nextWeight === currentWeight && nextNewer);
+
+  if (shouldReplace) {
     carrier.status = assessment.status || carrier.status;
     carrier.locationName = assessment.locationName || carrier.locationName;
     carrier.position = assessment.position || carrier.position;
+    carrier.positionPrecision = inferPositionPrecision(assessment);
     carrier.confidence = assessment.confidence || carrier.confidence;
     carrier.lastSeen = assessment.lastSeen || carrier.lastSeen;
     carrier.summary = assessment.summary || carrier.summary;
@@ -385,6 +402,23 @@ function applyAssessment(carrier, assessment) {
 
 function confidenceWeight(value) {
   return { unknown: 0, low: 1, medium: 2, high: 3 }[value || "unknown"] ?? 0;
+}
+
+function isImageAssessment(assessment) {
+  return assessment.positionPrecision === "image_estimate";
+}
+
+function isBroadRegionalAssessment(carrier) {
+  if (!carrier.position) return true;
+  if (carrier.positionPrecision === "image_estimate") return false;
+  return /sea|ocean|atlantic|pacific|mediterranean|indo-pacific|caribbean|centcom/i.test(carrier.locationName || "");
+}
+
+function inferPositionPrecision(assessment) {
+  if (assessment.positionPrecision) return assessment.positionPrecision;
+  if (assessment.status === "port" || assessment.status === "maintenance") return "port";
+  if (/sea|ocean|atlantic|pacific|mediterranean|indo-pacific|caribbean|centcom/i.test(assessment.locationName || "")) return "region";
+  return "unknown";
 }
 
 async function scrapeUsni() {
@@ -561,6 +595,191 @@ async function scrapeGoNavy() {
   return { ok: true, assessments };
 }
 
+function cacheKeyForImage(sourceSummary) {
+  return [
+    OPENAI_MODEL,
+    sourceSummary.articleUrl || "",
+    sourceSummary.imageUrl || "",
+    sourceSummary.publishedAt || ""
+  ].join("|");
+}
+
+async function loadImageAnalysisCache() {
+  if (!existsSync(IMAGE_ANALYSIS_CACHE_PATH)) {
+    return { version: 1, analyses: {} };
+  }
+  const raw = await readFile(IMAGE_ANALYSIS_CACHE_PATH, "utf8");
+  return JSON.parse(raw);
+}
+
+async function saveImageAnalysisCache(cache) {
+  await writeFile(IMAGE_ANALYSIS_CACHE_PATH, `${JSON.stringify(cache, null, 2)}\n`);
+}
+
+function carrierMapSchema() {
+  return {
+    type: "object",
+    additionalProperties: false,
+    required: ["sourceKey", "imageUrl", "publishedAt", "carriers"],
+    properties: {
+      sourceKey: { type: "string", enum: ["usni", "stratfor", "twz"] },
+      imageUrl: { type: "string" },
+      publishedAt: { type: ["string", "null"] },
+      carriers: {
+        type: "array",
+        items: {
+          type: "object",
+          additionalProperties: false,
+          required: ["hull", "name", "locationName", "lat", "lon", "confidence", "evidenceText", "rationale"],
+          properties: {
+            hull: { type: "string", enum: CARRIERS.map((carrier) => carrier.hull) },
+            name: { type: "string" },
+            locationName: { type: "string" },
+            lat: { type: "number" },
+            lon: { type: "number" },
+            confidence: { type: "string", enum: ["high", "medium", "low"] },
+            evidenceText: { type: "string" },
+            rationale: { type: "string" }
+          }
+        }
+      }
+    }
+  };
+}
+
+function openAiMapPrompt(sourceKey, sourceSummary) {
+  const carrierList = CARRIERS.map((carrier) => `${carrier.hull} ${carrier.name}`).join("\n");
+  return `Analyze this public carrier tracker map image from ${sourceKey}.
+
+Return only U.S. aircraft carriers from this allowlist:
+${carrierList}
+
+Task:
+- Read the map visually and estimate each carrier marker or label location.
+- Return approximate latitude/longitude for the visual map marker/label, not a generic region centroid.
+- If two carriers are close but shown as separate, preserve that separation.
+- Omit carriers that are not visible or are too uncertain to locate.
+- Do not include amphibious ships, destroyers, submarines, or foreign ships.
+- Treat all coordinates as approximate public-source image estimates.
+
+Article title: ${sourceSummary.title || "unknown"}
+Article URL: ${sourceSummary.articleUrl || "unknown"}
+Published date: ${sourceSummary.publishedAt || "unknown"}`;
+}
+
+async function callOpenAiForMapImage(sourceKey, sourceSummary) {
+  const response = await fetch("https://api.openai.com/v1/responses", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      authorization: `Bearer ${OPENAI_API_KEY}`
+    },
+    body: JSON.stringify({
+      model: OPENAI_MODEL,
+      input: [
+        {
+          role: "user",
+          content: [
+            { type: "input_text", text: openAiMapPrompt(sourceKey, sourceSummary) },
+            { type: "input_image", image_url: sourceSummary.imageUrl, detail: "high" }
+          ]
+        }
+      ],
+      text: {
+        format: {
+          type: "json_schema",
+          name: "carrier_map_analysis",
+          strict: true,
+          schema: carrierMapSchema()
+        }
+      }
+    })
+  });
+
+  const body = await response.text();
+  if (!response.ok) {
+    throw new Error(`OpenAI map parse failed for ${sourceKey}: ${response.status} ${body.slice(0, 300)}`);
+  }
+
+  const parsed = JSON.parse(body);
+  const outputText = parsed.output_text || parsed.output?.flatMap((item) => item.content || []).find((item) => item.type === "output_text")?.text;
+  if (!outputText) {
+    throw new Error(`OpenAI map parse returned no output_text for ${sourceKey}`);
+  }
+  return JSON.parse(outputText);
+}
+
+function imageResultToAssessments(result, sourceKey, sourceSummary) {
+  const sourcePublisher = sourceKeyToPublisher(sourceKey);
+  return (result.carriers || [])
+    .filter((item) => CARRIERS.some((carrier) => carrier.hull === item.hull))
+    .filter((item) => Number.isFinite(Number(item.lat)) && Number.isFinite(Number(item.lon)) && Number(item.lat) >= -90 && Number(item.lat) <= 90 && Number(item.lon) >= -180 && Number(item.lon) <= 180)
+    .map((item) => {
+      const record = CARRIERS.find((carrier) => carrier.hull === item.hull);
+      return {
+        hull: item.hull,
+        status: findLocationHint(item.locationName)?.status || "deployed",
+        locationName: item.locationName,
+        position: { lat: Number(item.lat), lon: Number(item.lon) },
+        positionPrecision: "image_estimate",
+        confidence: item.confidence,
+        lastSeen: result.publishedAt || sourceSummary.publishedAt,
+        summary: `${sourceSummary.title || sourcePublisher} places ${record?.name || item.hull} near ${item.locationName} from a public tracker map image.`,
+        sources: [
+          sourceFromArticle({
+            publisher: sourcePublisher,
+            title: sourceSummary.title,
+            url: sourceSummary.articleUrl,
+            publishedAt: result.publishedAt || sourceSummary.publishedAt,
+            note: `Image estimate: ${item.evidenceText || item.rationale || item.locationName}`,
+            imageUrl: sourceSummary.imageUrl || result.imageUrl
+          })
+        ]
+      };
+    });
+}
+
+async function loadOpenAiImageAssessments(sourceSummaries, sourceStatus) {
+  const imageSources = Object.entries(sourceSummaries)
+    .filter(([sourceKey, summary]) => ["usni", "stratfor", "twz"].includes(sourceKey) && summary.imageUrl);
+
+  if (!imageSources.length) return [];
+  if (!OPENAI_API_KEY) {
+    sourceStatus.openaiImages = "skipped: OPENAI_API_KEY not set";
+    return [];
+  }
+
+  const cache = await loadImageAnalysisCache();
+  let cacheChanged = false;
+  const assessments = [];
+  const errors = [];
+
+  for (const [sourceKey, summary] of imageSources) {
+    const cacheKey = cacheKeyForImage(summary);
+    try {
+      if (!cache.analyses[cacheKey]) {
+        cache.analyses[cacheKey] = {
+          sourceKey,
+          model: OPENAI_MODEL,
+          imageUrl: summary.imageUrl,
+          articleUrl: summary.articleUrl,
+          publishedAt: summary.publishedAt,
+          createdAt: new Date().toISOString(),
+          result: await callOpenAiForMapImage(sourceKey, summary)
+        };
+        cacheChanged = true;
+      }
+      assessments.push(...imageResultToAssessments(cache.analyses[cacheKey].result, sourceKey, summary));
+    } catch (error) {
+      errors.push(`${sourceKey}: ${error.message}`);
+    }
+  }
+
+  if (cacheChanged) await saveImageAnalysisCache(cache);
+  sourceStatus.openaiImages = errors.length ? `partial: ${errors.join("; ")}` : "ok";
+  return assessments;
+}
+
 async function loadImagePointAssessments(sourceSummaries) {
   if (!existsSync(IMAGE_POINTS_PATH)) return [];
   const raw = await readFile(IMAGE_POINTS_PATH, "utf8");
@@ -617,6 +836,10 @@ async function main() {
     } catch (error) {
       sourceStatus[key] = `error: ${error.message}`;
     }
+  }
+
+  for (const assessment of await loadOpenAiImageAssessments(sourceSummaries, sourceStatus)) {
+    applyAssessment(carriers.get(assessment.hull), assessment);
   }
 
   for (const assessment of await loadImagePointAssessments(sourceSummaries)) {

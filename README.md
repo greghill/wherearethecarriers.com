@@ -36,11 +36,27 @@ The current JSON contract stays intentionally simple: one carrier record per shi
 - GoNavy is parsed from carrier table rows and the latest dated operational entry, avoiding homeport boilerplate where possible.
 - USNI is parsed by article section so a carrier mention in one regional section is not confused with another.
 - TWZ parsing trims related-story snippets and handles the current article's “respectively” phrasing for multiple carriers and ports.
-- Stratfor currently contributes article/map metadata. Image-derived locations can be added through the manual hook below.
+- Stratfor contributes article/map metadata, and can contribute image-derived positions when OpenAI image parsing is enabled.
 
 ## Image-derived assessments
 
-Automatic OCR/image georeferencing is not enabled yet. For now, use a small manual merge file for public map-image points.
+The scraper can optionally use OpenAI vision parsing for USNI, Stratfor, and TWZ tracker map images. Set this GitHub Actions secret to enable it:
+
+```text
+OPENAI_API_KEY
+```
+
+Optional GitHub Actions variable:
+
+```text
+OPENAI_MODEL=gpt-4.1
+```
+
+When enabled, the scraper sends the latest tracker map images to the OpenAI Responses API and asks for approximate carrier positions as structured JSON. Results are cached in `scripts/map-image-cache.json` by image URL/model/date so unchanged map images are not reprocessed every scheduled run.
+
+If `OPENAI_API_KEY` is not set, image parsing is skipped and the scraper falls back to text-derived regional/port assessments.
+
+You can also use a small manual merge file for public map-image points.
 
 Copy `scripts/image-points.example.json` to `scripts/image-points.json` and add entries shaped like:
 

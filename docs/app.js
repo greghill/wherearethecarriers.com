@@ -45,7 +45,8 @@ let state = {
   data: null,
   filter: "all",
   selectedHull: null,
-  markers: new Map()
+  markers: new Map(),
+  isRenderingMarkers: false
 };
 
 const els = {
@@ -102,24 +103,6 @@ function displayName(carrier) {
   return shortNames[carrier.hull] || carrier.name.replace(/^USS\s+/, "");
 }
 
-function offsetPosition(carrier, visibleCarriers) {
-  if (!carrier.position) return null;
-  const key = `${carrier.position.lat.toFixed(3)},${carrier.position.lon.toFixed(3)}`;
-  const colocated = visibleCarriers.filter((item) => {
-    if (!item.position) return false;
-    return `${item.position.lat.toFixed(3)},${item.position.lon.toFixed(3)}` === key;
-  });
-  if (colocated.length === 1) return [carrier.position.lat, carrier.position.lon];
-
-  const index = colocated.findIndex((item) => item.hull === carrier.hull);
-  const angle = (Math.PI * 2 * index) / colocated.length - Math.PI / 2;
-  const radius = Math.min(1.2, 0.45 + colocated.length * 0.12);
-  return [
-    carrier.position.lat + Math.sin(angle) * radius,
-    carrier.position.lon + Math.cos(angle) * radius
-  ];
-}
-
 function createIcon(carrier) {
   return L.divIcon({
     className: "",
@@ -135,20 +118,60 @@ function createIcon(carrier) {
   });
 }
 
+function markerOffsets(carriers) {
+  const positioned = carriers
+    .filter((carrier) => carrier.position)
+    .map((carrier) => ({
+      carrier,
+      key: `${carrier.position.lat.toFixed(3)},${carrier.position.lon.toFixed(3)}`
+    }));
+
+  const clustersByCoordinate = new Map();
+  for (const item of positioned) {
+    const cluster = clustersByCoordinate.get(item.key) || [];
+    cluster.push(item);
+    clustersByCoordinate.set(item.key, cluster);
+  }
+
+  const offsets = new Map();
+  for (const cluster of clustersByCoordinate.values()) {
+    const count = cluster.length;
+    cluster.forEach((item, index) => {
+      if (count === 1) {
+        offsets.set(item.carrier.hull, L.point(0, 0));
+        return;
+      }
+
+      const angle = (Math.PI * 2 * index) / count - Math.PI / 2;
+      const radius = window.innerWidth < 640 ? 5 : 7;
+      offsets.set(item.carrier.hull, L.point(Math.cos(angle) * radius, Math.sin(angle) * radius));
+    });
+  }
+
+  return offsets;
+}
+
 function renderMarkers() {
+  if (!state.data || state.isRenderingMarkers) return;
+  state.isRenderingMarkers = true;
   state.markers.forEach((marker) => marker.remove());
   state.markers.clear();
 
   const visibleCarriers = state.data.carriers.filter(isVisible);
+  const offsets = markerOffsets(visibleCarriers);
   visibleCarriers.forEach((carrier) => {
     if (!carrier.position) return;
-    const marker = L.marker(offsetPosition(carrier, visibleCarriers), {
+    const basePoint = map.latLngToLayerPoint([carrier.position.lat, carrier.position.lon]);
+    const offset = offsets.get(carrier.hull) || L.point(0, 0);
+    const markerLatLng = map.layerPointToLatLng(basePoint.add(offset));
+    const marker = L.marker(markerLatLng, {
       icon: createIcon(carrier),
       title: `${carrier.name} ${carrier.hull}`
     }).addTo(map);
     marker.on("click", () => selectCarrier(carrier.hull, true));
     state.markers.set(carrier.hull, marker);
   });
+  state.isRenderingMarkers = false;
 }
 
 function refreshMarkerIcons() {
@@ -274,6 +297,8 @@ els.filters.forEach((button) => {
 window.addEventListener("load", () => {
   map.invalidateSize();
 });
+
+map.on("zoomend", renderMarkers);
 
 loadData().catch((error) => {
   els.updated.textContent = "Could not load carrier data.";
