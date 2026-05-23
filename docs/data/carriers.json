@@ -1,26 +1,56 @@
 {
-  "generatedAt": "2026-05-23T17:26:12.680Z",
+  "generatedAt": "2026-05-23T18:50:24.430Z",
   "sourceStatus": {
-    "usni": "ok",
-    "stratfor": "ok",
-    "twz": "ok",
-    "gonavy": "ok",
-    "openaiImages": "ok"
+    "usni": {
+      "status": "ok",
+      "lastFetchedAt": "2026-05-23T18:49:55.523Z",
+      "lastSuccessAt": "2026-05-23T18:49:55.523Z",
+      "lastErrorAt": null,
+      "message": null
+    },
+    "stratfor": {
+      "status": "ok",
+      "lastFetchedAt": "2026-05-23T18:49:57.843Z",
+      "lastSuccessAt": "2026-05-23T18:49:57.843Z",
+      "lastErrorAt": null,
+      "message": null
+    },
+    "twz": {
+      "status": "ok",
+      "lastFetchedAt": "2026-05-23T18:49:57.981Z",
+      "lastSuccessAt": "2026-05-23T18:49:57.981Z",
+      "lastErrorAt": null,
+      "message": null
+    },
+    "gonavy": {
+      "status": "ok",
+      "lastFetchedAt": "2026-05-23T18:49:59.005Z",
+      "lastSuccessAt": "2026-05-23T18:49:59.005Z",
+      "lastErrorAt": null,
+      "message": null
+    },
+    "openaiImages": {
+      "status": "ok",
+      "lastFetchedAt": "2026-05-23T18:50:24.428Z",
+      "lastSuccessAt": "2026-05-23T18:50:24.428Z",
+      "lastErrorAt": null,
+      "message": null
+    }
   },
   "carriers": [
     {
       "hull": "CVN-68",
       "name": "USS Nimitz",
       "status": "deployed",
-      "locationName": "South Atlantic Ocean, east of South America",
+      "locationName": "South Atlantic east of South America",
       "position": {
-        "lat": -25,
-        "lon": -32
+        "lat": -15,
+        "lon": -30
       },
       "positionPrecision": "image_estimate",
       "confidence": "high",
       "lastSeen": "2026-05-21",
-      "summary": "U.S. Naval Update Map: May 21, 2026 places USS Nimitz near South Atlantic Ocean, east of South America from a public tracker map image.",
+      "summary": "U.S. Naval Update Map: May 21, 2026 places USS Nimitz near South Atlantic east of South America from a public tracker map image.",
       "sources": [
         {
           "publisher": "USNI News",
@@ -42,7 +72,7 @@
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
           "publishedAt": "2026-05-18",
-          "note": "Image estimate: Label and marker: USS Nimitz (CVN-68) shown south of the Azores in eastern Atlantic.",
+          "note": "Image estimate: A marker explicitly labeled 'USS Nimitz (CVN-68)' is shown in the south-central Atlantic Ocean on the map.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
         },
         {
@@ -50,15 +80,15 @@
           "title": "U.S. Naval Update Map: May 21, 2026",
           "url": "https://worldview.stratfor.com/article/us-naval-update-map-may-21-2026",
           "publishedAt": "2026-05-21",
-          "note": "Image estimate: Map label and marker 'CVN 68' (orange), trace shows current position in the South Atlantic off South America, specific location plotted east of Brazil.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/styles/16x9_small/public/naval%20update%20map%2020260520%20display.png?itok=_Gy0mFI0"
+          "note": "Image estimate: Map marker 'CVN 68' is shown in the South Atlantic east of Brazil at this location.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260520%20display.png"
         },
         {
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
           "publishedAt": "2026-05-17",
-          "note": "Image estimate: USS Nimitz (CVN 68) shown with orange 'training' icon off West Africa.",
+          "note": "Image estimate: Map shows USS Nimitz (CVN 68) deployed as orange icon in the Arabian Sea area, SE of Oman.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ]
@@ -105,7 +135,7 @@
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
           "publishedAt": "2026-05-17",
-          "note": "Image estimate: USS Dwight D. Eisenhower (CVN 69) label at Norfolk, VA.",
+          "note": "Image estimate: Map shows USS Dwight D. Eisenhower (CVN 69) in Norfolk, VA, labeled with white box and text.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ]
@@ -136,7 +166,7 @@
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
           "publishedAt": "2026-05-17",
-          "note": "Image estimate: USS Carl Vinson (CVN 70) label is placed at San Diego, CA.",
+          "note": "Image estimate: Map specifically labels USS Carl Vinson (CVN 70) at San Diego, CA.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ]
@@ -183,7 +213,7 @@
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
           "publishedAt": "2026-05-17",
-          "note": "Image estimate: USS Theodore Roosevelt (CVN 71) label at San Diego, CA.",
+          "note": "Image estimate: Map labels USS Theodore Roosevelt (CVN 71) at San Diego, CA.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ]
@@ -194,11 +224,11 @@
       "status": "deployed",
       "locationName": "Arabian Sea",
       "position": {
-        "lat": 18,
-        "lon": 63
+        "lat": 22,
+        "lon": 60.5
       },
-      "positionPrecision": "region",
-      "confidence": "medium",
+      "positionPrecision": "image_estimate",
+      "confidence": "high",
       "lastSeen": "2026-05-20",
       "summary": "GoNavy's latest table entry places USS Abraham Lincoln in or near Arabian Sea: 28Feb-18May2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
@@ -230,15 +260,23 @@
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
           "publishedAt": "2026-05-18",
-          "note": "Image estimate: Cluster label: Abraham Lincoln CSG, George H.W. Bush CSG, USS Tripoli (LHA-7) shown east of Sicily, Mediterranean.",
+          "note": "Image estimate: Same marker as above, with both Abraham Lincoln CSG and George H.W. Bush CSG noted.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+        },
+        {
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: May 21, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-may-21-2026",
+          "publishedAt": "2026-05-21",
+          "note": "Image estimate: 'CVN 72' is shown adjacent to another carrier label and LHA7 in the North Arabian Sea/Gulf of Oman region.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260520%20display.png"
         },
         {
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
           "publishedAt": "2026-05-17",
-          "note": "Image estimate: USS Abraham Lincoln (CVN 72) label near the Persian Gulf / Arabian Sea region.",
+          "note": "Image estimate: Map shows USS Abraham Lincoln (CVN 72) in the central Mediterranean, green deployed marker.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ]
@@ -285,7 +323,7 @@
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
           "publishedAt": "2026-05-18",
-          "note": "Image estimate: Label and marker: George Washington CSG Yokosuka, Japan.",
+          "note": "Image estimate: A marker labeled 'George Washington CSG Yokosuka, Japan' is placed closely to Yokosuka, Japan.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
         },
         {
@@ -293,7 +331,7 @@
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
           "publishedAt": "2026-05-17",
-          "note": "Image estimate: USS George Washington (CVN 73) label at Yokosuka, Japan.",
+          "note": "Image estimate: Map labels USS George Washington (CVN 73) at Yokosuka, Japan with homeport marker.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ]
@@ -324,7 +362,7 @@
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
           "publishedAt": "2026-05-17",
-          "note": "Image estimate: USS John C. Stennis (CVN 74) label is placed at San Diego, CA.",
+          "note": "Image estimate: Map labels USS John C. Stennis (CVN 74) at San Diego, CA.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ]
@@ -355,7 +393,7 @@
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
           "publishedAt": "2026-05-17",
-          "note": "Image estimate: USS Harry S. Truman (CVN 75) label at Norfolk, VA.",
+          "note": "Image estimate: Map labels USS Harry S. Truman (CVN 75) in Norfolk, VA.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ]
@@ -386,7 +424,7 @@
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
           "publishedAt": "2026-05-17",
-          "note": "Image estimate: USS Ronald Reagan (CVN 76) label at Bremerton, Washington.",
+          "note": "Image estimate: Map shows USS Ronald Reagan (CVN 76) at Bremerton, WA.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ]
@@ -397,11 +435,11 @@
       "status": "deployed",
       "locationName": "Arabian Sea",
       "position": {
-        "lat": 18,
-        "lon": 63
+        "lat": 22.1,
+        "lon": 60.7
       },
-      "positionPrecision": "region",
-      "confidence": "medium",
+      "positionPrecision": "image_estimate",
+      "confidence": "high",
       "lastSeen": "2026-05-20",
       "summary": "GoNavy's latest table entry places USS George H.W. Bush in or near Arabian Sea: 27Apr-18May2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
@@ -425,15 +463,23 @@
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
           "publishedAt": "2026-05-18",
-          "note": "Image estimate: Cluster label: Abraham Lincoln CSG, George H.W. Bush CSG, USS Tripoli (LHA-7) shown east of Sicily, Mediterranean.",
+          "note": "Image estimate: A marker groups 'Abraham Lincoln CSG' and 'George H.W. Bush CSG' in the eastern Mediterranean Sea near Greece.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+        },
+        {
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: May 21, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-may-21-2026",
+          "publishedAt": "2026-05-21",
+          "note": "Image estimate: 'CVN 77' is shown in the same area as CVN 72 but slightly offset, indicating a nearby but separate presence.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260520%20display.png"
         },
         {
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
           "publishedAt": "2026-05-17",
-          "note": "Image estimate: Icon and label for USS George H.W. Bush (CVN 77) east of the Azores, in the eastern Atlantic/Med entrance.",
+          "note": "Image estimate: Map shows USS George H.W. Bush (CVN 77) in the eastern Mediterranean, green marker.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ]
@@ -480,7 +526,7 @@
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
           "publishedAt": "2026-05-18",
-          "note": "Image estimate: Label: Ford CSG Norfolk, Va.",
+          "note": "Image estimate: A marker labeled 'Ford CSG Norfolk, Va.' is shown at the Norfolk/Hampton Roads region.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
         },
         {
@@ -488,7 +534,7 @@
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
           "publishedAt": "2026-05-17",
-          "note": "Image estimate: USS Gerald R. Ford (CVN 78) label at Norfolk, VA.",
+          "note": "Image estimate: Labeled at Norfolk, VA with homeport icon.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ]
