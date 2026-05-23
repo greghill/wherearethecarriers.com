@@ -274,6 +274,20 @@ function setFilter(filter) {
   fitVisibleMarkers();
 }
 
+function updateFilterCounts() {
+  const counts = { all: state.data.carriers.length };
+  state.data.carriers.forEach((carrier) => {
+    const s = statusFor(carrier);
+    counts[s] = (counts[s] || 0) + 1;
+  });
+  const labels = { all: "Total", deployed: "Deployed", port: "At Port", maintenance: "Maintenance", unknown: "Unknown" };
+  els.filters.forEach((button) => {
+    const key = button.dataset.filter;
+    const n = counts[key] ?? 0;
+    button.textContent = `${n} ${labels[key] || key}`;
+  });
+}
+
 async function loadData() {
   const response = await fetch(DATA_URL, { cache: "no-store" });
   if (!response.ok) {
@@ -283,6 +297,7 @@ async function loadData() {
   els.updated.textContent = `Updated ${formatDate(state.data.generatedAt)} from public sources`;
   map.invalidateSize();
   state.selectedHull = state.data.carriers[0]?.hull || null;
+  updateFilterCounts();
   renderMarkers();
   fitVisibleMarkers();
   renderFleet();
