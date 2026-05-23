@@ -682,6 +682,12 @@ Task:
 - Do not include amphibious ships, destroyers, submarines, or foreign ships.
 - Treat all coordinates as approximate public-source image estimates.
 
+Trails and historical tracks (especially on Stratfor maps):
+- Some maps draw a colored line/trail showing a ship's movement over the past several weeks. The map's legend usually labels these (e.g. "Three weeks ago", "Two weeks ago", "One week ago", "This week").
+- The carrier's text label (e.g. "CVN 68") is placed next to the most recent point in the trail — typically the trail's endpoint.
+- Always return the coordinates of that labeled endpoint (the latest/current position), NOT the midpoint or average of the trail.
+- If the trail has multiple dots, pick the dot closest to the text label or the one corresponding to the "This week" / most-recent legend entry.
+
 Article title: ${sourceSummary.title || "unknown"}
 Article URL: ${sourceSummary.articleUrl || "unknown"}
 Published date: ${sourceSummary.publishedAt || "unknown"}`;
