@@ -6,6 +6,7 @@ const IMAGE_POINTS_PATH = new URL("./image-points.json", import.meta.url);
 const IMAGE_ANALYSIS_CACHE_PATH = new URL("./map-image-cache.json", import.meta.url);
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-4.1";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const FORCE_IMAGE_REPROCESS = /^(1|true|yes)$/i.test(process.env.FORCE_IMAGE_REPROCESS || "");
 
 const SOURCE_URLS = {
   gonavy: "http://www.gonavy.jp/CVLocation.html",
@@ -776,7 +777,7 @@ async function loadOpenAiImageAssessments(sourceSummaries, sourceStatus) {
   for (const [sourceKey, summary] of imageSources) {
     const cacheKey = cacheKeyForImage(summary);
     try {
-      if (!cache.analyses[cacheKey]) {
+      if (!cache.analyses[cacheKey] || FORCE_IMAGE_REPROCESS) {
         cache.analyses[cacheKey] = {
           sourceKey,
           model: OPENAI_MODEL,
