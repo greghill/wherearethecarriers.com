@@ -15,7 +15,7 @@ Open `http://localhost:8080`.
 
 - `docs/index.html`, `docs/app.js`, and `docs/styles.css` render a Leaflet world map entirely in the browser.
 - `docs/data/carriers.json` is the only runtime data file the page fetches.
-- `scripts/scrape.mjs` pulls public GoNavy, USNI Fleet Tracker, and Stratfor topic/article metadata.
+- `scripts/scrape.mjs` pulls public GoNavy, USNI Fleet Tracker, Stratfor, and The War Zone carrier tracker metadata.
 - `.github/workflows/scrape.yml` runs every four hours and commits changed data.
 
 ## Image-derived assessments

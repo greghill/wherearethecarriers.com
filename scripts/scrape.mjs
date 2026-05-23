@@ -7,7 +7,8 @@ const IMAGE_POINTS_PATH = new URL("./image-points.json", import.meta.url);
 const SOURCE_URLS = {
   gonavy: "http://www.gonavy.jp/CVLocation.html",
   usniIndex: "https://news.usni.org/category/fleet-tracker",
-  stratforIndex: "https://worldview.stratfor.com/topic/tracking-us-naval-power"
+  stratforIndex: "https://worldview.stratfor.com/topic/tracking-us-naval-power",
+  twzIndex: "https://www.twz.com/category/carrier-tracker"
 };
 
 const CARRIERS = [
@@ -98,6 +99,76 @@ function absoluteUrl(url, base) {
   }
 }
 
+function linksFromHtml(html, baseUrl) {
+  const links = [];
+  for (const match of html.matchAll(/<a[^>]+href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+    const url = absoluteUrl(cleanUrl(match[1]), baseUrl);
+    const text = stripTags(match[2]);
+    if (url) links.push({ url, text });
+  }
+  return links;
+}
+
+function firstUniqueUrl(items) {
+  const seen = new Set();
+  for (const item of items) {
+    if (seen.has(item.url)) continue;
+    seen.add(item.url);
+    return item.url;
+  }
+  return null;
+}
+
+function findLatestUsniTrackerUrl(html) {
+  return firstUniqueUrl(
+    linksFromHtml(html, SOURCE_URLS.usniIndex)
+      .filter((link) => /usni-news-fleet-and-marine-tracker/i.test(link.url) || /USNI News Fleet and Marine Tracker/i.test(link.text))
+  );
+}
+
+function findLatestStratforMapUrl(html) {
+  return firstUniqueUrl(
+    linksFromHtml(html, SOURCE_URLS.stratforIndex)
+      .filter((link) => /us-naval-update-map/i.test(link.url) || /U\.S\. Naval Update Map/i.test(link.text))
+  );
+}
+
+function findLatestTwzUrl(html) {
+  return firstUniqueUrl(
+    linksFromHtml(html, SOURCE_URLS.twzIndex)
+      .filter((link) => /twz\.com\/sea\/(?:where-are-the-carriers|carrier-tracker-as-of)/i.test(link.url))
+  );
+}
+
+function imageUrlsFromHtml(html, baseUrl) {
+  const urls = [];
+  for (const property of ["og:image", "twitter:image"]) {
+    const meta = extractMeta(html, property);
+    if (meta) urls.push(absoluteUrl(meta, baseUrl) || meta);
+  }
+  for (const match of html.matchAll(/<(?:img|source|link)[^>]+(?:src|href|data-src|srcset|imagesrcset)=["']([^"']+)["']/gi)) {
+    const value = cleanUrl(match[1]);
+    if (!value) continue;
+    const candidates = value.split(",").map((part) => part.trim().split(/\s+/)[0]);
+    for (const candidate of candidates) {
+      if (/\.(?:jpg|jpeg|png)(?:\?|$)/i.test(candidate)) {
+        urls.push(absoluteUrl(candidate, baseUrl) || candidate);
+      }
+    }
+  }
+  return [...new Set(urls)];
+}
+
+function bestMapImageUrl(html, baseUrl, sourceKey) {
+  const urls = imageUrlsFromHtml(html, baseUrl);
+  const mapPatterns = {
+    usni: /\/FT_|fleet|tracker|map/i,
+    twz: /Carrier-Tracker|carrier.*tracker|map/i,
+    stratfor: /naval.*update.*map|display|map/i
+  };
+  return urls.find((url) => mapPatterns[sourceKey]?.test(url)) || urls[0] || null;
+}
+
 function articleDateFromTitle(title) {
   const match = title?.match(/(?:May|Apr|March|Mar|June|Jun|July|Jul|August|Aug|September|Sept|October|Oct|November|Nov|December|Dec|January|Jan|February|Feb)\.?\s+\d{1,2},?\s+\d{4}/i);
   if (!match) return null;
@@ -107,6 +178,15 @@ function articleDateFromTitle(title) {
 
 function sourceFromArticle({ publisher, title, url, publishedAt, note, imageUrl }) {
   return { publisher, title, url, publishedAt, note, imageUrl };
+}
+
+function articleTextFromHtml(html, stopPattern) {
+  const article = html.match(/<article[\s\S]*?<\/article>/i)?.[0] || html;
+  let text = stripTags(article);
+  if (stopPattern) {
+    text = text.split(stopPattern)[0].trim();
+  }
+  return text;
 }
 
 function findLocationHint(text) {
@@ -204,6 +284,56 @@ function goNavyEntries(remarksHtml) {
     .filter((entry) => /\d{2}[A-Za-z]{3}\d{4}/.test(entry));
 }
 
+function extractPublishedDate(html, fallbackText = "") {
+  const metaDate = extractMeta(html, "article:published_time") || html.match(/"datePublished"\s*:\s*"([^"]+)"/i)?.[1];
+  if (metaDate) {
+    const dateOnly = metaDate.match(/^(\d{4}-\d{2}-\d{2})/);
+    if (dateOnly) return dateOnly[1];
+    const parsed = new Date(metaDate);
+    if (!Number.isNaN(parsed.getTime())) return parsed.toISOString().slice(0, 10);
+  }
+  return articleDateFromTitle(fallbackText);
+}
+
+function twzRespectivelyAssessments(text, { title, articleUrl, publishedAt, imageUrl }) {
+  const assessments = [];
+  const pattern = /USS George Washington\s*,\s*USS Dwight D\. Eisenhower\s*,\s*and USS Theodore Roosevelt[\s\S]{0,260}?pulled into Yokosuka,\s*Norfolk,\s*and San Diego,\s*respectively/i;
+  if (!pattern.test(text)) return assessments;
+
+  const mappings = [
+    ["CVN-73", "Yokosuka, Japan"],
+    ["CVN-69", "Norfolk, Virginia"],
+    ["CVN-71", "San Diego, California"]
+  ];
+
+  for (const [hull, locationName] of mappings) {
+    const record = CARRIERS.find((item) => item.hull === hull);
+    const hint = LOCATION_HINTS.find((item) => item.name === locationName);
+    if (!record || !hint) continue;
+    assessments.push({
+      hull,
+      status: "port",
+      locationName: hint.name,
+      position: { lat: hint.lat, lon: hint.lon },
+      confidence: "medium",
+      lastSeen: publishedAt,
+      summary: `${title} reports ${record.name} pulled into ${hint.name}.`,
+      sources: [
+        sourceFromArticle({
+          publisher: "The War Zone",
+          title,
+          url: articleUrl,
+          publishedAt,
+          note: `Text context: pulled into ${hint.name}`,
+          imageUrl
+        })
+      ]
+    });
+  }
+
+  return assessments;
+}
+
 function rowForCarrier(html, record) {
   return [...html.matchAll(/<TR>([\s\S]*?)<\/TR>/gi)]
     .map((match) => match[1])
@@ -259,13 +389,12 @@ function confidenceWeight(value) {
 
 async function scrapeUsni() {
   const indexHtml = await fetchText(SOURCE_URLS.usniIndex);
-  const linkMatch = indexHtml.match(/href=["']([^"']+)["'][^>]*>\s*USNI News Fleet and Marine Tracker:\s*([^<]+)</i);
-  const articleUrl = absoluteUrl(linkMatch?.[1] || "/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026", SOURCE_URLS.usniIndex);
+  const articleUrl = findLatestUsniTrackerUrl(indexHtml) || absoluteUrl("/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026", SOURCE_URLS.usniIndex);
   const articleHtml = await fetchText(articleUrl);
   const title = stripTags(articleHtml.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1]) || "USNI News Fleet and Marine Tracker";
   const publishedAt = articleDateFromTitle(title) || articleDateFromTitle(stripTags(articleHtml));
-  const imageUrl = extractMeta(articleHtml, "og:image") || cleanUrl(articleHtml.match(/https:\/\/news\.usni\.org\/wp-content\/uploads\/[^"']+\.(?:jpg|png)/i)?.[0]);
-  const articleText = stripTags(articleHtml);
+  const imageUrl = bestMapImageUrl(articleHtml, articleUrl, "usni");
+  const articleText = articleTextFromHtml(articleHtml);
   const sections = sectionizeUsniArticle(articleHtml);
   const assessments = [];
 
@@ -321,12 +450,11 @@ async function scrapeUsni() {
 
 async function scrapeStratfor() {
   const indexHtml = await fetchText(SOURCE_URLS.stratforIndex);
-  const latestMatch = indexHtml.match(/href=["']([^"']+)["'][^>]*>\s*(?:Assessments\s*)?(?:[A-Z][a-z]+\s+\d{1,2},\s+\d{4}\s*)?U\.S\. Naval Update Map:\s*([^<]+)/i);
-  const articleUrl = absoluteUrl(latestMatch?.[1] || "/article/us-naval-update-map-may-21-2026", SOURCE_URLS.stratforIndex);
+  const articleUrl = findLatestStratforMapUrl(indexHtml) || absoluteUrl("/article/us-naval-update-map-may-21-2026", SOURCE_URLS.stratforIndex);
   const articleHtml = await fetchText(articleUrl);
   const title = stripTags(articleHtml.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1]) || "U.S. Naval Update Map";
   const publishedAt = articleDateFromTitle(title) || articleDateFromTitle(stripTags(articleHtml));
-  const imageUrl = extractMeta(articleHtml, "og:image") || cleanUrl(articleHtml.match(/https:\/\/worldview\.stratfor\.com\/sites\/default\/files\/[^"']+\.(?:jpg|jpeg|png)(?:\?[^"']+)?/i)?.[0]);
+  const imageUrl = bestMapImageUrl(articleHtml, articleUrl, "stratfor");
   return {
     ok: true,
     articleUrl,
@@ -334,6 +462,59 @@ async function scrapeStratfor() {
     publishedAt,
     imageUrl,
     assessments: []
+  };
+}
+
+async function scrapeTwz() {
+  const indexHtml = await fetchText(SOURCE_URLS.twzIndex);
+  const articleUrl = findLatestTwzUrl(indexHtml) || SOURCE_URLS.twzIndex;
+  const articleHtml = articleUrl === SOURCE_URLS.twzIndex ? indexHtml : await fetchText(articleUrl);
+  const title = stripTags(articleHtml.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1]) || extractMeta(articleHtml, "og:title") || "The War Zone Carrier Tracker";
+  const publishedAt = extractPublishedDate(articleHtml, title);
+  const imageUrl = bestMapImageUrl(articleHtml, articleUrl, "twz");
+  const articleText = articleTextFromHtml(articleHtml, /Latest in Carrier Tracker|More in Carrier Tracker|The War Zone Wire/);
+  const assessments = twzRespectivelyAssessments(articleText, { title, articleUrl, publishedAt, imageUrl });
+
+  for (const record of CARRIERS) {
+    if (!containsAlias(articleText, record)) continue;
+    if (assessments.some((assessment) => assessment.hull === record.hull)) continue;
+
+    const best = bestCarrierLocation(articleText, record);
+    if (!best || best.score < 5) continue;
+
+    const hint = best.hint;
+    const context = best.text;
+    const returned = /returned|arrived|pulled into|homecoming|upon arrival/i.test(context);
+    const status = returned && (hint.status === "port" || hint.status === "maintenance") ? hint.status : hint.status;
+
+    assessments.push({
+      hull: record.hull,
+      status,
+      locationName: hint.name,
+      position: { lat: hint.lat, lon: hint.lon },
+      confidence: "medium",
+      lastSeen: publishedAt,
+      summary: `${title} places ${record.name} in or near ${hint.name}.`,
+      sources: [
+        sourceFromArticle({
+          publisher: "The War Zone",
+          title,
+          url: articleUrl,
+          publishedAt,
+          note: `Text context: ${hint.name}`,
+          imageUrl
+        })
+      ]
+    });
+  }
+
+  return {
+    ok: true,
+    articleUrl,
+    title,
+    publishedAt,
+    imageUrl,
+    assessments
   };
 }
 
@@ -418,6 +599,7 @@ async function main() {
   const scrapers = [
     ["usni", scrapeUsni],
     ["stratfor", scrapeStratfor],
+    ["twz", scrapeTwz],
     ["gonavy", scrapeGoNavy]
   ];
 
@@ -426,7 +608,7 @@ async function main() {
       const result = await scraper();
       sourceStatus[key] = "ok";
       sourceSummaries[key] = {
-        publisher: key === "usni" ? "USNI News" : key === "stratfor" ? "Stratfor Worldview" : "GoNavy.jp",
+        publisher: key === "usni" ? "USNI News" : key === "stratfor" ? "Stratfor Worldview" : key === "twz" ? "The War Zone" : "GoNavy.jp",
         ...result
       };
       for (const assessment of result.assessments || []) {

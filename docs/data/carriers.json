@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-05-23T15:49:50.825Z",
+  "generatedAt": "2026-05-23T16:30:21.055Z",
   "sourceStatus": {
     "usni": "ok",
     "stratfor": "ok",
+    "twz": "ok",
     "gonavy": "ok"
   },
   "carriers": [
@@ -58,6 +59,14 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
         },
         {
+          "publisher": "The War Zone",
+          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
+          "publishedAt": "2026-05-17",
+          "note": "Text context: pulled into Norfolk, Virginia",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
+        },
+        {
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
@@ -110,6 +119,14 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
         },
         {
+          "publisher": "The War Zone",
+          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
+          "publishedAt": "2026-05-17",
+          "note": "Text context: pulled into San Diego, California",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
+        },
+        {
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
@@ -140,6 +157,14 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
         },
         {
+          "publisher": "The War Zone",
+          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
+          "publishedAt": "2026-05-17",
+          "note": "Text context: Arabian Sea",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
+        },
+        {
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
@@ -168,6 +193,14 @@
           "publishedAt": "2026-05-18",
           "note": "Text context: Yokosuka, Japan",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+        },
+        {
+          "publisher": "The War Zone",
+          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
+          "publishedAt": "2026-05-17",
+          "note": "Text context: pulled into Yokosuka, Japan",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         },
         {
           "publisher": "GoNavy.jp",
@@ -294,6 +327,14 @@
           "publishedAt": "2026-05-18",
           "note": "Text context: Norfolk, Virginia",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+        },
+        {
+          "publisher": "The War Zone",
+          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
+          "publishedAt": "2026-05-17",
+          "note": "Text context: Norfolk, Virginia",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         },
         {
           "publisher": "GoNavy.jp",
