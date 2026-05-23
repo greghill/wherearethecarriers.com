@@ -683,10 +683,16 @@ Task:
 - Treat all coordinates as approximate public-source image estimates.
 
 Trails and historical tracks (especially on Stratfor maps):
-- Some maps draw a colored line/trail showing a ship's movement over the past several weeks. The map's legend usually labels these (e.g. "Three weeks ago", "Two weeks ago", "One week ago", "This week").
-- The carrier's text label (e.g. "CVN 68") is placed next to the most recent point in the trail — typically the trail's endpoint.
-- Always return the coordinates of that labeled endpoint (the latest/current position), NOT the midpoint or average of the trail.
-- If the trail has multiple dots, pick the dot closest to the text label or the one corresponding to the "This week" / most-recent legend entry.
+- Stratfor uses color to distinguish ship classes: orange/red trails and dots are aircraft carriers (CVNs — what we want); blue/teal trails and dots are LHD amphibious ships, which we DO NOT track. Ignore every blue/teal dot, even if it appears to continue an orange line.
+
+For each CVN, follow this exact procedure:
+1. Find the text label on the map (e.g. "CVN 68"). Note the approximate latitude/longitude of where the LABEL TEXT itself sits.
+2. From that label, look at the nearest orange/red dot. The label is anchored adjacent to its dot — usually within ~2° lat/lon.
+3. Return that adjacent dot's coordinates as the carrier's current position. The dot's lat/lon should be VERY CLOSE to the label's lat/lon (within a couple of degrees), NOT a midpoint of the surrounding trail.
+4. If a multi-dot orange trail extends away from that dot, those farther dots are historical — DO NOT average them in. The dot touching the label is "this week"; dots farther from the label are progressively older.
+5. If a carrier has no trail (e.g. carriers parked in the Arabian Sea), there is just a single orange/red dot next to the label — return its coordinates.
+
+Sanity check before returning each carrier: the returned lat/lon must be within roughly 2° of where the carrier's text label appears on the map. If your number is farther than that from the label, re-anchor on the label and retry.
 
 Article title: ${sourceSummary.title || "unknown"}
 Article URL: ${sourceSummary.articleUrl || "unknown"}
