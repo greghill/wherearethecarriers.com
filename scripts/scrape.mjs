@@ -162,6 +162,12 @@ function imageUrlsFromHtml(html, baseUrl) {
   return [...new Set(urls)];
 }
 
+function upgradeStratforImageUrl(url) {
+  if (!url) return url;
+  const stripped = url.replace(/\/sites\/default\/files\/styles\/[^/]+\/public\//, "/sites/default/files/");
+  return stripped.split("?")[0];
+}
+
 function bestMapImageUrl(html, baseUrl, sourceKey) {
   const urls = imageUrlsFromHtml(html, baseUrl);
   const mapPatterns = {
@@ -169,7 +175,8 @@ function bestMapImageUrl(html, baseUrl, sourceKey) {
     twz: /Carrier-Tracker|carrier.*tracker|map/i,
     stratfor: /naval.*update.*map|display|map/i
   };
-  return urls.find((url) => mapPatterns[sourceKey]?.test(url)) || urls[0] || null;
+  const picked = urls.find((url) => mapPatterns[sourceKey]?.test(url)) || urls[0] || null;
+  return sourceKey === "stratfor" ? upgradeStratforImageUrl(picked) : picked;
 }
 
 function articleDateFromTitle(title) {
@@ -377,20 +384,21 @@ function applyAssessment(carrier, assessment) {
   const nextNewer = !carrier.lastSeen || (assessment.lastSeen && assessment.lastSeen >= carrier.lastSeen);
   const nextIsImage = isImageAssessment(assessment);
   const currentIsImage = carrier.positionPrecision === "image_estimate";
-  const imageCanRefine = nextIsImage && nextWeight >= 2 && isBroadRegionalAssessment(carrier) && nextNewer;
+  const imageCanRefine = nextIsImage && nextWeight >= 2 && isBroadRegionalAssessment(carrier) && imageMatchesCentroidRegion(carrier, assessment);
   const imageCanReplaceImage = nextIsImage && currentIsImage && (nextWeight > currentWeight || (nextWeight === currentWeight && nextNewer));
   const shouldReplace = nextIsImage
     ? carrier.confidence === "unknown" || imageCanRefine || imageCanReplaceImage
     : carrier.confidence === "unknown" || nextWeight > currentWeight || (nextWeight === currentWeight && nextNewer);
 
   if (shouldReplace) {
+    const refiningCentroid = nextIsImage && imageCanRefine && !currentIsImage;
     carrier.status = assessment.status || carrier.status;
-    carrier.locationName = assessment.locationName || carrier.locationName;
+    if (!refiningCentroid) carrier.locationName = assessment.locationName || carrier.locationName;
     carrier.position = assessment.position || carrier.position;
     carrier.positionPrecision = inferPositionPrecision(assessment);
     carrier.confidence = assessment.confidence || carrier.confidence;
-    carrier.lastSeen = assessment.lastSeen || carrier.lastSeen;
-    carrier.summary = assessment.summary || carrier.summary;
+    if (!refiningCentroid) carrier.lastSeen = assessment.lastSeen || carrier.lastSeen;
+    if (!refiningCentroid) carrier.summary = assessment.summary || carrier.summary;
   }
 
   for (const source of assessment.sources || []) {
@@ -412,6 +420,17 @@ function isBroadRegionalAssessment(carrier) {
   if (!carrier.position) return true;
   if (carrier.positionPrecision === "image_estimate") return false;
   return /sea|ocean|atlantic|pacific|mediterranean|indo-pacific|caribbean|centcom/i.test(carrier.locationName || "");
+}
+
+function imageMatchesCentroidRegion(carrier, assessment) {
+  const carrierHint = findLocationHint(carrier.locationName || "");
+  const imageHint = findLocationHint(assessment.locationName || "");
+  if (carrierHint && imageHint) return carrierHint.name === imageHint.name;
+
+  const ref = carrier.position;
+  const candidate = assessment.position;
+  if (!ref || !candidate) return false;
+  return Math.abs(ref.lat - candidate.lat) <= 8 && Math.abs(ref.lon - candidate.lon) <= 8;
 }
 
 function inferPositionPrecision(assessment) {
@@ -745,7 +764,7 @@ async function loadOpenAiImageAssessments(sourceSummaries, sourceStatus) {
 
   if (!imageSources.length) return [];
   if (!OPENAI_API_KEY) {
-    sourceStatus.openaiImages = "skipped: OPENAI_API_KEY not set";
+    recordStatus(sourceStatus, "openaiImages", "skipped", "OPENAI_API_KEY not set");
     return [];
   }
 
@@ -776,7 +795,8 @@ async function loadOpenAiImageAssessments(sourceSummaries, sourceStatus) {
   }
 
   if (cacheChanged) await saveImageAnalysisCache(cache);
-  sourceStatus.openaiImages = errors.length ? `partial: ${errors.join("; ")}` : "ok";
+  if (errors.length) recordStatus(sourceStatus, "openaiImages", "partial", errors.join("; "));
+  else recordStatus(sourceStatus, "openaiImages", "ok");
   return assessments;
 }
 
@@ -809,6 +829,30 @@ async function loadImagePointAssessments(sourceSummaries) {
   });
 }
 
+function carryStatusEntry(previousStatus, key) {
+  const prior = previousStatus?.[key];
+  if (prior && typeof prior === "object") {
+    return {
+      status: prior.status || "unknown",
+      lastFetchedAt: prior.lastFetchedAt || null,
+      lastSuccessAt: prior.lastSuccessAt || null,
+      lastErrorAt: prior.lastErrorAt || null,
+      message: prior.message || null
+    };
+  }
+  return { status: "unknown", lastFetchedAt: null, lastSuccessAt: null, lastErrorAt: null, message: null };
+}
+
+function recordStatus(sourceStatus, key, outcome, message) {
+  const now = new Date().toISOString();
+  const entry = sourceStatus[key];
+  entry.status = outcome;
+  entry.lastFetchedAt = now;
+  entry.message = message || null;
+  if (outcome === "ok") entry.lastSuccessAt = now;
+  else if (outcome === "error") entry.lastErrorAt = now;
+}
+
 async function main() {
   const previous = existsSync(DATA_PATH) ? JSON.parse(await readFile(DATA_PATH, "utf8")) : { carriers: [] };
   const carriers = new Map(CARRIERS.map((record) => [record.hull, blankCarrier(record)]));
@@ -822,10 +866,13 @@ async function main() {
     ["gonavy", scrapeGoNavy]
   ];
 
+  for (const [key] of scrapers) sourceStatus[key] = carryStatusEntry(previous.sourceStatus, key);
+  sourceStatus.openaiImages = carryStatusEntry(previous.sourceStatus, "openaiImages");
+
   for (const [key, scraper] of scrapers) {
     try {
       const result = await scraper();
-      sourceStatus[key] = "ok";
+      recordStatus(sourceStatus, key, "ok");
       sourceSummaries[key] = {
         publisher: key === "usni" ? "USNI News" : key === "stratfor" ? "Stratfor Worldview" : key === "twz" ? "The War Zone" : "GoNavy.jp",
         ...result
@@ -834,7 +881,7 @@ async function main() {
         applyAssessment(carriers.get(assessment.hull), assessment);
       }
     } catch (error) {
-      sourceStatus[key] = `error: ${error.message}`;
+      recordStatus(sourceStatus, key, "error", error.message);
     }
   }
 
@@ -867,8 +914,9 @@ async function main() {
 
   await writeFile(DATA_PATH, `${JSON.stringify(output, null, 2)}\n`);
   console.log(`Wrote ${output.carriers.length} carrier records to ${DATA_PATH.pathname}`);
-  for (const [key, status] of Object.entries(sourceStatus)) {
-    console.log(`${key}: ${status}`);
+  for (const [key, entry] of Object.entries(sourceStatus)) {
+    const suffix = entry.message ? ` (${entry.message})` : "";
+    console.log(`${key}: ${entry.status}${suffix}`);
   }
 }
 

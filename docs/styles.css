@@ -247,6 +247,30 @@ h1 {
   outline: none;
 }
 
+.stale-pill {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.stale-pill.stale-warn {
+  background: rgba(214, 158, 46, 0.18);
+  color: #8a5a00;
+  border: 1px solid rgba(214, 158, 46, 0.5);
+}
+
+.stale-pill.stale-old {
+  background: rgba(204, 50, 50, 0.18);
+  color: #8c1d1d;
+  border: 1px solid rgba(204, 50, 50, 0.5);
+}
+
 .chip.active {
   background: #183235;
   border-color: #183235;

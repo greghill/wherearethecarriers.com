@@ -80,6 +80,23 @@ function statusFor(carrier) {
   return carrier.status || "unknown";
 }
 
+function daysSince(value) {
+  if (!value) return null;
+  const parsed = /^\d{4}-\d{2}-\d{2}$/.test(value)
+    ? new Date(`${value}T00:00:00Z`)
+    : new Date(value);
+  if (Number.isNaN(parsed.getTime())) return null;
+  return Math.floor((Date.now() - parsed.getTime()) / 86400000);
+}
+
+function staleness(value) {
+  const days = daysSince(value);
+  if (days === null) return null;
+  if (days > 14) return { className: "stale-old", label: "very stale", days };
+  if (days > 7) return { className: "stale-warn", label: "stale", days };
+  return null;
+}
+
 function isVisible(carrier) {
   return state.filter === "all" || statusFor(carrier) === state.filter;
 }
@@ -253,7 +270,15 @@ function selectCarrier(hull, moveMap = false) {
   els.summary.textContent = carrier.summary || "No assessment has been generated yet.";
   els.status.textContent = statusLabels[statusFor(carrier)] || statusLabels.unknown;
   els.location.textContent = carrier.locationName || "Unknown";
-  els.seen.textContent = formatDate(carrier.lastSeen);
+  els.seen.textContent = "";
+  els.seen.append(document.createTextNode(formatDate(carrier.lastSeen)));
+  const stale = staleness(carrier.lastSeen);
+  if (stale) {
+    const badge = document.createElement("span");
+    badge.className = `stale-pill ${stale.className}`;
+    badge.textContent = `${stale.label} (${stale.days}d)`;
+    els.seen.append(" ", badge);
+  }
   renderSources(carrier);
   refreshMarkerIcons();
   renderFleet();
