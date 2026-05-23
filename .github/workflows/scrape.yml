@@ -19,7 +19,7 @@ jobs:
       - run: npm run scrape
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1' }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.5' }}
       - name: Commit updated data
         run: |
           if git diff --quiet docs/data/carriers.json scripts/map-image-cache.json; then
