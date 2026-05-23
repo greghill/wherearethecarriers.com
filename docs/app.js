@@ -35,11 +35,68 @@ const map = L.map("map", {
 
 L.control.zoom({ position: "bottomleft" }).addTo(map);
 
-L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-  attribution: "&copy; OpenStreetMap contributors &copy; CARTO",
+const tileOpts = {
   maxZoom: 9,
-  minZoom: 1
-}).addTo(map);
+  minZoom: 1,
+  keepBuffer: 4,
+  updateWhenZooming: false,
+  crossOrigin: true
+};
+const esri = (path, attribution = "Tiles &copy; Esri") => L.tileLayer(
+  `https://services.arcgisonline.com/arcgis/rest/services/${path}/MapServer/tile/{z}/{y}/{x}`,
+  { ...tileOpts, attribution }
+);
+const carto = (style) => L.tileLayer(
+  `https://{s}.basemaps.cartocdn.com/${style}/{z}/{x}/{y}{r}.png`,
+  { ...tileOpts, attribution: "&copy; OpenStreetMap contributors &copy; CARTO", subdomains: "abcd" }
+);
+
+const baseLayers = {
+  "CARTO Voyager": carto("rastertiles/voyager"),
+  "CARTO Positron": carto("light_all"),
+  "OpenStreetMap": L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    ...tileOpts, attribution: "&copy; OpenStreetMap contributors"
+  }),
+  "OpenTopoMap": L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
+    ...tileOpts, attribution: "&copy; OpenStreetMap contributors, SRTM | &copy; OpenTopoMap (CC-BY-SA)", subdomains: "abc"
+  }),
+  "Esri National Geographic": esri("NatGeo_World_Map"),
+  "Esri Light Gray Canvas": L.layerGroup([
+    esri("Canvas/World_Light_Gray_Base"),
+    esri("Canvas/World_Light_Gray_Reference", "")
+  ]),
+  "Esri World Street Map": esri("World_Street_Map"),
+  "Esri World Topographic": esri("World_Topo_Map"),
+  "Esri World Imagery (satellite)": L.layerGroup([
+    esri("World_Imagery", "Tiles &copy; Esri, Maxar, Earthstar Geographics"),
+    esri("Reference/World_Boundaries_and_Places", "")
+  ])
+};
+
+const defaultBasemap = "CARTO Voyager";
+let activeBasemap = baseLayers[defaultBasemap].addTo(map);
+
+const BasemapControl = L.Control.extend({
+  onAdd() {
+    const select = L.DomUtil.create("select", "basemap-select");
+    select.setAttribute("aria-label", "Basemap");
+    for (const name of Object.keys(baseLayers)) {
+      const opt = document.createElement("option");
+      opt.value = name;
+      opt.textContent = name;
+      select.appendChild(opt);
+    }
+    select.value = defaultBasemap;
+    L.DomEvent.disableClickPropagation(select);
+    L.DomEvent.disableScrollPropagation(select);
+    select.addEventListener("change", () => {
+      map.removeLayer(activeBasemap);
+      activeBasemap = baseLayers[select.value].addTo(map);
+    });
+    return select;
+  }
+});
+new BasemapControl({ position: "bottomleft" }).addTo(map);
 
 let state = {
   data: null,

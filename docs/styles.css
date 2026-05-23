@@ -277,6 +277,32 @@ h1 {
   color: #f8faf8;
 }
 
+.basemap-select {
+  font: inherit;
+  font-size: 0.85rem;
+  height: 32px;
+  padding: 0 28px 0 12px;
+  border: 1px solid rgba(32, 54, 58, 0.18);
+  border-radius: 999px;
+  background: rgba(248, 250, 248, 0.92);
+  color: var(--text);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%23182326' stroke-width='1.5'><path d='M1 1.5l5 5 5-5'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 10px 7px;
+}
+
+.basemap-select:hover,
+.basemap-select:focus-visible {
+  border-color: var(--accent);
+  outline: none;
+}
+
 .details-panel {
   position: relative;
   z-index: 700;
