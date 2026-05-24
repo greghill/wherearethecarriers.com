@@ -1,38 +1,38 @@
 {
-  "generatedAt": "2026-05-24T17:17:01.415Z",
+  "generatedAt": "2026-05-24T21:13:28.899Z",
   "sourceStatus": {
     "usni": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-24T17:16:57.840Z",
-      "lastSuccessAt": "2026-05-24T17:16:57.840Z",
+      "lastFetchedAt": "2026-05-24T21:13:25.718Z",
+      "lastSuccessAt": "2026-05-24T21:13:25.718Z",
       "lastErrorAt": null,
       "message": null
     },
     "stratfor": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-24T17:17:00.294Z",
-      "lastSuccessAt": "2026-05-24T17:17:00.294Z",
+      "lastFetchedAt": "2026-05-24T21:13:28.154Z",
+      "lastSuccessAt": "2026-05-24T21:13:28.154Z",
       "lastErrorAt": null,
       "message": null
     },
     "twz": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-24T17:17:00.814Z",
-      "lastSuccessAt": "2026-05-24T17:17:00.814Z",
+      "lastFetchedAt": "2026-05-24T21:13:28.369Z",
+      "lastSuccessAt": "2026-05-24T21:13:28.369Z",
       "lastErrorAt": null,
       "message": null
     },
     "gonavy": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-24T17:17:01.413Z",
-      "lastSuccessAt": "2026-05-24T17:17:01.413Z",
+      "lastFetchedAt": "2026-05-24T21:13:28.897Z",
+      "lastSuccessAt": "2026-05-24T21:13:28.897Z",
       "lastErrorAt": null,
       "message": null
     },
     "openaiImages": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-24T17:17:01.415Z",
-      "lastSuccessAt": "2026-05-24T17:17:01.415Z",
+      "lastFetchedAt": "2026-05-24T21:13:28.899Z",
+      "lastSuccessAt": "2026-05-24T21:13:28.899Z",
       "lastErrorAt": null,
       "message": null
     }
