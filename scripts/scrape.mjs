@@ -7,7 +7,7 @@ const IMAGE_ANALYSIS_CACHE_PATH = new URL("./map-image-cache.json", import.meta.
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-5.5";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const FORCE_IMAGE_REPROCESS = /^(1|true|yes)$/i.test(process.env.FORCE_IMAGE_REPROCESS || "");
-const CURRENT_SOURCE_DAYS = 21;
+const CURRENT_SOURCE_DAYS = 7;
 const AGING_SOURCE_DAYS = 90;
 
 const SOURCE_URLS = {
