@@ -20,7 +20,7 @@ Open `http://localhost:8080`.
 - Stratfor U.S. Naval Update Map: `https://worldview.stratfor.com/topic/tracking-us-naval-power`
 - The War Zone carrier tracker: `https://www.twz.com/category/carrier-tracker`
 
-USNI, Stratfor, and TWZ category/topic pages are treated as indexes. The scraper first discovers the latest actual tracker/map article, then parses that article and captures the likely tracker-map image URL as source evidence.
+USNI, Stratfor, and TWZ category/topic pages are treated as indexes. The scraper first discovers the latest actual tracker/map article, then parses that article and captures the likely tracker-map image URL as source context.
 
 ## Data flow
 
@@ -29,7 +29,7 @@ USNI, Stratfor, and TWZ category/topic pages are treated as indexes. The scraper
 - `scripts/scrape.mjs` fetches public source pages, parses source text, picks approximate map positions, and writes `docs/data/carriers.json`.
 - `.github/workflows/scrape.yml` runs hourly and commits back to the repository only when a carrier's status, location, or position actually changes (or when the OpenAI image cache picked up new analyses). The topbar's "scraped" timestamp comes from the live GitHub Actions API, so no-change runs leave no commit.
 
-The current JSON contract stays intentionally simple: one carrier record per ship, with selected status/location/confidence and an embedded list of supporting sources.
+The current JSON contract stays intentionally simple: one carrier record per ship, with selected status, location, last reported date, approximate position, and an embedded list of supporting sources.
 
 ## Source parsing notes
 
@@ -68,7 +68,6 @@ Copy `scripts/image-points.example.json` to `scripts/image-points.json` and add 
   "hull": "CVN-72",
   "locationName": "Arabian Sea",
   "position": { "lat": 18.0, "lon": 63.0 },
-  "confidence": "high",
   "note": "Point read from public Stratfor naval update map image."
 }
 ```
