@@ -504,7 +504,7 @@ function renderUpdatedHeader() {
   if (lastChangedAt) {
     const span = document.createElement("span");
     span.title = formatDate(lastChangedAt);
-    span.textContent = `Updated ${formatRelative(lastChangedAt)}`;
+    span.textContent = `updated ${formatRelative(lastChangedAt)}`;
     if (lastChangedAt === generatedAt) {
       const badge = document.createElement("span");
       badge.className = "fresh-badge";
@@ -521,15 +521,16 @@ function renderUpdatedHeader() {
     link.rel = "noreferrer";
     link.className = "scrape-link";
     link.title = formatDate(action.timestamp);
-    link.append("last scrape ", scrapeStatusIcon(action), ` ${formatRelative(action.timestamp)}`);
+    link.append("scraped ", scrapeStatusIcon(action), ` ${formatRelative(action.timestamp)}`);
     segments.push(link);
   } else if (generatedAt) {
     const span = document.createElement("span");
     span.title = formatDate(generatedAt);
-    span.textContent = `last scrape ${formatRelative(generatedAt)}`;
+    span.textContent = `scraped ${formatRelative(generatedAt)}`;
     segments.push(span);
   }
 
+  els.updated.append("Via public sources: ");
   segments.forEach((node, i) => {
     if (i > 0) els.updated.append(", ");
     els.updated.append(node);
