@@ -111,8 +111,6 @@ let state = {
 
 const els = {
   updated: document.querySelector("#updated"),
-  scrapedAt: document.querySelector("#scraped-at"),
-  changedAt: document.querySelector("#changed-at"),
   shipName: document.querySelector("#ship-name"),
   confidence: document.querySelector("#confidence"),
   summary: document.querySelector("#ship-summary"),
@@ -469,31 +467,33 @@ map.on("zoomend", renderMarkers);
 
 function renderUpdatedHeader() {
   const { generatedAt, lastChangedAt } = state.data || {};
-  els.scrapedAt.textContent = generatedAt
-    ? `Last checked ${formatRelative(generatedAt)} (${formatDate(generatedAt)})`
-    : "";
+  els.updated.textContent = "";
 
-  els.changedAt.textContent = "";
-  if (!lastChangedAt) {
-    els.changedAt.hidden = true;
-    return;
-  }
-  els.changedAt.hidden = false;
-  const isFresh = lastChangedAt === generatedAt;
-  els.changedAt.append(
-    document.createTextNode(`New info ${formatRelative(lastChangedAt)} (${formatDate(lastChangedAt)})`)
-  );
-  if (isFresh) {
-    const badge = document.createElement("span");
-    badge.className = "fresh-badge";
-    badge.textContent = "new";
-    els.changedAt.append(" ", badge);
+  if (!generatedAt) return;
+
+  els.updated.append("Via public sources: ");
+
+  const checked = document.createElement("span");
+  checked.title = formatDate(generatedAt);
+  checked.textContent = `checked ${formatRelative(generatedAt)}`;
+  els.updated.append(checked);
+
+  if (lastChangedAt) {
+    els.updated.append(", ");
+    const updated = document.createElement("span");
+    updated.title = formatDate(lastChangedAt);
+    updated.textContent = `updated ${formatRelative(lastChangedAt)}`;
+    els.updated.append(updated);
+    if (lastChangedAt === generatedAt) {
+      const badge = document.createElement("span");
+      badge.className = "fresh-badge";
+      badge.textContent = "new";
+      els.updated.append(" ", badge);
+    }
   }
 }
 
 loadData().catch((error) => {
-  els.scrapedAt.textContent = "Could not load carrier data.";
-  els.changedAt.textContent = "";
-  els.changedAt.hidden = true;
+  els.updated.textContent = "Could not load carrier data.";
   els.summary.textContent = error.message;
 });
