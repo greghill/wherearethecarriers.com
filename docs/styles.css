@@ -521,6 +521,12 @@ ul {
   text-transform: uppercase;
 }
 
+.source-use.backup {
+  border-color: rgba(101, 117, 121, 0.24);
+  background: rgba(101, 117, 121, 0.08);
+  color: var(--muted);
+}
+
 .source-label.source-gonavy {
   border-color: color-mix(in srgb, var(--source-gonavy) 42%, transparent);
   background: color-mix(in srgb, var(--source-gonavy) 13%, transparent);

@@ -339,7 +339,8 @@ function usedForLabel(source) {
   const labels = values
     .filter((value) => value !== "summary")
     .map((value) => value.replace("_", " "));
-  return labels.length ? labels.join(", ") : "";
+  if (labels.length) return labels.join(", ");
+  return source.role === "backup" ? "backup" : "";
 }
 
 function renderAboutSources() {
@@ -408,7 +409,7 @@ function renderSources(carrier) {
     const usedFor = usedForLabel(source);
     if (usedFor) {
       const usage = document.createElement("span");
-      usage.className = "source-use";
+      usage.className = `source-use${usedFor === "backup" ? " backup" : ""}`;
       usage.textContent = usedFor;
       labelRow.append(usage);
     }
