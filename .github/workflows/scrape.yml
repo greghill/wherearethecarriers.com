@@ -1,4 +1,4 @@
-name: Update carrier data
+name: Scrape latest carrier data
 
 on:
   schedule:
