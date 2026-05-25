@@ -31,6 +31,13 @@ const shortNames = {
   "CVN-78": "Ford"
 };
 
+const aboutSources = [
+  { publisher: "GoNavy.jp", url: "http://www.gonavy.jp/CVLocation.html" },
+  { publisher: "USNI News", url: "https://news.usni.org/category/fleet-tracker" },
+  { publisher: "Stratfor Worldview", url: "https://worldview.stratfor.com/topic/tracking-us-naval-power" },
+  { publisher: "The War Zone", url: "https://www.twz.com/category/carrier-tracker" }
+];
+
 const minMapZoom = window.innerWidth < 640 ? 1 : 3;
 
 const map = L.map("map", {
@@ -353,28 +360,16 @@ function sourceMediumLabel(source) {
 function renderAboutSources() {
   if (!els.aboutSources) return;
   els.aboutSources.innerHTML = "";
-  const sourceMap = new Map();
-
-  state.data.carriers.forEach((carrier) => {
-    (carrier.sources || []).forEach((source) => {
-      if (!source.url) return;
-      const publisher = source.publisher || "Source";
-      if (!sourceMap.has(publisher)) sourceMap.set(publisher, source);
-    });
+  aboutSources.forEach((source) => {
+    const link = document.createElement("a");
+    const sourceClass = sourceClassName(source);
+    link.className = `source-label${sourceClass ? ` ${sourceClass}` : ""}`;
+    link.href = source.url;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.textContent = source.publisher;
+    els.aboutSources.append(link);
   });
-
-  [...sourceMap.values()]
-    .sort((a, b) => (a.publisher || "").localeCompare(b.publisher || ""))
-    .forEach((source) => {
-      const link = document.createElement("a");
-      const sourceClass = sourceClassName(source);
-      link.className = `source-label${sourceClass ? ` ${sourceClass}` : ""}`;
-      link.href = source.url;
-      link.target = "_blank";
-      link.rel = "noreferrer";
-      link.textContent = source.publisher || "Source";
-      els.aboutSources.append(link);
-    });
 }
 
 function renderFleet() {
