@@ -449,6 +449,9 @@ function selectCarrier(hull, moveMap = false) {
   if (!carrier) return;
 
   state.selectedHull = carrier.hull;
+  if (state.filter !== "all" && statusFor(carrier) !== state.filter) {
+    setFilter("all");
+  }
   els.shipName.textContent = `${carrier.name} (${carrier.hull})`;
   els.confidence.textContent = confidenceLabels[carrier.confidence || "unknown"];
   els.confidence.className = `confidence${carrier.confidence ? "" : " muted"}`;
