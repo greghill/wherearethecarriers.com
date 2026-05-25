@@ -176,7 +176,12 @@ function bestMapImageUrl(html, baseUrl, sourceKey) {
     twz: /Carrier-Tracker|carrier.*tracker|map/i,
     stratfor: /naval.*update.*map|display|map/i
   };
-  const picked = urls.find((url) => mapPatterns[sourceKey]?.test(url)) || urls[0] || null;
+  const matches = urls.filter((url) => mapPatterns[sourceKey]?.test(url));
+  // USNI publishes revisions as suffixed siblings (FT_5_18_26.jpg, FT_5_18_26_a.jpg).
+  // The og:image often lags the body, so prefer the lexicographically-last filename.
+  const picked = sourceKey === "usni" && matches.length
+    ? [...matches].sort().at(-1)
+    : matches[0] || urls[0] || null;
   return sourceKey === "stratfor" ? upgradeStratforImageUrl(picked) : picked;
 }
 
@@ -300,7 +305,11 @@ function goNavyEntries(remarksHtml) {
 }
 
 function extractPublishedDate(html, fallbackText = "") {
-  const metaDate = extractMeta(html, "article:published_time") || html.match(/"datePublished"\s*:\s*"([^"]+)"/i)?.[1];
+  const metaDate =
+    extractMeta(html, "article:modified_time") ||
+    html.match(/"dateModified"\s*:\s*"([^"]+)"/i)?.[1] ||
+    extractMeta(html, "article:published_time") ||
+    html.match(/"datePublished"\s*:\s*"([^"]+)"/i)?.[1];
   if (metaDate) {
     const dateOnly = metaDate.match(/^(\d{4}-\d{2}-\d{2})/);
     if (dateOnly) return dateOnly[1];
@@ -476,10 +485,15 @@ function isBroadRegionalAssessment(carrier) {
 }
 
 function imageMatchesCentroidRegion(carrier, assessment) {
+  // Shared ocean (e.g. both mention "atlantic") is a stronger signal than the
+  // hint-table match, which can mislabel (LOCATION_HINTS treats every "western
+  // atlantic" string as Virginia Capes even when the image places the carrier
+  // off northern Brazil).
+  if (sharedWaterRegion(carrier.locationName, assessment.locationName)) return true;
+
   const carrierHint = findLocationHint(carrier.locationName || "");
   const imageHint = findLocationHint(assessment.locationName || "");
-  if (carrierHint && imageHint) return carrierHint.name === imageHint.name;
-  if (sharedWaterRegion(carrier.locationName, assessment.locationName)) return true;
+  if (carrierHint && imageHint && carrierHint.name === imageHint.name) return true;
 
   const ref = carrier.position;
   const candidate = assessment.position;
@@ -506,7 +520,7 @@ async function scrapeUsni() {
   const articleUrl = findLatestUsniTrackerUrl(indexHtml) || absoluteUrl("/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026", SOURCE_URLS.usniIndex);
   const articleHtml = await fetchText(articleUrl);
   const title = stripTags(articleHtml.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1]) || "USNI News Fleet and Marine Tracker";
-  const publishedAt = articleDateFromTitle(title) || articleDateFromTitle(stripTags(articleHtml));
+  const publishedAt = extractPublishedDate(articleHtml, title) || articleDateFromTitle(stripTags(articleHtml));
   const imageUrl = bestMapImageUrl(articleHtml, articleUrl, "usni");
   const articleText = articleTextFromHtml(articleHtml);
   const sections = sectionizeUsniArticle(articleHtml);
