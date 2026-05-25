@@ -413,19 +413,19 @@ function renderSources(carrier) {
     const labelRow = document.createElement("div");
     labelRow.className = "source-label-row";
     labelRow.append(publisher);
-    const usedFor = usedForLabel(source);
-    if (usedFor) {
-      const usage = document.createElement("span");
-      usage.className = `source-use${usedFor === "backup" ? " backup" : ""}`;
-      usage.textContent = usedFor;
-      labelRow.append(usage);
-    }
     const medium = sourceMediumLabel(source);
     if (medium) {
       const mediumBadge = document.createElement("span");
       mediumBadge.className = `source-medium ${medium}`;
       mediumBadge.textContent = medium;
       labelRow.append(mediumBadge);
+    }
+    const usedFor = usedForLabel(source);
+    if (usedFor) {
+      const usage = document.createElement("span");
+      usage.className = `source-use${usedFor === "backup" ? " backup" : ""}`;
+      usage.textContent = usedFor;
+      labelRow.append(usage);
     }
     const link = document.createElement("a");
     link.href = source.url;
