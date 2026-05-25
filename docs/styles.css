@@ -791,10 +791,34 @@ ul {
     display: none;
   }
 
-  .leaflet-control-attribution {
+  .leaflet-control-attribution.collapsed {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    font-size: 0;
+    line-height: 1;
+    cursor: pointer;
+  }
+
+  .leaflet-control-attribution.collapsed::before {
+    content: "ⓘ";
+    font-size: 14px;
+    color: #20393e;
+  }
+
+  .leaflet-control-attribution.collapsed.expanded {
+    width: auto;
     max-width: 230px;
+    padding: 0 5px;
     font-size: 0.62rem;
     line-height: 1.15;
+  }
+
+  .leaflet-control-attribution.collapsed.expanded::before {
+    content: none;
   }
 
   .details-panel {

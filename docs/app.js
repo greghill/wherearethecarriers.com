@@ -39,6 +39,16 @@ const map = L.map("map", {
 
 L.control.zoom({ position: "bottomleft" }).addTo(map);
 
+map.attributionControl.setPrefix(false);
+if (window.innerWidth < 640) {
+  const attribution = map.attributionControl.getContainer();
+  attribution.classList.add("collapsed");
+  attribution.addEventListener("click", (event) => {
+    event.stopPropagation();
+    attribution.classList.toggle("expanded");
+  });
+}
+
 const tileOpts = {
   maxZoom: 9,
   minZoom: minMapZoom,
@@ -143,21 +153,22 @@ function statusFor(carrier) {
   return carrier.status || "unknown";
 }
 
-function formatRelative(value) {
+function formatRelative(value, { withAgo = true } = {}) {
   if (!value) return null;
   const parsed = new Date(value);
   if (Number.isNaN(parsed.getTime())) return null;
   const seconds = Math.max(0, Math.round((Date.now() - parsed.getTime()) / 1000));
   if (seconds < 60) return "just now";
+  const suffix = withAgo ? " ago" : "";
   const minutes = Math.round(seconds / 60);
-  if (minutes < 60) return `${minutes}m ago`;
+  if (minutes < 60) return `${minutes}m${suffix}`;
   const hours = Math.round(minutes / 60);
-  if (hours < 24) return `${hours}h ago`;
+  if (hours < 24) return `${hours}h${suffix}`;
   const days = Math.round(hours / 24);
-  if (days < 30) return `${days}d ago`;
+  if (days < 30) return `${days}d${suffix}`;
   const months = Math.round(days / 30);
-  if (months < 12) return `${months}mo ago`;
-  return `${Math.round(months / 12)}y ago`;
+  if (months < 12) return `${months}mo${suffix}`;
+  return `${Math.round(months / 12)}y${suffix}`;
 }
 
 function daysSince(value) {
@@ -432,7 +443,9 @@ function updateFilterCounts() {
     const s = statusFor(carrier);
     counts[s] = (counts[s] || 0) + 1;
   });
-  const labels = { all: "Total", deployed: "Deployed", port: "At Port", maintenance: "Maintenance", unknown: "Unknown" };
+  const labels = window.innerWidth < 640
+    ? { all: "All", deployed: "Deployed", port: "Port", maintenance: "Maint.", unknown: "Unknown" }
+    : { all: "Total", deployed: "Deployed", port: "At Port", maintenance: "Maintenance", unknown: "Unknown" };
   els.filters.forEach((button) => {
     const key = button.dataset.filter;
     const n = counts[key] ?? 0;
@@ -501,6 +514,22 @@ function renderUpdatedHeader() {
 
   const segments = [];
 
+  if (action) {
+    const link = document.createElement("a");
+    link.href = action.htmlUrl;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.className = "scrape-link";
+    link.title = formatDate(action.timestamp);
+    link.append("scraped ", scrapeStatusIcon(action), ` ${formatRelative(action.timestamp, { withAgo: false })}`);
+    segments.push(link);
+  } else if (generatedAt) {
+    const span = document.createElement("span");
+    span.title = formatDate(generatedAt);
+    span.textContent = `scraped ${formatRelative(generatedAt, { withAgo: false })}`;
+    segments.push(span);
+  }
+
   if (lastChangedAt) {
     const span = document.createElement("span");
     span.title = formatDate(lastChangedAt);
@@ -511,22 +540,6 @@ function renderUpdatedHeader() {
       badge.textContent = "new";
       span.append(" ", badge);
     }
-    segments.push(span);
-  }
-
-  if (action) {
-    const link = document.createElement("a");
-    link.href = action.htmlUrl;
-    link.target = "_blank";
-    link.rel = "noreferrer";
-    link.className = "scrape-link";
-    link.title = formatDate(action.timestamp);
-    link.append("scraped ", scrapeStatusIcon(action), ` ${formatRelative(action.timestamp)}`);
-    segments.push(link);
-  } else if (generatedAt) {
-    const span = document.createElement("span");
-    span.title = formatDate(generatedAt);
-    span.textContent = `scraped ${formatRelative(generatedAt)}`;
     segments.push(span);
   }
 
