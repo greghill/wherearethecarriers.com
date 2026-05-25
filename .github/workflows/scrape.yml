@@ -2,7 +2,7 @@ name: Scrape latest carrier data
 
 on:
   schedule:
-    - cron: "17 * * * *"
+    - cron: "7 * * * *"
   workflow_dispatch:
     inputs:
       force_image_reprocess:
