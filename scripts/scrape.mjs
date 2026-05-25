@@ -1,4 +1,4 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { appendFile, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 
 const DATA_PATH = new URL("../docs/data/carriers.json", import.meta.url);
@@ -938,6 +938,26 @@ function sourceDateValue(source) {
   return Number.isNaN(date.getTime()) ? 0 : date.getTime();
 }
 
+function roundCoord(value) {
+  return typeof value === "number" && Number.isFinite(value) ? Math.round(value * 1000) / 1000 : null;
+}
+
+function positionKey(position) {
+  if (!position) return null;
+  const lat = roundCoord(position.lat);
+  const lon = roundCoord(position.lon);
+  if (lat === null || lon === null) return null;
+  return `${lat},${lon}`;
+}
+
+function isMeaningfulChange(oldCarrier, newCarrier) {
+  if (!oldCarrier) return true;
+  if ((oldCarrier.status || "unknown") !== (newCarrier.status || "unknown")) return true;
+  if ((oldCarrier.locationName || "") !== (newCarrier.locationName || "")) return true;
+  if (positionKey(oldCarrier.position) !== positionKey(newCarrier.position)) return true;
+  return false;
+}
+
 function finalizeCarrier(carrier) {
   const sources = carrier.sources.map((source, index) => ({
     _sourceOrder: source._sourceOrder ?? index,
@@ -1017,14 +1037,37 @@ async function main() {
     }
   }
 
+  const generatedAt = new Date().toISOString();
+  const previousByHull = new Map((previous.carriers || []).map((entry) => [entry.hull, entry]));
+  const changedHulls = [];
+
+  for (const carrier of carriers.values()) {
+    const oldCarrier = previousByHull.get(carrier.hull);
+    if (isMeaningfulChange(oldCarrier, carrier)) {
+      carrier.lastChangedAt = generatedAt;
+      changedHulls.push(carrier.hull);
+    } else {
+      carrier.lastChangedAt = oldCarrier?.lastChangedAt || null;
+    }
+  }
+
+  const lastChangedAt = changedHulls.length
+    ? generatedAt
+    : previous.lastChangedAt || null;
+
   const output = {
-    generatedAt: new Date().toISOString(),
+    generatedAt,
+    lastChangedAt,
     sourceStatus,
     carriers: [...carriers.values()].map(finalizeCarrier)
   };
 
   await writeFile(DATA_PATH, `${JSON.stringify(output, null, 2)}\n`);
   console.log(`Wrote ${output.carriers.length} carrier records to ${DATA_PATH.pathname}`);
+  console.log(`changedHulls=${changedHulls.join(",")}`);
+  if (process.env.GITHUB_OUTPUT) {
+    await appendFile(process.env.GITHUB_OUTPUT, `changedHulls=${changedHulls.join(",")}\n`);
+  }
   for (const [key, entry] of Object.entries(sourceStatus)) {
     const suffix = entry.message ? ` (${entry.message})` : "";
     console.log(`${key}: ${entry.status}${suffix}`);

@@ -70,13 +70,13 @@ const baseLayers = {
   ]),
   "Esri World Street Map": esri("World_Street_Map"),
   "Esri World Topographic": esri("World_Topo_Map"),
-  "Esri World Imagery (satellite)": L.layerGroup([
+  "Esri Satellite Imagery": L.layerGroup([
     esri("World_Imagery", "Tiles &copy; Esri, Maxar, Earthstar Geographics"),
     esri("Reference/World_Boundaries_and_Places", "")
   ])
 };
 
-const defaultBasemap = "Esri National Geographic";
+const defaultBasemap = "CARTO Voyager";
 let activeBasemap = baseLayers[defaultBasemap].addTo(map);
 
 const BasemapControl = L.Control.extend({
@@ -99,7 +99,7 @@ const BasemapControl = L.Control.extend({
     return select;
   }
 });
-new BasemapControl({ position: "bottomleft" }).addTo(map);
+new BasemapControl({ position: "bottomright" }).addTo(map);
 
 let state = {
   data: null,
@@ -111,6 +111,8 @@ let state = {
 
 const els = {
   updated: document.querySelector("#updated"),
+  scrapedAt: document.querySelector("#scraped-at"),
+  changedAt: document.querySelector("#changed-at"),
   shipName: document.querySelector("#ship-name"),
   confidence: document.querySelector("#confidence"),
   summary: document.querySelector("#ship-summary"),
@@ -139,6 +141,23 @@ function formatDate(value) {
 
 function statusFor(carrier) {
   return carrier.status || "unknown";
+}
+
+function formatRelative(value) {
+  if (!value) return null;
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return null;
+  const seconds = Math.max(0, Math.round((Date.now() - parsed.getTime()) / 1000));
+  if (seconds < 60) return "just now";
+  const minutes = Math.round(seconds / 60);
+  if (minutes < 60) return `${minutes}m ago`;
+  const hours = Math.round(minutes / 60);
+  if (hours < 24) return `${hours}h ago`;
+  const days = Math.round(hours / 24);
+  if (days < 30) return `${days}d ago`;
+  const months = Math.round(days / 30);
+  if (months < 12) return `${months}mo ago`;
+  return `${Math.round(months / 12)}y ago`;
 }
 
 function daysSince(value) {
@@ -427,7 +446,7 @@ async function loadData() {
     throw new Error(`Unable to load ${DATA_URL}: ${response.status}`);
   }
   state.data = await response.json();
-  els.updated.textContent = `Updated ${formatDate(state.data.generatedAt)} from public sources`;
+  renderUpdatedHeader();
   map.invalidateSize();
   state.selectedHull = state.data.carriers[0]?.hull || null;
   updateFilterCounts();
@@ -448,7 +467,33 @@ window.addEventListener("load", () => {
 
 map.on("zoomend", renderMarkers);
 
+function renderUpdatedHeader() {
+  const { generatedAt, lastChangedAt } = state.data || {};
+  els.scrapedAt.textContent = generatedAt
+    ? `Last checked ${formatRelative(generatedAt)} (${formatDate(generatedAt)})`
+    : "";
+
+  els.changedAt.textContent = "";
+  if (!lastChangedAt) {
+    els.changedAt.hidden = true;
+    return;
+  }
+  els.changedAt.hidden = false;
+  const isFresh = lastChangedAt === generatedAt;
+  els.changedAt.append(
+    document.createTextNode(`New info ${formatRelative(lastChangedAt)} (${formatDate(lastChangedAt)})`)
+  );
+  if (isFresh) {
+    const badge = document.createElement("span");
+    badge.className = "fresh-badge";
+    badge.textContent = "new";
+    els.changedAt.append(" ", badge);
+  }
+}
+
 loadData().catch((error) => {
-  els.updated.textContent = "Could not load carrier data.";
+  els.scrapedAt.textContent = "Could not load carrier data.";
+  els.changedAt.textContent = "";
+  els.changedAt.hidden = true;
   els.summary.textContent = error.message;
 });

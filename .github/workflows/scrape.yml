@@ -16,11 +16,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: npm run scrape
+      - id: scrape
+        run: npm run scrape
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.5' }}
       - name: Commit updated data
+        env:
+          CHANGED_HULLS: ${{ steps.scrape.outputs.changedHulls }}
         run: |
           if git diff --quiet docs/data/carriers.json scripts/map-image-cache.json; then
             echo "No data changes"
@@ -29,5 +32,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data/carriers.json scripts/map-image-cache.json
-          git commit -m "Update carrier data"
+          if [ -n "$CHANGED_HULLS" ]; then
+            hulls=$(echo "$CHANGED_HULLS" | sed 's/,/, /g')
+            git commit -m "Update carrier data: $hulls"
+          else
+            git commit -m "Scrape: no carrier changes"
+          fi
           git push

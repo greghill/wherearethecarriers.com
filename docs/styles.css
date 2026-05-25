@@ -164,6 +164,12 @@ a {
   right: 0;
 }
 
+.leaflet-bottom.leaflet-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .leaflet-control-zoom {
   margin: 0 0 18px 18px;
 }
@@ -225,6 +231,29 @@ h1 {
   color: #405256;
   font-size: 0.92rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#updated .updated-secondary {
+  color: #5a6c70;
+  font-size: 0.84rem;
+}
+
+.fresh-badge {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: middle;
+  background: rgba(46, 132, 92, 0.18);
+  color: #1d5e3d;
+  border: 1px solid rgba(46, 132, 92, 0.45);
 }
 
 .filters {
