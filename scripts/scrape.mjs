@@ -385,7 +385,7 @@ function applyAssessment(carrier, assessment) {
   const nextNewer = !carrier.lastSeen || (assessment.lastSeen && assessment.lastSeen >= carrier.lastSeen);
   const nextIsImage = isImageAssessment(assessment);
   const currentIsImage = carrier.positionPrecision === "image_estimate";
-  const imageCanRefine = nextIsImage && nextWeight >= 2 && isBroadRegionalAssessment(carrier) && imageMatchesCentroidRegion(carrier, assessment);
+  const imageCanRefine = nextIsImage && nextWeight >= 2 && nextNewer && isBroadRegionalAssessment(carrier) && imageMatchesCentroidRegion(carrier, assessment);
   const imageCanReplaceImage = nextIsImage && currentIsImage && (nextWeight > currentWeight || (nextWeight === currentWeight && nextNewer));
   const shouldReplace = nextIsImage
     ? carrier.confidence === "unknown" || imageCanRefine || imageCanReplaceImage
@@ -393,6 +393,8 @@ function applyAssessment(carrier, assessment) {
 
   if (shouldReplace) {
     const refiningCentroid = nextIsImage && imageCanRefine && !currentIsImage;
+    if (refiningCentroid) removePrimaryUsedFor(carrier, "position");
+    else demotePrimarySources(carrier);
     carrier.status = assessment.status || carrier.status;
     if (!refiningCentroid) carrier.locationName = assessment.locationName || carrier.locationName;
     carrier.position = assessment.position || carrier.position;
@@ -403,10 +405,60 @@ function applyAssessment(carrier, assessment) {
   }
 
   for (const source of assessment.sources || []) {
-    if (!carrier.sources.some((item) => item.url === source.url && item.note === source.note)) {
-      carrier.sources.push(source);
+    addCarrierSource(carrier, source, {
+      role: shouldReplace ? "primary" : "backup",
+      usedFor: shouldReplace ? usedForAssessment(assessment, nextIsImage && imageCanRefine && !currentIsImage) : [],
+      confidence: assessment.confidence,
+      lastSeen: assessment.lastSeen
+    });
+  }
+}
+
+function sourceIdentity(source) {
+  return `${source.url || ""}|${source.note || ""}`;
+}
+
+function addCarrierSource(carrier, source, metadata = {}) {
+  const existing = carrier.sources.find((item) => sourceIdentity(item) === sourceIdentity(source));
+  const nextRole = metadata.role || source.role || "backup";
+  const nextUsedFor = new Set([...(source.usedFor || []), ...(metadata.usedFor || [])]);
+  const target = existing || { ...source, role: "backup", usedFor: [], _sourceOrder: carrier.sources.length };
+
+  Object.assign(target, source);
+  target.role = target.role === "primary" || nextRole === "primary" ? "primary" : "backup";
+  target.usedFor = [...new Set([...(target.usedFor || []), ...nextUsedFor])];
+  target.sourceConfidence = metadata.confidence || target.sourceConfidence || source.sourceConfidence || null;
+  target.sourceLastSeen = metadata.lastSeen || target.sourceLastSeen || source.sourceLastSeen || source.publishedAt || null;
+
+  if (!existing) carrier.sources.push(target);
+}
+
+function demotePrimarySources(carrier) {
+  for (const source of carrier.sources) {
+    if (source.role === "primary") {
+      source.role = "backup";
+      source.usedFor = [];
     }
   }
+}
+
+function removePrimaryUsedFor(carrier, field) {
+  for (const source of carrier.sources) {
+    if (source.role === "primary") {
+      source.usedFor = (source.usedFor || []).filter((value) => value !== field);
+    }
+  }
+}
+
+function usedForAssessment(assessment, coordinateRefinement = false) {
+  if (coordinateRefinement) return ["coordinate_refinement"];
+
+  const fields = [];
+  if (assessment.status) fields.push("status");
+  if (assessment.locationName) fields.push("location");
+  if (assessment.position) fields.push("position");
+  if (assessment.summary) fields.push("summary");
+  return fields;
 }
 
 function confidenceWeight(value) {
@@ -427,11 +479,19 @@ function imageMatchesCentroidRegion(carrier, assessment) {
   const carrierHint = findLocationHint(carrier.locationName || "");
   const imageHint = findLocationHint(assessment.locationName || "");
   if (carrierHint && imageHint) return carrierHint.name === imageHint.name;
+  if (sharedWaterRegion(carrier.locationName, assessment.locationName)) return true;
 
   const ref = carrier.position;
   const candidate = assessment.position;
   if (!ref || !candidate) return false;
   return Math.abs(ref.lat - candidate.lat) <= 8 && Math.abs(ref.lon - candidate.lon) <= 8;
+}
+
+function sharedWaterRegion(a = "", b = "") {
+  const left = a.toLowerCase();
+  const right = b.toLowerCase();
+  return ["atlantic", "pacific", "mediterranean", "arabian sea", "red sea", "south china sea", "philippine sea"]
+    .some((region) => left.includes(region) && right.includes(region));
 }
 
 function inferPositionPrecision(assessment) {
@@ -776,20 +836,21 @@ async function loadOpenAiImageAssessments(sourceSummaries, sourceStatus) {
     .filter(([sourceKey, summary]) => ["usni", "stratfor", "twz"].includes(sourceKey) && summary.imageUrl);
 
   if (!imageSources.length) return [];
-  if (!OPENAI_API_KEY) {
-    recordStatus(sourceStatus, "openaiImages", "skipped", "OPENAI_API_KEY not set");
-    return [];
-  }
 
   const cache = await loadImageAnalysisCache();
   let cacheChanged = false;
   const assessments = [];
   const errors = [];
+  const skipped = [];
 
   for (const [sourceKey, summary] of imageSources) {
     const cacheKey = cacheKeyForImage(summary);
     try {
       if (!cache.analyses[cacheKey] || FORCE_IMAGE_REPROCESS) {
+        if (!OPENAI_API_KEY) {
+          skipped.push(sourceKey);
+          continue;
+        }
         cache.analyses[cacheKey] = {
           sourceKey,
           model: OPENAI_MODEL,
@@ -809,6 +870,7 @@ async function loadOpenAiImageAssessments(sourceSummaries, sourceStatus) {
 
   if (cacheChanged) await saveImageAnalysisCache(cache);
   if (errors.length) recordStatus(sourceStatus, "openaiImages", "partial", errors.join("; "));
+  else if (skipped.length) recordStatus(sourceStatus, "openaiImages", assessments.length ? "partial" : "skipped", `OPENAI_API_KEY not set; no cached analysis for ${skipped.join(", ")}`);
   else recordStatus(sourceStatus, "openaiImages", "ok");
   return assessments;
 }
@@ -825,6 +887,7 @@ async function loadImagePointAssessments(sourceSummaries) {
       status: point.status || "deployed",
       locationName: point.locationName,
       position: point.position,
+      positionPrecision: "image_estimate",
       confidence: point.confidence || "medium",
       lastSeen: point.lastSeen || sourceSummary.publishedAt,
       summary: point.summary || `${record?.name || point.hull} was placed from a public map image.`,
@@ -864,6 +927,36 @@ function recordStatus(sourceStatus, key, outcome, message) {
   entry.message = message || null;
   if (outcome === "ok") entry.lastSuccessAt = now;
   else if (outcome === "error") entry.lastErrorAt = now;
+}
+
+function sourceRoleRank(source) {
+  return source.role === "primary" ? 0 : 1;
+}
+
+function sourceDateValue(source) {
+  const date = new Date(source.sourceLastSeen || source.publishedAt || 0);
+  return Number.isNaN(date.getTime()) ? 0 : date.getTime();
+}
+
+function finalizeCarrier(carrier) {
+  const sources = carrier.sources.map((source, index) => ({
+    _sourceOrder: source._sourceOrder ?? index,
+    role: source.role || "backup",
+    usedFor: source.usedFor || [],
+    ...source
+  }));
+
+  sources.sort((a, b) =>
+    sourceRoleRank(a) - sourceRoleRank(b) ||
+    confidenceWeight(b.sourceConfidence) - confidenceWeight(a.sourceConfidence) ||
+    sourceDateValue(b) - sourceDateValue(a) ||
+    a._sourceOrder - b._sourceOrder
+  );
+
+  return {
+    ...carrier,
+    sources: sources.map(({ _sourceOrder, sourceConfidence, sourceLastSeen, ...source }) => source)
+  };
 }
 
 async function main() {
@@ -915,14 +1008,19 @@ async function main() {
       carrier.confidence = "low";
       carrier.lastSeen = oldCarrier.lastSeen;
       carrier.summary = `No fresh source matched this run, so this is a stale prior assessment: ${oldCarrier.summary}`;
-      carrier.sources = oldCarrier.sources || [];
+      carrier.sources = (oldCarrier.sources || []).map((source, index) => ({
+        ...source,
+        role: "backup",
+        usedFor: [],
+        _sourceOrder: index
+      }));
     }
   }
 
   const output = {
     generatedAt: new Date().toISOString(),
     sourceStatus,
-    carriers: [...carriers.values()]
+    carriers: [...carriers.values()].map(finalizeCarrier)
   };
 
   await writeFile(DATA_PATH, `${JSON.stringify(output, null, 2)}\n`);
