@@ -1,39 +1,39 @@
 {
-  "generatedAt": "2026-05-25T16:25:52.855Z",
+  "generatedAt": "2026-05-25T16:29:03.427Z",
   "lastChangedAt": "2026-05-25T16:25:52.855Z",
   "sourceStatus": {
     "usni": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:25:04.033Z",
-      "lastSuccessAt": "2026-05-25T16:25:04.033Z",
+      "lastFetchedAt": "2026-05-25T16:28:59.716Z",
+      "lastSuccessAt": "2026-05-25T16:28:59.716Z",
       "lastErrorAt": null,
       "message": null
     },
     "stratfor": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:25:06.078Z",
-      "lastSuccessAt": "2026-05-25T16:25:06.078Z",
+      "lastFetchedAt": "2026-05-25T16:29:02.559Z",
+      "lastSuccessAt": "2026-05-25T16:29:02.559Z",
       "lastErrorAt": null,
       "message": null
     },
     "twz": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:25:06.167Z",
-      "lastSuccessAt": "2026-05-25T16:25:06.167Z",
+      "lastFetchedAt": "2026-05-25T16:29:02.866Z",
+      "lastSuccessAt": "2026-05-25T16:29:02.866Z",
       "lastErrorAt": null,
       "message": null
     },
     "gonavy": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:25:06.742Z",
-      "lastSuccessAt": "2026-05-25T16:25:06.742Z",
+      "lastFetchedAt": "2026-05-25T16:29:03.425Z",
+      "lastSuccessAt": "2026-05-25T16:29:03.425Z",
       "lastErrorAt": null,
       "message": null
     },
     "openaiImages": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:25:52.854Z",
-      "lastSuccessAt": "2026-05-25T16:25:52.854Z",
+      "lastFetchedAt": "2026-05-25T16:29:03.427Z",
+      "lastSuccessAt": "2026-05-25T16:29:03.427Z",
       "lastErrorAt": null,
       "message": null
     }
@@ -50,7 +50,7 @@
       },
       "positionPrecision": "image_estimate",
       "confidence": "medium",
-      "lastSeen": "2026-05-20",
+      "lastSeen": "2026-05-21",
       "summary": "GoNavy's latest table entry places USS Nimitz in or near South Atlantic: 11May-18May2026, off the eastern coast of Brazil",
       "sources": [
         {
@@ -285,7 +285,7 @@
       },
       "positionPrecision": "image_estimate",
       "confidence": "medium",
-      "lastSeen": "2026-05-20",
+      "lastSeen": "2026-05-21",
       "summary": "GoNavy's latest table entry places USS Abraham Lincoln in or near Arabian Sea: 28Feb-18May2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
         {
@@ -561,7 +561,7 @@
       },
       "positionPrecision": "image_estimate",
       "confidence": "medium",
-      "lastSeen": "2026-05-20",
+      "lastSeen": "2026-05-21",
       "summary": "GoNavy's latest table entry places USS George H.W. Bush in or near Arabian Sea: 27Apr-18May2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
         {
