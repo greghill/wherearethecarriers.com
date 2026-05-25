@@ -1,4 +1,5 @@
 const DATA_URL = "./data/carriers.json";
+const ACTIONS_API_URL = "https://api.github.com/repos/greghill/wherearethecarriers.com/actions/workflows/scrape.yml/runs?per_page=1";
 
 const statusLabels = {
   deployed: "Deployed",
@@ -103,6 +104,7 @@ new BasemapControl({ position: "bottomright" }).addTo(map);
 
 let state = {
   data: null,
+  actionRun: null,
   filter: "all",
   selectedHull: null,
   markers: new Map(),
@@ -466,31 +468,90 @@ window.addEventListener("load", () => {
 
 map.on("zoomend", renderMarkers);
 
+function scrapeStatusIcon(action) {
+  const span = document.createElement("span");
+  span.className = "scrape-status";
+  let label;
+  if (action.status === "in_progress" || action.status === "queued") {
+    span.classList.add("in-progress");
+    span.textContent = "⏳";
+    label = "in progress";
+  } else if (action.conclusion === "success") {
+    span.classList.add("ok");
+    span.textContent = "✓";
+    label = "succeeded";
+  } else if (action.conclusion === "failure" || action.conclusion === "cancelled" || action.conclusion === "timed_out") {
+    span.classList.add("fail");
+    span.textContent = "✗";
+    label = action.conclusion;
+  } else {
+    span.textContent = "•";
+    label = action.conclusion || action.status || "unknown";
+  }
+  span.setAttribute("aria-label", label);
+  return span;
+}
+
 function renderUpdatedHeader() {
   const { generatedAt, lastChangedAt } = state.data || {};
+  const action = state.actionRun;
   els.updated.textContent = "";
 
-  if (!generatedAt) return;
+  if (!generatedAt && !action) return;
 
-  els.updated.append("Via public sources: ");
-
-  const checked = document.createElement("span");
-  checked.title = formatDate(generatedAt);
-  checked.textContent = `checked ${formatRelative(generatedAt)}`;
-  els.updated.append(checked);
+  const segments = [];
 
   if (lastChangedAt) {
-    els.updated.append(", ");
-    const updated = document.createElement("span");
-    updated.title = formatDate(lastChangedAt);
-    updated.textContent = `updated ${formatRelative(lastChangedAt)}`;
-    els.updated.append(updated);
+    const span = document.createElement("span");
+    span.title = formatDate(lastChangedAt);
+    span.textContent = `Updated ${formatRelative(lastChangedAt)}`;
     if (lastChangedAt === generatedAt) {
       const badge = document.createElement("span");
       badge.className = "fresh-badge";
       badge.textContent = "new";
-      els.updated.append(" ", badge);
+      span.append(" ", badge);
     }
+    segments.push(span);
+  }
+
+  if (action) {
+    const link = document.createElement("a");
+    link.href = action.htmlUrl;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.className = "scrape-link";
+    link.title = formatDate(action.timestamp);
+    link.append("last scrape ", scrapeStatusIcon(action), ` ${formatRelative(action.timestamp)}`);
+    segments.push(link);
+  } else if (generatedAt) {
+    const span = document.createElement("span");
+    span.title = formatDate(generatedAt);
+    span.textContent = `last scrape ${formatRelative(generatedAt)}`;
+    segments.push(span);
+  }
+
+  segments.forEach((node, i) => {
+    if (i > 0) els.updated.append(", ");
+    els.updated.append(node);
+  });
+}
+
+async function loadActionStatus() {
+  try {
+    const response = await fetch(ACTIONS_API_URL);
+    if (!response.ok) return;
+    const data = await response.json();
+    const run = data.workflow_runs?.[0];
+    if (!run) return;
+    state.actionRun = {
+      timestamp: run.updated_at || run.run_started_at,
+      conclusion: run.conclusion,
+      status: run.status,
+      htmlUrl: run.html_url
+    };
+    renderUpdatedHeader();
+  } catch {
+    // Silent fallback to carriers.json's generatedAt
   }
 }
 
@@ -498,3 +559,5 @@ loadData().catch((error) => {
   els.updated.textContent = "Could not load carrier data.";
   els.summary.textContent = error.message;
 });
+
+loadActionStatus();
