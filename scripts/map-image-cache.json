@@ -502,7 +502,7 @@
       "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg",
       "articleUrl": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
       "publishedAt": "2026-05-18",
-      "createdAt": "2026-05-23T19:28:57.442Z",
+      "createdAt": "2026-05-25T16:02:59.034Z",
       "result": {
         "sourceKey": "usni",
         "imageUrl": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
@@ -511,32 +511,22 @@
           {
             "hull": "CVN-68",
             "name": "USS Nimitz",
-            "locationName": "South Atlantic, off eastern Brazil",
-            "lat": -20,
-            "lon": -30,
+            "locationName": "South Atlantic, east of Brazil",
+            "lat": -24,
+            "lon": -33,
             "confidence": "medium",
-            "evidenceText": "Map label reads “USS Nimitz (CVN-68)” with a yellow diamond just east of Brazil in the South Atlantic.",
-            "rationale": "Estimated from the visible diamond adjacent to the Nimitz label, southeast/east of Brazil’s bulge, not from a generic regional centroid."
+            "evidenceText": "Map shows a yellow diamond with label “USS Nimitz (CVN-68)” in the South Atlantic just east of Brazil.",
+            "rationale": "Position estimated from the diamond adjacent to the Nimitz label, not from a regional centroid; it appears offshore of southeastern Brazil in the western South Atlantic."
           },
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
-            "locationName": "Arabian Sea",
-            "lat": 19,
-            "lon": 68.5,
+            "locationName": "Arabian Sea, west of India",
+            "lat": 18,
+            "lon": 68,
             "confidence": "medium",
-            "evidenceText": "Stacked map label includes “Abraham Lincoln CSG” next to a yellow diamond in the Arabian Sea west of India.",
-            "rationale": "The carrier label is anchored to the nearby diamond west of India/south of Pakistan; Abraham Lincoln and George H.W. Bush are shown together at the same visible marker."
-          },
-          {
-            "hull": "CVN-77",
-            "name": "USS George H.W. Bush",
-            "locationName": "Arabian Sea",
-            "lat": 19,
-            "lon": 68.5,
-            "confidence": "medium",
-            "evidenceText": "Stacked map label includes “George H.W. Bush CSG” next to the same yellow diamond in the Arabian Sea west of India.",
-            "rationale": "The label is colocated with the Abraham Lincoln CSG label at the same adjacent marker west of India; no separate nearby carrier marker is visible."
+            "evidenceText": "Map label stack includes “Abraham Lincoln CSG” beside a single yellow diamond west of India, also labeled with George H.W. Bush CSG and USS Tripoli.",
+            "rationale": "Returned the adjacent diamond position for the carrier label cluster; the marker appears in the Arabian Sea off India’s west coast."
           },
           {
             "hull": "CVN-73",
@@ -545,18 +535,28 @@
             "lat": 35.3,
             "lon": 139.7,
             "confidence": "high",
-            "evidenceText": "Map label reads “George Washington CSG / Yokosuka, Japan” with a yellow diamond at Japan.",
-            "rationale": "The marker is placed at the Yokosuka/Tokyo Bay area on Honshu, matching the label location."
+            "evidenceText": "Map shows “George Washington CSG Yokosuka, Japan” with a yellow diamond at Yokosuka.",
+            "rationale": "Marker is adjacent to the Yokosuka label on Japan’s east coast; coordinates approximate the visible port marker."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea, west of India",
+            "lat": 18,
+            "lon": 68,
+            "confidence": "medium",
+            "evidenceText": "Map label stack includes “George H.W. Bush CSG” beside the same yellow diamond west of India as Abraham Lincoln CSG.",
+            "rationale": "The map does not show a separate carrier marker for George H.W. Bush; returned the shared adjacent diamond position in the Arabian Sea."
           },
           {
             "hull": "CVN-78",
             "name": "USS Gerald R. Ford",
-            "locationName": "Norfolk, Va.",
+            "locationName": "Norfolk, Virginia",
             "lat": 36.9,
             "lon": -76.3,
             "confidence": "high",
-            "evidenceText": "Map label reads “Ford CSG / Norfolk, Va.” with a yellow diamond on the U.S. East Coast.",
-            "rationale": "The marker is placed at the Norfolk, Virginia area, directly adjacent to the Ford CSG label."
+            "evidenceText": "Map shows “Ford CSG Norfolk, Va.” with a yellow diamond on the U.S. East Coast near Norfolk.",
+            "rationale": "Marker is adjacent to the Norfolk label; coordinates approximate the visible Norfolk-area carrier marker."
           }
         ]
       }
@@ -567,7 +567,7 @@
       "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260520%20display.png",
       "articleUrl": "https://worldview.stratfor.com/article/us-naval-update-map-may-21-2026",
       "publishedAt": "2026-05-21",
-      "createdAt": "2026-05-23T19:29:57.840Z",
+      "createdAt": "2026-05-25T16:04:09.864Z",
       "result": {
         "sourceKey": "stratfor",
         "imageUrl": "https://worldview.stratfor.com/article/us-naval-update-map-may-21-2026",
@@ -576,32 +576,32 @@
           {
             "hull": "CVN-68",
             "name": "USS Nimitz",
-            "locationName": "equatorial Atlantic off northern Brazil",
-            "lat": 0,
-            "lon": -41.4,
-            "confidence": "high",
-            "evidenceText": "Orange/red carrier dot directly below and adjacent to the label \"CVN 68\" off the northern coast of South America.",
-            "rationale": "Used the current-week orange/red dot touching the CVN 68 label; did not average the older orange trail extending southward."
+            "locationName": "Western Atlantic, off northern Brazil",
+            "lat": -0.8,
+            "lon": -40.1,
+            "confidence": "medium",
+            "evidenceText": "Orange/red label “CVN 68” appears just off the northern coast of Brazil, with the current-week orange dot immediately beside the label at the northern end of the orange trail.",
+            "rationale": "Returned the adjacent orange/red current-position dot next to the CVN 68 label, not the older trail dots extending south along South America."
           },
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
-            "locationName": "north Arabian Sea / Gulf of Oman area",
-            "lat": 19.3,
-            "lon": 62.3,
-            "confidence": "high",
-            "evidenceText": "Orange/red carrier dot adjacent to the label \"CVN 72\" east of the Arabian Peninsula and west of India.",
-            "rationale": "Selected the upper orange/red dot nearest the CVN 72 label; ignored nearby blue LHA 7 marker."
+            "locationName": "Arabian Sea, southeast of Oman",
+            "lat": 19,
+            "lon": 63.8,
+            "confidence": "medium",
+            "evidenceText": "Orange/red label “CVN 72” is shown in the Arabian Sea with a single adjacent orange/red dot just to the lower-right of the label.",
+            "rationale": "Used the orange/red dot directly anchored to the CVN 72 label. Nearby blue LHA marker was ignored as amphibious/teal-blue class."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
-            "locationName": "north Arabian Sea",
-            "lat": 15.3,
-            "lon": 60.4,
-            "confidence": "high",
-            "evidenceText": "Orange/red carrier dot adjacent to the label \"CVN 77\" in the Arabian Sea, southwest of the CVN 72 marker.",
-            "rationale": "Selected the lower orange/red dot nearest the CVN 77 label and preserved its separation from CVN 72; ignored the nearby blue LHA 7 marker."
+            "locationName": "Arabian Sea, southeast of Oman",
+            "lat": 15.5,
+            "lon": 62,
+            "confidence": "medium",
+            "evidenceText": "Orange/red label “CVN 77” is shown slightly southwest of the CVN 72 marker in the Arabian Sea, with its adjacent orange/red dot beside the label.",
+            "rationale": "Returned the separate orange/red dot next to the CVN 77 label, preserving separation from CVN 72 and ignoring the nearby blue LHA 7 marker."
           }
         ]
       }
@@ -612,7 +612,7 @@
       "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200",
       "articleUrl": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
       "publishedAt": "2026-05-17",
-      "createdAt": "2026-05-23T19:31:15.765Z",
+      "createdAt": "2026-05-25T16:05:44.590Z",
       "result": {
         "sourceKey": "twz",
         "imageUrl": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
@@ -621,52 +621,52 @@
           {
             "hull": "CVN-68",
             "name": "USS Nimitz",
-            "locationName": "South Atlantic, off northeast Brazil",
-            "lat": -7.5,
-            "lon": -34,
+            "locationName": "South Atlantic, off eastern South America",
+            "lat": -22,
+            "lon": -37,
             "confidence": "medium",
-            "evidenceText": "Orange label “USS NIMITZ (CVN 68)” is shown in the South Atlantic just east of Brazil; the adjacent orange current dot is at the west end of the short orange trail next to the label.",
-            "rationale": "Estimated the current dot beside the label, not the farther orange trail segment extending eastward."
+            "evidenceText": "Orange CVN label 'USS NIMITZ (CVN 68)' appears in the South Atlantic east of Brazil, with the adjacent orange dot just to the left of the label.",
+            "rationale": "Estimated the current-position orange dot immediately adjacent to the CVN 68 label, not the longer orange line extending eastward."
           },
           {
             "hull": "CVN-69",
             "name": "USS Dwight D. Eisenhower",
-            "locationName": "Norfolk, Virginia area",
-            "lat": 36.8,
-            "lon": -76.2,
-            "confidence": "high",
-            "evidenceText": "Blue label “USS DWIGHT D. EISENHOWER (CVN 69)” appears directly below the Norfolk cluster on the U.S. East Coast.",
-            "rationale": "The blue at-port dot/label is adjacent to Norfolk, VA; coordinate is placed on the visible Norfolk-area marker cluster."
+            "locationName": "Western Atlantic, east of Norfolk",
+            "lat": 34.8,
+            "lon": -70.5,
+            "confidence": "medium",
+            "evidenceText": "Blue at-port/deployed marker labeled 'USS DWIGHT D. EISENHOWER (CVN 69)' is just off the U.S. East Coast, below the Ford/Norfolk label cluster.",
+            "rationale": "The dot next to the CVN 69 label sits a few degrees east-southeast of the Norfolk area in the western Atlantic."
           },
           {
             "hull": "CVN-70",
             "name": "USS Carl Vinson",
-            "locationName": "Off Southern California",
-            "lat": 33,
-            "lon": -122,
+            "locationName": "Southern California coast / San Diego area",
+            "lat": 32.8,
+            "lon": -117.2,
             "confidence": "medium",
-            "evidenceText": "Orange label “USS CARL VINSON (CVN 70)” appears west of the U.S. West Coast near the Southern California/San Diego area, next to an orange current marker/trail.",
-            "rationale": "Returned the orange dot adjacent to the Carl Vinson label, preserving it offshore rather than placing it at the San Diego homeport square."
+            "evidenceText": "Red label 'USS CARL VINSON (CVN 70)' is in the Southern California cluster near the 'SAN DIEGO, CA' callout, with the adjacent red dot at the coast.",
+            "rationale": "Used the dot nearest the CVN 70 label in the San Diego-area carrier cluster."
           },
           {
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
-            "locationName": "San Diego, California area",
-            "lat": 32.7,
-            "lon": -117.2,
-            "confidence": "high",
-            "evidenceText": "Blue label “USS THEODORE ROOSEVELT (CVN 71)” is shown at the San Diego cluster on the U.S. West Coast.",
-            "rationale": "The visible blue at-port marker is adjacent to the San Diego, CA label and homeport square."
+            "locationName": "Southern California coast / San Diego area",
+            "lat": 32.6,
+            "lon": -117.5,
+            "confidence": "medium",
+            "evidenceText": "Blue label 'USS THEODORE ROOSEVELT (CVN 71)' appears just southwest of the San Diego callout, with the adjacent blue dot near the coast.",
+            "rationale": "Returned the adjacent blue CVN dot beside the label, preserving separation from the nearby Carl Vinson marker."
           },
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
-            "locationName": "Northern Arabian Sea / Gulf of Oman approaches",
-            "lat": 22.5,
-            "lon": 60,
+            "locationName": "Arabian Sea / Gulf of Oman area",
+            "lat": 23,
+            "lon": 62,
             "confidence": "medium",
-            "evidenceText": "Green label “USS ABRAHAM LINCOLN (CVN 72)” is shown in the northern Arabian Sea, just east/southeast of Oman, with a green dot immediately next to the label.",
-            "rationale": "Used the upper green CVN marker next to the Abraham Lincoln label and did not average it with other nearby deployed markers."
+            "evidenceText": "Green label 'USS ABRAHAM LINCOLN (CVN 72)' appears in the northern Arabian Sea/Oman area with a green dot directly above the label.",
+            "rationale": "Used the green CVN dot immediately adjacent to the label, not nearby amphibious markers."
           },
           {
             "hull": "CVN-73",
@@ -675,28 +675,28 @@
             "lat": 35.3,
             "lon": 139.7,
             "confidence": "high",
-            "evidenceText": "Blue label “USS GEORGE WASHINGTON (CVN 73)” appears at the Yokosuka, Japan marker on the western Pacific side of the map.",
-            "rationale": "The marker is adjacent to the Yokosuka, Japan homeport label."
+            "evidenceText": "Blue marker labeled 'USS GEORGE WASHINGTON (CVN 73)' sits at the Yokosuka, Japan callout.",
+            "rationale": "The CVN 73 dot is anchored at the Yokosuka label on Tokyo Bay."
           },
           {
             "hull": "CVN-74",
             "name": "USS John C. Stennis",
-            "locationName": "Newport News / Norfolk, Virginia area",
-            "lat": 37,
-            "lon": -76.4,
-            "confidence": "high",
-            "evidenceText": "Label “USS JOHN C. STENNIS (CVN 74)” is shown in the Virginia East Coast cluster near Norfolk/Newport News.",
-            "rationale": "Placed the carrier at the visible Virginia shipyard/port cluster associated with the Stennis label."
+            "locationName": "U.S. West Coast, Southern California offshore",
+            "lat": 34.2,
+            "lon": -121,
+            "confidence": "low",
+            "evidenceText": "Red label 'USS JOHN C. STENNIS (CVN 74)' is visible in the dense West Coast cluster, with a red dot just offshore of California near the label.",
+            "rationale": "Estimated the closest red dot to the CVN 74 label; the cluster is dense, so confidence is lower."
           },
           {
             "hull": "CVN-75",
             "name": "USS Harry S. Truman",
-            "locationName": "Norfolk, Virginia area",
-            "lat": 36.9,
-            "lon": -76.3,
-            "confidence": "high",
-            "evidenceText": "Label “USS HARRY S. TRUMAN (CVN 75)” is shown in the same U.S. East Coast carrier cluster just west/southwest of the Norfolk label.",
-            "rationale": "Returned the marker position in the Norfolk-area cluster adjacent to the Truman label."
+            "locationName": "Eastern Pacific, southwest of Southern California",
+            "lat": 26.5,
+            "lon": -119.5,
+            "confidence": "medium",
+            "evidenceText": "Red label 'USS HARRY S. TRUMAN (CVN 75)' is south of the West Coast cluster, adjacent to a red dot/trail west of Baja California.",
+            "rationale": "Used the red dot immediately beside the CVN 75 label rather than averaging the short red trail."
           },
           {
             "hull": "CVN-76",
@@ -705,18 +705,18 @@
             "lat": 47.6,
             "lon": -122.7,
             "confidence": "high",
-            "evidenceText": "Red/orange label “USS RONALD REAGAN (CVN 76)” appears directly beside the Bremerton, WA marker in Puget Sound.",
-            "rationale": "Used the marker adjacent to the Bremerton label rather than any surrounding regional centroid."
+            "evidenceText": "Red label 'USS RONALD REAGAN (CVN 76)' appears near the 'BREMERTON, WA' callout, with a red marker at Puget Sound.",
+            "rationale": "The adjacent red dot is at the Bremerton/Puget Sound port area."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
-            "locationName": "Arabian Sea",
-            "lat": 18.5,
-            "lon": 61,
+            "locationName": "Arabian Sea / Gulf of Oman area",
+            "lat": 19.5,
+            "lon": 62.5,
             "confidence": "medium",
-            "evidenceText": "Green label “USS GEORGE H.W. BUSH (CVN 77)” is shown as a separate deployed marker south of the Abraham Lincoln label in the Arabian Sea.",
-            "rationale": "Returned the lower green CVN dot next to the Bush label, preserving separation from the Abraham Lincoln marker and ignoring nearby amphibious-ship labels."
+            "evidenceText": "Green label 'USS GEORGE H.W. BUSH (CVN 77)' appears in the Arabian Sea below Abraham Lincoln, with its adjacent green dot near the label.",
+            "rationale": "Returned the nearby green CVN dot and ignored adjacent green amphibious-ship labels/tracks."
           },
           {
             "hull": "CVN-78",
@@ -725,8 +725,8 @@
             "lat": 36.9,
             "lon": -76.3,
             "confidence": "high",
-            "evidenceText": "Blue label “USS GERALD R. FORD (CVN 78)” is shown at the Norfolk, VA cluster.",
-            "rationale": "The blue at-port dot/label is adjacent to the Norfolk homeport marker, consistent with the article title indicating Ford is home."
+            "evidenceText": "Label 'USS GERALD R. FORD (CVN 78)' is at the Norfolk, VA callout with a white homeport square.",
+            "rationale": "The marker is the Norfolk homeport square immediately adjacent to the Ford label."
           }
         ]
       }
