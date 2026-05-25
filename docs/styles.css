@@ -485,14 +485,6 @@ ul {
   padding: 12px;
 }
 
-.primary-source-summary {
-  border-left: 3px solid var(--accent-2);
-  padding-left: 10px;
-  color: #2c3d41;
-  font-size: 0.86rem;
-  line-height: 1.42;
-}
-
 .source-label-row {
   display: flex;
   flex-wrap: wrap;
@@ -515,29 +507,18 @@ ul {
   text-transform: uppercase;
 }
 
-.source-role {
+.source-use {
   display: inline-flex;
   width: fit-content;
-  border: 1px solid rgba(101, 117, 121, 0.28);
+  border: 1px solid rgba(13, 111, 128, 0.26);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.45);
-  color: var(--muted);
+  background: rgba(13, 111, 128, 0.08);
+  color: var(--accent-2);
   padding: 2px 8px;
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-}
-
-.source-role.primary {
-  border-color: rgba(181, 111, 38, 0.42);
-  background: rgba(181, 111, 38, 0.12);
-  color: var(--accent);
-}
-
-.source-role.backup {
-  border-color: rgba(101, 117, 121, 0.24);
-  background: rgba(101, 117, 121, 0.08);
 }
 
 .source-label.source-gonavy {

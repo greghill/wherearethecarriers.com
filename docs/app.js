@@ -123,7 +123,6 @@ const els = {
   status: document.querySelector("#ship-status"),
   location: document.querySelector("#ship-location"),
   seen: document.querySelector("#ship-seen"),
-  primarySourceSummary: document.querySelector("#primary-source-summary"),
   sources: document.querySelector("#source-list"),
   aboutSources: document.querySelector("#about-source-list"),
   basemapAttribution: document.querySelector("#basemap-attribution"),
@@ -335,25 +334,12 @@ function sourceClassName(source) {
 function usedForLabel(source) {
   const values = source.usedFor || [];
   if (values.includes("coordinate_refinement")) return "coordinate refinement";
-  if (values.includes("status") && values.includes("location") && values.includes("position")) return "assessment";
+  if (values.includes("status") && values.includes("location")) return "status, location";
 
   const labels = values
     .filter((value) => value !== "summary")
     .map((value) => value.replace("_", " "));
-  return labels.length ? labels.join(", ") : "assessment";
-}
-
-function renderPrimarySourceSummary(sources) {
-  const primarySources = sources.filter((source) => source.role === "primary");
-  if (!primarySources.length) {
-    els.primarySourceSummary.hidden = true;
-    els.primarySourceSummary.textContent = "";
-    return;
-  }
-
-  const descriptions = primarySources.map((source) => `${source.publisher || "Source"} ${usedForLabel(source)}`);
-  els.primarySourceSummary.hidden = false;
-  els.primarySourceSummary.textContent = `Primary assessment: ${descriptions.join("; ")}.`;
+  return labels.length ? labels.join(", ") : "";
 }
 
 function renderAboutSources() {
@@ -403,7 +389,6 @@ function renderFleet() {
 function renderSources(carrier) {
   els.sources.innerHTML = "";
   const sources = carrier.sources || [];
-  renderPrimarySourceSummary(sources);
   if (!sources.length) {
     const item = document.createElement("li");
     item.textContent = "No source attached yet.";
@@ -417,12 +402,16 @@ function renderSources(carrier) {
     const sourceClass = sourceClassName(source);
     publisher.className = `source-label${sourceClass ? ` ${sourceClass}` : ""}`;
     publisher.textContent = source.publisher || "Source";
-    const role = document.createElement("span");
-    role.className = `source-role ${source.role === "primary" ? "primary" : "backup"}`;
-    role.textContent = source.role === "primary" ? "Primary" : "Backup";
     const labelRow = document.createElement("div");
     labelRow.className = "source-label-row";
-    labelRow.append(publisher, role);
+    labelRow.append(publisher);
+    const usedFor = usedForLabel(source);
+    if (usedFor) {
+      const usage = document.createElement("span");
+      usage.className = "source-use";
+      usage.textContent = usedFor;
+      labelRow.append(usage);
+    }
     const link = document.createElement("a");
     link.href = source.url;
     link.target = "_blank";
