@@ -185,6 +185,15 @@ function formatRelative(value, { withAgo = true } = {}) {
   return `${Math.round(months / 12)}y${suffix}`;
 }
 
+function isSameScrapeRun(generatedAt, action) {
+  if (!action?.timestamp) return true;
+  if (action.status && action.status !== "completed") return false;
+  const generated = new Date(generatedAt);
+  const actionTime = new Date(action.timestamp);
+  if (Number.isNaN(generated.getTime()) || Number.isNaN(actionTime.getTime())) return false;
+  return Math.abs(actionTime.getTime() - generated.getTime()) <= 5 * 60 * 1000;
+}
+
 function isVisible(carrier) {
   return state.filter === "all" || statusFor(carrier) === state.filter;
 }
@@ -554,7 +563,7 @@ function renderUpdatedHeader() {
     link.className = "scrape-link";
     link.title = formatDate(lastChangedAt);
     link.textContent = `updated ${formatRelative(lastChangedAt)}`;
-    if (lastChangedAt === generatedAt) {
+    if (lastChangedAt === generatedAt && isSameScrapeRun(generatedAt, action)) {
       const badge = document.createElement("span");
       badge.className = "fresh-badge";
       badge.textContent = "new";
