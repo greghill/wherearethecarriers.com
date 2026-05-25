@@ -1,39 +1,39 @@
 {
-  "generatedAt": "2026-05-25T16:06:11.767Z",
-  "lastChangedAt": "2026-05-25T16:06:11.767Z",
+  "generatedAt": "2026-05-25T16:25:52.855Z",
+  "lastChangedAt": "2026-05-25T16:25:52.855Z",
   "sourceStatus": {
     "usni": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:02:55.593Z",
-      "lastSuccessAt": "2026-05-25T16:02:55.593Z",
+      "lastFetchedAt": "2026-05-25T16:25:04.033Z",
+      "lastSuccessAt": "2026-05-25T16:25:04.033Z",
       "lastErrorAt": null,
       "message": null
     },
     "stratfor": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:02:58.406Z",
-      "lastSuccessAt": "2026-05-25T16:02:58.406Z",
+      "lastFetchedAt": "2026-05-25T16:25:06.078Z",
+      "lastSuccessAt": "2026-05-25T16:25:06.078Z",
       "lastErrorAt": null,
       "message": null
     },
     "twz": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:02:58.477Z",
-      "lastSuccessAt": "2026-05-25T16:02:58.477Z",
+      "lastFetchedAt": "2026-05-25T16:25:06.167Z",
+      "lastSuccessAt": "2026-05-25T16:25:06.167Z",
       "lastErrorAt": null,
       "message": null
     },
     "gonavy": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:02:59.033Z",
-      "lastSuccessAt": "2026-05-25T16:02:59.033Z",
+      "lastFetchedAt": "2026-05-25T16:25:06.742Z",
+      "lastSuccessAt": "2026-05-25T16:25:06.742Z",
       "lastErrorAt": null,
       "message": null
     },
     "openaiImages": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:06:11.766Z",
-      "lastSuccessAt": "2026-05-25T16:06:11.766Z",
+      "lastFetchedAt": "2026-05-25T16:25:52.854Z",
+      "lastSuccessAt": "2026-05-25T16:25:52.854Z",
       "lastErrorAt": null,
       "message": null
     }
@@ -45,10 +45,10 @@
       "status": "deployed",
       "locationName": "South Atlantic",
       "position": {
-        "lat": -24,
-        "lon": -35
+        "lat": -0.8,
+        "lon": -40.1
       },
-      "positionPrecision": "region",
+      "positionPrecision": "image_estimate",
       "confidence": "medium",
       "lastSeen": "2026-05-20",
       "summary": "GoNavy's latest table entry places USS Nimitz in or near South Atlantic: 11May-18May2026, off the eastern coast of Brazil",
@@ -56,9 +56,20 @@
         {
           "role": "primary",
           "usedFor": [
+            "coordinate_refinement"
+          ],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: May 21, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-may-21-2026",
+          "publishedAt": "2026-05-21",
+          "note": "Image estimate: Orange/red label “CVN 68” appears just off the northern coast of Brazil, with the current-week orange dot immediately beside the label at the northern end of the orange trail.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260520%20display.png"
+        },
+        {
+          "role": "primary",
+          "usedFor": [
             "status",
             "location",
-            "position",
             "summary"
           ],
           "publisher": "GoNavy.jp",
@@ -70,22 +81,12 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: May 21, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-may-21-2026",
-          "publishedAt": "2026-05-21",
-          "note": "Image estimate: Orange/red label “CVN 68” appears just off the northern coast of Brazil, with the current-week orange dot immediately beside the label at the northern end of the orange trail.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260520%20display.png"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-18",
+          "publishedAt": "2026-05-19",
           "note": "Text context: South Atlantic",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -93,9 +94,9 @@
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-18",
-          "note": "Image estimate: Map shows a yellow diamond with label “USS Nimitz (CVN-68)” in the South Atlantic just east of Brazil.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+          "publishedAt": "2026-05-19",
+          "note": "Image estimate: Map label reads “USS Nimitz (CVN-68)” with a yellow diamond just southwest of the label, offshore north of Brazil.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -108,7 +109,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": "2026-05-25T16:06:11.767Z"
+      "lastChangedAt": "2026-05-25T16:25:52.855Z"
     },
     {
       "hull": "CVN-69",
@@ -144,9 +145,9 @@
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-18",
+          "publishedAt": "2026-05-19",
           "note": "Text context: Norfolk, Virginia",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -246,9 +247,9 @@
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-18",
+          "publishedAt": "2026-05-19",
           "note": "Text context: San Diego, California",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -318,9 +319,9 @@
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-18",
+          "publishedAt": "2026-05-19",
           "note": "Text context: Arabian Sea",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -328,9 +329,9 @@
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-18",
-          "note": "Image estimate: Map label stack includes “Abraham Lincoln CSG” beside a single yellow diamond west of India, also labeled with George H.W. Bush CSG and USS Tripoli.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+          "publishedAt": "2026-05-19",
+          "note": "Image estimate: Map label stack includes “Abraham Lincoln CSG” next to a yellow diamond west of India; the same nearby marker is also associated with George H.W. Bush CSG and USS Tripoli.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -389,9 +390,9 @@
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-18",
-          "note": "Image estimate: Map shows “George Washington CSG Yokosuka, Japan” with a yellow diamond at Yokosuka.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+          "publishedAt": "2026-05-19",
+          "note": "Image estimate: Map label reads “George Washington CSG Yokosuka, Japan” with a yellow diamond on Japan’s east coast near Tokyo Bay.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -409,9 +410,9 @@
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-18",
+          "publishedAt": "2026-05-19",
           "note": "Text context: Yokosuka, Japan",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -594,9 +595,9 @@
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-18",
+          "publishedAt": "2026-05-19",
           "note": "Text context: Arabian Sea",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -604,9 +605,9 @@
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-18",
-          "note": "Image estimate: Map label stack includes “George H.W. Bush CSG” beside the same yellow diamond west of India as Abraham Lincoln CSG.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+          "publishedAt": "2026-05-19",
+          "note": "Image estimate: Map label stack includes “George H.W. Bush CSG” next to a yellow diamond west of India; the same nearby marker is also associated with Abraham Lincoln CSG and USS Tripoli.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -655,9 +656,9 @@
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-18",
-          "note": "Image estimate: Map shows “Ford CSG Norfolk, Va.” with a yellow diamond on the U.S. East Coast near Norfolk.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+          "publishedAt": "2026-05-19",
+          "note": "Image estimate: Map label reads “Ford CSG Norfolk, Va.” with a yellow diamond at the Virginia coast near Hampton Roads.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -675,9 +676,9 @@
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
           "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-18",
+          "publishedAt": "2026-05-19",
           "note": "Text context: Norfolk, Virginia",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26.jpg"
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",

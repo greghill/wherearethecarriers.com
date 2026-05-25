@@ -730,6 +730,71 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026|https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg|2026-05-19": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg",
+      "articleUrl": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
+      "publishedAt": "2026-05-19",
+      "createdAt": "2026-05-25T16:25:06.743Z",
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "",
+        "publishedAt": "2026-05-19",
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "off northern Brazil / western equatorial Atlantic",
+            "lat": 4.5,
+            "lon": -50,
+            "confidence": "medium",
+            "evidenceText": "Map label reads “USS Nimitz (CVN-68)” with a yellow diamond just southwest of the label, offshore north of Brazil.",
+            "rationale": "The marker is visually placed in the western equatorial Atlantic near the Guianas/northern Brazil coast, close to the label rather than at a regional centroid."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea, west of India",
+            "lat": 13.5,
+            "lon": 72.5,
+            "confidence": "medium",
+            "evidenceText": "Map label stack includes “Abraham Lincoln CSG” next to a yellow diamond west of India; the same nearby marker is also associated with George H.W. Bush CSG and USS Tripoli.",
+            "rationale": "The carrier label is immediately adjacent to the single visible marker in the eastern Arabian Sea off India’s west coast. The map does not show a separate Abraham Lincoln marker, so the adjacent shared marker is used."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea, west of India",
+            "lat": 13.5,
+            "lon": 72.5,
+            "confidence": "medium",
+            "evidenceText": "Map label stack includes “George H.W. Bush CSG” next to a yellow diamond west of India; the same nearby marker is also associated with Abraham Lincoln CSG and USS Tripoli.",
+            "rationale": "The carrier label is immediately adjacent to the single visible marker in the eastern Arabian Sea off India’s west coast. The map does not show a separate George H.W. Bush marker, so the adjacent shared marker is used."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Yokosuka, Japan",
+            "lat": 35.3,
+            "lon": 139.7,
+            "confidence": "high",
+            "evidenceText": "Map label reads “George Washington CSG Yokosuka, Japan” with a yellow diamond on Japan’s east coast near Tokyo Bay.",
+            "rationale": "The marker is visually anchored at Yokosuka/Tokyo Bay, matching the label location on the map."
+          },
+          {
+            "hull": "CVN-78",
+            "name": "USS Gerald R. Ford",
+            "locationName": "Norfolk, Virginia",
+            "lat": 36.9,
+            "lon": -76.3,
+            "confidence": "high",
+            "evidenceText": "Map label reads “Ford CSG Norfolk, Va.” with a yellow diamond at the Virginia coast near Hampton Roads.",
+            "rationale": "The marker is visually anchored at Norfolk, Virginia, matching the label location on the U.S. East Coast."
+          }
+        ]
+      }
     }
   }
 }
