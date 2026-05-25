@@ -13,6 +13,10 @@
   --maintenance: #b57a2d;
   --unknown: #737a82;
   --danger: #ba3f35;
+  --source-gonavy: #1f7a5a;
+  --source-war-zone: #a94834;
+  --source-stratfor: #7457a8;
+  --source-usni: #2368a2;
   --shadow: 0 18px 50px rgba(39, 55, 57, 0.2);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -419,7 +423,47 @@ ul {
   padding: 12px;
 }
 
+.source-label {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 7px;
+  border: 1px solid rgba(101, 117, 121, 0.32);
+  border-radius: 999px;
+  background: rgba(101, 117, 121, 0.12);
+  color: var(--muted);
+  padding: 2px 8px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.source-label.source-gonavy {
+  border-color: color-mix(in srgb, var(--source-gonavy) 42%, transparent);
+  background: color-mix(in srgb, var(--source-gonavy) 13%, transparent);
+  color: var(--source-gonavy);
+}
+
+.source-label.source-war-zone {
+  border-color: color-mix(in srgb, var(--source-war-zone) 42%, transparent);
+  background: color-mix(in srgb, var(--source-war-zone) 13%, transparent);
+  color: var(--source-war-zone);
+}
+
+.source-label.source-stratfor {
+  border-color: color-mix(in srgb, var(--source-stratfor) 42%, transparent);
+  background: color-mix(in srgb, var(--source-stratfor) 13%, transparent);
+  color: var(--source-stratfor);
+}
+
+.source-label.source-usni {
+  border-color: color-mix(in srgb, var(--source-usni) 42%, transparent);
+  background: color-mix(in srgb, var(--source-usni) 13%, transparent);
+  color: var(--source-usni);
+}
+
 #source-list a {
+  display: block;
   color: var(--text);
   font-weight: 700;
   text-decoration: none;
@@ -435,6 +479,55 @@ ul {
   margin-top: 5px;
   color: var(--muted);
   font-size: 0.82rem;
+}
+
+.about-section {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.about-section summary {
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  list-style-position: outside;
+  text-transform: uppercase;
+}
+
+.about-section summary:hover,
+.about-section summary:focus-visible {
+  color: var(--accent);
+  outline: none;
+}
+
+.about-content {
+  display: grid;
+  gap: 10px;
+  padding-top: 12px;
+  color: #2c3d41;
+  font-size: 0.9rem;
+  line-height: 1.48;
+}
+
+.about-content ul {
+  display: grid;
+  gap: 7px;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.about-content a {
+  color: var(--accent-2);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.about-content a:hover,
+.about-content a:focus-visible {
+  color: var(--accent);
+  outline: none;
 }
 
 .fleet-list {

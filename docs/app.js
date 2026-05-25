@@ -28,16 +28,19 @@ const shortNames = {
   "CVN-78": "Ford"
 };
 
+const minMapZoom = 3;
+
 const map = L.map("map", {
+  minZoom: minMapZoom,
   zoomControl: false,
   worldCopyJump: true
-}).setView([21, 15], 2);
+}).setView([21, 15], minMapZoom);
 
 L.control.zoom({ position: "bottomleft" }).addTo(map);
 
 const tileOpts = {
   maxZoom: 9,
-  minZoom: 1,
+  minZoom: minMapZoom,
   keepBuffer: 4,
   updateWhenZooming: false,
   crossOrigin: true
@@ -73,7 +76,7 @@ const baseLayers = {
   ])
 };
 
-const defaultBasemap = "CARTO Voyager";
+const defaultBasemap = "Esri National Geographic";
 let activeBasemap = baseLayers[defaultBasemap].addTo(map);
 
 const BasemapControl = L.Control.extend({
@@ -264,10 +267,22 @@ function fitVisibleMarkers() {
   if (!positions.length) return;
   map.fitBounds(L.latLngBounds(positions), {
     animate: false,
-    maxZoom: window.innerWidth < 640 ? 1 : 2,
+    maxZoom: minMapZoom,
     paddingTopLeft: window.innerWidth < 640 ? [12, 138] : [20, 86],
     paddingBottomRight: [20, 24]
   });
+}
+
+function sourceClassName(source) {
+  const publisher = (source.publisher || "").toLowerCase();
+  const url = (source.url || "").toLowerCase();
+  const value = `${publisher} ${url}`;
+
+  if (value.includes("gonavy.jp")) return "source-gonavy";
+  if (value.includes("the war zone") || value.includes("twz.com")) return "source-war-zone";
+  if (value.includes("stratfor")) return "source-stratfor";
+  if (value.includes("usni")) return "source-usni";
+  return "";
 }
 
 function renderFleet() {
@@ -299,6 +314,10 @@ function renderSources(carrier) {
 
   sources.forEach((source) => {
     const item = document.createElement("li");
+    const publisher = document.createElement("span");
+    const sourceClass = sourceClassName(source);
+    publisher.className = `source-label${sourceClass ? ` ${sourceClass}` : ""}`;
+    publisher.textContent = source.publisher || "Source";
     const link = document.createElement("a");
     link.href = source.url;
     link.target = "_blank";
@@ -311,7 +330,7 @@ function renderSources(carrier) {
       source.publishedAt ? formatDate(source.publishedAt) : null,
       source.note
     ].filter(Boolean).join(" | ");
-    item.append(link, meta);
+    item.append(publisher, link, meta);
     els.sources.append(item);
   });
 }
