@@ -29,7 +29,7 @@ const shortNames = {
   "CVN-78": "Ford"
 };
 
-const minMapZoom = 3;
+const minMapZoom = window.innerWidth < 640 ? 1 : 3;
 
 const map = L.map("map", {
   minZoom: minMapZoom,
