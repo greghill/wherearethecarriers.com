@@ -10,10 +10,11 @@ const statusLabels = {
   unknown: "Unknown"
 };
 
-const confidenceLabels = {
-  high: "High",
-  medium: "Medium",
-  low: "Low",
+const evidenceLabels = {
+  corroborated: "Corroborated",
+  current: "Current",
+  aging: "Aging",
+  stale: "Stale",
   unknown: "--"
 };
 
@@ -173,6 +174,16 @@ function formatDate(value) {
 
 function statusFor(carrier) {
   return carrier.status || "unknown";
+}
+
+function evidenceFor(carrier) {
+  if (carrier.evidence) return carrier.evidence;
+  return {
+    high: "corroborated",
+    medium: "current",
+    low: "stale",
+    unknown: "unknown"
+  }[carrier.confidence || "unknown"] || "unknown";
 }
 
 function formatRelative(value, { withAgo = true } = {}) {
@@ -448,8 +459,9 @@ function selectCarrier(hull, moveMap = false) {
     setFilter("all");
   }
   els.shipName.textContent = `${carrier.name} (${carrier.hull})`;
-  els.confidence.textContent = confidenceLabels[carrier.confidence || "unknown"];
-  els.confidence.className = `confidence${carrier.confidence ? "" : " muted"}`;
+  const evidence = evidenceFor(carrier);
+  els.confidence.textContent = evidenceLabels[evidence] || evidenceLabels.unknown;
+  els.confidence.className = `confidence${evidence !== "unknown" ? "" : " muted"}`;
   els.summary.textContent = carrier.summary || "No assessment has been generated yet.";
   els.status.textContent = statusLabels[statusFor(carrier)] || statusLabels.unknown;
   els.location.textContent = carrier.locationName || "Unknown";

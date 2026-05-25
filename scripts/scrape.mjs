@@ -7,6 +7,8 @@ const IMAGE_ANALYSIS_CACHE_PATH = new URL("./map-image-cache.json", import.meta.
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-5.5";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const FORCE_IMAGE_REPROCESS = /^(1|true|yes)$/i.test(process.env.FORCE_IMAGE_REPROCESS || "");
+const CURRENT_SOURCE_DAYS = 21;
+const AGING_SOURCE_DAYS = 90;
 
 const SOURCE_URLS = {
   gonavy: "http://www.gonavy.jp/CVLocation.html",
@@ -382,6 +384,7 @@ function blankCarrier(record) {
     position: null,
     positionPrecision: "unknown",
     confidence: "unknown",
+    evidence: "unknown",
     lastSeen: null,
     summary: "No current public-source assessment has been attached yet.",
     sources: []
@@ -476,6 +479,30 @@ function confidenceWeight(value) {
   return { unknown: 0, low: 1, medium: 2, high: 3 }[value || "unknown"] ?? 0;
 }
 
+function evidenceToConfidence(value) {
+  return {
+    unknown: "unknown",
+    stale: "low",
+    aging: "low",
+    current: "medium",
+    corroborated: "high"
+  }[value || "unknown"] || "unknown";
+}
+
+function daysBetween(fromValue, toValue) {
+  if (!fromValue || !toValue) return null;
+  const from = /^\d{4}-\d{2}-\d{2}$/.test(fromValue)
+    ? new Date(`${fromValue}T00:00:00Z`)
+    : new Date(fromValue);
+  const to = new Date(toValue);
+  if (Number.isNaN(from.getTime()) || Number.isNaN(to.getTime())) return null;
+  return Math.max(0, Math.floor((to.getTime() - from.getTime()) / 86400000));
+}
+
+function sourceAgeDays(assessment, generatedAt) {
+  return daysBetween(assessment.lastSeen, generatedAt);
+}
+
 function isImageAssessment(assessment) {
   return assessment.positionPrecision === "image_estimate";
 }
@@ -508,6 +535,47 @@ function sharedWaterRegion(a = "", b = "") {
   const right = b.toLowerCase();
   return ["atlantic", "pacific", "mediterranean", "arabian sea", "red sea", "south china sea", "philippine sea"]
     .some((region) => left.includes(region) && right.includes(region));
+}
+
+function locationsAgree(a = "", b = "") {
+  if (!a || !b) return false;
+  if (a === b) return true;
+  if (sharedWaterRegion(a, b)) return true;
+  const leftHint = findLocationHint(a);
+  const rightHint = findLocationHint(b);
+  return Boolean(leftHint && rightHint && leftHint.name === rightHint.name);
+}
+
+function assessmentSupportsCarrier(assessment, carrier) {
+  if (!assessment || !carrier) return false;
+  if ((assessment.status || "unknown") !== (carrier.status || "unknown")) return false;
+  return locationsAgree(assessment.locationName, carrier.locationName);
+}
+
+function assessmentPublisher(assessment) {
+  return (assessment.sources || []).map((source) => source.publisher).find(Boolean) || "Unknown";
+}
+
+function deriveCarrierEvidence(carrier, assessments, generatedAt) {
+  if (!carrier || carrier.confidence === "unknown") return "unknown";
+
+  const supporting = (assessments || [])
+    .filter((assessment) => assessmentSupportsCarrier(assessment, carrier))
+    .map((assessment) => ({
+      assessment,
+      ageDays: sourceAgeDays(assessment, generatedAt),
+      publisher: assessmentPublisher(assessment)
+    }));
+
+  const current = supporting.filter((item) => item.ageDays !== null && item.ageDays <= CURRENT_SOURCE_DAYS);
+  const currentPublishers = new Set(current.map((item) => item.publisher));
+  if (currentPublishers.size >= 2) return "corroborated";
+  if (current.length) return "current";
+
+  const aging = supporting.filter((item) => item.ageDays !== null && item.ageDays <= AGING_SOURCE_DAYS);
+  if (aging.length) return "aging";
+
+  return "stale";
 }
 
 function inferPositionPrecision(assessment) {
@@ -970,6 +1038,8 @@ function isMeaningfulChange(oldCarrier, newCarrier) {
   if (!oldCarrier) return true;
   if ((oldCarrier.status || "unknown") !== (newCarrier.status || "unknown")) return true;
   if ((oldCarrier.locationName || "") !== (newCarrier.locationName || "")) return true;
+  if ((oldCarrier.evidence || "") !== (newCarrier.evidence || "")) return true;
+  if ((oldCarrier.confidence || "unknown") !== (newCarrier.confidence || "unknown")) return true;
   if (positionKey(oldCarrier.position) !== positionKey(newCarrier.position)) return true;
   return false;
 }
@@ -998,6 +1068,7 @@ function finalizeCarrier(carrier) {
 async function main() {
   const previous = existsSync(DATA_PATH) ? JSON.parse(await readFile(DATA_PATH, "utf8")) : { carriers: [] };
   const carriers = new Map(CARRIERS.map((record) => [record.hull, blankCarrier(record)]));
+  const assessmentsByHull = new Map(CARRIERS.map((record) => [record.hull, []]));
   const sourceStatus = {};
   const sourceSummaries = {};
 
@@ -1020,6 +1091,7 @@ async function main() {
         ...result
       };
       for (const assessment of result.assessments || []) {
+        assessmentsByHull.get(assessment.hull)?.push(assessment);
         applyAssessment(carriers.get(assessment.hull), assessment);
       }
     } catch (error) {
@@ -1028,10 +1100,12 @@ async function main() {
   }
 
   for (const assessment of await loadOpenAiImageAssessments(sourceSummaries, sourceStatus)) {
+    assessmentsByHull.get(assessment.hull)?.push(assessment);
     applyAssessment(carriers.get(assessment.hull), assessment);
   }
 
   for (const assessment of await loadImagePointAssessments(sourceSummaries)) {
+    assessmentsByHull.get(assessment.hull)?.push(assessment);
     applyAssessment(carriers.get(assessment.hull), assessment);
   }
 
@@ -1042,6 +1116,7 @@ async function main() {
       carrier.locationName = oldCarrier.locationName;
       carrier.position = oldCarrier.position;
       carrier.confidence = "low";
+      carrier.evidence = "stale";
       carrier.lastSeen = oldCarrier.lastSeen;
       carrier.summary = `No fresh source matched this run, so this is a stale prior assessment: ${oldCarrier.summary}`;
       carrier.sources = (oldCarrier.sources || []).map((source, index) => ({
@@ -1058,6 +1133,8 @@ async function main() {
   const changedHulls = [];
 
   for (const carrier of carriers.values()) {
+    carrier.evidence = deriveCarrierEvidence(carrier, assessmentsByHull.get(carrier.hull) || [], generatedAt);
+    carrier.confidence = evidenceToConfidence(carrier.evidence);
     const oldCarrier = previousByHull.get(carrier.hull);
     if (isMeaningfulChange(oldCarrier, carrier)) {
       carrier.lastChangedAt = generatedAt;

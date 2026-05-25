@@ -1,39 +1,39 @@
 {
-  "generatedAt": "2026-05-25T16:29:03.427Z",
-  "lastChangedAt": "2026-05-25T16:25:52.855Z",
+  "generatedAt": "2026-05-25T20:08:09.924Z",
+  "lastChangedAt": "2026-05-25T20:08:09.924Z",
   "sourceStatus": {
     "usni": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:28:59.716Z",
-      "lastSuccessAt": "2026-05-25T16:28:59.716Z",
+      "lastFetchedAt": "2026-05-25T20:08:06.717Z",
+      "lastSuccessAt": "2026-05-25T20:08:06.717Z",
       "lastErrorAt": null,
       "message": null
     },
     "stratfor": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:29:02.559Z",
-      "lastSuccessAt": "2026-05-25T16:29:02.559Z",
+      "lastFetchedAt": "2026-05-25T20:08:08.981Z",
+      "lastSuccessAt": "2026-05-25T20:08:08.981Z",
       "lastErrorAt": null,
       "message": null
     },
     "twz": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:29:02.866Z",
-      "lastSuccessAt": "2026-05-25T16:29:02.866Z",
+      "lastFetchedAt": "2026-05-25T20:08:09.083Z",
+      "lastSuccessAt": "2026-05-25T20:08:09.083Z",
       "lastErrorAt": null,
       "message": null
     },
     "gonavy": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:29:03.425Z",
-      "lastSuccessAt": "2026-05-25T16:29:03.425Z",
+      "lastFetchedAt": "2026-05-25T20:08:09.920Z",
+      "lastSuccessAt": "2026-05-25T20:08:09.920Z",
       "lastErrorAt": null,
       "message": null
     },
     "openaiImages": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T16:29:03.427Z",
-      "lastSuccessAt": "2026-05-25T16:29:03.427Z",
+      "lastFetchedAt": "2026-05-25T20:08:09.923Z",
+      "lastSuccessAt": "2026-05-25T20:08:09.923Z",
       "lastErrorAt": null,
       "message": null
     }
@@ -49,7 +49,8 @@
         "lon": -40.1
       },
       "positionPrecision": "image_estimate",
-      "confidence": "medium",
+      "confidence": "high",
+      "evidence": "corroborated",
       "lastSeen": "2026-05-21",
       "summary": "GoNavy's latest table entry places USS Nimitz in or near South Atlantic: 11May-18May2026, off the eastern coast of Brazil",
       "sources": [
@@ -109,7 +110,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": "2026-05-25T16:25:52.855Z"
+      "lastChangedAt": "2026-05-25T20:08:09.924Z"
     },
     {
       "hull": "CVN-69",
@@ -121,7 +122,8 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "medium",
+      "confidence": "high",
+      "evidence": "corroborated",
       "lastSeen": "2026-05-20",
       "summary": "GoNavy's latest table entry places USS Dwight D. Eisenhower in or near Norfolk, Virginia: 15May2026, returned to Norfolk",
       "sources": [
@@ -170,7 +172,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": null
+      "lastChangedAt": "2026-05-25T20:08:09.924Z"
     },
     {
       "hull": "CVN-70",
@@ -183,6 +185,7 @@
       },
       "positionPrecision": "port",
       "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2025-10-08",
       "summary": "GoNavy's latest table entry places USS Carl Vinson in or near San Diego, California: 16Sep2025, returned to San Diego",
       "sources": [
@@ -211,7 +214,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": null
+      "lastChangedAt": "2026-05-25T20:08:09.924Z"
     },
     {
       "hull": "CVN-71",
@@ -223,7 +226,8 @@
         "lon": -117.173
       },
       "positionPrecision": "port",
-      "confidence": "medium",
+      "confidence": "high",
+      "evidence": "corroborated",
       "lastSeen": "2026-05-20",
       "summary": "GoNavy's latest table entry places USS Theodore Roosevelt in or near San Diego, California: 14May2026, returned to San Diego",
       "sources": [
@@ -272,7 +276,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": null
+      "lastChangedAt": "2026-05-25T20:08:09.924Z"
     },
     {
       "hull": "CVN-72",
@@ -284,7 +288,8 @@
         "lon": 63.8
       },
       "positionPrecision": "image_estimate",
-      "confidence": "medium",
+      "confidence": "high",
+      "evidence": "corroborated",
       "lastSeen": "2026-05-21",
       "summary": "GoNavy's latest table entry places USS Abraham Lincoln in or near Arabian Sea: 28Feb-18May2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
@@ -354,7 +359,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": "2026-05-25T16:06:11.767Z"
+      "lastChangedAt": "2026-05-25T20:08:09.924Z"
     },
     {
       "hull": "CVN-73",
@@ -366,7 +371,8 @@
         "lon": 139.672
       },
       "positionPrecision": "port",
-      "confidence": "medium",
+      "confidence": "high",
+      "evidence": "corroborated",
       "lastSeen": "2026-05-20",
       "summary": "GoNavy's latest table entry places USS George Washington in or near Yokosuka, Japan: 17May2026, returned to Yokosuka",
       "sources": [
@@ -425,7 +431,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": null
+      "lastChangedAt": "2026-05-25T20:08:09.924Z"
     },
     {
       "hull": "CVN-74",
@@ -437,7 +443,8 @@
         "lon": -76.432
       },
       "positionPrecision": "port",
-      "confidence": "medium",
+      "confidence": "low",
+      "evidence": "stale",
       "lastSeen": "2025-10-22",
       "summary": "GoNavy's latest table entry places USS John C. Stennis in or near Newport News, Virginia: 08Apr2024, moved to an outfitting berth at Newport News Shipbuilding in Newport News, Virginia",
       "sources": [
@@ -466,7 +473,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": null
+      "lastChangedAt": "2026-05-25T20:08:09.924Z"
     },
     {
       "hull": "CVN-75",
@@ -478,7 +485,8 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "medium",
+      "confidence": "low",
+      "evidence": "stale",
       "lastSeen": "2025-10-01",
       "summary": "GoNavy's latest table entry places USS Harry S. Truman in or near Norfolk, Virginia: 26Sep2025, returned to Norfolk",
       "sources": [
@@ -507,7 +515,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": null
+      "lastChangedAt": "2026-05-25T20:08:09.924Z"
     },
     {
       "hull": "CVN-76",
@@ -519,7 +527,8 @@
         "lon": -122.648
       },
       "positionPrecision": "port",
-      "confidence": "medium",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-03-11",
       "summary": "GoNavy's latest table entry places USS Ronald Reagan in or near Bremerton, Washington: 17Mar2025, entered the Dry Dock in Puget Sound Naval Shipyard and Intermediate Maintenance Facility (PSNS&IMF)",
       "sources": [
@@ -548,7 +557,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": null
+      "lastChangedAt": "2026-05-25T20:08:09.924Z"
     },
     {
       "hull": "CVN-77",
@@ -560,7 +569,8 @@
         "lon": 62
       },
       "positionPrecision": "image_estimate",
-      "confidence": "medium",
+      "confidence": "high",
+      "evidence": "corroborated",
       "lastSeen": "2026-05-21",
       "summary": "GoNavy's latest table entry places USS George H.W. Bush in or near Arabian Sea: 27Apr-18May2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
@@ -620,7 +630,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": "2026-05-25T16:06:11.767Z"
+      "lastChangedAt": "2026-05-25T20:08:09.924Z"
     },
     {
       "hull": "CVN-78",
@@ -632,7 +642,8 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "medium",
+      "confidence": "high",
+      "evidence": "corroborated",
       "lastSeen": "2026-05-20",
       "summary": "GoNavy's latest table entry places USS Gerald R. Ford in or near Norfolk, Virginia: 16May2026, returned to Norfolk",
       "sources": [
@@ -691,7 +702,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": null
+      "lastChangedAt": "2026-05-25T20:08:09.924Z"
     }
   ]
 }
