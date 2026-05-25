@@ -27,7 +27,7 @@ USNI, Stratfor, and TWZ category/topic pages are treated as indexes. The scraper
 - `docs/index.html`, `docs/app.js`, and `docs/styles.css` render a Leaflet world map in the browser.
 - `docs/data/carriers.json` is the only runtime data file the page fetches.
 - `scripts/scrape.mjs` fetches public source pages, parses source text, picks approximate map positions, and writes `docs/data/carriers.json`.
-- `.github/workflows/scrape.yml` runs every four hours and commits changed data back to the repository.
+- `.github/workflows/scrape.yml` runs hourly and commits back to the repository only when a carrier's status, location, or position actually changes (or when the OpenAI image cache picked up new analyses). The topbar's "scraped" timestamp comes from the live GitHub Actions API, so no-change runs leave no commit.
 
 The current JSON contract stays intentionally simple: one carrier record per ship, with selected status/location/confidence and an embedded list of supporting sources.
 
@@ -49,8 +49,10 @@ OPENAI_API_KEY
 Optional GitHub Actions variable:
 
 ```text
-OPENAI_MODEL=gpt-4.1
+OPENAI_MODEL=gpt-5.5
 ```
+
+(`gpt-5.5` is also the default if the variable is unset.)
 
 When enabled, the scraper sends the latest tracker map images to the OpenAI Responses API and asks for approximate carrier positions as structured JSON. Results are cached in `scripts/map-image-cache.json` by image URL/model/date so unchanged map images are not reprocessed every scheduled run.
 
