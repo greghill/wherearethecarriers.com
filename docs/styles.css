@@ -171,7 +171,7 @@ a {
 }
 
 .leaflet-control-zoom {
-  margin: 0 0 18px 18px;
+  margin: 0;
 }
 
 .leaflet-control-zoom a {
