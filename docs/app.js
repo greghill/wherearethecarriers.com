@@ -10,14 +10,6 @@ const statusLabels = {
   unknown: "Unknown"
 };
 
-const evidenceLabels = {
-  corroborated: "Corroborated",
-  current: "Current",
-  aging: "Aging",
-  stale: "Stale",
-  unknown: "--"
-};
-
 const shortNames = {
   "CVN-68": "Nimitz",
   "CVN-69": "Eisenhower",
@@ -126,7 +118,6 @@ let state = {
 const els = {
   updated: document.querySelector("#updated"),
   shipName: document.querySelector("#ship-name"),
-  confidence: document.querySelector("#confidence"),
   summary: document.querySelector("#ship-summary"),
   status: document.querySelector("#ship-status"),
   location: document.querySelector("#ship-location"),
@@ -176,16 +167,6 @@ function statusFor(carrier) {
   return carrier.status || "unknown";
 }
 
-function evidenceFor(carrier) {
-  if (carrier.evidence) return carrier.evidence;
-  return {
-    high: "corroborated",
-    medium: "current",
-    low: "stale",
-    unknown: "unknown"
-  }[carrier.confidence || "unknown"] || "unknown";
-}
-
 function formatRelative(value, { withAgo = true } = {}) {
   if (!value) return null;
   const parsed = new Date(value);
@@ -202,23 +183,6 @@ function formatRelative(value, { withAgo = true } = {}) {
   const months = Math.round(days / 30);
   if (months < 12) return `${months}mo${suffix}`;
   return `${Math.round(months / 12)}y${suffix}`;
-}
-
-function daysSince(value) {
-  if (!value) return null;
-  const parsed = /^\d{4}-\d{2}-\d{2}$/.test(value)
-    ? new Date(`${value}T00:00:00Z`)
-    : new Date(value);
-  if (Number.isNaN(parsed.getTime())) return null;
-  return Math.floor((Date.now() - parsed.getTime()) / 86400000);
-}
-
-function staleness(value) {
-  const days = daysSince(value);
-  if (days === null) return null;
-  if (days > 14) return { className: "stale-old", label: "very stale", days };
-  if (days > 7) return { className: "stale-warn", label: "stale", days };
-  return null;
 }
 
 function isVisible(carrier) {
@@ -459,21 +423,11 @@ function selectCarrier(hull, moveMap = false) {
     setFilter("all");
   }
   els.shipName.textContent = `${carrier.name} (${carrier.hull})`;
-  const evidence = evidenceFor(carrier);
-  els.confidence.textContent = evidenceLabels[evidence] || evidenceLabels.unknown;
-  els.confidence.className = `confidence${evidence !== "unknown" ? "" : " muted"}`;
   els.summary.textContent = carrier.summary || "No assessment has been generated yet.";
   els.status.textContent = statusLabels[statusFor(carrier)] || statusLabels.unknown;
   els.location.textContent = carrier.locationName || "Unknown";
   els.seen.textContent = "";
   els.seen.append(document.createTextNode(formatDate(carrier.lastSeen)));
-  const stale = staleness(carrier.lastSeen);
-  if (stale) {
-    const badge = document.createElement("span");
-    badge.className = `stale-pill ${stale.className}`;
-    badge.textContent = `${stale.label} (${stale.days}d)`;
-    els.seen.append(" ", badge);
-  }
   renderSources(carrier);
   refreshMarkerIcons();
   renderFleet();

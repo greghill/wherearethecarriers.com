@@ -503,6 +503,14 @@ function sourceAgeDays(assessment, generatedAt) {
   return daysBetween(assessment.lastSeen, generatedAt);
 }
 
+function assessmentDateValue(assessment) {
+  if (!assessment?.lastSeen) return 0;
+  const date = /^\d{4}-\d{2}-\d{2}$/.test(assessment.lastSeen)
+    ? new Date(`${assessment.lastSeen}T00:00:00Z`)
+    : new Date(assessment.lastSeen);
+  return Number.isNaN(date.getTime()) ? 0 : date.getTime();
+}
+
 function isImageAssessment(assessment) {
   return assessment.positionPrecision === "image_estimate";
 }
@@ -549,22 +557,42 @@ function locationsAgree(a = "", b = "") {
 function assessmentSupportsCarrier(assessment, carrier) {
   if (!assessment || !carrier) return false;
   if ((assessment.status || "unknown") !== (carrier.status || "unknown")) return false;
-  return locationsAgree(assessment.locationName, carrier.locationName);
+  if (locationsAgree(assessment.locationName, carrier.locationName)) return true;
+
+  const ref = carrier.position;
+  const candidate = assessment.position;
+  if (!ref || !candidate) return false;
+  return Math.abs(ref.lat - candidate.lat) <= 8 && Math.abs(ref.lon - candidate.lon) <= 8;
 }
 
 function assessmentPublisher(assessment) {
   return (assessment.sources || []).map((source) => source.publisher).find(Boolean) || "Unknown";
 }
 
-function deriveCarrierEvidence(carrier, assessments, generatedAt) {
-  if (!carrier || carrier.confidence === "unknown") return "unknown";
-
-  const supporting = (assessments || [])
+function supportingAssessmentsFor(carrier, assessments) {
+  return (assessments || [])
     .filter((assessment) => assessmentSupportsCarrier(assessment, carrier))
     .map((assessment) => ({
       assessment,
-      ageDays: sourceAgeDays(assessment, generatedAt),
       publisher: assessmentPublisher(assessment)
+    }));
+}
+
+function newestSupportingLastSeen(carrier, assessments) {
+  const newest = supportingAssessmentsFor(carrier, assessments)
+    .map((item) => item.assessment)
+    .filter((assessment) => assessment.lastSeen)
+    .sort((a, b) => assessmentDateValue(b) - assessmentDateValue(a))[0];
+  return newest?.lastSeen || carrier.lastSeen;
+}
+
+function deriveCarrierEvidence(carrier, assessments, generatedAt) {
+  if (!carrier || carrier.confidence === "unknown") return "unknown";
+
+  const supporting = supportingAssessmentsFor(carrier, assessments)
+    .map((item) => ({
+      ...item,
+      ageDays: sourceAgeDays(item.assessment, generatedAt)
     }));
 
   const current = supporting.filter((item) => item.ageDays !== null && item.ageDays <= CURRENT_SOURCE_DAYS);
@@ -1038,6 +1066,7 @@ function isMeaningfulChange(oldCarrier, newCarrier) {
   if (!oldCarrier) return true;
   if ((oldCarrier.status || "unknown") !== (newCarrier.status || "unknown")) return true;
   if ((oldCarrier.locationName || "") !== (newCarrier.locationName || "")) return true;
+  if ((oldCarrier.lastSeen || "") !== (newCarrier.lastSeen || "")) return true;
   if ((oldCarrier.evidence || "") !== (newCarrier.evidence || "")) return true;
   if ((oldCarrier.confidence || "unknown") !== (newCarrier.confidence || "unknown")) return true;
   if (positionKey(oldCarrier.position) !== positionKey(newCarrier.position)) return true;
@@ -1133,7 +1162,9 @@ async function main() {
   const changedHulls = [];
 
   for (const carrier of carriers.values()) {
-    carrier.evidence = deriveCarrierEvidence(carrier, assessmentsByHull.get(carrier.hull) || [], generatedAt);
+    const assessments = assessmentsByHull.get(carrier.hull) || [];
+    carrier.lastSeen = newestSupportingLastSeen(carrier, assessments);
+    carrier.evidence = deriveCarrierEvidence(carrier, assessments, generatedAt);
     carrier.confidence = evidenceToConfidence(carrier.evidence);
     const oldCarrier = previousByHull.get(carrier.hull);
     if (isMeaningfulChange(oldCarrier, carrier)) {

@@ -1,39 +1,39 @@
 {
-  "generatedAt": "2026-05-25T20:09:53.855Z",
-  "lastChangedAt": "2026-05-25T20:09:53.855Z",
+  "generatedAt": "2026-05-25T20:18:38.236Z",
+  "lastChangedAt": "2026-05-25T20:18:38.236Z",
   "sourceStatus": {
     "usni": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T20:09:51.271Z",
-      "lastSuccessAt": "2026-05-25T20:09:51.271Z",
+      "lastFetchedAt": "2026-05-25T20:18:35.269Z",
+      "lastSuccessAt": "2026-05-25T20:18:35.269Z",
       "lastErrorAt": null,
       "message": null
     },
     "stratfor": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T20:09:53.377Z",
-      "lastSuccessAt": "2026-05-25T20:09:53.377Z",
+      "lastFetchedAt": "2026-05-25T20:18:37.305Z",
+      "lastSuccessAt": "2026-05-25T20:18:37.305Z",
       "lastErrorAt": null,
       "message": null
     },
     "twz": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T20:09:53.469Z",
-      "lastSuccessAt": "2026-05-25T20:09:53.469Z",
+      "lastFetchedAt": "2026-05-25T20:18:37.384Z",
+      "lastSuccessAt": "2026-05-25T20:18:37.384Z",
       "lastErrorAt": null,
       "message": null
     },
     "gonavy": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T20:09:53.848Z",
-      "lastSuccessAt": "2026-05-25T20:09:53.848Z",
+      "lastFetchedAt": "2026-05-25T20:18:38.230Z",
+      "lastSuccessAt": "2026-05-25T20:18:38.230Z",
       "lastErrorAt": null,
       "message": null
     },
     "openaiImages": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T20:09:53.854Z",
-      "lastSuccessAt": "2026-05-25T20:09:53.854Z",
+      "lastFetchedAt": "2026-05-25T20:18:38.235Z",
+      "lastSuccessAt": "2026-05-25T20:18:38.235Z",
       "lastErrorAt": null,
       "message": null
     }
@@ -186,7 +186,7 @@
       "positionPrecision": "port",
       "confidence": "low",
       "evidence": "aging",
-      "lastSeen": "2025-10-08",
+      "lastSeen": "2026-05-17",
       "summary": "GoNavy's latest table entry places USS Carl Vinson in or near San Diego, California: 16Sep2025, returned to San Diego",
       "sources": [
         {
@@ -214,7 +214,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": "2026-05-25T20:09:53.855Z"
+      "lastChangedAt": "2026-05-25T20:18:38.236Z"
     },
     {
       "hull": "CVN-71",
