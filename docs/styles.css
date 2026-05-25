@@ -380,6 +380,13 @@ h3 {
   color: var(--muted);
 }
 
+.confidence-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
 .confidence {
   display: inline-flex;
   align-items: center;
