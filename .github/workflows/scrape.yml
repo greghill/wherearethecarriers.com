@@ -31,8 +31,8 @@ jobs:
         env:
           CHANGED_HULLS: ${{ steps.scrape.outputs.changedHulls }}
         run: |
-          if git diff --quiet docs/data/carriers.json scripts/map-image-cache.json; then
-            echo "No data changes"
+          if [ -z "$CHANGED_HULLS" ] && git diff --quiet scripts/map-image-cache.json; then
+            echo "No meaningful changes; skipping commit"
             exit 0
           fi
           git config user.name "github-actions[bot]"
@@ -42,6 +42,6 @@ jobs:
             hulls=$(echo "$CHANGED_HULLS" | sed 's/,/, /g')
             git commit -m "Update carrier data: $hulls"
           else
-            git commit -m "Scrape: no carrier changes"
+            git commit -m "Refresh image analysis cache"
           fi
           git push
