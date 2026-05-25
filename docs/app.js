@@ -1,5 +1,7 @@
 const DATA_URL = "./data/carriers.json";
 const ACTIONS_API_URL = "https://api.github.com/repos/greghill/wherearethecarriers.com/actions/workflows/scrape.yml/runs?per_page=1";
+const ACTIONS_WORKFLOW_URL = "https://github.com/greghill/wherearethecarriers.com/actions/workflows/scrape.yml";
+const DATA_COMMITS_URL = "https://github.com/greghill/wherearethecarriers.com/commits/master/docs/data/carriers.json";
 
 const statusLabels = {
   deployed: "Deployed",
@@ -34,20 +36,11 @@ const minMapZoom = window.innerWidth < 640 ? 1 : 3;
 const map = L.map("map", {
   minZoom: minMapZoom,
   zoomControl: false,
+  attributionControl: false,
   worldCopyJump: true
 }).setView([21, 15], minMapZoom);
 
 L.control.zoom({ position: "bottomleft" }).addTo(map);
-
-map.attributionControl.setPrefix(false);
-if (window.innerWidth < 640) {
-  const attribution = map.attributionControl.getContainer();
-  attribution.classList.add("collapsed");
-  attribution.addEventListener("click", (event) => {
-    event.stopPropagation();
-    attribution.classList.toggle("expanded");
-  });
-}
 
 const tileOpts = {
   maxZoom: 9,
@@ -106,6 +99,7 @@ const BasemapControl = L.Control.extend({
     select.addEventListener("change", () => {
       map.removeLayer(activeBasemap);
       activeBasemap = baseLayers[select.value].addTo(map);
+      renderBasemapAttribution();
     });
     return select;
   }
@@ -131,9 +125,31 @@ const els = {
   seen: document.querySelector("#ship-seen"),
   primarySourceSummary: document.querySelector("#primary-source-summary"),
   sources: document.querySelector("#source-list"),
+  aboutSources: document.querySelector("#about-source-list"),
+  basemapAttribution: document.querySelector("#basemap-attribution"),
   fleet: document.querySelector("#fleet-list"),
   filters: [...document.querySelectorAll(".chip")]
 };
+
+function layerAttributions(layer) {
+  if (layer instanceof L.LayerGroup) {
+    const attributions = [];
+    layer.eachLayer((child) => {
+      attributions.push(...layerAttributions(child));
+    });
+    return attributions;
+  }
+
+  const attribution = layer.options?.attribution;
+  return attribution ? [attribution] : [];
+}
+
+function renderBasemapAttribution() {
+  if (!els.basemapAttribution) return;
+  els.basemapAttribution.innerHTML = layerAttributions(activeBasemap).join(" | ");
+}
+
+renderBasemapAttribution();
 
 function formatDate(value) {
   if (!value) return "--";
@@ -340,6 +356,33 @@ function renderPrimarySourceSummary(sources) {
   els.primarySourceSummary.textContent = `Primary assessment: ${descriptions.join("; ")}.`;
 }
 
+function renderAboutSources() {
+  if (!els.aboutSources) return;
+  els.aboutSources.innerHTML = "";
+  const sourceMap = new Map();
+
+  state.data.carriers.forEach((carrier) => {
+    (carrier.sources || []).forEach((source) => {
+      if (!source.url) return;
+      const publisher = source.publisher || "Source";
+      if (!sourceMap.has(publisher)) sourceMap.set(publisher, source);
+    });
+  });
+
+  [...sourceMap.values()]
+    .sort((a, b) => (a.publisher || "").localeCompare(b.publisher || ""))
+    .forEach((source) => {
+      const link = document.createElement("a");
+      const sourceClass = sourceClassName(source);
+      link.className = `source-label${sourceClass ? ` ${sourceClass}` : ""}`;
+      link.href = source.url;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      link.textContent = source.publisher || "Source";
+      els.aboutSources.append(link);
+    });
+}
+
 function renderFleet() {
   els.fleet.innerHTML = "";
   state.data.carriers.forEach((carrier) => {
@@ -464,6 +507,7 @@ async function loadData() {
   map.invalidateSize();
   state.selectedHull = state.data.carriers[0]?.hull || null;
   updateFilterCounts();
+  renderAboutSources();
   renderMarkers();
   fitVisibleMarkers();
   renderFleet();
@@ -516,7 +560,7 @@ function renderUpdatedHeader() {
 
   if (action) {
     const link = document.createElement("a");
-    link.href = action.htmlUrl;
+    link.href = action.htmlUrl || ACTIONS_WORKFLOW_URL;
     link.target = "_blank";
     link.rel = "noreferrer";
     link.className = "scrape-link";
@@ -524,23 +568,31 @@ function renderUpdatedHeader() {
     link.append("scraped ", scrapeStatusIcon(action), ` ${formatRelative(action.timestamp, { withAgo: false })}`);
     segments.push(link);
   } else if (generatedAt) {
-    const span = document.createElement("span");
-    span.title = formatDate(generatedAt);
-    span.textContent = `scraped ${formatRelative(generatedAt, { withAgo: false })}`;
-    segments.push(span);
+    const link = document.createElement("a");
+    link.href = ACTIONS_WORKFLOW_URL;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.className = "scrape-link";
+    link.title = formatDate(generatedAt);
+    link.textContent = `scraped ${formatRelative(generatedAt, { withAgo: false })}`;
+    segments.push(link);
   }
 
   if (lastChangedAt) {
-    const span = document.createElement("span");
-    span.title = formatDate(lastChangedAt);
-    span.textContent = `updated ${formatRelative(lastChangedAt)}`;
+    const link = document.createElement("a");
+    link.href = DATA_COMMITS_URL;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    link.className = "scrape-link";
+    link.title = formatDate(lastChangedAt);
+    link.textContent = `updated ${formatRelative(lastChangedAt)}`;
     if (lastChangedAt === generatedAt) {
       const badge = document.createElement("span");
       badge.className = "fresh-badge";
       badge.textContent = "new";
-      span.append(" ", badge);
+      link.append(" ", badge);
     }
-    segments.push(span);
+    segments.push(link);
   }
 
   els.updated.append("Via public sources: ");

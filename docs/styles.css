@@ -344,6 +344,18 @@ h1 {
   background-size: 10px 7px;
 }
 
+.leaflet-bottom.leaflet-right {
+  margin: 0 12px 12px 0;
+}
+
+.leaflet-bottom.leaflet-left {
+  margin: 0 0 12px 12px;
+}
+
+.leaflet-control-attribution {
+  display: none !important;
+}
+
 .basemap-select:hover,
 .basemap-select:focus-visible {
   border-color: var(--accent);
@@ -620,6 +632,55 @@ ul {
   outline: none;
 }
 
+.about-source-block {
+  display: grid;
+  gap: 8px;
+}
+
+.about-source-block h3 {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.about-source-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.about-content .source-label {
+  text-decoration: none;
+}
+
+.about-content .source-label:hover,
+.about-content .source-label:focus-visible {
+  border-color: currentColor;
+}
+
+.about-content .source-label.source-gonavy:hover,
+.about-content .source-label.source-gonavy:focus-visible {
+  color: var(--source-gonavy);
+}
+
+.about-content .source-label.source-war-zone:hover,
+.about-content .source-label.source-war-zone:focus-visible {
+  color: var(--source-war-zone);
+}
+
+.about-content .source-label.source-stratfor:hover,
+.about-content .source-label.source-stratfor:focus-visible {
+  color: var(--source-stratfor);
+}
+
+.about-content .source-label.source-usni:hover,
+.about-content .source-label.source-usni:focus-visible {
+  color: var(--source-usni);
+}
+
 .fleet-list {
   display: grid;
   gap: 7px;
@@ -720,16 +781,6 @@ ul {
   box-shadow: 0 8px 22px rgba(13, 111, 128, 0.24);
 }
 
-.leaflet-control-attribution {
-  background: rgba(248, 250, 248, 0.78) !important;
-  color: #4b5c61 !important;
-  font-size: 0.72rem;
-}
-
-.leaflet-control-attribution a {
-  color: #20393e !important;
-}
-
 .leaflet-control-zoom a {
   border-color: var(--line) !important;
   background: rgba(248, 250, 248, 0.9) !important;
@@ -789,36 +840,6 @@ ul {
 
   .marker-text {
     display: none;
-  }
-
-  .leaflet-control-attribution.collapsed {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 22px;
-    height: 22px;
-    padding: 0;
-    font-size: 0;
-    line-height: 1;
-    cursor: pointer;
-  }
-
-  .leaflet-control-attribution.collapsed::before {
-    content: "ⓘ";
-    font-size: 14px;
-    color: #20393e;
-  }
-
-  .leaflet-control-attribution.collapsed.expanded {
-    width: auto;
-    max-width: 230px;
-    padding: 0 5px;
-    font-size: 0.62rem;
-    line-height: 1.15;
-  }
-
-  .leaflet-control-attribution.collapsed.expanded::before {
-    content: none;
   }
 
   .details-panel {
