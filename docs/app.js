@@ -435,6 +435,7 @@ function updateFilterCounts() {
     const key = button.dataset.filter;
     const n = counts[key] ?? 0;
     button.textContent = `${n} ${labels[key] || key}`;
+    if (key === "unknown") button.hidden = n === 0;
   });
 }
 
