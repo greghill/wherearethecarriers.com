@@ -343,6 +343,13 @@ function usedForLabel(source) {
   return source.role === "backup" ? "backup" : "";
 }
 
+function sourceMediumLabel(source) {
+  const note = source.note || "";
+  if (/image estimate|image-derived|map label/i.test(note)) return "image";
+  if (/text context|latest row/i.test(note)) return "text";
+  return source.imageUrl ? "image" : "";
+}
+
 function renderAboutSources() {
   if (!els.aboutSources) return;
   els.aboutSources.innerHTML = "";
@@ -412,6 +419,13 @@ function renderSources(carrier) {
       usage.className = `source-use${usedFor === "backup" ? " backup" : ""}`;
       usage.textContent = usedFor;
       labelRow.append(usage);
+    }
+    const medium = sourceMediumLabel(source);
+    if (medium) {
+      const mediumBadge = document.createElement("span");
+      mediumBadge.className = `source-medium ${medium}`;
+      mediumBadge.textContent = medium;
+      labelRow.append(mediumBadge);
     }
     const link = document.createElement("a");
     link.href = source.url;

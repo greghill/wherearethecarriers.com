@@ -527,6 +527,20 @@ ul {
   color: var(--muted);
 }
 
+.source-medium {
+  display: inline-flex;
+  width: fit-content;
+  border: 1px solid rgba(101, 117, 121, 0.22);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.52);
+  color: var(--muted);
+  padding: 2px 8px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .source-label.source-gonavy {
   border-color: color-mix(in srgb, var(--source-gonavy) 42%, transparent);
   background: color-mix(in srgb, var(--source-gonavy) 13%, transparent);
