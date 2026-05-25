@@ -409,7 +409,9 @@ function applyAssessment(carrier, assessment) {
     carrier.position = assessment.position || carrier.position;
     carrier.positionPrecision = inferPositionPrecision(assessment);
     carrier.confidence = assessment.confidence || carrier.confidence;
-    if (!refiningCentroid) carrier.lastSeen = assessment.lastSeen || carrier.lastSeen;
+    if (assessment.lastSeen && (!carrier.lastSeen || assessment.lastSeen > carrier.lastSeen)) {
+      carrier.lastSeen = assessment.lastSeen;
+    }
     if (!refiningCentroid) carrier.summary = assessment.summary || carrier.summary;
   }
 
