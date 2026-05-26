@@ -1,39 +1,39 @@
 {
-  "generatedAt": "2026-05-25T20:18:38.236Z",
-  "lastChangedAt": "2026-05-25T20:18:38.236Z",
+  "generatedAt": "2026-05-26T08:41:50.827Z",
+  "lastChangedAt": "2026-05-26T08:41:50.827Z",
   "sourceStatus": {
     "usni": {
-      "status": "ok",
-      "lastFetchedAt": "2026-05-25T20:18:35.269Z",
+      "status": "error",
+      "lastFetchedAt": "2026-05-26T08:41:47.383Z",
       "lastSuccessAt": "2026-05-25T20:18:35.269Z",
-      "lastErrorAt": null,
-      "message": null
+      "lastErrorAt": "2026-05-26T08:41:47.383Z",
+      "message": "https://news.usni.org/category/fleet-tracker returned 403"
     },
     "stratfor": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T20:18:37.305Z",
-      "lastSuccessAt": "2026-05-25T20:18:37.305Z",
+      "lastFetchedAt": "2026-05-26T08:41:49.671Z",
+      "lastSuccessAt": "2026-05-26T08:41:49.671Z",
       "lastErrorAt": null,
       "message": null
     },
     "twz": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T20:18:37.384Z",
-      "lastSuccessAt": "2026-05-25T20:18:37.384Z",
+      "lastFetchedAt": "2026-05-26T08:41:50.139Z",
+      "lastSuccessAt": "2026-05-26T08:41:50.139Z",
       "lastErrorAt": null,
       "message": null
     },
     "gonavy": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T20:18:38.230Z",
-      "lastSuccessAt": "2026-05-25T20:18:38.230Z",
+      "lastFetchedAt": "2026-05-26T08:41:50.825Z",
+      "lastSuccessAt": "2026-05-26T08:41:50.825Z",
       "lastErrorAt": null,
       "message": null
     },
     "openaiImages": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-25T20:18:38.235Z",
-      "lastSuccessAt": "2026-05-25T20:18:38.235Z",
+      "lastFetchedAt": "2026-05-26T08:41:50.826Z",
+      "lastSuccessAt": "2026-05-26T08:41:50.826Z",
       "lastErrorAt": null,
       "message": null
     }
@@ -82,26 +82,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
-          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-19",
-          "note": "Text context: South Atlantic",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
-          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-19",
-          "note": "Image estimate: Map label reads “USS Nimitz (CVN-68)” with a yellow diamond just southwest of the label, offshore north of Brazil.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
@@ -122,8 +102,8 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-05-20",
       "summary": "GoNavy's latest table entry places USS Dwight D. Eisenhower in or near Norfolk, Virginia: 15May2026, returned to Norfolk",
       "sources": [
@@ -140,16 +120,6 @@
           "url": "http://www.gonavy.jp/CVLocation.html",
           "publishedAt": "2026-05-20",
           "note": "Latest row: 15May2026, returned to Norfolk"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
-          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-19",
-          "note": "Text context: Norfolk, Virginia",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -172,7 +142,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": "2026-05-25T20:08:09.924Z"
+      "lastChangedAt": "2026-05-26T08:41:50.827Z"
     },
     {
       "hull": "CVN-70",
@@ -226,8 +196,8 @@
         "lon": -117.173
       },
       "positionPrecision": "port",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-05-20",
       "summary": "GoNavy's latest table entry places USS Theodore Roosevelt in or near San Diego, California: 14May2026, returned to San Diego",
       "sources": [
@@ -244,16 +214,6 @@
           "url": "http://www.gonavy.jp/CVLocation.html",
           "publishedAt": "2026-05-20",
           "note": "Latest row: 14May2026, returned to San Diego"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
-          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-19",
-          "note": "Text context: San Diego, California",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -276,7 +236,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": "2026-05-25T20:08:09.924Z"
+      "lastChangedAt": "2026-05-26T08:41:50.827Z"
     },
     {
       "hull": "CVN-72",
@@ -321,26 +281,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
-          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-19",
-          "note": "Text context: Arabian Sea",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
-          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-19",
-          "note": "Image estimate: Map label stack includes “Abraham Lincoln CSG” next to a yellow diamond west of India; the same nearby marker is also associated with George H.W. Bush CSG and USS Tripoli.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
@@ -371,8 +311,8 @@
         "lon": 139.672
       },
       "positionPrecision": "port",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-05-20",
       "summary": "GoNavy's latest table entry places USS George Washington in or near Yokosuka, Japan: 17May2026, returned to Yokosuka",
       "sources": [
@@ -393,32 +333,12 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
-          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-19",
-          "note": "Image estimate: Map label reads “George Washington CSG Yokosuka, Japan” with a yellow diamond on Japan’s east coast near Tokyo Bay.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
           "publishedAt": "2026-05-17",
           "note": "Image estimate: Blue marker labeled 'USS GEORGE WASHINGTON (CVN 73)' sits at the Yokosuka, Japan callout.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
-          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-19",
-          "note": "Text context: Yokosuka, Japan",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -431,7 +351,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": "2026-05-25T20:08:09.924Z"
+      "lastChangedAt": "2026-05-26T08:41:50.827Z"
     },
     {
       "hull": "CVN-74",
@@ -602,26 +522,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
-          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-19",
-          "note": "Text context: Arabian Sea",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
-          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-19",
-          "note": "Image estimate: Map label stack includes “George H.W. Bush CSG” next to a yellow diamond west of India; the same nearby marker is also associated with Abraham Lincoln CSG and USS Tripoli.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
@@ -642,8 +542,8 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-05-20",
       "summary": "GoNavy's latest table entry places USS Gerald R. Ford in or near Norfolk, Virginia: 16May2026, returned to Norfolk",
       "sources": [
@@ -664,32 +564,12 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
-          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-19",
-          "note": "Image estimate: Map label reads “Ford CSG Norfolk, Va.” with a yellow diamond at the Virginia coast near Hampton Roads.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
           "publishedAt": "2026-05-17",
           "note": "Image estimate: Label 'USS GERALD R. FORD (CVN 78)' is at the Norfolk, VA callout with a white homeport square.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: May 18, 2026",
-          "url": "https://news.usni.org/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026",
-          "publishedAt": "2026-05-19",
-          "note": "Text context: Norfolk, Virginia",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_18_26_a.jpg"
         },
         {
           "role": "backup",
@@ -702,7 +582,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": "2026-05-25T20:08:09.924Z"
+      "lastChangedAt": "2026-05-26T08:41:50.827Z"
     }
   ]
 }
