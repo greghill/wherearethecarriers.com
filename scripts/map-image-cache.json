@@ -795,6 +795,131 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean|https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28|2026-05-26": {
+      "sourceKey": "twz",
+      "model": "gpt-5.5",
+      "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+      "publishedAt": "2026-05-26",
+      "createdAt": "2026-05-26T21:56:52.658Z",
+      "result": {
+        "sourceKey": "twz",
+        "imageUrl": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+        "publishedAt": "2026-05-26",
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Caribbean Sea",
+            "lat": 19,
+            "lon": -75,
+            "confidence": "medium",
+            "evidenceText": "The map label for CVN 68 is visible in the Caribbean area; the adjacent red carrier dot appears just south of Cuba / near the central Caribbean.",
+            "rationale": "Estimated from the red dot immediately adjacent to the CVN 68 label, not from the surrounding region."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk / Hampton Roads area",
+            "lat": 36.9,
+            "lon": -76.3,
+            "confidence": "low",
+            "evidenceText": "A carrier label/dot cluster is visible on the U.S. East Coast around the Norfolk/Hampton Roads area; CVN 69 appears to be one of the visible labels in that cluster.",
+            "rationale": "The marker is visually colocated with the dense East Coast carrier label cluster; exact separation between overlapping labels is hard to resolve in the small image."
+          },
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "Southern California / San Diego area",
+            "lat": 32.7,
+            "lon": -117.2,
+            "confidence": "medium",
+            "evidenceText": "The CVN 70 label is visible on the U.S. West Coast near Southern California, with the red dot adjacent to the San Diego area.",
+            "rationale": "Returned the red marker next to the CVN 70 label, which visually sits on the Southern California coast."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Southern California / San Diego area",
+            "lat": 32.8,
+            "lon": -117.4,
+            "confidence": "low",
+            "evidenceText": "A second carrier label/dot appears in the Southern California West Coast cluster near San Diego, consistent with CVN 71 being shown there.",
+            "rationale": "The labels in the San Diego cluster are difficult to separate, so the estimate preserves a small offset from the nearby CVN 70 marker."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "U.S. West Coast / Pacific Northwest area",
+            "lat": 47.7,
+            "lon": -122.6,
+            "confidence": "low",
+            "evidenceText": "A carrier label/dot is visible on the U.S. West Coast farther north than the Southern California cluster, near the Pacific Northwest/Puget Sound area.",
+            "rationale": "Estimated from the northern West Coast red marker adjacent to the visible CVN label; the small thumbnail makes the hull number somewhat uncertain."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Western Pacific / Japan area",
+            "lat": 35.3,
+            "lon": 139.7,
+            "confidence": "medium",
+            "evidenceText": "A carrier label/dot is visible in the western Pacific near Japan/Yokosuka.",
+            "rationale": "Returned the dot adjacent to the Japan-area carrier label, corresponding to the forward-deployed carrier marker."
+          },
+          {
+            "hull": "CVN-74",
+            "name": "USS John C. Stennis",
+            "locationName": "Newport News / Hampton Roads area",
+            "lat": 36.95,
+            "lon": -76.45,
+            "confidence": "low",
+            "evidenceText": "One of the tightly grouped East Coast carrier labels/dots appears at the Newport News/Hampton Roads location.",
+            "rationale": "The East Coast markers overlap strongly in the image; the coordinate is anchored to the visible Hampton Roads cluster rather than a broader region."
+          },
+          {
+            "hull": "CVN-75",
+            "name": "USS Harry S. Truman",
+            "locationName": "Eastern Mediterranean / Middle East transit area",
+            "lat": 33.5,
+            "lon": 34,
+            "confidence": "low",
+            "evidenceText": "A red carrier label/dot appears in the eastern Mediterranean/Middle East portion of the map, separated from the U.S. coast clusters.",
+            "rationale": "Estimated from the deployed red dot adjacent to its label; exact hull text is hard to read at thumbnail resolution."
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "U.S. West Coast / Pacific Northwest area",
+            "lat": 47.6,
+            "lon": -122.8,
+            "confidence": "low",
+            "evidenceText": "A visible carrier marker in the Pacific Northwest/Puget Sound vicinity appears as part of the U.S. West Coast carrier markers.",
+            "rationale": "Estimated from the red dot at the northern West Coast cluster; small image size prevents a high-confidence hull-number read."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Norfolk / Hampton Roads area",
+            "lat": 36.85,
+            "lon": -76.25,
+            "confidence": "low",
+            "evidenceText": "A carrier label/dot is visible in the Norfolk-area East Coast cluster and appears to correspond to one of the CVNs shown there.",
+            "rationale": "Returned a coordinate within the visible Norfolk label cluster, slightly separated from other East Coast carriers."
+          },
+          {
+            "hull": "CVN-78",
+            "name": "USS Gerald R. Ford",
+            "locationName": "Norfolk / Hampton Roads area",
+            "lat": 36.8,
+            "lon": -76.1,
+            "confidence": "low",
+            "evidenceText": "A CVN 78 label appears to be visible in the U.S. East Coast/Norfolk cluster, with the adjacent red carrier dot near Hampton Roads.",
+            "rationale": "The marker is anchored to the label cluster on the East Coast; overlap in the small source image limits precision."
+          }
+        ]
+      }
     }
   }
 }

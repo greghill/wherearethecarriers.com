@@ -1,39 +1,39 @@
 {
-  "generatedAt": "2026-05-26T16:51:16.594Z",
-  "lastChangedAt": "2026-05-26T16:51:16.594Z",
+  "generatedAt": "2026-05-26T21:57:57.190Z",
+  "lastChangedAt": "2026-05-26T21:57:57.190Z",
   "sourceStatus": {
     "usni": {
       "status": "error",
-      "lastFetchedAt": "2026-05-26T16:51:13.444Z",
+      "lastFetchedAt": "2026-05-26T21:56:49.008Z",
       "lastSuccessAt": "2026-05-25T20:18:35.269Z",
-      "lastErrorAt": "2026-05-26T16:51:13.444Z",
+      "lastErrorAt": "2026-05-26T21:56:49.008Z",
       "message": "https://news.usni.org/category/fleet-tracker returned 403"
     },
     "stratfor": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-26T16:51:15.465Z",
-      "lastSuccessAt": "2026-05-26T16:51:15.465Z",
+      "lastFetchedAt": "2026-05-26T21:56:51.103Z",
+      "lastSuccessAt": "2026-05-26T21:56:51.103Z",
       "lastErrorAt": null,
       "message": null
     },
     "twz": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-26T16:51:16.055Z",
-      "lastSuccessAt": "2026-05-26T16:51:16.055Z",
+      "lastFetchedAt": "2026-05-26T21:56:51.922Z",
+      "lastSuccessAt": "2026-05-26T21:56:51.922Z",
       "lastErrorAt": null,
       "message": null
     },
     "gonavy": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-26T16:51:16.592Z",
-      "lastSuccessAt": "2026-05-26T16:51:16.592Z",
+      "lastFetchedAt": "2026-05-26T21:56:52.657Z",
+      "lastSuccessAt": "2026-05-26T21:56:52.657Z",
       "lastErrorAt": null,
       "message": null
     },
     "openaiImages": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-26T16:51:16.593Z",
-      "lastSuccessAt": "2026-05-26T16:51:16.593Z",
+      "lastFetchedAt": "2026-05-26T21:57:57.190Z",
+      "lastSuccessAt": "2026-05-26T21:57:57.190Z",
       "lastErrorAt": null,
       "message": null
     }
@@ -43,16 +43,16 @@
       "hull": "CVN-68",
       "name": "USS Nimitz",
       "status": "deployed",
-      "locationName": "Western Atlantic, off northern Brazil",
+      "locationName": "Western Pacific",
       "position": {
-        "lat": -0.8,
-        "lon": -40.1
+        "lat": 18,
+        "lon": 145
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-05-21",
-      "summary": "U.S. Naval Update Map: May 21, 2026 places USS Nimitz near Western Atlantic, off northern Brazil from a public tracker map image.",
+      "lastSeen": "2026-05-26",
+      "summary": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean places USS Nimitz in or near Western Pacific.",
       "sources": [
         {
           "role": "primary",
@@ -62,25 +62,35 @@
             "position",
             "summary"
           ],
+          "publisher": "The War Zone",
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Text context: Western Pacific",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "The War Zone",
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Image estimate: The map label for CVN 68 is visible in the Caribbean area; the adjacent red carrier dot appears just south of Cuba / near the central Caribbean.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: May 21, 2026",
           "url": "https://worldview.stratfor.com/article/us-naval-update-map-may-21-2026",
           "publishedAt": "2026-05-21",
           "note": "Image estimate: Orange/red label “CVN 68” appears just off the northern coast of Brazil, with the current-week orange dot immediately beside the label at the northern end of the orange trail.",
           "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260520%20display.png"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Image estimate: Orange CVN label 'USS NIMITZ (CVN 68)' appears in the South Atlantic east of Brazil, with the adjacent orange dot just to the left of the label.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
         }
       ],
-      "lastChangedAt": "2026-05-26T16:51:16.594Z"
+      "lastChangedAt": "2026-05-26T21:57:57.190Z"
     },
     {
       "hull": "CVN-69",
@@ -92,9 +102,9 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
-      "lastSeen": "2026-05-20",
+      "confidence": "high",
+      "evidence": "corroborated",
+      "lastSeen": "2026-05-26",
       "summary": "GoNavy's latest table entry places USS Dwight D. Eisenhower in or near Norfolk, Virginia: 15May2026, returned to Norfolk",
       "sources": [
         {
@@ -115,24 +125,14 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Text context: pulled into Norfolk, Virginia",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Image estimate: Blue at-port/deployed marker labeled 'USS DWIGHT D. EISENHOWER (CVN 69)' is just off the U.S. East Coast, below the Ford/Norfolk label cluster.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Image estimate: A carrier label/dot cluster is visible on the U.S. East Coast around the Norfolk/Hampton Roads area; CVN 69 appears to be one of the visible labels in that cluster.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28"
         }
       ],
-      "lastChangedAt": "2026-05-26T08:41:50.827Z"
+      "lastChangedAt": "2026-05-26T21:57:57.190Z"
     },
     {
       "hull": "CVN-70",
@@ -144,9 +144,9 @@
         "lon": -117.173
       },
       "positionPrecision": "port",
-      "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-05-17",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-05-26",
       "summary": "GoNavy's latest table entry places USS Carl Vinson in or near San Diego, California: 16Sep2025, returned to San Diego",
       "sources": [
         {
@@ -167,14 +167,14 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Image estimate: Red label 'USS CARL VINSON (CVN 70)' is in the Southern California cluster near the 'SAN DIEGO, CA' callout, with the adjacent red dot at the coast.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Image estimate: The CVN 70 label is visible on the U.S. West Coast near Southern California, with the red dot adjacent to the San Diego area.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28"
         }
       ],
-      "lastChangedAt": "2026-05-25T20:18:38.236Z"
+      "lastChangedAt": "2026-05-26T21:57:57.190Z"
     },
     {
       "hull": "CVN-71",
@@ -186,9 +186,9 @@
         "lon": -117.173
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
-      "lastSeen": "2026-05-20",
+      "confidence": "high",
+      "evidence": "corroborated",
+      "lastSeen": "2026-05-26",
       "summary": "GoNavy's latest table entry places USS Theodore Roosevelt in or near San Diego, California: 14May2026, returned to San Diego",
       "sources": [
         {
@@ -209,24 +209,14 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Text context: pulled into San Diego, California",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Image estimate: Blue label 'USS THEODORE ROOSEVELT (CVN 71)' appears just southwest of the San Diego callout, with the adjacent blue dot near the coast.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Image estimate: A second carrier label/dot appears in the Southern California West Coast cluster near San Diego, consistent with CVN 71 being shown there.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28"
         }
       ],
-      "lastChangedAt": "2026-05-26T08:41:50.827Z"
+      "lastChangedAt": "2026-05-26T21:57:57.190Z"
     },
     {
       "hull": "CVN-72",
@@ -271,21 +261,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Text context: Arabian Sea",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Image estimate: Green label 'USS ABRAHAM LINCOLN (CVN 72)' appears in the northern Arabian Sea/Oman area with a green dot directly above the label.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Image estimate: A carrier label/dot is visible on the U.S. West Coast farther north than the Southern California cluster, near the Pacific Northwest/Puget Sound area.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28"
         }
       ],
       "lastChangedAt": "2026-05-26T16:51:16.594Z"
@@ -300,10 +280,10 @@
         "lon": 139.672
       },
       "positionPrecision": "port",
-      "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-05-17",
-      "summary": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home reports USS George Washington pulled into Yokosuka, Japan.",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-05-26",
+      "summary": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean places USS George Washington in or near Yokosuka, Japan.",
       "sources": [
         {
           "role": "primary",
@@ -314,24 +294,24 @@
             "summary"
           ],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Text context: pulled into Yokosuka, Japan",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Text context: Yokosuka, Japan",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28"
         },
         {
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Image estimate: Blue marker labeled 'USS GEORGE WASHINGTON (CVN 73)' sits at the Yokosuka, Japan callout.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Image estimate: A carrier label/dot is visible in the western Pacific near Japan/Yokosuka.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28"
         }
       ],
-      "lastChangedAt": "2026-05-26T16:51:16.594Z"
+      "lastChangedAt": "2026-05-26T21:57:57.190Z"
     },
     {
       "hull": "CVN-74",
@@ -366,11 +346,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Image estimate: Red label 'USS JOHN C. STENNIS (CVN 74)' is visible in the dense West Coast cluster, with a red dot just offshore of California near the label.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Image estimate: One of the tightly grouped East Coast carrier labels/dots appears at the Newport News/Hampton Roads location.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28"
         }
       ],
       "lastChangedAt": "2026-05-25T20:08:09.924Z"
@@ -408,11 +388,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Image estimate: Red label 'USS HARRY S. TRUMAN (CVN 75)' is south of the West Coast cluster, adjacent to a red dot/trail west of Baja California.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Image estimate: A red carrier label/dot appears in the eastern Mediterranean/Middle East portion of the map, separated from the U.S. coast clusters.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28"
         }
       ],
       "lastChangedAt": "2026-05-25T20:08:09.924Z"
@@ -450,11 +430,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Image estimate: Red label 'USS RONALD REAGAN (CVN 76)' appears near the 'BREMERTON, WA' callout, with a red marker at Puget Sound.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Image estimate: A visible carrier marker in the Pacific Northwest/Puget Sound vicinity appears as part of the U.S. West Coast carrier markers.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28"
         }
       ],
       "lastChangedAt": "2026-05-25T20:08:09.924Z"
@@ -502,11 +482,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Image estimate: Green label 'USS GEORGE H.W. BUSH (CVN 77)' appears in the Arabian Sea below Abraham Lincoln, with its adjacent green dot near the label.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Image estimate: A carrier label/dot is visible in the Norfolk-area East Coast cluster and appears to correspond to one of the CVNs shown there.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28"
         }
       ],
       "lastChangedAt": "2026-05-26T16:51:16.594Z"
@@ -521,9 +501,9 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
-      "lastSeen": "2026-05-20",
+      "confidence": "high",
+      "evidence": "corroborated",
+      "lastSeen": "2026-05-26",
       "summary": "GoNavy's latest table entry places USS Gerald R. Ford in or near Norfolk, Virginia: 16May2026, returned to Norfolk",
       "sources": [
         {
@@ -544,24 +524,14 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Image estimate: Label 'USS GERALD R. FORD (CVN 78)' is at the Norfolk, VA callout with a white homeport square.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 17, 2026: Ford Is Finally Home",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-17-2026-ford-is-finally-home",
-          "publishedAt": "2026-05-17",
-          "note": "Text context: Norfolk, Virginia",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=1200"
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Image estimate: A CVN 78 label appears to be visible in the U.S. East Coast/Norfolk cluster, with the adjacent red carrier dot near Hampton Roads.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/Carrier-Tracker-as-of-May-17-2026-TWZ.png?w=50&h=28"
         }
       ],
-      "lastChangedAt": "2026-05-26T08:41:50.827Z"
+      "lastChangedAt": "2026-05-26T21:57:57.190Z"
     }
   ]
 }
