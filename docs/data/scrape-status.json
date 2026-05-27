@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-05-27T11:50:06.020Z",
+  "lastRunAt": "2026-05-27T11:50:06.020Z",
+  "sourceOutageGraceDays": 3,
+  "sourceStatus": {
+    "usni": {
+      "status": "error",
+      "lastFetchedAt": "2026-05-27T11:50:06.123Z",
+      "lastSuccessAt": "2026-05-25T20:18:35.269Z",
+      "firstErrorAt": "2026-05-26T08:41:47.383Z",
+      "lastErrorAt": "2026-05-27T11:50:06.123Z",
+      "consecutiveFailures": 2,
+      "message": "https://news.usni.org/category/fleet-tracker returned 403"
+    },
+    "stratfor": {
+      "status": "ok",
+      "lastFetchedAt": "2026-05-27T11:50:08.374Z",
+      "lastSuccessAt": "2026-05-27T11:50:08.374Z",
+      "firstErrorAt": null,
+      "lastErrorAt": null,
+      "consecutiveFailures": 0,
+      "message": null
+    },
+    "twz": {
+      "status": "ok",
+      "lastFetchedAt": "2026-05-27T11:50:08.914Z",
+      "lastSuccessAt": "2026-05-27T11:50:08.914Z",
+      "firstErrorAt": null,
+      "lastErrorAt": null,
+      "consecutiveFailures": 0,
+      "message": null
+    },
+    "gonavy": {
+      "status": "ok",
+      "lastFetchedAt": "2026-05-27T11:50:09.614Z",
+      "lastSuccessAt": "2026-05-27T11:50:09.614Z",
+      "firstErrorAt": null,
+      "lastErrorAt": null,
+      "consecutiveFailures": 0,
+      "message": null
+    },
+    "openaiImages": {
+      "status": "partial",
+      "lastFetchedAt": "2026-05-27T11:50:09.615Z",
+      "lastSuccessAt": "2026-05-26T08:41:50.826Z",
+      "firstErrorAt": null,
+      "lastErrorAt": null,
+      "consecutiveFailures": 0,
+      "message": "OPENAI_API_KEY not set; no cached analysis for twz"
+    }
+  }
+}

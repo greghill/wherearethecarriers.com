@@ -25,9 +25,10 @@ USNI, Stratfor, and TWZ category/topic pages are treated as indexes. The scraper
 ## Data flow
 
 - `docs/index.html`, `docs/app.js`, and `docs/styles.css` render a Leaflet world map in the browser.
-- `docs/data/carriers.json` is the only runtime data file the page fetches.
-- `scripts/scrape.mjs` fetches public source pages, parses source text, picks approximate map positions, and writes `docs/data/carriers.json`.
-- `.github/workflows/scrape.yml` runs hourly and commits back to the repository only when a carrier's status, location, or position actually changes (or when the OpenAI image cache picked up new analyses). The topbar's "scraped" timestamp comes from the live GitHub Actions API, so no-change runs leave no commit.
+- `docs/data/carriers.json` is the runtime carrier data file.
+- `docs/data/scrape-status.json` tracks scrape/source health separately so source outages can be visible without making carrier data look changed.
+- `scripts/scrape.mjs` fetches public source pages, parses source text, picks approximate map positions, and writes both JSON files.
+- `.github/workflows/scrape.yml` runs hourly and commits carrier data only when a carrier's status, location, evidence, confidence, last-seen date, or position actually changes. Scrape-health-only runs commit only `docs/data/scrape-status.json`.
 
 The current JSON contract stays intentionally simple: one carrier record per ship, with selected status, location, last reported date, approximate position, and an embedded list of supporting sources.
 

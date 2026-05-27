@@ -2,6 +2,7 @@ import { appendFile, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 
 const DATA_PATH = new URL("../docs/data/carriers.json", import.meta.url);
+const SCRAPE_STATUS_PATH = new URL("../docs/data/scrape-status.json", import.meta.url);
 const IMAGE_POINTS_PATH = new URL("./image-points.json", import.meta.url);
 const IMAGE_ANALYSIS_CACHE_PATH = new URL("./map-image-cache.json", import.meta.url);
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-5.5";
@@ -9,12 +10,20 @@ const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const FORCE_IMAGE_REPROCESS = /^(1|true|yes)$/i.test(process.env.FORCE_IMAGE_REPROCESS || "");
 const CURRENT_SOURCE_DAYS = 7;
 const AGING_SOURCE_DAYS = 90;
+const SOURCE_OUTAGE_GRACE_DAYS = Number(process.env.SOURCE_OUTAGE_GRACE_DAYS || 3);
 
 const SOURCE_URLS = {
   gonavy: "http://www.gonavy.jp/CVLocation.html",
   usniIndex: "https://news.usni.org/category/fleet-tracker",
   stratforIndex: "https://worldview.stratfor.com/topic/tracking-us-naval-power",
   twzIndex: "https://www.twz.com/category/carrier-tracker"
+};
+
+const SOURCE_PUBLISHERS = {
+  usni: "USNI News",
+  stratfor: "Stratfor Worldview",
+  twz: "The War Zone",
+  gonavy: "GoNavy.jp"
 };
 
 const CARRIERS = [
@@ -33,6 +42,7 @@ const CARRIERS = [
 
 const LOCATION_HINTS = [
   { match: /north arabian sea|arabian sea|centcom/i, name: "Arabian Sea", lat: 18.0, lon: 63.0, status: "deployed" },
+  { match: /caribbean|southern seas|southcom/i, name: "Caribbean Sea", lat: 18.0, lon: -75.0, status: "deployed" },
   { match: /newport news shipyard|newport news shipbuilding|outfitting berth/i, name: "Newport News, Virginia", lat: 36.986, lon: -76.432, status: "maintenance" },
   { match: /puget sound naval shipyard|psns|dry dock/i, name: "Bremerton, Washington", lat: 47.561, lon: -122.648, status: "maintenance" },
   { match: /yokosuka/i, name: "Yokosuka, Japan", lat: 35.281, lon: 139.672, status: "port" },
@@ -171,14 +181,33 @@ function upgradeStratforImageUrl(url) {
   return stripped.split("?")[0];
 }
 
+function imageWidth(url) {
+  const width = url?.match(/[?&]w=(\d+)/i)?.[1];
+  return width ? Number(width) : 0;
+}
+
+function twzDateToken(baseUrl) {
+  const match = baseUrl.match(/as-of-([a-z]+-\d{1,2}-\d{4})/i);
+  return match?.[1]?.toLowerCase();
+}
+
 function bestMapImageUrl(html, baseUrl, sourceKey) {
   const urls = imageUrlsFromHtml(html, baseUrl);
   const mapPatterns = {
     usni: /\/FT_|fleet|tracker|map/i,
-    twz: /Carrier-Tracker|carrier.*tracker|map/i,
+    twz: /Carrier-Tracker|carrier.*tracker|where-are-the-carriers|map/i,
     stratfor: /naval.*update.*map|display|map/i
   };
   const matches = urls.filter((url) => mapPatterns[sourceKey]?.test(url));
+  if (sourceKey === "twz" && matches.length) {
+    const dateToken = twzDateToken(baseUrl);
+    const currentMatches = dateToken
+      ? matches.filter((url) => url.toLowerCase().includes(dateToken))
+      : [];
+    return [...(currentMatches.length ? currentMatches : matches)]
+      .sort((a, b) => imageWidth(b) - imageWidth(a))
+      [0];
+  }
   // USNI publishes revisions as suffixed siblings (FT_5_18_26.jpg, FT_5_18_26_a.jpg).
   // The og:image often lags the body, so prefer the lexicographically-last filename.
   const picked = sourceKey === "usni" && matches.length
@@ -253,7 +282,7 @@ function scoreLocationText(text, record) {
 function bestCarrierLocation(text, record, fallbackHeading = "") {
   const candidates = [];
   for (const sentence of splitSentences(text)) {
-    if (!containsAlias(sentence, record) && !matchingAlias(text, record)) continue;
+    if (!containsAlias(sentence, record)) continue;
     const candidate = scoreLocationText(sentence, record);
     if (candidate) candidates.push(candidate);
   }
@@ -503,6 +532,10 @@ function sourceAgeDays(assessment, generatedAt) {
   return daysBetween(assessment.lastSeen, generatedAt);
 }
 
+function outageAgeDays(statusEntry, generatedAt) {
+  return daysBetween(statusEntry?.firstErrorAt, generatedAt);
+}
+
 function assessmentDateValue(assessment) {
   if (!assessment?.lastSeen) return 0;
   const date = /^\d{4}-\d{2}-\d{2}$/.test(assessment.lastSeen)
@@ -567,6 +600,10 @@ function assessmentSupportsCarrier(assessment, carrier) {
 
 function assessmentPublisher(assessment) {
   return (assessment.sources || []).map((source) => source.publisher).find(Boolean) || "Unknown";
+}
+
+function sourceLastSeen(source) {
+  return source.sourceLastSeen || source.publishedAt || null;
 }
 
 function supportingAssessmentsFor(carrier, assessments) {
@@ -705,7 +742,7 @@ async function scrapeTwz() {
     if (!containsAlias(articleText, record)) continue;
     if (assessments.some((assessment) => assessment.hull === record.hull)) continue;
 
-    const best = bestCarrierLocation(articleText, record);
+    const best = bestCarrierLocation(articleText, record, title);
     if (!best || best.score < 5) continue;
 
     const hint = best.hint;
@@ -796,12 +833,29 @@ function cacheKeyForImage(sourceSummary) {
   ].join("|");
 }
 
+function cacheEntryMatchesCurrentRules(key, entry) {
+  if ((entry.model || key.split("|")[0]) !== OPENAI_MODEL) return false;
+  if (entry.sourceKey === "twz") {
+    const dateToken = twzDateToken(entry.articleUrl || "");
+    if (dateToken && !String(entry.imageUrl || "").toLowerCase().includes(dateToken)) return false;
+  }
+  return true;
+}
+
 async function loadImageAnalysisCache() {
   if (!existsSync(IMAGE_ANALYSIS_CACHE_PATH)) {
     return { version: 1, analyses: {} };
   }
   const raw = await readFile(IMAGE_ANALYSIS_CACHE_PATH, "utf8");
-  return JSON.parse(raw);
+  const cache = JSON.parse(raw);
+  const entries = Object.entries(cache.analyses || {});
+  cache.analyses = Object.fromEntries(
+    entries.filter(([key, entry]) => cacheEntryMatchesCurrentRules(key, entry))
+  );
+  if (cache.analyses && Object.keys(cache.analyses).length !== entries.length) {
+    cache._sanitized = true;
+  }
+  return cache;
 }
 
 async function saveImageAnalysisCache(cache) {
@@ -950,7 +1004,8 @@ async function loadOpenAiImageAssessments(sourceSummaries, sourceStatus) {
   if (!imageSources.length) return [];
 
   const cache = await loadImageAnalysisCache();
-  let cacheChanged = false;
+  let cacheChanged = Boolean(cache._sanitized);
+  delete cache._sanitized;
   const assessments = [];
   const errors = [];
   const skipped = [];
@@ -1024,11 +1079,21 @@ function carryStatusEntry(previousStatus, key) {
       status: prior.status || "unknown",
       lastFetchedAt: prior.lastFetchedAt || null,
       lastSuccessAt: prior.lastSuccessAt || null,
+      firstErrorAt: prior.firstErrorAt || (prior.status === "error" ? prior.lastErrorAt : null) || null,
       lastErrorAt: prior.lastErrorAt || null,
+      consecutiveFailures: Number.isFinite(prior.consecutiveFailures) ? prior.consecutiveFailures : 0,
       message: prior.message || null
     };
   }
-  return { status: "unknown", lastFetchedAt: null, lastSuccessAt: null, lastErrorAt: null, message: null };
+  return {
+    status: "unknown",
+    lastFetchedAt: null,
+    lastSuccessAt: null,
+    firstErrorAt: null,
+    lastErrorAt: null,
+    consecutiveFailures: 0,
+    message: null
+  };
 }
 
 function recordStatus(sourceStatus, key, outcome, message) {
@@ -1037,8 +1102,57 @@ function recordStatus(sourceStatus, key, outcome, message) {
   entry.status = outcome;
   entry.lastFetchedAt = now;
   entry.message = message || null;
-  if (outcome === "ok") entry.lastSuccessAt = now;
-  else if (outcome === "error") entry.lastErrorAt = now;
+  if (outcome === "ok") {
+    entry.lastSuccessAt = now;
+    entry.firstErrorAt = null;
+    entry.consecutiveFailures = 0;
+  } else if (outcome === "error") {
+    entry.firstErrorAt = entry.firstErrorAt || now;
+    entry.lastErrorAt = now;
+    entry.consecutiveFailures = (entry.consecutiveFailures || 0) + 1;
+  }
+}
+
+function canUsePriorSourceDuringOutage(sourceStatus, key, generatedAt) {
+  const entry = sourceStatus[key];
+  if (!entry || entry.status !== "error") return false;
+  const age = outageAgeDays(entry, generatedAt);
+  return age !== null && age <= SOURCE_OUTAGE_GRACE_DAYS;
+}
+
+function priorAssessmentsForFailedSource(previous, key, sourceStatus, generatedAt) {
+  if (!canUsePriorSourceDuringOutage(sourceStatus, key, generatedAt)) return [];
+
+  const publisher = SOURCE_PUBLISHERS[key];
+  if (!publisher) return [];
+
+  const assessments = [];
+  for (const oldCarrier of previous.carriers || []) {
+    const sources = (oldCarrier.sources || [])
+      .filter((source) => source.publisher === publisher)
+      .filter((source) => sourceLastSeen(source))
+      .map((source) => ({
+        ...source,
+        sourceLastSeen: sourceLastSeen(source)
+      }));
+    if (!sources.length) continue;
+
+    assessments.push({
+      hull: oldCarrier.hull,
+      status: oldCarrier.status,
+      locationName: oldCarrier.locationName,
+      position: oldCarrier.position,
+      positionPrecision: oldCarrier.positionPrecision,
+      confidence: oldCarrier.confidence,
+      lastSeen: sources
+        .map((source) => source.sourceLastSeen)
+        .sort()
+        .at(-1),
+      summary: oldCarrier.summary,
+      sources
+    });
+  }
+  return assessments;
 }
 
 function sourceRoleRank(source) {
@@ -1096,10 +1210,15 @@ function finalizeCarrier(carrier) {
 
 async function main() {
   const previous = existsSync(DATA_PATH) ? JSON.parse(await readFile(DATA_PATH, "utf8")) : { carriers: [] };
+  const previousScrapeStatus = existsSync(SCRAPE_STATUS_PATH)
+    ? JSON.parse(await readFile(SCRAPE_STATUS_PATH, "utf8"))
+    : { sourceStatus: previous.sourceStatus || {} };
+  const generatedAt = new Date().toISOString();
   const carriers = new Map(CARRIERS.map((record) => [record.hull, blankCarrier(record)]));
   const assessmentsByHull = new Map(CARRIERS.map((record) => [record.hull, []]));
   const sourceStatus = {};
   const sourceSummaries = {};
+  const failedSourceKeys = [];
 
   const scrapers = [
     ["usni", scrapeUsni],
@@ -1108,15 +1227,15 @@ async function main() {
     ["gonavy", scrapeGoNavy]
   ];
 
-  for (const [key] of scrapers) sourceStatus[key] = carryStatusEntry(previous.sourceStatus, key);
-  sourceStatus.openaiImages = carryStatusEntry(previous.sourceStatus, "openaiImages");
+  for (const [key] of scrapers) sourceStatus[key] = carryStatusEntry(previousScrapeStatus.sourceStatus, key);
+  sourceStatus.openaiImages = carryStatusEntry(previousScrapeStatus.sourceStatus, "openaiImages");
 
   for (const [key, scraper] of scrapers) {
     try {
       const result = await scraper();
       recordStatus(sourceStatus, key, "ok");
       sourceSummaries[key] = {
-        publisher: key === "usni" ? "USNI News" : key === "stratfor" ? "Stratfor Worldview" : key === "twz" ? "The War Zone" : "GoNavy.jp",
+        publisher: SOURCE_PUBLISHERS[key],
         ...result
       };
       for (const assessment of result.assessments || []) {
@@ -1125,6 +1244,24 @@ async function main() {
       }
     } catch (error) {
       recordStatus(sourceStatus, key, "error", error.message);
+      failedSourceKeys.push(key);
+    }
+  }
+
+  for (const key of failedSourceKeys) {
+    const priorAssessments = priorAssessmentsForFailedSource(previous, key, sourceStatus, generatedAt);
+    for (const assessment of priorAssessments) {
+      const carrier = carriers.get(assessment.hull);
+      assessmentsByHull.get(assessment.hull)?.push(assessment);
+      if (assessmentSupportsCarrier(assessment, carrier)) {
+        for (const source of assessment.sources || []) {
+          addCarrierSource(carrier, source, {
+            role: "backup",
+            confidence: assessment.confidence,
+            lastSeen: assessment.lastSeen
+          });
+        }
+      }
     }
   }
 
@@ -1157,7 +1294,6 @@ async function main() {
     }
   }
 
-  const generatedAt = new Date().toISOString();
   const previousByHull = new Map((previous.carriers || []).map((entry) => [entry.hull, entry]));
   const changedHulls = [];
 
@@ -1182,12 +1318,19 @@ async function main() {
   const output = {
     generatedAt,
     lastChangedAt,
-    sourceStatus,
     carriers: [...carriers.values()].map(finalizeCarrier)
+  };
+  const scrapeStatus = {
+    generatedAt,
+    lastRunAt: generatedAt,
+    sourceOutageGraceDays: SOURCE_OUTAGE_GRACE_DAYS,
+    sourceStatus
   };
 
   await writeFile(DATA_PATH, `${JSON.stringify(output, null, 2)}\n`);
+  await writeFile(SCRAPE_STATUS_PATH, `${JSON.stringify(scrapeStatus, null, 2)}\n`);
   console.log(`Wrote ${output.carriers.length} carrier records to ${DATA_PATH.pathname}`);
+  console.log(`Wrote scrape status to ${SCRAPE_STATUS_PATH.pathname}`);
   console.log(`changedHulls=${changedHulls.join(",")}`);
   if (process.env.GITHUB_OUTPUT) {
     await appendFile(process.env.GITHUB_OUTPUT, `changedHulls=${changedHulls.join(",")}\n`);

@@ -1,4 +1,5 @@
 const DATA_URL = "./data/carriers.json";
+const SCRAPE_STATUS_URL = "./data/scrape-status.json";
 const ACTIONS_API_URL = "https://api.github.com/repos/greghill/wherearethecarriers.com/actions/workflows/scrape.yml/runs?per_page=1";
 const ACTIONS_WORKFLOW_URL = "https://github.com/greghill/wherearethecarriers.com/actions/workflows/scrape.yml";
 const DATA_COMMITS_URL = "https://github.com/greghill/wherearethecarriers.com/commits/master/docs/data/carriers.json";
@@ -108,6 +109,7 @@ new BasemapControl({ position: "bottomright" }).addTo(map);
 
 let state = {
   data: null,
+  scrapeStatus: null,
   actionRun: null,
   filter: "all",
   selectedHull: null,
@@ -183,15 +185,6 @@ function formatRelative(value, { withAgo = true } = {}) {
   const months = Math.round(days / 30);
   if (months < 12) return `${months}mo${suffix}`;
   return `${Math.round(months / 12)}y${suffix}`;
-}
-
-function isSameScrapeRun(generatedAt, action) {
-  if (!action?.timestamp) return true;
-  if (action.status && action.status !== "completed") return false;
-  const generated = new Date(generatedAt);
-  const actionTime = new Date(action.timestamp);
-  if (Number.isNaN(generated.getTime()) || Number.isNaN(actionTime.getTime())) return false;
-  return Math.abs(actionTime.getTime() - generated.getTime()) <= 5 * 60 * 1000;
 }
 
 function isVisible(carrier) {
@@ -526,32 +519,45 @@ function scrapeStatusIcon(action) {
   return span;
 }
 
+function sourceHealthIcon(scrapeStatus) {
+  const span = document.createElement("span");
+  span.className = "scrape-status";
+  const entries = Object.entries(scrapeStatus?.sourceStatus || {})
+    .filter(([key]) => key !== "openaiImages")
+    .map(([, value]) => value);
+  const failing = entries.filter((entry) => entry.status === "error");
+  if (failing.length) {
+    span.classList.add("fail");
+    span.textContent = "!";
+    span.setAttribute("aria-label", `${failing.length} source${failing.length === 1 ? "" : "s"} failing`);
+    return span;
+  }
+  span.classList.add("ok");
+  span.textContent = "✓";
+  span.setAttribute("aria-label", "sources healthy");
+  return span;
+}
+
 function renderUpdatedHeader() {
   const { generatedAt, lastChangedAt } = state.data || {};
+  const scrapeStatus = state.scrapeStatus;
   const action = state.actionRun;
   els.updated.textContent = "";
 
-  if (!generatedAt && !action) return;
+  if (!generatedAt && !action && !scrapeStatus) return;
 
   const segments = [];
+  const scrapeTimestamp = scrapeStatus?.lastRunAt || scrapeStatus?.generatedAt || action?.timestamp || generatedAt;
 
-  if (action) {
+  if (scrapeTimestamp) {
     const link = document.createElement("a");
-    link.href = action.htmlUrl || ACTIONS_WORKFLOW_URL;
+    link.href = action?.htmlUrl || ACTIONS_WORKFLOW_URL;
     link.target = "_blank";
     link.rel = "noreferrer";
     link.className = "scrape-link";
-    link.title = formatDate(action.timestamp);
-    link.append("scraped ", scrapeStatusIcon(action), ` ${formatRelative(action.timestamp, { withAgo: false })}`);
-    segments.push(link);
-  } else if (generatedAt) {
-    const link = document.createElement("a");
-    link.href = ACTIONS_WORKFLOW_URL;
-    link.target = "_blank";
-    link.rel = "noreferrer";
-    link.className = "scrape-link";
-    link.title = formatDate(generatedAt);
-    link.textContent = `scraped ${formatRelative(generatedAt, { withAgo: false })}`;
+    link.title = formatDate(scrapeTimestamp);
+    const icon = scrapeStatus ? sourceHealthIcon(scrapeStatus) : scrapeStatusIcon(action);
+    link.append("scraped ", icon, ` ${formatRelative(scrapeTimestamp, { withAgo: false })}`);
     segments.push(link);
   }
 
@@ -563,7 +569,7 @@ function renderUpdatedHeader() {
     link.className = "scrape-link";
     link.title = formatDate(lastChangedAt);
     link.textContent = `updated ${formatRelative(lastChangedAt)}`;
-    if (lastChangedAt === generatedAt && isSameScrapeRun(generatedAt, action)) {
+    if (lastChangedAt === generatedAt) {
       const badge = document.createElement("span");
       badge.className = "fresh-badge";
       badge.textContent = "new";
@@ -598,9 +604,21 @@ async function loadActionStatus() {
   }
 }
 
+async function loadScrapeStatus() {
+  try {
+    const response = await fetch(SCRAPE_STATUS_URL, { cache: "no-store" });
+    if (!response.ok) return;
+    state.scrapeStatus = await response.json();
+    renderUpdatedHeader();
+  } catch {
+    // Silent fallback to carriers.json and Actions API timestamps.
+  }
+}
+
 loadData().catch((error) => {
   els.updated.textContent = "Could not load carrier data.";
   els.summary.textContent = error.message;
 });
 
+loadScrapeStatus();
 loadActionStatus();
