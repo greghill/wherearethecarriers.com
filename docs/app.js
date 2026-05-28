@@ -499,21 +499,21 @@ function scrapeStatusIcon(action) {
   const span = document.createElement("span");
   span.className = "scrape-status";
   let label;
-  if (action.status === "in_progress" || action.status === "queued") {
+  if (action?.status === "in_progress" || action?.status === "queued") {
     span.classList.add("in-progress");
     span.textContent = "⏳";
     label = "in progress";
-  } else if (action.conclusion === "success") {
+  } else if (action?.conclusion === "success") {
     span.classList.add("ok");
     span.textContent = "✓";
     label = "succeeded";
-  } else if (action.conclusion === "failure" || action.conclusion === "cancelled" || action.conclusion === "timed_out") {
+  } else if (action?.conclusion === "failure" || action?.conclusion === "cancelled" || action?.conclusion === "timed_out") {
     span.classList.add("fail");
     span.textContent = "✗";
     label = action.conclusion;
   } else {
     span.textContent = "•";
-    label = action.conclusion || action.status || "unknown";
+    label = action?.conclusion || action?.status || "status unknown";
   }
   span.setAttribute("aria-label", label);
   return span;
