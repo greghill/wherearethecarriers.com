@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-05-28T19:44:05.642Z",
-  "lastRunAt": "2026-05-28T19:44:05.642Z",
+  "generatedAt": "2026-05-28T22:04:29.854Z",
+  "lastRunAt": "2026-05-28T22:04:29.854Z",
   "sourceOutageGraceDays": 3,
   "sourceStatus": {
     "usni": {
       "status": "error",
-      "lastFetchedAt": "2026-05-28T19:44:06.171Z",
+      "lastFetchedAt": "2026-05-28T22:04:30.321Z",
       "lastSuccessAt": "2026-05-25T20:18:35.269Z",
       "firstErrorAt": "2026-05-26T08:41:47.383Z",
-      "lastErrorAt": "2026-05-28T19:44:06.171Z",
-      "consecutiveFailures": 12,
+      "lastErrorAt": "2026-05-28T22:04:30.321Z",
+      "consecutiveFailures": 13,
       "message": "https://news.usni.org/category/fleet-tracker returned 403"
     },
     "stratfor": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-28T19:44:08.805Z",
-      "lastSuccessAt": "2026-05-28T19:44:08.805Z",
+      "lastFetchedAt": "2026-05-28T22:04:32.482Z",
+      "lastSuccessAt": "2026-05-28T22:04:32.482Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
@@ -23,8 +23,8 @@
     },
     "twz": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-28T19:44:08.942Z",
-      "lastSuccessAt": "2026-05-28T19:44:08.942Z",
+      "lastFetchedAt": "2026-05-28T22:04:32.614Z",
+      "lastSuccessAt": "2026-05-28T22:04:32.614Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
@@ -32,8 +32,8 @@
     },
     "gonavy": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-28T19:44:09.482Z",
-      "lastSuccessAt": "2026-05-28T19:44:09.482Z",
+      "lastFetchedAt": "2026-05-28T22:04:33.069Z",
+      "lastSuccessAt": "2026-05-28T22:04:33.069Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
@@ -41,8 +41,8 @@
     },
     "openaiImages": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-28T19:44:09.484Z",
-      "lastSuccessAt": "2026-05-28T19:44:09.484Z",
+      "lastFetchedAt": "2026-05-28T22:04:33.071Z",
+      "lastSuccessAt": "2026-05-28T22:04:33.071Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
