@@ -187,6 +187,14 @@ function formatRelative(value, { withAgo = true } = {}) {
   return `${Math.round(months / 12)}y${suffix}`;
 }
 
+function isWithinLastDay(value) {
+  if (!value) return false;
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return false;
+  const elapsed = Date.now() - parsed.getTime();
+  return elapsed >= 0 && elapsed < 24 * 60 * 60 * 1000;
+}
+
 function isVisible(carrier) {
   return state.filter === "all" || statusFor(carrier) === state.filter;
 }
@@ -569,7 +577,7 @@ function renderUpdatedHeader() {
     link.className = "scrape-link";
     link.title = formatDate(lastChangedAt);
     link.textContent = `updated ${formatRelative(lastChangedAt)}`;
-    if (lastChangedAt === generatedAt) {
+    if (isWithinLastDay(lastChangedAt)) {
       const badge = document.createElement("span");
       badge.className = "fresh-badge";
       badge.textContent = "new";
