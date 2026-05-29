@@ -5,6 +5,7 @@ const DATA_PATH = new URL("../docs/data/carriers.json", import.meta.url);
 const SCRAPE_STATUS_PATH = new URL("../docs/data/scrape-status.json", import.meta.url);
 const IMAGE_POINTS_PATH = new URL("./image-points.json", import.meta.url);
 const IMAGE_ANALYSIS_CACHE_PATH = new URL("./map-image-cache.json", import.meta.url);
+const LAND_POLYGONS_PATH = new URL("./land-polygons.json", import.meta.url);
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-5.5";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const FORCE_IMAGE_REPROCESS = /^(1|true|yes)$/i.test(process.env.FORCE_IMAGE_REPROCESS || "");
@@ -876,13 +877,14 @@ function carrierMapSchema() {
         items: {
           type: "object",
           additionalProperties: false,
-          required: ["hull", "name", "locationName", "lat", "lon", "confidence", "evidenceText", "rationale"],
+          required: ["hull", "name", "locationName", "lat", "lon", "overWater", "confidence", "evidenceText", "rationale"],
           properties: {
             hull: { type: "string", enum: CARRIERS.map((carrier) => carrier.hull) },
             name: { type: "string" },
             locationName: { type: "string" },
             lat: { type: "number" },
             lon: { type: "number" },
+            overWater: { type: "boolean" },
             confidence: { type: "string", enum: ["high", "medium", "low"] },
             evidenceText: { type: "string" },
             rationale: { type: "string" }
@@ -907,6 +909,8 @@ Task:
 - Omit carriers that are not visible or are too uncertain to locate.
 - Do not include amphibious ships, destroyers, submarines, or foreign ships.
 - Treat all coordinates as approximate public-source image estimates.
+
+Carriers are warships at sea: the coordinate you return MUST lie over open water, never in the interior of a continent. If the orange/red dot you are reading appears to sit over a landmass, you have mis-anchored — re-read the map and move the point to the nearest open water that is consistent with its region label (e.g. a dot labeled "Caribbean Sea" belongs in the Caribbean basin north of Venezuela, not over the South American mainland). The only exception is a carrier explicitly shown pierside in a named port. For each carrier set "overWater" to true only after confirming the lat/lon you return falls on water (or on a port); if you cannot place it over water with confidence, set "overWater" to false and lower "confidence".
 
 Trails and historical tracks (especially on Stratfor maps):
 - Stratfor uses color to distinguish ship classes: orange/red trails and dots are aircraft carriers (CVNs — what we want); blue/teal trails and dots are LHD amphibious ships, which we DO NOT track. Ignore every blue/teal dot, even if it appears to continue an orange line.
@@ -965,6 +969,102 @@ async function callOpenAiForMapImage(sourceKey, sourceSummary) {
     throw new Error(`OpenAI map parse returned no output_text for ${sourceKey}`);
   }
   return JSON.parse(outputText);
+}
+
+// Coarse global land polygons (Natural Earth 1:110m), used to reject image
+// reads that drop a carrier into the interior of a continent. Lazily loaded and
+// cached with a precomputed bounding box per polygon so the point-in-polygon
+// test (run a handful of times per scrape) stays cheap.
+let landPolygonsCache = null;
+async function loadLandPolygons() {
+  if (landPolygonsCache) return landPolygonsCache;
+  const raw = JSON.parse(await readFile(LAND_POLYGONS_PATH, "utf8"));
+  landPolygonsCache = (raw.polygons || []).map((rings) => {
+    let minLon = 180;
+    let maxLon = -180;
+    let minLat = 90;
+    let maxLat = -90;
+    for (const ring of rings) {
+      for (const [lon, lat] of ring) {
+        if (lon < minLon) minLon = lon;
+        if (lon > maxLon) maxLon = lon;
+        if (lat < minLat) minLat = lat;
+        if (lat > maxLat) maxLat = lat;
+      }
+    }
+    return { rings, minLon, maxLon, minLat, maxLat };
+  });
+  return landPolygonsCache;
+}
+
+function pointInRing(lon, lat, ring) {
+  let inside = false;
+  for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+    const xi = ring[i][0];
+    const yi = ring[i][1];
+    const xj = ring[j][0];
+    const yj = ring[j][1];
+    if (((yi > lat) !== (yj > lat)) && lon < ((xj - xi) * (lat - yi)) / (yj - yi) + xi) {
+      inside = !inside;
+    }
+  }
+  return inside;
+}
+
+function pointIsLand(polygons, lat, lon) {
+  for (const poly of polygons) {
+    if (lon < poly.minLon || lon > poly.maxLon || lat < poly.minLat || lat > poly.maxLat) continue;
+    const [outer, ...holes] = poly.rings;
+    if (!pointInRing(lon, lat, outer)) continue;
+    if (holes.some((hole) => pointInRing(lon, lat, hole))) continue;
+    return true;
+  }
+  return false;
+}
+
+// The 1:110m data traces coastlines coarsely, so a point just offshore can read
+// as land and vice versa. Treat a coordinate as "solidly inland" only when it
+// AND its neighbors ~0.75 deg out are all land — that ignores near-shore
+// ambiguity (transits, ports) while still catching gross misreads that drop a
+// carrier hundreds of km into a continent.
+const INLAND_TOLERANCE_DEG = 0.75;
+async function isSolidlyInland(lat, lon) {
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) return false;
+  const polygons = await loadLandPolygons();
+  if (!pointIsLand(polygons, lat, lon)) return false;
+  const neighbors = [
+    [INLAND_TOLERANCE_DEG, 0],
+    [-INLAND_TOLERANCE_DEG, 0],
+    [0, INLAND_TOLERANCE_DEG],
+    [0, -INLAND_TOLERANCE_DEG]
+  ];
+  return neighbors.every(([dLat, dLon]) => pointIsLand(polygons, lat + dLat, lon + dLon));
+}
+
+// Carriers are warships at sea (or pierside in a named port handled via text
+// hints). An image estimate that lands solidly inland is a mis-anchored read:
+// drop the bogus coordinate and fall back to the named region's water centroid
+// when we have one, otherwise discard the position entirely.
+async function deLandImageAssessment(assessment) {
+  if (assessment.positionPrecision !== "image_estimate") return assessment;
+  const pos = assessment.position;
+  if (!pos || !(await isSolidlyInland(pos.lat, pos.lon))) return assessment;
+
+  const hint = findLocationHint(assessment.locationName || "");
+  const note = hint
+    ? `Auto-corrected: image estimate (${pos.lat}, ${pos.lon}) fell on land; snapped to ${hint.name} region centroid.`
+    : `Auto-corrected: image estimate (${pos.lat}, ${pos.lon}) fell on land and no region centroid was available; position dropped.`;
+  const sources = (assessment.sources || []).map((source, index) =>
+    index === 0 ? { ...source, note: source.note ? `${source.note} | ${note}` : note } : source
+  );
+
+  return {
+    ...assessment,
+    position: hint ? { lat: hint.lat, lon: hint.lon } : null,
+    positionPrecision: hint ? "region" : "unknown",
+    confidence: assessment.confidence === "high" ? "medium" : assessment.confidence,
+    sources
+  };
 }
 
 function imageResultToAssessments(result, sourceKey, sourceSummary) {
@@ -1265,12 +1365,14 @@ async function main() {
     }
   }
 
-  for (const assessment of await loadOpenAiImageAssessments(sourceSummaries, sourceStatus)) {
+  for (const rawAssessment of await loadOpenAiImageAssessments(sourceSummaries, sourceStatus)) {
+    const assessment = await deLandImageAssessment(rawAssessment);
     assessmentsByHull.get(assessment.hull)?.push(assessment);
     applyAssessment(carriers.get(assessment.hull), assessment);
   }
 
-  for (const assessment of await loadImagePointAssessments(sourceSummaries)) {
+  for (const rawAssessment of await loadImagePointAssessments(sourceSummaries)) {
+    const assessment = await deLandImageAssessment(rawAssessment);
     assessmentsByHull.get(assessment.hull)?.push(assessment);
     applyAssessment(carriers.get(assessment.hull), assessment);
   }
