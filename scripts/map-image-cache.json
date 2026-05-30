@@ -495,6 +495,65 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://news.usni.org/2026/05/26/usni-news-fleet-and-marine-tracker-may-26-2026|https://news.usni.org/wp-content/uploads/2026/05/FT_5_26_26-2.jpg|2026-05-26": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/05/FT_5_26_26-2.jpg",
+      "articleUrl": "https://news.usni.org/2026/05/26/usni-news-fleet-and-marine-tracker-may-26-2026",
+      "publishedAt": "2026-05-26",
+      "createdAt": "2026-05-30T16:13:37.435Z",
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/05/26/usni-news-fleet-and-marine-tracker-may-26-2026",
+        "publishedAt": "2026-05-26",
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Caribbean Sea / eastern Caribbean",
+            "lat": 14.2,
+            "lon": -64.7,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label reads “USS Nimitz (CVN-68)” with a yellow marker just below the label in the eastern Caribbean, north of Venezuela and east/southeast of Puerto Rico.",
+            "rationale": "The returned point is placed on the adjacent yellow marker, not on the label text, and adjusted to open water in the Caribbean basin."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea / western Indian Ocean",
+            "lat": 12.8,
+            "lon": 70,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label stack includes “Abraham Lincoln CSG” next to a single yellow marker southwest of India in the Arabian Sea area.",
+            "rationale": "The marker appears just offshore southwest of the Indian subcontinent; the coordinate is placed over open water near the dot."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea / western Indian Ocean",
+            "lat": 12.8,
+            "lon": 70,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label stack includes “George H.W. Bush CSG” at the same plotted position as Abraham Lincoln CSG, with the adjacent yellow marker southwest of India.",
+            "rationale": "The visual map shows the George H.W. Bush CSG sharing the same adjacent marker/label group in open water southwest of India."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Western Pacific east of Japan",
+            "lat": 31.5,
+            "lon": 145.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label reads “George Washington CSG” with a yellow marker just below it in the western Pacific east/southeast of Japan.",
+            "rationale": "The returned coordinate is placed on the visible marker offshore in the western Pacific, not on land."
+          }
+        ]
+      }
     }
   }
 }
