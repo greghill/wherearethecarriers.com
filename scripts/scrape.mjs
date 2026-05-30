@@ -15,7 +15,11 @@ const SOURCE_OUTAGE_GRACE_DAYS = Number(process.env.SOURCE_OUTAGE_GRACE_DAYS || 
 
 const SOURCE_URLS = {
   gonavy: "http://www.gonavy.jp/CVLocation.html",
-  usniIndex: "https://news.usni.org/category/fleet-tracker",
+  // news.usni.org HTML pages sit behind a Cloudflare JS challenge that a plain
+  // fetch() can't pass, but the WordPress REST API (category 4137 = Fleet Tracker)
+  // and the wp-content CDN are served without a challenge. content.rendered carries
+  // the full article HTML, so the same parsers work on it unchanged.
+  usniApi: "https://news.usni.org/wp-json/wp/v2/posts?categories=4137&per_page=10&_fields=date,modified,link,title,content",
   stratforIndex: "https://worldview.stratfor.com/topic/tracking-us-naval-power",
   twzIndex: "https://www.twz.com/category/carrier-tracker"
 };
@@ -103,6 +107,10 @@ async function fetchText(url) {
   return textDecoder.decode(buffer);
 }
 
+async function fetchJson(url) {
+  return JSON.parse(await fetchText(url));
+}
+
 function extractMeta(html, property) {
   const pattern = new RegExp(`<meta[^>]+(?:property|name)=["']${property}["'][^>]+content=["']([^"']+)["'][^>]*>`, "i");
   return cleanUrl(html.match(pattern)?.[1]);
@@ -134,13 +142,6 @@ function firstUniqueUrl(items) {
     return item.url;
   }
   return null;
-}
-
-function findLatestUsniTrackerUrl(html) {
-  return firstUniqueUrl(
-    linksFromHtml(html, SOURCE_URLS.usniIndex)
-      .filter((link) => /usni-news-fleet-and-marine-tracker/i.test(link.url) || /USNI News Fleet and Marine Tracker/i.test(link.text))
-  );
 }
 
 function findLatestStratforMapUrl(html) {
@@ -652,11 +653,22 @@ function inferPositionPrecision(assessment) {
 }
 
 async function scrapeUsni() {
-  const indexHtml = await fetchText(SOURCE_URLS.usniIndex);
-  const articleUrl = findLatestUsniTrackerUrl(indexHtml) || absoluteUrl("/2026/05/18/usni-news-fleet-and-marine-tracker-may-18-2026", SOURCE_URLS.usniIndex);
-  const articleHtml = await fetchText(articleUrl);
-  const title = stripTags(articleHtml.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1]) || "USNI News Fleet and Marine Tracker";
-  const publishedAt = extractPublishedDate(articleHtml, title) || articleDateFromTitle(stripTags(articleHtml));
+  // Category 4137 also carries non-tracker posts (e.g. "Western Pacific Pulse"),
+  // so pick the newest entry that is actually a Fleet and Marine Tracker article.
+  const posts = await fetchJson(SOURCE_URLS.usniApi);
+  const post =
+    posts.find(
+      (item) =>
+        /usni-news-fleet-and-marine-tracker/i.test(item.link || "") ||
+        /fleet and marine tracker/i.test(stripTags(item.title?.rendered || ""))
+    ) || posts[0];
+  if (!post) {
+    throw new Error(`${SOURCE_URLS.usniApi} returned no fleet tracker posts`);
+  }
+  const articleUrl = post.link;
+  const articleHtml = post.content?.rendered || "";
+  const title = stripTags(post.title?.rendered) || "USNI News Fleet and Marine Tracker";
+  const publishedAt = (post.modified || post.date || "").slice(0, 10) || articleDateFromTitle(title);
   const imageUrl = bestMapImageUrl(articleHtml, articleUrl, "usni");
   const articleText = articleTextFromHtml(articleHtml);
   const sections = sectionizeUsniArticle(articleHtml);
