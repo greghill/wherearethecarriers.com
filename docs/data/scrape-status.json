@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-31T05:44:19.049Z",
-  "lastRunAt": "2026-05-31T05:44:19.049Z",
+  "generatedAt": "2026-05-31T09:21:30.695Z",
+  "lastRunAt": "2026-05-31T09:21:30.695Z",
   "sourceOutageGraceDays": 3,
   "sourceStatus": {
     "usni": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-31T05:44:19.989Z",
-      "lastSuccessAt": "2026-05-31T05:44:19.989Z",
+      "lastFetchedAt": "2026-05-31T09:21:31.782Z",
+      "lastSuccessAt": "2026-05-31T09:21:31.782Z",
       "firstErrorAt": null,
       "lastErrorAt": "2026-05-30T14:46:20.138Z",
       "consecutiveFailures": 0,
@@ -14,8 +14,8 @@
     },
     "stratfor": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-31T05:44:22.062Z",
-      "lastSuccessAt": "2026-05-31T05:44:22.062Z",
+      "lastFetchedAt": "2026-05-31T09:21:33.805Z",
+      "lastSuccessAt": "2026-05-31T09:21:33.805Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
@@ -23,8 +23,8 @@
     },
     "twz": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-31T05:44:22.405Z",
-      "lastSuccessAt": "2026-05-31T05:44:22.405Z",
+      "lastFetchedAt": "2026-05-31T09:21:33.903Z",
+      "lastSuccessAt": "2026-05-31T09:21:33.903Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
@@ -32,8 +32,8 @@
     },
     "gonavy": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-31T05:44:23.018Z",
-      "lastSuccessAt": "2026-05-31T05:44:23.018Z",
+      "lastFetchedAt": "2026-05-31T09:21:34.340Z",
+      "lastSuccessAt": "2026-05-31T09:21:34.340Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
@@ -41,8 +41,8 @@
     },
     "openaiImages": {
       "status": "ok",
-      "lastFetchedAt": "2026-05-31T05:44:23.019Z",
-      "lastSuccessAt": "2026-05-31T05:44:23.019Z",
+      "lastFetchedAt": "2026-05-31T09:21:34.342Z",
+      "lastSuccessAt": "2026-05-31T09:21:34.342Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
