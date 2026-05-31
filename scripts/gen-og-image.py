@@ -127,8 +127,8 @@ svg.append('<text x="86" y="592" font-family="DejaVu Sans, Arial, sans-serif" fo
 # carrier markers at their true positions (matches current live data)
 # CVN-72 & CVN-77 in the Arabian Sea (deployed/orange), CVN-73 at Yokosuka (port/teal).
 geo_markers = [
-    ("72", 63.0, 18.0, "#d05f3f"),       # Arabian Sea
-    ("77", 54.0, 11.0, "#d05f3f"),       # Arabian Sea, below-left of 72 (away from India)
+    ("72", 63.0, 21.0, "#d05f3f"),       # Arabian Sea
+    ("77", 55.0, 15.0, "#d05f3f"),       # Arabian Sea, below-left of 72 (away from India)
     ("73", 139.67, 35.28, "#2f8b70"),    # Yokosuka, Japan
 ]
 svg.append('<g font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" fill="#ffffff" text-anchor="middle">')
