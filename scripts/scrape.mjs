@@ -1,5 +1,6 @@
 import { appendFile, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
+import { pathToFileURL } from "node:url";
 
 const DATA_PATH = new URL("../docs/data/carriers.json", import.meta.url);
 const SCRAPE_STATUS_PATH = new URL("../docs/data/scrape-status.json", import.meta.url);
@@ -652,6 +653,32 @@ function inferPositionPrecision(assessment) {
   return "unknown";
 }
 
+// Shared assessment shape for the text-based scrapers (USNI, TWZ). Each caller resolves
+// the location `hint` and `confidence` its own way, then this builds the common record.
+// Status is the hint's status: the previous per-scraper "returned" status overrides were
+// no-ops (their ternary branches were identical), so they were removed.
+function buildTextAssessment({ record, hint, publisher, title, articleUrl, publishedAt, imageUrl, confidence, summarySuffix = "" }) {
+  return {
+    hull: record.hull,
+    status: hint.status,
+    locationName: hint.name,
+    position: { lat: hint.lat, lon: hint.lon },
+    confidence,
+    lastSeen: publishedAt,
+    summary: `${title} places ${record.name} in or near ${hint.name}.${summarySuffix}`,
+    sources: [
+      sourceFromArticle({
+        publisher,
+        title,
+        url: articleUrl,
+        publishedAt,
+        note: `Text context: ${hint.name}`,
+        imageUrl
+      })
+    ]
+  };
+}
+
 async function scrapeUsni() {
   // Category 4137 also carries non-tracker posts (e.g. "Western Pacific Pulse"),
   // so pick the newest entry that is actually a Fleet and Marine Tracker article.
@@ -690,28 +717,20 @@ async function scrapeUsni() {
 
     const hint = best.candidate.hint;
     const context = best.candidate.text;
-    const returned = /returned|arrived|in port/i.test(context);
-    const status = returned && hint.status === "port" ? "port" : hint.status;
     const confidence = /operating|returned|underway|deployed|in support of|after visiting/i.test(context) ? "medium" : "low";
-    assessments.push({
-      hull: record.hull,
-      status,
-      locationName: hint.name,
-      position: { lat: hint.lat, lon: hint.lon },
-      confidence,
-      lastSeen: publishedAt,
-      summary: `${title} places ${record.name} in or near ${hint.name}. The point is an approximate public-source assessment.`,
-      sources: [
-        sourceFromArticle({
-          publisher: "USNI News",
-          title,
-          url: articleUrl,
-          publishedAt,
-          note: `Text context: ${hint.name}`,
-          imageUrl
-        })
-      ]
-    });
+    assessments.push(
+      buildTextAssessment({
+        record,
+        hint,
+        publisher: "USNI News",
+        title,
+        articleUrl,
+        publishedAt,
+        imageUrl,
+        confidence,
+        summarySuffix: " The point is an approximate public-source assessment."
+      })
+    );
   }
 
   return {
@@ -726,7 +745,12 @@ async function scrapeUsni() {
 
 async function scrapeStratfor() {
   const indexHtml = await fetchText(SOURCE_URLS.stratforIndex);
-  const articleUrl = findLatestStratforMapUrl(indexHtml) || absoluteUrl("/article/us-naval-update-map-may-21-2026", SOURCE_URLS.stratforIndex);
+  const articleUrl = findLatestStratforMapUrl(indexHtml);
+  if (!articleUrl) {
+    // No dated fallback URL — let the source fail into the outage/grace handling
+    // rather than fetching a hardcoded link that goes stale.
+    throw new Error(`${SOURCE_URLS.stratforIndex} returned no naval update map link`);
+  }
   const articleHtml = await fetchText(articleUrl);
   const title = stripTags(articleHtml.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1]) || "U.S. Naval Update Map";
   const publishedAt = articleDateFromTitle(title) || articleDateFromTitle(stripTags(articleHtml));
@@ -759,29 +783,19 @@ async function scrapeTwz() {
     if (!best || best.score < 5) continue;
 
     const hint = best.hint;
-    const context = best.text;
-    const returned = /returned|arrived|pulled into|homecoming|upon arrival/i.test(context);
-    const status = returned && (hint.status === "port" || hint.status === "maintenance") ? hint.status : hint.status;
 
-    assessments.push({
-      hull: record.hull,
-      status,
-      locationName: hint.name,
-      position: { lat: hint.lat, lon: hint.lon },
-      confidence: "medium",
-      lastSeen: publishedAt,
-      summary: `${title} places ${record.name} in or near ${hint.name}.`,
-      sources: [
-        sourceFromArticle({
-          publisher: "The War Zone",
-          title,
-          url: articleUrl,
-          publishedAt,
-          note: `Text context: ${hint.name}`,
-          imageUrl
-        })
-      ]
-    });
+    assessments.push(
+      buildTextAssessment({
+        record,
+        hint,
+        publisher: "The War Zone",
+        title,
+        articleUrl,
+        publishedAt,
+        imageUrl,
+        confidence: "medium"
+      })
+    );
   }
 
   return {
@@ -1455,7 +1469,23 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+// Only run the full pipeline when invoked directly (e.g. `node scripts/scrape.mjs`).
+// Importing the module for tests must not trigger network fetches or file writes.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}
+
+export {
+  articleDateFromTitle,
+  parseGoNavyDate,
+  goNavyEntries,
+  sectionizeUsniArticle,
+  scoreLocationText,
+  bestCarrierLocation,
+  sourceIdentity,
+  addCarrierSource,
+  canUsePriorSourceDuringOutage
+};

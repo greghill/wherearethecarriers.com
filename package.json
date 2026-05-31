@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "scrape": "node scripts/scrape.mjs",
-    "serve": "python3 -m http.server 8080 --directory docs"
+    "serve": "python3 -m http.server 8080 --directory docs",
+    "test": "node --test"
   },
   "engines": {
     "node": ">=20"
