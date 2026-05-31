@@ -45,18 +45,23 @@ def project_clamp(lon, lat):
     return (CX + R*xe/norm, CY - R*ye/norm, False)
 
 # Build filled land rings; skip rings entirely on the far side.
-land_rings = []
+# Keep rings grouped by polygon so inner rings (lakes) can punch holes via
+# fill-rule:evenodd instead of being painted as overlapping solid patches.
+land_polys = []
 for poly in polys:
+    rings = []
+    any_front = False
     for ring in poly:
         pts = []
-        any_front = False
         for lon, lat in ring:
             x, y, front = project_clamp(lon, lat)
             if front:
                 any_front = True
             pts.append((x, y))
-        if any_front and len(pts) > 2:
-            land_rings.append(pts)
+        if len(pts) > 2:
+            rings.append(pts)
+    if any_front and rings:
+        land_polys.append(rings)
 
 def path_d(seg):
     return "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in seg)
@@ -102,9 +107,12 @@ svg.append(f'<circle cx="{CX}" cy="{CY}" r="{R}" fill="#ffffff" fill-opacity="0.
 svg.append('<g stroke="#ffffff" stroke-opacity="0.05" stroke-width="1" fill="none">')
 for seg in grat: svg.append(f'<path d="{path_d(seg)}"/>')
 svg.append('</g>')
-# land (clipped to the disc; rings closed cleanly along the rim)
-svg.append('<g clip-path="url(#disc)" fill="#9fc3c0" fill-opacity="0.16">')
-for ring in land_rings: svg.append(f'<path d="{path_d(ring)}Z"/>')
+# land: one opaque path per landmass (evenodd punches lake holes), so it stays
+# strictly two-tone — no transparency stacking where rings overlap.
+svg.append('<g clip-path="url(#disc)" fill="#2b4c53" fill-rule="evenodd">')
+for rings in land_polys:
+    d = "".join(path_d(r) + "Z" for r in rings)
+    svg.append(f'<path d="{d}"/>')
 svg.append('</g>')
 # limb outline
 svg.append(f'<circle cx="{CX}" cy="{CY}" r="{R}" fill="none" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2"/>')
@@ -120,7 +128,7 @@ svg.append('<text x="86" y="592" font-family="DejaVu Sans, Arial, sans-serif" fo
 # CVN-72 & CVN-77 in the Arabian Sea (deployed/orange), CVN-73 at Yokosuka (port/teal).
 geo_markers = [
     ("72", 63.0, 18.0, "#d05f3f"),       # Arabian Sea
-    ("77", 72.0, 11.0, "#d05f3f"),       # Arabian Sea (nudged for spacing)
+    ("77", 54.0, 11.0, "#d05f3f"),       # Arabian Sea, below-left of 72 (away from India)
     ("73", 139.67, 35.28, "#2f8b70"),    # Yokosuka, Japan
 ]
 svg.append('<g font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" fill="#ffffff" text-anchor="middle">')
@@ -136,4 +144,4 @@ svg.append('</g>')
 
 svg.append('</svg>')
 open('scripts/og-image.svg', 'w').write("\n".join(svg))
-print("wrote scripts/og-image.svg with", len(land_rings), "land rings")
+print("wrote scripts/og-image.svg with", len(land_polys), "land polygons")
