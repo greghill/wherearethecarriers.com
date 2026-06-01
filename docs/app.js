@@ -1,8 +1,7 @@
 const DATA_URL = "./data/carriers.json";
 const SCRAPE_STATUS_URL = "./data/scrape-status.json";
-const ACTIONS_API_URL = "https://api.github.com/repos/greghill/wherearethecarriers.com/actions/workflows/scrape.yml/runs?per_page=1";
 const ACTIONS_WORKFLOW_URL = "https://github.com/greghill/wherearethecarriers.com/actions/workflows/scrape.yml";
-const DATA_COMMITS_URL = "https://github.com/greghill/wherearethecarriers.com/commits/master/docs/data/carriers.json";
+const DATA_COMMITS_URL = "https://github.com/greghill/wherearethecarriers.com/commits/master";
 
 const statusLabels = {
   deployed: "Deployed",
@@ -110,7 +109,6 @@ new BasemapControl({ position: "bottomright" }).addTo(map);
 let state = {
   data: null,
   scrapeStatus: null,
-  actionRun: null,
   filter: "all",
   selectedHull: null,
   markers: new Map(),
@@ -503,30 +501,6 @@ window.addEventListener("load", () => {
 
 map.on("zoomend", renderMarkers);
 
-function scrapeStatusIcon(action) {
-  const span = document.createElement("span");
-  span.className = "scrape-status";
-  let label;
-  if (action?.status === "in_progress" || action?.status === "queued") {
-    span.classList.add("in-progress");
-    span.textContent = "⏳";
-    label = "in progress";
-  } else if (action?.conclusion === "success") {
-    span.classList.add("ok");
-    span.textContent = "✓";
-    label = "succeeded";
-  } else if (action?.conclusion === "failure" || action?.conclusion === "cancelled" || action?.conclusion === "timed_out") {
-    span.classList.add("fail");
-    span.textContent = "✗";
-    label = action.conclusion;
-  } else {
-    span.textContent = "•";
-    label = action?.conclusion || action?.status || "status unknown";
-  }
-  span.setAttribute("aria-label", label);
-  return span;
-}
-
 function sourceHealthIcon(scrapeStatus) {
   const span = document.createElement("span");
   span.className = "scrape-status";
@@ -549,23 +523,24 @@ function sourceHealthIcon(scrapeStatus) {
 function renderUpdatedHeader() {
   const { generatedAt, lastChangedAt } = state.data || {};
   const scrapeStatus = state.scrapeStatus;
-  const action = state.actionRun;
   els.updated.textContent = "";
 
-  if (!generatedAt && !action && !scrapeStatus) return;
+  if (!generatedAt && !scrapeStatus) return;
 
   const segments = [];
-  const scrapeTimestamp = scrapeStatus?.lastRunAt || scrapeStatus?.generatedAt || action?.timestamp || generatedAt;
+  const scrapeTimestamp = scrapeStatus?.lastRunAt || scrapeStatus?.generatedAt || generatedAt;
 
   if (scrapeTimestamp) {
     const link = document.createElement("a");
-    link.href = action?.htmlUrl || ACTIONS_WORKFLOW_URL;
+    link.href = ACTIONS_WORKFLOW_URL;
     link.target = "_blank";
     link.rel = "noreferrer";
     link.className = "scrape-link";
     link.title = formatDate(scrapeTimestamp);
-    const icon = scrapeStatus ? sourceHealthIcon(scrapeStatus) : scrapeStatusIcon(action);
-    link.append("scraped ", icon, ` ${formatRelative(scrapeTimestamp, { withAgo: false })}`);
+    const icon = scrapeStatus ? sourceHealthIcon(scrapeStatus) : null;
+    link.append("scraped ");
+    if (icon) link.append(icon, " ");
+    link.append(formatRelative(scrapeTimestamp, { withAgo: false }));
     segments.push(link);
   }
 
@@ -593,25 +568,6 @@ function renderUpdatedHeader() {
   });
 }
 
-async function loadActionStatus() {
-  try {
-    const response = await fetch(ACTIONS_API_URL);
-    if (!response.ok) return;
-    const data = await response.json();
-    const run = data.workflow_runs?.[0];
-    if (!run) return;
-    state.actionRun = {
-      timestamp: run.updated_at || run.run_started_at,
-      conclusion: run.conclusion,
-      status: run.status,
-      htmlUrl: run.html_url
-    };
-    renderUpdatedHeader();
-  } catch {
-    // Silent fallback to carriers.json's generatedAt
-  }
-}
-
 async function loadScrapeStatus() {
   try {
     const response = await fetch(SCRAPE_STATUS_URL, { cache: "no-store" });
@@ -619,7 +575,7 @@ async function loadScrapeStatus() {
     state.scrapeStatus = await response.json();
     renderUpdatedHeader();
   } catch {
-    // Silent fallback to carriers.json and Actions API timestamps.
+    // Silent fallback to carriers.json's generatedAt timestamp.
   }
 }
 
@@ -629,4 +585,3 @@ loadData().catch((error) => {
 });
 
 loadScrapeStatus();
-loadActionStatus();
