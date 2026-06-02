@@ -613,6 +613,65 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://news.usni.org/2026/06/01/usni-news-fleet-and-marine-tracker-june-1-2026|https://news.usni.org/wp-content/uploads/2026/06/FT_6_1_26.jpg|2026-06-02": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_1_26.jpg",
+      "articleUrl": "https://news.usni.org/2026/06/01/usni-news-fleet-and-marine-tracker-june-1-2026",
+      "publishedAt": "2026-06-02",
+      "createdAt": "2026-06-02T15:06:59.222Z",
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/06/01/usni-news-fleet-and-marine-tracker-june-1-2026",
+        "publishedAt": "2026-06-02",
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Kingston, Jamaica",
+            "lat": 17.95,
+            "lon": -76.8,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "Map label reads “USS Nimitz (CVN-68) Kingston, Jamaica” with a yellow diamond immediately adjacent to Jamaica in the northern Caribbean.",
+            "rationale": "The marker is plotted at/just off Kingston on Jamaica’s south coast; returned coordinates are placed at the port/waterfront rather than inland."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea",
+            "lat": 19.2,
+            "lon": 67.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label stack reads “Abraham Lincoln CSG” and “George H.W. Bush CSG” beside a yellow diamond in the northern Arabian Sea west of India.",
+            "rationale": "The visible grouped marker is offshore in the northern Arabian Sea. The map does not show separate dots for Abraham Lincoln and George H.W. Bush, so the same adjacent grouped marker location is used."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 19.2,
+            "lon": 67.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label stack reads “Abraham Lincoln CSG” and “George H.W. Bush CSG” beside a yellow diamond in the northern Arabian Sea west of India.",
+            "rationale": "The visible grouped marker is offshore in the northern Arabian Sea. The map does not show separate dots for Abraham Lincoln and George H.W. Bush, so the same adjacent grouped marker location is used."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Philippine Sea / western Pacific east of Taiwan",
+            "lat": 24.5,
+            "lon": 126.8,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "Map label reads “George Washington CSG” with a yellow diamond in the western Pacific, just east of Taiwan and south of Japan.",
+            "rationale": "The marker sits over open water east of Taiwan in the Philippine Sea region; returned point is anchored to the adjacent diamond, not to a regional centroid."
+          }
+        ]
+      }
     }
   }
 }
