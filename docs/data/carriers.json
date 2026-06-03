@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-03T00:00:42.355Z",
-  "lastChangedAt": "2026-06-03T00:00:42.355Z",
+  "generatedAt": "2026-06-03T23:58:12.733Z",
+  "lastChangedAt": "2026-06-03T23:58:12.733Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -234,6 +234,16 @@
         {
           "role": "backup",
           "usedFor": [],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: May 28, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-may-28-2026",
+          "publishedAt": "2026-05-28",
+          "note": "Image estimate: Orange/red label “CVN 72” appears beside the upper of two nearby orange carrier dots in the Arabian Sea region east-southeast of Oman.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260527%20display.png"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: June 1, 2026",
           "url": "https://news.usni.org/2026/06/01/usni-news-fleet-and-marine-tracker-june-1-2026",
@@ -250,16 +260,6 @@
           "publishedAt": "2026-06-02",
           "note": "Image estimate: Map label stack reads “Abraham Lincoln CSG” and “George H.W. Bush CSG” beside a yellow diamond in the northern Arabian Sea west of India.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_1_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: May 28, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-may-28-2026",
-          "publishedAt": "2026-05-28",
-          "note": "Image estimate: Orange/red label “CVN 72” appears beside the upper of two nearby orange carrier dots in the Arabian Sea region east-southeast of Oman.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260527%20display.png"
         },
         {
           "role": "backup",
@@ -284,8 +284,8 @@
         "lon": 139.672
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "high",
+      "evidence": "corroborated",
       "lastSeen": "2026-06-02",
       "summary": "USNI News Fleet and Marine Tracker: June 1, 2026 places USS George Washington in or near Yokosuka, Japan. The point is an approximate public-source assessment.",
       "sources": [
@@ -317,6 +317,16 @@
         {
           "role": "backup",
           "usedFor": [],
+          "publisher": "The War Zone",
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Image estimate: Green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)*” appears next to the “YOKOSUKA, JAPAN” label.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: May 28, 2026",
           "url": "https://worldview.stratfor.com/article/us-naval-update-map-may-28-2026",
@@ -331,21 +341,11 @@
           "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
           "publishedAt": "2026-05-26",
-          "note": "Image estimate: Green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)*” appears next to the “YOKOSUKA, JAPAN” label.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
           "note": "Text context: Yokosuka, Japan",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-03T00:00:42.355Z"
+      "lastChangedAt": "2026-06-03T23:58:12.733Z"
     },
     {
       "hull": "CVN-74",
@@ -505,22 +505,22 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: June 1, 2026",
-          "url": "https://news.usni.org/2026/06/01/usni-news-fleet-and-marine-tracker-june-1-2026",
-          "publishedAt": "2026-06-02",
-          "note": "Image estimate: Map label stack reads “Abraham Lincoln CSG” and “George H.W. Bush CSG” beside a yellow diamond in the northern Arabian Sea west of India.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_1_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: May 28, 2026",
           "url": "https://worldview.stratfor.com/article/us-naval-update-map-may-28-2026",
           "publishedAt": "2026-05-28",
           "note": "Image estimate: Orange/red label “CVN 77” is adjacent to the lower orange carrier dot in the Arabian Sea, below and slightly west of the CVN 72 dot.",
           "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260527%20display.png"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 1, 2026",
+          "url": "https://news.usni.org/2026/06/01/usni-news-fleet-and-marine-tracker-june-1-2026",
+          "publishedAt": "2026-06-02",
+          "note": "Image estimate: Map label stack reads “Abraham Lincoln CSG” and “George H.W. Bush CSG” beside a yellow diamond in the northern Arabian Sea west of India.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_1_26.jpg"
         },
         {
           "role": "backup",
