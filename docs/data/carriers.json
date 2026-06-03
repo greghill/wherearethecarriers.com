@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-02T15:06:53.386Z",
-  "lastChangedAt": "2026-06-02T15:06:53.386Z",
+  "generatedAt": "2026-06-03T00:00:42.355Z",
+  "lastChangedAt": "2026-06-03T00:00:42.355Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -86,8 +86,8 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-05-26",
       "summary": "GoNavy's latest table entry places USS Dwight D. Eisenhower in or near Norfolk, Virginia: 15May2026, returned to Norfolk",
       "sources": [
@@ -116,7 +116,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-05-28T04:36:07.188Z"
+      "lastChangedAt": "2026-06-03T00:00:42.355Z"
     },
     {
       "hull": "CVN-70",
@@ -128,8 +128,8 @@
         "lon": -117.173
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-05-26",
       "summary": "GoNavy's latest table entry places USS Carl Vinson in or near San Diego, California: 16Sep2025, returned to San Diego",
       "sources": [
@@ -158,7 +158,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-05-27T12:30:48.316Z"
+      "lastChangedAt": "2026-06-03T00:00:42.355Z"
     },
     {
       "hull": "CVN-71",
@@ -170,8 +170,8 @@
         "lon": -117.173
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-05-26",
       "summary": "GoNavy's latest table entry places USS Theodore Roosevelt in or near San Diego, California: 14May2026, returned to San Diego",
       "sources": [
@@ -200,7 +200,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-05-28T04:36:07.188Z"
+      "lastChangedAt": "2026-06-03T00:00:42.355Z"
     },
     {
       "hull": "CVN-72",
@@ -284,8 +284,8 @@
         "lon": 139.672
       },
       "positionPrecision": "port",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-06-02",
       "summary": "USNI News Fleet and Marine Tracker: June 1, 2026 places USS George Washington in or near Yokosuka, Japan. The point is an approximate public-source assessment.",
       "sources": [
@@ -345,7 +345,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-02T15:06:53.386Z"
+      "lastChangedAt": "2026-06-03T00:00:42.355Z"
     },
     {
       "hull": "CVN-74",
@@ -399,8 +399,8 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-05-26",
       "summary": "GoNavy's latest table entry places USS Harry S. Truman in or near Norfolk, Virginia: 26Sep2025, returned to Norfolk",
       "sources": [
@@ -429,7 +429,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-05-27T12:30:48.316Z"
+      "lastChangedAt": "2026-06-03T00:00:42.355Z"
     },
     {
       "hull": "CVN-76",
@@ -555,8 +555,8 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-05-26",
       "summary": "GoNavy's latest table entry places USS Gerald R. Ford in or near Norfolk, Virginia: 16May2026, returned to Norfolk",
       "sources": [
@@ -585,7 +585,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-05-28T04:36:07.188Z"
+      "lastChangedAt": "2026-06-03T00:00:42.355Z"
     }
   ]
 }
