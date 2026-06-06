@@ -1,28 +1,27 @@
 {
-  "generatedAt": "2026-06-05T20:55:34.763Z",
-  "lastChangedAt": "2026-06-05T20:55:34.763Z",
+  "generatedAt": "2026-06-06T00:17:57.347Z",
+  "lastChangedAt": "2026-06-06T00:17:57.347Z",
   "carriers": [
     {
       "hull": "CVN-68",
       "name": "USS Nimitz",
       "status": "deployed",
-      "locationName": "Caribbean Sea, south of Jamaica",
+      "locationName": "Caribbean Sea",
       "position": {
-        "lat": 17.4,
-        "lon": -77.9
+        "lat": 17.95,
+        "lon": -76.8
       },
       "positionPrecision": "image_estimate",
       "confidence": "high",
       "evidence": "corroborated",
       "lastSeen": "2026-06-04",
-      "summary": "U.S. Naval Update Map: June 4, 2026 places USS Nimitz near Caribbean Sea, south of Jamaica from a public tracker map image.",
+      "summary": "USNI News Fleet and Marine Tracker: June 1, 2026 places USS Nimitz in or near Caribbean Sea. The point is an approximate public-source assessment.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
-            "position",
             "summary"
           ],
           "publisher": "Stratfor Worldview",
@@ -33,8 +32,10 @@
           "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260603%20display.png"
         },
         {
-          "role": "backup",
-          "usedFor": [],
+          "role": "primary",
+          "usedFor": [
+            "coordinate_refinement"
+          ],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: June 1, 2026",
           "url": "https://news.usni.org/2026/06/01/usni-news-fleet-and-marine-tracker-june-1-2026",
@@ -43,8 +44,12 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_1_26.jpg"
         },
         {
-          "role": "backup",
-          "usedFor": [],
+          "role": "primary",
+          "usedFor": [
+            "status",
+            "location",
+            "summary"
+          ],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: June 1, 2026",
           "url": "https://news.usni.org/2026/06/01/usni-news-fleet-and-marine-tracker-june-1-2026",
@@ -73,7 +78,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-05T20:55:34.763Z"
+      "lastChangedAt": "2026-06-06T00:17:57.347Z"
     },
     {
       "hull": "CVN-69",
@@ -207,10 +212,10 @@
       "status": "deployed",
       "locationName": "Arabian Sea",
       "position": {
-        "lat": 19,
-        "lon": 62.4
+        "lat": 18,
+        "lon": 63
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
       "lastSeen": "2026-06-04",
@@ -233,6 +238,7 @@
           "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
           "publisher": "GoNavy.jp",
@@ -272,7 +278,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-05T20:55:34.763Z"
+      "lastChangedAt": "2026-06-06T00:17:57.347Z"
     },
     {
       "hull": "CVN-73",
@@ -284,9 +290,9 @@
         "lon": 139.672
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
-      "lastSeen": "2026-06-02",
+      "confidence": "high",
+      "evidence": "corroborated",
+      "lastSeen": "2026-06-04",
       "summary": "USNI News Fleet and Marine Tracker: June 1, 2026 places USS George Washington in or near Yokosuka, Japan. The point is an approximate public-source assessment.",
       "sources": [
         {
@@ -303,16 +309,6 @@
           "publishedAt": "2026-06-02",
           "note": "Text context: Yokosuka, Japan",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_1_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: June 4, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-4-2026",
-          "publishedAt": "2026-06-04",
-          "note": "Image estimate: The orange/red label \"CVN 73\" is south of Japan, with the adjacent current-week orange/red dot immediately to the left of the label.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260603%20display.png"
         },
         {
           "role": "backup",
@@ -337,6 +333,16 @@
         {
           "role": "backup",
           "usedFor": [],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: June 4, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-4-2026",
+          "publishedAt": "2026-06-04",
+          "note": "Image estimate: The orange/red label \"CVN 73\" is south of Japan, with the adjacent current-week orange/red dot immediately to the left of the label.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260603%20display.png"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
@@ -345,7 +351,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-05T20:55:34.763Z"
+      "lastChangedAt": "2026-06-06T00:17:57.347Z"
     },
     {
       "hull": "CVN-74",
@@ -479,10 +485,10 @@
       "status": "deployed",
       "locationName": "Arabian Sea",
       "position": {
-        "lat": 15.1,
-        "lon": 61
+        "lat": 18,
+        "lon": 63
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
       "lastSeen": "2026-06-04",
@@ -505,6 +511,7 @@
           "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
           "publisher": "GoNavy.jp",
@@ -544,7 +551,7 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_1_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-06-05T20:55:34.763Z"
+      "lastChangedAt": "2026-06-06T00:17:57.347Z"
     },
     {
       "hull": "CVN-78",
