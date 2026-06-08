@@ -731,6 +731,65 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026|https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg|2026-06-08": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg",
+      "articleUrl": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
+      "publishedAt": "2026-06-08",
+      "createdAt": "2026-06-08T19:34:03.289Z",
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
+        "publishedAt": "2026-06-08",
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Caribbean Sea",
+            "lat": 14.3,
+            "lon": -74.5,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "Map label reads “USS Nimitz (CVN-68)” with a yellow diamond in the central Caribbean north of Colombia/Venezuela.",
+            "rationale": "The returned point is anchored on the diamond adjacent to the Nimitz label and adjusted to open water in the Caribbean basin."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea",
+            "lat": 15.8,
+            "lon": 67.1,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label stack reads “Abraham Lincoln CSG / George H.W. Bush CSG / USS Tripoli (LHA-7)” with a single yellow diamond west of India in the Arabian Sea.",
+            "rationale": "The carrier is shown as part of the grouped Arabian Sea marker; no separate CVN dot is visible, so the shared adjacent marker position is used over open water."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 15.8,
+            "lon": 67.1,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label stack reads “Abraham Lincoln CSG / George H.W. Bush CSG / USS Tripoli (LHA-7)” with a single yellow diamond west of India in the Arabian Sea.",
+            "rationale": "The carrier is shown as part of the grouped Arabian Sea marker; no separate CVN dot is visible, so the shared adjacent marker position is used over open water."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Philippine Sea / western Pacific east of the Philippines",
+            "lat": 8.6,
+            "lon": 134.2,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "Map label reads “George Washington CSG” with a yellow diamond east of the Philippines and north of New Guinea.",
+            "rationale": "The returned point is placed on the adjacent diamond in open water east of the Philippines, matching the visible marker location."
+          }
+        ]
+      }
     }
   }
 }
