@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-08T19:33:58.527Z",
-  "lastChangedAt": "2026-06-08T19:33:58.527Z",
+  "generatedAt": "2026-06-09T12:14:07.896Z",
+  "lastChangedAt": "2026-06-09T12:14:07.896Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -8,39 +8,37 @@
       "status": "deployed",
       "locationName": "Caribbean Sea",
       "position": {
-        "lat": 14.3,
-        "lon": -74.5
+        "lat": 18,
+        "lon": -75
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-06-08",
-      "summary": "USNI News Fleet and Marine Tracker: June 8, 2026 places USS Nimitz in or near Caribbean Sea. The point is an approximate public-source assessment.",
+      "lastSeen": "2026-06-10",
+      "summary": "GoNavy's latest table entry places USS Nimitz in or near Caribbean Sea: 08Jun2026, U.S. Ambassador hosts Dominican delegation aboard USS Nimitz in the Caribbean Sea",
       "sources": [
-        {
-          "role": "primary",
-          "usedFor": [
-            "coordinate_refinement"
-          ],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
-          "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
-          "publishedAt": "2026-06-08",
-          "note": "Image estimate: Map label reads “USS Nimitz (CVN-68)” with a yellow diamond in the central Caribbean north of Colombia/Venezuela.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
-        },
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-06-10",
+          "note": "Latest row: 08Jun2026, U.S. Ambassador hosts Dominican delegation aboard USS Nimitz in the Caribbean Sea"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
           "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
           "publishedAt": "2026-06-08",
-          "note": "Text context: Caribbean Sea",
+          "note": "Image estimate: Map label reads “USS Nimitz (CVN-68)” with a yellow diamond in the central Caribbean north of Colombia/Venezuela.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
         },
         {
@@ -52,6 +50,16 @@
           "publishedAt": "2026-06-04",
           "note": "Image estimate: The orange/red carrier label \"CVN 68\" is in the Caribbean, with the adjacent current-week orange/red dot just above and to the right of the label.",
           "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260603%20display.png"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
+          "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
+          "publishedAt": "2026-06-08",
+          "note": "Text context: Caribbean Sea",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
         },
         {
           "role": "backup",
@@ -74,7 +82,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-08T19:33:58.527Z"
+      "lastChangedAt": "2026-06-09T12:14:07.896Z"
     },
     {
       "hull": "CVN-69",
@@ -206,16 +214,16 @@
       "hull": "CVN-72",
       "name": "USS Abraham Lincoln",
       "status": "deployed",
-      "locationName": "Arabian Sea off Oman",
+      "locationName": "Arabian Sea",
       "position": {
-        "lat": 19,
-        "lon": 62.4
+        "lat": 18,
+        "lon": 63
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-06-08",
-      "summary": "U.S. Naval Update Map: June 4, 2026 places USS Abraham Lincoln near Arabian Sea off Oman from a public tracker map image.",
+      "lastSeen": "2026-06-10",
+      "summary": "GoNavy's latest table entry places USS Abraham Lincoln in or near Arabian Sea: 28Feb-08Jun2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
         {
           "role": "primary",
@@ -225,6 +233,15 @@
             "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-06-10",
+          "note": "Latest row: 28Feb-08Jun2026, North Arabian Sea in support of Operation Epic Fury"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: June 4, 2026",
           "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-4-2026",
@@ -255,15 +272,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-06-03",
-          "note": "Latest row: 28Feb-01Jun2026, North Arabian Sea in support of Operation Epic Fury"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
@@ -272,7 +280,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-08T19:33:58.527Z"
+      "lastChangedAt": "2026-06-09T12:14:07.896Z"
     },
     {
       "hull": "CVN-73",
@@ -280,39 +288,37 @@
       "status": "deployed",
       "locationName": "Western Pacific",
       "position": {
-        "lat": 8.6,
-        "lon": 134.2
+        "lat": 18,
+        "lon": 145
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-06-08",
-      "summary": "USNI News Fleet and Marine Tracker: June 8, 2026 places USS George Washington in or near Western Pacific. The point is an approximate public-source assessment.",
+      "lastSeen": "2026-06-10",
+      "summary": "GoNavy's latest table entry places USS George Washington in or near Western Pacific: 07Jun-08Jun2026, Philippine Sea",
       "sources": [
-        {
-          "role": "primary",
-          "usedFor": [
-            "coordinate_refinement"
-          ],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
-          "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
-          "publishedAt": "2026-06-08",
-          "note": "Image estimate: Map label reads “George Washington CSG” with a yellow diamond east of the Philippines and north of New Guinea.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
-        },
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-06-10",
+          "note": "Latest row: 07Jun-08Jun2026, Philippine Sea"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
           "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
           "publishedAt": "2026-06-08",
-          "note": "Text context: Western Pacific",
+          "note": "Image estimate: Map label reads “George Washington CSG” with a yellow diamond east of the Philippines and north of New Guinea.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
         },
         {
@@ -338,6 +344,16 @@
         {
           "role": "backup",
           "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
+          "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
+          "publishedAt": "2026-06-08",
+          "note": "Text context: Western Pacific",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
@@ -346,7 +362,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-08T19:33:58.527Z"
+      "lastChangedAt": "2026-06-09T12:14:07.896Z"
     },
     {
       "hull": "CVN-74",
@@ -478,16 +494,16 @@
       "hull": "CVN-77",
       "name": "USS George H.W. Bush",
       "status": "deployed",
-      "locationName": "Arabian Sea southeast of Oman",
+      "locationName": "Arabian Sea",
       "position": {
-        "lat": 15.1,
-        "lon": 61
+        "lat": 18,
+        "lon": 63
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-06-08",
-      "summary": "U.S. Naval Update Map: June 4, 2026 places USS George H.W. Bush near Arabian Sea southeast of Oman from a public tracker map image.",
+      "lastSeen": "2026-06-10",
+      "summary": "GoNavy's latest table entry places USS George H.W. Bush in or near Arabian Sea: 27Apr-08Jun2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
         {
           "role": "primary",
@@ -497,6 +513,15 @@
             "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-06-10",
+          "note": "Latest row: 27Apr-08Jun2026, North Arabian Sea in support of Operation Epic Fury"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: June 4, 2026",
           "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-4-2026",
@@ -527,15 +552,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-06-03",
-          "note": "Latest row: 27Apr-01Jun2026, North Arabian Sea in support of Operation Epic Fury"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
@@ -544,7 +560,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-08T19:33:58.527Z"
+      "lastChangedAt": "2026-06-09T12:14:07.896Z"
     },
     {
       "hull": "CVN-78",
