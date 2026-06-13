@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-11T16:18:37.328Z",
-  "lastChangedAt": "2026-06-11T16:18:37.328Z",
+  "generatedAt": "2026-06-13T01:33:28.920Z",
+  "lastChangedAt": "2026-06-13T01:33:28.920Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -14,7 +14,7 @@
       "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-06-10",
+      "lastSeen": "2026-06-11",
       "summary": "GoNavy's latest table entry places USS Nimitz in or near Caribbean Sea: 08Jun2026, U.S. Ambassador hosts Dominican delegation aboard USS Nimitz in the Caribbean Sea",
       "sources": [
         {
@@ -82,7 +82,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-09T12:14:07.896Z"
+      "lastChangedAt": "2026-06-13T01:33:28.920Z"
     },
     {
       "hull": "CVN-69",
@@ -178,9 +178,9 @@
         "lon": -117.173
       },
       "positionPrecision": "port",
-      "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-05-26",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-06-11",
       "summary": "GoNavy's latest table entry places USS Theodore Roosevelt in or near San Diego, California: 14May2026, returned to San Diego",
       "sources": [
         {
@@ -200,25 +200,25 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: June 11, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-11-2026",
-          "publishedAt": "2026-06-11",
-          "note": "Image estimate: Orange/red current marker labeled CVN 71 appears just offshore of southern California/northern Baja, near but distinct from the blue LHD 2 marker.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260610%20display.png"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
           "publishedAt": "2026-05-26",
           "note": "Image estimate: Carrier label “USS THEODORE ROOSEVELT (CVN 71)” is visible adjacent to the San Diego, CA cluster.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: June 11, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-11-2026",
+          "publishedAt": "2026-06-11",
+          "note": "Image estimate: Orange/red current marker labeled CVN 71 appears just offshore of southern California/northern Baja, near but distinct from the blue LHD 2 marker.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260610%20display.png"
         }
       ],
-      "lastChangedAt": "2026-06-03T00:00:42.355Z"
+      "lastChangedAt": "2026-06-13T01:33:28.920Z"
     },
     {
       "hull": "CVN-72",
@@ -226,10 +226,10 @@
       "status": "deployed",
       "locationName": "Arabian Sea",
       "position": {
-        "lat": 19.5,
-        "lon": 64
+        "lat": 18,
+        "lon": 63
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
       "lastSeen": "2026-06-11",
@@ -252,6 +252,7 @@
           "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
           "publisher": "GoNavy.jp",
@@ -291,7 +292,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-11T16:18:37.328Z"
+      "lastChangedAt": "2026-06-13T01:33:28.920Z"
     },
     {
       "hull": "CVN-73",
@@ -299,10 +300,10 @@
       "status": "deployed",
       "locationName": "Western Pacific",
       "position": {
-        "lat": 7.2,
-        "lon": 137.1
+        "lat": 18,
+        "lon": 145
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
       "lastSeen": "2026-06-11",
@@ -325,6 +326,7 @@
           "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
           "publisher": "GoNavy.jp",
@@ -374,7 +376,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-11T16:18:37.328Z"
+      "lastChangedAt": "2026-06-13T01:33:28.920Z"
     },
     {
       "hull": "CVN-74",
@@ -508,10 +510,10 @@
       "status": "deployed",
       "locationName": "Arabian Sea",
       "position": {
-        "lat": 15.6,
-        "lon": 62.5
+        "lat": 18,
+        "lon": 63
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
       "lastSeen": "2026-06-11",
@@ -534,6 +536,7 @@
           "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
           "publisher": "GoNavy.jp",
@@ -573,7 +576,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-11T16:18:37.328Z"
+      "lastChangedAt": "2026-06-13T01:33:28.920Z"
     },
     {
       "hull": "CVN-78",
