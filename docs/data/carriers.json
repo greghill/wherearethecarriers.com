@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-16T05:27:33.120Z",
-  "lastChangedAt": "2026-06-16T05:27:33.120Z",
+  "generatedAt": "2026-06-16T17:18:46.458Z",
+  "lastChangedAt": "2026-06-16T17:18:46.458Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -14,8 +14,8 @@
       "positionPrecision": "region",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-06-10",
-      "summary": "GoNavy's latest table entry places USS Nimitz in or near Caribbean Sea: 08Jun2026, U.S. Ambassador hosts Dominican delegation aboard USS Nimitz in the Caribbean Sea",
+      "lastSeen": "2026-06-17",
+      "summary": "GoNavy's latest table entry places USS Nimitz in or near Caribbean Sea: 13Jun-14Jun2026, near Cuban waters in the Gulf of Mexico and Caribbean region",
       "sources": [
         {
           "role": "primary",
@@ -28,8 +28,8 @@
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-06-10",
-          "note": "Latest row: 08Jun2026, U.S. Ambassador hosts Dominican delegation aboard USS Nimitz in the Caribbean Sea"
+          "publishedAt": "2026-06-17",
+          "note": "Latest row: 13Jun-14Jun2026, near Cuban waters in the Gulf of Mexico and Caribbean region"
         },
         {
           "role": "backup",
@@ -82,7 +82,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-16T05:27:33.120Z"
+      "lastChangedAt": "2026-06-16T17:18:46.458Z"
     },
     {
       "hull": "CVN-69",
@@ -129,17 +129,17 @@
     {
       "hull": "CVN-70",
       "name": "USS Carl Vinson",
-      "status": "port",
-      "locationName": "San Diego, California",
+      "status": "deployed",
+      "locationName": "Eastern Pacific",
       "position": {
-        "lat": 32.715,
-        "lon": -117.173
+        "lat": 31,
+        "lon": -121
       },
-      "positionPrecision": "port",
-      "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-05-26",
-      "summary": "GoNavy's latest table entry places USS Carl Vinson in or near San Diego, California: 16Sep2025, returned to San Diego",
+      "positionPrecision": "region",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-06-17",
+      "summary": "GoNavy's latest table entry places USS Carl Vinson in or near Eastern Pacific: 10Jun-12Jun2016, sea trials in the Southern California Operating Areas",
       "sources": [
         {
           "role": "primary",
@@ -152,8 +152,8 @@
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2025-10-08",
-          "note": "Latest row: 16Sep2025, returned to San Diego"
+          "publishedAt": "2026-06-17",
+          "note": "Latest row: 10Jun-12Jun2016, sea trials in the Southern California Operating Areas"
         },
         {
           "role": "backup",
@@ -166,7 +166,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-03T00:00:42.355Z"
+      "lastChangedAt": "2026-06-16T17:18:46.458Z"
     },
     {
       "hull": "CVN-71",
@@ -178,10 +178,10 @@
         "lon": -117.173
       },
       "positionPrecision": "port",
-      "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-05-26",
-      "summary": "GoNavy's latest table entry places USS Theodore Roosevelt in or near San Diego, California: 14May2026, returned to San Diego",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-06-17",
+      "summary": "GoNavy's latest table entry places USS Theodore Roosevelt in or near San Diego, California: 10Jun2026, departed San Diego conducted exercises to bolster strike group readiness and capability in the Southern California Operating Areas",
       "sources": [
         {
           "role": "primary",
@@ -194,8 +194,8 @@
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-05-20",
-          "note": "Latest row: 14May2026, returned to San Diego"
+          "publishedAt": "2026-06-17",
+          "note": "Latest row: 10Jun2026, departed San Diego conducted exercises to bolster strike group readiness and capability in the Southern California Operating Areas"
         },
         {
           "role": "backup",
@@ -218,7 +218,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-13T06:30:44.416Z"
+      "lastChangedAt": "2026-06-16T17:18:46.458Z"
     },
     {
       "hull": "CVN-72",
@@ -297,21 +297,24 @@
       "hull": "CVN-73",
       "name": "USS George Washington",
       "status": "deployed",
-      "locationName": "Western Pacific",
+      "locationName": "western Pacific east of the Philippines",
       "position": {
         "lat": 7.2,
         "lon": 137.1
       },
       "positionPrecision": "image_estimate",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-06-11",
-      "summary": "GoNavy's latest table entry places USS George Washington in or near Western Pacific: 07Jun-08Jun2026, Philippine Sea",
+      "summary": "U.S. Naval Update Map: June 11, 2026 places USS George Washington near western Pacific east of the Philippines from a public tracker map image.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
-            "coordinate_refinement"
+            "status",
+            "location",
+            "position",
+            "summary"
           ],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: June 11, 2026",
@@ -319,19 +322,6 @@
           "publishedAt": "2026-06-11",
           "note": "Image estimate: Orange/red CVN 73 trail appears east of the Philippines, with the current-week red dot at the southern end adjacent to the CVN 73 label.",
           "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260610%20display.png"
-        },
-        {
-          "role": "primary",
-          "usedFor": [
-            "status",
-            "location",
-            "summary"
-          ],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-06-10",
-          "note": "Latest row: 07Jun-08Jun2026, Philippine Sea"
         },
         {
           "role": "backup",
@@ -374,7 +364,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-13T06:30:44.416Z"
+      "lastChangedAt": "2026-06-16T17:18:46.458Z"
     },
     {
       "hull": "CVN-74",
