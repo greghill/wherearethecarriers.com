@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-13T06:30:44.416Z",
-  "lastChangedAt": "2026-06-13T06:30:44.416Z",
+  "generatedAt": "2026-06-16T05:27:33.120Z",
+  "lastChangedAt": "2026-06-16T05:27:33.120Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -12,8 +12,8 @@
         "lon": -75
       },
       "positionPrecision": "region",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-06-10",
       "summary": "GoNavy's latest table entry places USS Nimitz in or near Caribbean Sea: 08Jun2026, U.S. Ambassador hosts Dominican delegation aboard USS Nimitz in the Caribbean Sea",
       "sources": [
@@ -82,7 +82,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-13T06:30:44.416Z"
+      "lastChangedAt": "2026-06-16T05:27:33.120Z"
     },
     {
       "hull": "CVN-69",
