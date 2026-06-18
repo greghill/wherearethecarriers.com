@@ -860,6 +860,76 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://worldview.stratfor.com/article/us-naval-update-map-june-18-2026|https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260617%20display.png|2026-06-18": {
+      "sourceKey": "stratfor",
+      "model": "gpt-5.5",
+      "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260617%20display.png",
+      "articleUrl": "https://worldview.stratfor.com/article/us-naval-update-map-june-18-2026",
+      "publishedAt": "2026-06-18",
+      "createdAt": "2026-06-18T13:39:31.256Z",
+      "result": {
+        "sourceKey": "stratfor",
+        "imageUrl": "https://worldview.stratfor.com/article/us-naval-update-map-june-18-2026",
+        "publishedAt": "2026-06-18",
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Western Atlantic, off U.S. East Coast near Norfolk/Cape Hatteras",
+            "lat": 35,
+            "lon": -74.6,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red carrier marker labeled “CVN 68” is adjacent to the U.S. East Coast near the Norfolk, VA label; the current-week dot is just offshore in the western Atlantic.",
+            "rationale": "Returned the orange/red dot closest to the CVN 68 label, not the older trail dots extending south/west. Coordinates are placed over water off Virginia/North Carolina."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Eastern Pacific, off Southern California/Baja California near San Diego",
+            "lat": 31.7,
+            "lon": -119.4,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red carrier marker labeled “CVN 71” is just southwest of the San Diego, CA label, offshore in the eastern Pacific.",
+            "rationale": "Used the current-week orange/red dot immediately beside the CVN 71 label, distinct from nearby blue LHD marker and older trail positions."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Western Pacific, west-northwest of Guam",
+            "lat": 14.4,
+            "lon": 142.6,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red carrier marker labeled “CVN 73” appears just west-northwest of the Guam label in the western Pacific.",
+            "rationale": "Selected the red/orange dot adjacent to the CVN 73 label and ignored older orange trail dots to the north/southwest."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "North Arabian Sea / Gulf of Oman area",
+            "lat": 24,
+            "lon": 62.6,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red carrier marker labeled “CVN 72” is the upper of the two close orange carrier dots east of Oman, near the Gulf of Oman/northern Arabian Sea.",
+            "rationale": "Returned the dot closest to the CVN 72 label, kept separate from the nearby CVN 77 dot and ignored the blue LHA 7 marker."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea, east-southeast of Oman",
+            "lat": 21,
+            "lon": 61.7,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red carrier marker labeled “CVN 77” is the lower-left orange dot in the cluster east of Oman, south of the CVN 72 marker.",
+            "rationale": "Used the current-week orange/red dot adjacent to the CVN 77 label, preserving separation from CVN 72 and excluding the nearby blue LHA 7 amphibious marker."
+          }
+        ]
+      }
     }
   }
 }

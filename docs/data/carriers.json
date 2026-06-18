@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-18T04:58:46.934Z",
-  "lastChangedAt": "2026-06-18T04:58:46.934Z",
+  "generatedAt": "2026-06-18T13:39:26.999Z",
+  "lastChangedAt": "2026-06-18T13:39:26.999Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -34,22 +34,22 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: June 11, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-11-2026",
-          "publishedAt": "2026-06-11",
-          "note": "Image estimate: Orange/red marker labeled CVN 68 is plotted just north of the western Caribbean/Yucatan area, with the current-week red dot adjacent to the label.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260610%20display.png"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
           "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
           "publishedAt": "2026-06-08",
           "note": "Image estimate: Map label reads “USS Nimitz (CVN-68)” with a yellow diamond in the central Caribbean north of Colombia/Venezuela.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: June 18, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-18-2026",
+          "publishedAt": "2026-06-18",
+          "note": "Image estimate: Orange/red carrier marker labeled “CVN 68” is adjacent to the U.S. East Coast near the Norfolk, VA label; the current-week dot is just offshore in the western Atlantic.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260617%20display.png"
         },
         {
           "role": "backup",
@@ -178,9 +178,9 @@
         "lon": -117.173
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
-      "lastSeen": "2026-06-17",
+      "confidence": "high",
+      "evidence": "corroborated",
+      "lastSeen": "2026-06-18",
       "summary": "GoNavy's latest table entry places USS Theodore Roosevelt in or near San Diego, California: 10Jun2026, departed San Diego conducted exercises to bolster strike group readiness and capability in the Southern California Operating Areas",
       "sources": [
         {
@@ -201,11 +201,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: June 11, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-11-2026",
-          "publishedAt": "2026-06-11",
-          "note": "Image estimate: Orange/red current marker labeled CVN 71 appears just offshore of southern California/northern Baja, near but distinct from the blue LHD 2 marker.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260610%20display.png"
+          "title": "U.S. Naval Update Map: June 18, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-18-2026",
+          "publishedAt": "2026-06-18",
+          "note": "Image estimate: Orange/red carrier marker labeled “CVN 71” is just southwest of the San Diego, CA label, offshore in the eastern Pacific.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260617%20display.png"
         },
         {
           "role": "backup",
@@ -218,7 +218,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-17T15:59:35.006Z"
+      "lastChangedAt": "2026-06-18T13:39:26.999Z"
     },
     {
       "hull": "CVN-72",
@@ -226,13 +226,13 @@
       "status": "deployed",
       "locationName": "Arabian Sea",
       "position": {
-        "lat": 19.5,
-        "lon": 64
+        "lat": 24,
+        "lon": 62.6
       },
       "positionPrecision": "image_estimate",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-06-11",
+      "lastSeen": "2026-06-18",
       "summary": "GoNavy's latest table entry places USS Abraham Lincoln in or near Arabian Sea: 28Feb-08Jun2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
         {
@@ -241,11 +241,11 @@
             "coordinate_refinement"
           ],
           "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: June 11, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-11-2026",
-          "publishedAt": "2026-06-11",
-          "note": "Image estimate: The CVN 72 label is in the Arabian Sea area, with an orange/red dot just below the label and separate from the nearby CVN 77 and blue LHA 7 markers.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260610%20display.png"
+          "title": "U.S. Naval Update Map: June 18, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-18-2026",
+          "publishedAt": "2026-06-18",
+          "note": "Image estimate: Orange/red carrier marker labeled “CVN 72” is the upper of the two close orange carrier dots east of Oman, near the Gulf of Oman/northern Arabian Sea.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260617%20display.png"
         },
         {
           "role": "primary",
@@ -291,46 +291,47 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-18T04:58:46.934Z"
+      "lastChangedAt": "2026-06-18T13:39:26.999Z"
     },
     {
       "hull": "CVN-73",
       "name": "USS George Washington",
       "status": "deployed",
-      "locationName": "western Pacific east of the Philippines",
+      "locationName": "Western Pacific",
       "position": {
-        "lat": 7.2,
-        "lon": 137.1
+        "lat": 8.6,
+        "lon": 134.2
       },
       "positionPrecision": "image_estimate",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-06-11",
-      "summary": "U.S. Naval Update Map: June 11, 2026 places USS George Washington near western Pacific east of the Philippines from a public tracker map image.",
+      "lastSeen": "2026-06-18",
+      "summary": "USNI News Fleet and Marine Tracker: June 8, 2026 places USS George Washington in or near Western Pacific. The point is an approximate public-source assessment.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
-            "status",
-            "location",
-            "position",
-            "summary"
+            "coordinate_refinement"
           ],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: June 11, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-11-2026",
-          "publishedAt": "2026-06-11",
-          "note": "Image estimate: Orange/red CVN 73 trail appears east of the Philippines, with the current-week red dot at the southern end adjacent to the CVN 73 label.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260610%20display.png"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
           "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
           "publishedAt": "2026-06-08",
           "note": "Image estimate: Map label reads “George Washington CSG” with a yellow diamond east of the Philippines and north of New Guinea.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
+        },
+        {
+          "role": "primary",
+          "usedFor": [
+            "status",
+            "location",
+            "summary"
+          ],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
+          "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
+          "publishedAt": "2026-06-08",
+          "note": "Text context: Western Pacific",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
         },
         {
@@ -346,12 +347,12 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
-          "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
-          "publishedAt": "2026-06-08",
-          "note": "Text context: Western Pacific",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: June 18, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-18-2026",
+          "publishedAt": "2026-06-18",
+          "note": "Image estimate: Orange/red carrier marker labeled “CVN 73” appears just west-northwest of the Guam label in the western Pacific.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260617%20display.png"
         },
         {
           "role": "backup",
@@ -364,7 +365,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-17T15:59:35.006Z"
+      "lastChangedAt": "2026-06-18T13:39:26.999Z"
     },
     {
       "hull": "CVN-74",
@@ -498,13 +499,13 @@
       "status": "deployed",
       "locationName": "Arabian Sea",
       "position": {
-        "lat": 15.6,
-        "lon": 62.5
+        "lat": 21,
+        "lon": 61.7
       },
       "positionPrecision": "image_estimate",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-06-11",
+      "lastSeen": "2026-06-18",
       "summary": "GoNavy's latest table entry places USS George H.W. Bush in or near Arabian Sea: 27Apr-08Jun2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
         {
@@ -513,11 +514,11 @@
             "coordinate_refinement"
           ],
           "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: June 11, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-11-2026",
-          "publishedAt": "2026-06-11",
-          "note": "Image estimate: The CVN 77 label is plotted in the Arabian Sea, with an orange/red dot immediately to its right/below, distinct from CVN 72 and from the blue LHA 7 dot.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260610%20display.png"
+          "title": "U.S. Naval Update Map: June 18, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-18-2026",
+          "publishedAt": "2026-06-18",
+          "note": "Image estimate: Orange/red carrier marker labeled “CVN 77” is the lower-left orange dot in the cluster east of Oman, south of the CVN 72 marker.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260617%20display.png"
         },
         {
           "role": "primary",
@@ -563,7 +564,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-18T04:58:46.934Z"
+      "lastChangedAt": "2026-06-18T13:39:26.999Z"
     },
     {
       "hull": "CVN-78",
