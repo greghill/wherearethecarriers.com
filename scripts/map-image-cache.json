@@ -930,6 +930,76 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026|https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg|2026-06-22": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg",
+      "articleUrl": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+      "publishedAt": "2026-06-22",
+      "createdAt": "2026-06-22T21:11:23.434Z",
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+        "publishedAt": "2026-06-22",
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Mayport, Florida",
+            "lat": 30.39,
+            "lon": -81.39,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "Map label reads “USS Nimitz (CVN-68) / Mayport, Fla.” with the marker at the northeast Florida coast.",
+            "rationale": "The yellow marker is shown at Mayport/Jacksonville on the Atlantic coast. Returned coordinate is at the Mayport naval port/waterfront, not inland."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Eastern Pacific, off California",
+            "lat": 33.8,
+            "lon": -126,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label reads “USS Theodore Roosevelt (CVN-71)” next to a marker west of the U.S. West Coast.",
+            "rationale": "The marker sits offshore west of California/Baja California in the eastern Pacific. Coordinate is placed on open water adjacent to the label and marker."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea / northern Indian Ocean",
+            "lat": 13.5,
+            "lon": 69,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label includes “Abraham Lincoln CSG” beside a single marker southwest of India.",
+            "rationale": "The shared marker for Abraham Lincoln CSG, George H.W. Bush CSG, and USS Tripoli is shown in the Arabian Sea west-southwest of India. Coordinate is placed on open water near the visual marker."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Philippine Sea / western Pacific",
+            "lat": 22,
+            "lon": 137,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label reads “George Washington CSG” next to a marker east of Taiwan/Luzon in the western Pacific.",
+            "rationale": "The marker is in the Philippine Sea/western Pacific, well offshore and adjacent to the label. Coordinate is placed on open water at the visual marker location."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea / northern Indian Ocean",
+            "lat": 13.5,
+            "lon": 69,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label includes “George H.W. Bush CSG” beside the same marker southwest of India.",
+            "rationale": "The George H.W. Bush CSG is listed on the same grouped label and marker as Abraham Lincoln CSG in the Arabian Sea. Coordinate is placed on the shared open-water marker."
+          }
+        ]
+      }
     }
   }
 }

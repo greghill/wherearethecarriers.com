@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-18T13:39:26.999Z",
-  "lastChangedAt": "2026-06-18T13:39:26.999Z",
+  "generatedAt": "2026-06-22T21:11:19.899Z",
+  "lastChangedAt": "2026-06-22T21:11:19.899Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -15,7 +15,7 @@
       "confidence": "medium",
       "evidence": "current",
       "lastSeen": "2026-06-17",
-      "summary": "GoNavy's latest table entry places USS Nimitz in or near Caribbean Sea: 13Jun-14Jun2026, near Cuban waters in the Gulf of Mexico and Caribbean region",
+      "summary": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean places USS Nimitz in or near Caribbean Sea.",
       "sources": [
         {
           "role": "primary",
@@ -25,21 +25,22 @@
             "position",
             "summary"
           ],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-06-17",
-          "note": "Latest row: 13Jun-14Jun2026, near Cuban waters in the Gulf of Mexico and Caribbean region"
+          "publisher": "The War Zone",
+          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
+          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
+          "publishedAt": "2026-05-26",
+          "note": "Text context: Caribbean Sea",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         },
         {
           "role": "backup",
           "usedFor": [],
           "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
-          "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
-          "publishedAt": "2026-06-08",
-          "note": "Image estimate: Map label reads “USS Nimitz (CVN-68)” with a yellow diamond in the central Caribbean north of Colombia/Venezuela.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
+          "title": "USNI News Fleet and Marine Tracker: June 22, 2026",
+          "url": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+          "publishedAt": "2026-06-22",
+          "note": "Image estimate: Map label reads “USS Nimitz (CVN-68) / Mayport, Fla.” with the marker at the northeast Florida coast.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg"
         },
         {
           "role": "backup",
@@ -54,22 +55,11 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
-          "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
-          "publishedAt": "2026-06-08",
-          "note": "Text context: Caribbean Sea",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
-          "note": "Text context: Caribbean Sea",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-06-17",
+          "note": "Latest row: 13Jun-14Jun2026, near Cuban waters in the Gulf of Mexico and Caribbean region"
         },
         {
           "role": "backup",
@@ -80,6 +70,16 @@
           "publishedAt": "2026-05-26",
           "note": "Image estimate: Orange/training carrier marker labeled “USS NIMITZ (CVN 68)” is shown in the Caribbean basin, north of Venezuela/Colombia.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 22, 2026",
+          "url": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+          "publishedAt": "2026-06-22",
+          "note": "Text context: Western Atlantic",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg"
         }
       ],
       "lastChangedAt": "2026-06-17T15:59:35.006Z"
@@ -94,10 +94,10 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-05-26",
-      "summary": "GoNavy's latest table entry places USS Dwight D. Eisenhower in or near Norfolk, Virginia: 15May2026, returned to Norfolk",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-06-22",
+      "summary": "USNI News Fleet and Marine Tracker: June 22, 2026 places USS Dwight D. Eisenhower in or near Norfolk, Virginia. The point is an approximate public-source assessment.",
       "sources": [
         {
           "role": "primary",
@@ -107,11 +107,12 @@
             "position",
             "summary"
           ],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-05-20",
-          "note": "Latest row: 15May2026, returned to Norfolk"
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 22, 2026",
+          "url": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+          "publishedAt": "2026-06-22",
+          "note": "Text context: Norfolk, Virginia",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg"
         },
         {
           "role": "backup",
@@ -122,9 +123,18 @@
           "publishedAt": "2026-05-26",
           "note": "Image estimate: Carrier label “USS DWIGHT D. EISENHOWER (CVN 69)” appears in the Norfolk, VA cluster.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-05-20",
+          "note": "Latest row: 15May2026, returned to Norfolk"
         }
       ],
-      "lastChangedAt": "2026-06-03T00:00:42.355Z"
+      "lastChangedAt": "2026-06-22T21:11:19.899Z"
     },
     {
       "hull": "CVN-70",
@@ -180,7 +190,7 @@
       "positionPrecision": "port",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-06-18",
+      "lastSeen": "2026-06-22",
       "summary": "GoNavy's latest table entry places USS Theodore Roosevelt in or near San Diego, California: 10Jun2026, departed San Diego conducted exercises to bolster strike group readiness and capability in the Southern California Operating Areas",
       "sources": [
         {
@@ -196,6 +206,16 @@
           "url": "http://www.gonavy.jp/CVLocation.html",
           "publishedAt": "2026-06-17",
           "note": "Latest row: 10Jun2026, departed San Diego conducted exercises to bolster strike group readiness and capability in the Southern California Operating Areas"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 22, 2026",
+          "url": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+          "publishedAt": "2026-06-22",
+          "note": "Image estimate: Map label reads “USS Theodore Roosevelt (CVN-71)” next to a marker west of the U.S. West Coast.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg"
         },
         {
           "role": "backup",
@@ -216,9 +236,19 @@
           "publishedAt": "2026-05-26",
           "note": "Image estimate: Carrier label “USS THEODORE ROOSEVELT (CVN 71)” is visible adjacent to the San Diego, CA cluster.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 22, 2026",
+          "url": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+          "publishedAt": "2026-06-22",
+          "note": "Text context: San Diego, California",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-06-18T13:39:26.999Z"
+      "lastChangedAt": "2026-06-22T21:11:19.899Z"
     },
     {
       "hull": "CVN-72",
@@ -226,20 +256,44 @@
       "status": "deployed",
       "locationName": "Arabian Sea",
       "position": {
-        "lat": 24,
-        "lon": 62.6
+        "lat": 13.5,
+        "lon": 69
       },
       "positionPrecision": "image_estimate",
-      "confidence": "medium",
-      "evidence": "current",
-      "lastSeen": "2026-06-18",
-      "summary": "GoNavy's latest table entry places USS Abraham Lincoln in or near Arabian Sea: 28Feb-08Jun2026, North Arabian Sea in support of Operation Epic Fury",
+      "confidence": "high",
+      "evidence": "corroborated",
+      "lastSeen": "2026-06-22",
+      "summary": "USNI News Fleet and Marine Tracker: June 22, 2026 places USS Abraham Lincoln in or near Arabian Sea. The point is an approximate public-source assessment.",
       "sources": [
+        {
+          "role": "primary",
+          "usedFor": [
+            "status",
+            "location",
+            "summary"
+          ],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 22, 2026",
+          "url": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+          "publishedAt": "2026-06-22",
+          "note": "Text context: Arabian Sea",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg"
+        },
         {
           "role": "primary",
           "usedFor": [
             "coordinate_refinement"
           ],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 22, 2026",
+          "url": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+          "publishedAt": "2026-06-22",
+          "note": "Image estimate: Map label includes “Abraham Lincoln CSG” beside a single marker southwest of India.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: June 18, 2026",
           "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-18-2026",
@@ -248,37 +302,13 @@
           "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260617%20display.png"
         },
         {
-          "role": "primary",
-          "usedFor": [
-            "status",
-            "location",
-            "summary"
-          ],
+          "role": "backup",
+          "usedFor": [],
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
           "publishedAt": "2026-06-10",
           "note": "Latest row: 28Feb-08Jun2026, North Arabian Sea in support of Operation Epic Fury"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
-          "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
-          "publishedAt": "2026-06-08",
-          "note": "Text context: Arabian Sea",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
-          "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
-          "publishedAt": "2026-06-08",
-          "note": "Image estimate: Map label stack reads “Abraham Lincoln CSG / George H.W. Bush CSG / USS Tripoli (LHA-7)” with a single yellow diamond west of India in the Arabian Sea.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
         },
         {
           "role": "backup",
@@ -291,58 +321,57 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-18T13:39:26.999Z"
+      "lastChangedAt": "2026-06-22T21:11:19.899Z"
     },
     {
       "hull": "CVN-73",
       "name": "USS George Washington",
-      "status": "deployed",
-      "locationName": "Western Pacific",
+      "status": "port",
+      "locationName": "Yokosuka, Japan",
       "position": {
-        "lat": 8.6,
-        "lon": 134.2
+        "lat": 35.29,
+        "lon": 139.67
       },
       "positionPrecision": "image_estimate",
-      "confidence": "medium",
-      "evidence": "current",
-      "lastSeen": "2026-06-18",
-      "summary": "USNI News Fleet and Marine Tracker: June 8, 2026 places USS George Washington in or near Western Pacific. The point is an approximate public-source assessment.",
+      "confidence": "low",
+      "evidence": "aging",
+      "lastSeen": "2026-05-26",
+      "summary": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean places USS George Washington near Yokosuka, Japan from a public tracker map image.",
       "sources": [
-        {
-          "role": "primary",
-          "usedFor": [
-            "coordinate_refinement"
-          ],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
-          "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
-          "publishedAt": "2026-06-08",
-          "note": "Image estimate: Map label reads “George Washington CSG” with a yellow diamond east of the Philippines and north of New Guinea.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
-        },
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
-          "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
-          "publishedAt": "2026-06-08",
-          "note": "Text context: Western Pacific",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
           "publishedAt": "2026-05-26",
           "note": "Image estimate: Green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)*” appears next to the “YOKOSUKA, JAPAN” label.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 22, 2026",
+          "url": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+          "publishedAt": "2026-06-22",
+          "note": "Text context: Western Pacific",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 22, 2026",
+          "url": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+          "publishedAt": "2026-06-22",
+          "note": "Image estimate: Map label reads “George Washington CSG” next to a marker east of Taiwan/Luzon in the western Pacific.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg"
         },
         {
           "role": "backup",
@@ -365,7 +394,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-18T13:39:26.999Z"
+      "lastChangedAt": "2026-06-22T21:11:19.899Z"
     },
     {
       "hull": "CVN-74",
@@ -499,13 +528,13 @@
       "status": "deployed",
       "locationName": "Arabian Sea",
       "position": {
-        "lat": 21,
-        "lon": 61.7
+        "lat": 13.5,
+        "lon": 69
       },
       "positionPrecision": "image_estimate",
-      "confidence": "medium",
-      "evidence": "current",
-      "lastSeen": "2026-06-18",
+      "confidence": "high",
+      "evidence": "corroborated",
+      "lastSeen": "2026-06-22",
       "summary": "GoNavy's latest table entry places USS George H.W. Bush in or near Arabian Sea: 27Apr-08Jun2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
         {
@@ -513,12 +542,12 @@
           "usedFor": [
             "coordinate_refinement"
           ],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: June 18, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-18-2026",
-          "publishedAt": "2026-06-18",
-          "note": "Image estimate: Orange/red carrier marker labeled “CVN 77” is the lower-left orange dot in the cluster east of Oman, south of the CVN 72 marker.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260617%20display.png"
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 22, 2026",
+          "url": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+          "publishedAt": "2026-06-22",
+          "note": "Image estimate: Map label includes “George H.W. Bush CSG” beside the same marker southwest of India.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg"
         },
         {
           "role": "primary",
@@ -536,22 +565,12 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
-          "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
-          "publishedAt": "2026-06-08",
-          "note": "Text context: Arabian Sea",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: June 8, 2026",
-          "url": "https://news.usni.org/2026/06/08/usni-news-fleet-and-marine-tracker-june-8-2026",
-          "publishedAt": "2026-06-08",
-          "note": "Image estimate: Map label stack reads “Abraham Lincoln CSG / George H.W. Bush CSG / USS Tripoli (LHA-7)” with a single yellow diamond west of India in the Arabian Sea.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_8_26.jpg"
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: June 18, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-june-18-2026",
+          "publishedAt": "2026-06-18",
+          "note": "Image estimate: Orange/red carrier marker labeled “CVN 77” is the lower-left orange dot in the cluster east of Oman, south of the CVN 72 marker.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260617%20display.png"
         },
         {
           "role": "backup",
@@ -562,9 +581,19 @@
           "publishedAt": "2026-05-26",
           "note": "Image estimate: Green/deployed carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)*” is shown below the Abraham Lincoln marker in the Arabian Sea.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 22, 2026",
+          "url": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+          "publishedAt": "2026-06-22",
+          "note": "Text context: Arabian Sea",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-06-18T13:39:26.999Z"
+      "lastChangedAt": "2026-06-22T21:11:19.899Z"
     },
     {
       "hull": "CVN-78",
