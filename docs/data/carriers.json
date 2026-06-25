@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-23T12:13:54.208Z",
-  "lastChangedAt": "2026-06-23T12:13:54.208Z",
+  "generatedAt": "2026-06-25T04:20:45.664Z",
+  "lastChangedAt": "2026-06-25T04:20:45.664Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -137,8 +137,8 @@
         "lon": -121
       },
       "positionPrecision": "region",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-06-17",
       "summary": "GoNavy's latest table entry places USS Carl Vinson in or near Eastern Pacific: 10Jun-12Jun2016, sea trials in the Southern California Operating Areas",
       "sources": [
@@ -167,7 +167,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-06-16T17:18:46.458Z"
+      "lastChangedAt": "2026-06-25T04:20:45.664Z"
     },
     {
       "hull": "CVN-71",
