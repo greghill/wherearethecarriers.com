@@ -1151,6 +1151,98 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://news.usni.org/2026/06/29/usni-news-fleet-and-marine-tracker-june-29-2026|https://news.usni.org/wp-content/uploads/2026/06/FT_6_29_26-1.jpg|2026-06-29": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_29_26-1.jpg",
+      "articleUrl": "https://news.usni.org/2026/06/29/usni-news-fleet-and-marine-tracker-june-29-2026",
+      "publishedAt": "2026-06-29",
+      "createdAt": "2026-06-29T18:22:19.617Z",
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/06/29/usni-news-fleet-and-marine-tracker-june-29-2026",
+        "publishedAt": "2026-06-29",
+        "carriers": [
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "Eastern Pacific, off Southern California",
+            "lat": 32.3,
+            "lon": -124.2,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Yellow diamond adjacent to label “USS Carl Vinson (CVN-70)” west of the U.S. West Coast.",
+            "rationale": "Marker appears just offshore of Southern California/Baja in the eastern Pacific; coordinate placed on open water close to the label/dot."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Western Atlantic, off the U.S. Southeast Coast",
+            "lat": 33,
+            "lon": -74.8,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Yellow diamond adjacent to label “USS Dwight D. Eisenhower (CVN-69)” east of the southeastern United States.",
+            "rationale": "Marker is northeast of the nearby Nimitz marker and offshore of the Carolinas/Georgia area; coordinate placed in open Atlantic water near the visible dot."
+          },
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Western Atlantic, east of Florida",
+            "lat": 29.2,
+            "lon": -78.3,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Yellow diamond adjacent to label “USS Nimitz (CVN-68)” just east of Florida and south-southwest of the Eisenhower marker.",
+            "rationale": "Marker is shown off the U.S. Southeast coast, close to the label, and has been placed over open Atlantic water east of Florida."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea",
+            "lat": 18.6,
+            "lon": 64.4,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Shared yellow diamond adjacent to stacked label “Abraham Lincoln CSG / George H.W. Bush CSG / USS Tripoli (LHA-7)” west of India.",
+            "rationale": "The map shows one visible marker for the listed groups in the Arabian Sea; Abraham Lincoln is included from the label and placed on the shared dot over open water."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 18.6,
+            "lon": 64.4,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Shared yellow diamond adjacent to stacked label “Abraham Lincoln CSG / George H.W. Bush CSG / USS Tripoli (LHA-7)” west of India.",
+            "rationale": "The map shows one visible marker for the listed groups in the Arabian Sea; George H.W. Bush is included from the label and placed on the shared dot over open water."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Pearl Harbor, Hawaii",
+            "lat": 21.35,
+            "lon": -157.95,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "Label reads “Theodore Roosevelt CSG … Pearl Harbor, Hawaii” with a yellow diamond at Hawaii.",
+            "rationale": "The marker and explicit port label indicate Pearl Harbor; coordinate placed at the Pearl Harbor/Honolulu port area."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Philippine Sea, east of the Philippines",
+            "lat": 15.2,
+            "lon": 130.4,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Yellow diamond adjacent to label “George Washington CSG” east of the Philippines.",
+            "rationale": "Marker is clearly in the Philippine Sea, east of Luzon/Philippines, and coordinate is placed on open water near the visible dot."
+          }
+        ]
+      }
     }
   }
 }
