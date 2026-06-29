@@ -1081,6 +1081,76 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026|https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg|2026-06-29": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_22_26.jpg",
+      "articleUrl": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+      "publishedAt": "2026-06-29",
+      "createdAt": "2026-06-29T16:06:15.464Z",
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/06/22/usni-news-fleet-and-marine-tracker-june-22-2026",
+        "publishedAt": "2026-06-29",
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Mayport, Florida",
+            "lat": 30.39,
+            "lon": -81.4,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "Map label reads \"USS Nimitz (CVN-68) / Mayport, Fla.\" with a yellow diamond at the Mayport/Jacksonville port area.",
+            "rationale": "The carrier marker is shown pierside at Mayport on Florida's northeast coast; coordinates are placed at the Mayport basin/approach rather than inland."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Eastern Pacific, off the U.S. West Coast",
+            "lat": 39,
+            "lon": -127,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label reads \"USS Theodore Roosevelt (CVN-71)\" above \"USS Essex (LHD-2)\" with the adjacent yellow diamond in the eastern Pacific west of the U.S. West Coast.",
+            "rationale": "The diamond is offshore west of California/Oregon and close to the CVN-71 label; the estimate is placed over open Pacific water near the visual marker."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea",
+            "lat": 16,
+            "lon": 65,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label stack includes \"Abraham Lincoln CSG\" next to a yellow diamond in the Arabian Sea, west-southwest of India.",
+            "rationale": "The single adjacent marker for the label stack is in open Arabian Sea water, near the western side of India; no separate dot is visible for Abraham Lincoln versus George H.W. Bush."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Philippine Sea / Western Pacific",
+            "lat": 22,
+            "lon": 134,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label reads \"George Washington CSG\" with the adjacent yellow diamond east of the Philippines/Taiwan area in the western Pacific.",
+            "rationale": "The marker is in open water of the Philippine Sea, close to the label and east of the Philippine archipelago."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 16,
+            "lon": 65,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label stack includes \"George H.W. Bush CSG\" next to the same yellow diamond in the Arabian Sea, west-southwest of India.",
+            "rationale": "The map shows George H.W. Bush CSG at the Arabian Sea marker shared with the Abraham Lincoln CSG label; the returned coordinate is the adjacent open-water marker location."
+          }
+        ]
+      }
     }
   }
 }
