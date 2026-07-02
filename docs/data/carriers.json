@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-01T13:39:25.896Z",
-  "lastChangedAt": "2026-07-01T13:39:25.896Z",
+  "generatedAt": "2026-07-02T04:18:05.934Z",
+  "lastChangedAt": "2026-07-02T04:18:05.934Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -220,8 +220,8 @@
         "lon": -121
       },
       "positionPrecision": "region",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-06-25",
       "summary": "GoNavy's latest table entry places USS Theodore Roosevelt in or near Eastern Pacific: 15Jun-22Jun2026, Southern California Operating Areas",
       "sources": [
@@ -280,7 +280,7 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_29_26-1.jpg"
         }
       ],
-      "lastChangedAt": "2026-06-29T18:22:14.959Z"
+      "lastChangedAt": "2026-07-02T04:18:05.934Z"
     },
     {
       "hull": "CVN-72",
