@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-02T14:26:00.051Z",
-  "lastChangedAt": "2026-07-02T14:26:00.051Z",
+  "generatedAt": "2026-07-07T12:07:53.798Z",
+  "lastChangedAt": "2026-07-07T12:07:53.798Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -87,8 +87,8 @@
       "positionPrecision": "port",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-07-02",
-      "summary": "USNI News Fleet and Marine Tracker: June 29, 2026 places USS Dwight D. Eisenhower in or near Norfolk, Virginia. The point is an approximate public-source assessment.",
+      "lastSeen": "2026-07-08",
+      "summary": "GoNavy's latest table entry places USS Dwight D. Eisenhower in or near Norfolk, Virginia: 02Jul2026, returned to Norfolk",
       "sources": [
         {
           "role": "primary",
@@ -98,12 +98,11 @@
             "position",
             "summary"
           ],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: June 29, 2026",
-          "url": "https://news.usni.org/2026/06/29/usni-news-fleet-and-marine-tracker-june-29-2026",
-          "publishedAt": "2026-07-01",
-          "note": "Text context: Norfolk, Virginia",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_29_26-1.jpg"
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-07-08",
+          "note": "Latest row: 02Jul2026, returned to Norfolk"
         },
         {
           "role": "backup",
@@ -132,60 +131,60 @@
           "title": "USNI News Fleet and Marine Tracker: June 29, 2026",
           "url": "https://news.usni.org/2026/06/29/usni-news-fleet-and-marine-tracker-june-29-2026",
           "publishedAt": "2026-07-01",
-          "note": "Image estimate: Map label reads “USS Dwight D. Eisenhower (CVN-69)” with a yellow diamond in the western Atlantic east of Florida/Georgia.",
+          "note": "Text context: Norfolk, Virginia",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_29_26-1.jpg"
         },
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-06-24",
-          "note": "Latest row: 21Jun2026, returned to Norfolk"
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: June 29, 2026",
+          "url": "https://news.usni.org/2026/06/29/usni-news-fleet-and-marine-tracker-june-29-2026",
+          "publishedAt": "2026-07-01",
+          "note": "Image estimate: Map label reads “USS Dwight D. Eisenhower (CVN-69)” with a yellow diamond in the western Atlantic east of Florida/Georgia.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_29_26-1.jpg"
         }
       ],
-      "lastChangedAt": "2026-07-02T14:26:00.051Z"
+      "lastChangedAt": "2026-07-07T12:07:53.798Z"
     },
     {
       "hull": "CVN-70",
       "name": "USS Carl Vinson",
-      "status": "deployed",
-      "locationName": "Eastern Pacific",
+      "status": "port",
+      "locationName": "San Diego, California",
       "position": {
-        "lat": 32.5,
-        "lon": -122.5
+        "lat": 32.715,
+        "lon": -117.173
       },
-      "positionPrecision": "image_estimate",
-      "confidence": "medium",
-      "evidence": "current",
-      "lastSeen": "2026-07-01",
-      "summary": "GoNavy's latest table entry places USS Carl Vinson in or near Eastern Pacific: 10Jun-12Jun2016, sea trials in the Southern California Operating Areas",
+      "positionPrecision": "port",
+      "confidence": "high",
+      "evidence": "corroborated",
+      "lastSeen": "2026-07-08",
+      "summary": "GoNavy's latest table entry places USS Carl Vinson in or near San Diego, California: 02Jul2026, returned to San Diego",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
-            "coordinate_refinement"
+            "status",
+            "location",
+            "position",
+            "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-07-08",
+          "note": "Latest row: 02Jul2026, returned to San Diego"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: June 29, 2026",
           "url": "https://news.usni.org/2026/06/29/usni-news-fleet-and-marine-tracker-june-29-2026",
           "publishedAt": "2026-07-01",
           "note": "Image estimate: Map label reads “USS Carl Vinson (CVN-70)” with a yellow diamond just offshore of the U.S. West Coast/Baja California area.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_29_26-1.jpg"
-        },
-        {
-          "role": "primary",
-          "usedFor": [
-            "status",
-            "location",
-            "summary"
-          ],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-06-17",
-          "note": "Latest row: 10Jun-12Jun2016, sea trials in the Southern California Operating Areas"
         },
         {
           "role": "backup",
@@ -208,47 +207,46 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_29_26-1.jpg"
         }
       ],
-      "lastChangedAt": "2026-07-01T13:39:25.896Z"
+      "lastChangedAt": "2026-07-07T12:07:53.798Z"
     },
     {
       "hull": "CVN-71",
       "name": "USS Theodore Roosevelt",
-      "status": "deployed",
-      "locationName": "Eastern Pacific",
+      "status": "port",
+      "locationName": "Pearl Harbor, Hawaii",
       "position": {
-        "lat": 20.4,
-        "lon": -158.2
+        "lat": 21.354,
+        "lon": -157.95
       },
-      "positionPrecision": "image_estimate",
-      "confidence": "medium",
-      "evidence": "current",
-      "lastSeen": "2026-07-02",
-      "summary": "GoNavy's latest table entry places USS Theodore Roosevelt in or near Eastern Pacific: 15Jun-22Jun2026, Southern California Operating Areas",
+      "positionPrecision": "port",
+      "confidence": "high",
+      "evidence": "corroborated",
+      "lastSeen": "2026-07-08",
+      "summary": "GoNavy's latest table entry places USS Theodore Roosevelt in or near Pearl Harbor, Hawaii: 23Jun-24Jun2026, Pearl Harbor-Hickam, Hawaii,",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
-            "coordinate_refinement"
+            "status",
+            "location",
+            "position",
+            "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-07-08",
+          "note": "Latest row: 23Jun-24Jun2026, Pearl Harbor-Hickam, Hawaii,"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: July 2, 2026",
           "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-2-2026",
           "publishedAt": "2026-07-02",
           "note": "Image estimate: Orange/red dot adjacent to the 'CVN 71' label near Pearl Harbor/Hawaii, with older orange trail extending eastward.",
           "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260701%20display.png"
-        },
-        {
-          "role": "primary",
-          "usedFor": [
-            "status",
-            "location",
-            "summary"
-          ],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-06-24",
-          "note": "Latest row: 15Jun-22Jun2026, Southern California Operating Areas"
         },
         {
           "role": "backup",
@@ -281,22 +279,22 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_29_26-1.jpg"
         }
       ],
-      "lastChangedAt": "2026-07-02T14:26:00.051Z"
+      "lastChangedAt": "2026-07-07T12:07:53.798Z"
     },
     {
       "hull": "CVN-72",
       "name": "USS Abraham Lincoln",
       "status": "deployed",
-      "locationName": "Arabian Sea / Gulf of Oman area",
+      "locationName": "Arabian Sea",
       "position": {
-        "lat": 18.4,
-        "lon": 63.2
+        "lat": 18,
+        "lon": 63
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-07-02",
-      "summary": "U.S. Naval Update Map: July 2, 2026 places USS Abraham Lincoln near Arabian Sea / Gulf of Oman area from a public tracker map image.",
+      "lastSeen": "2026-07-08",
+      "summary": "GoNavy's latest table entry places USS Abraham Lincoln in or near Arabian Sea: 28Feb-30Jun2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
         {
           "role": "primary",
@@ -306,6 +304,15 @@
             "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-07-08",
+          "note": "Latest row: 28Feb-30Jun2026, North Arabian Sea in support of Operation Epic Fury"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: July 2, 2026",
           "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-2-2026",
@@ -336,15 +343,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-06-24",
-          "note": "Latest row: 28Feb-22Jun2026, North Arabian Sea in support of Operation Epic Fury"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
@@ -353,7 +351,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-07-02T14:26:00.051Z"
+      "lastChangedAt": "2026-07-07T12:07:53.798Z"
     },
     {
       "hull": "CVN-73",
@@ -558,16 +556,16 @@
       "hull": "CVN-77",
       "name": "USS George H.W. Bush",
       "status": "deployed",
-      "locationName": "Arabian Sea south of Oman",
+      "locationName": "Arabian Sea",
       "position": {
-        "lat": 14.6,
-        "lon": 61.8
+        "lat": 18,
+        "lon": 63
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-07-02",
-      "summary": "U.S. Naval Update Map: July 2, 2026 places USS George H.W. Bush near Arabian Sea south of Oman from a public tracker map image.",
+      "lastSeen": "2026-07-08",
+      "summary": "GoNavy's latest table entry places USS George H.W. Bush in or near Arabian Sea: 27Apr-01Jul2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
         {
           "role": "primary",
@@ -577,6 +575,15 @@
             "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-07-08",
+          "note": "Latest row: 27Apr-01Jul2026, North Arabian Sea in support of Operation Epic Fury"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: July 2, 2026",
           "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-2-2026",
@@ -593,15 +600,6 @@
           "publishedAt": "2026-07-01",
           "note": "Image estimate: Stacked map label includes “George H.W. Bush CSG” next to the same yellow diamond in the Arabian Sea, west/southwest of India.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_29_26-1.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-06-24",
-          "note": "Latest row: 27Apr-22Jun2026, North Arabian Sea in support of Operation Epic Fury"
         },
         {
           "role": "backup",
@@ -624,7 +622,7 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/06/FT_6_29_26-1.jpg"
         }
       ],
-      "lastChangedAt": "2026-07-02T14:26:00.051Z"
+      "lastChangedAt": "2026-07-07T12:07:53.798Z"
     },
     {
       "hull": "CVN-78",
