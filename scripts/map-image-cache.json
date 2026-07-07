@@ -1508,6 +1508,76 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://news.usni.org/2026/07/07/usni-news-fleet-and-marine-tracker-july-7-2026|https://news.usni.org/wp-content/uploads/2026/07/FT_7_07_26.jpg|2026-07-07": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_07_26.jpg",
+      "articleUrl": "https://news.usni.org/2026/07/07/usni-news-fleet-and-marine-tracker-july-7-2026",
+      "publishedAt": "2026-07-07",
+      "createdAt": "2026-07-07T20:56:19.551Z",
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/07/07/usni-news-fleet-and-marine-tracker-july-7-2026",
+        "publishedAt": "2026-07-07",
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "western North Atlantic Ocean",
+            "lat": 39.8,
+            "lon": -66.8,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label reads “USS Nimitz (CVN-68)” with a yellow diamond immediately to the left/southwest of the label, east of the U.S. East Coast in the North Atlantic.",
+            "rationale": "The marker is visually offshore and near the same longitude as the Venezuela port marker but much farther north, placing it in open Atlantic water roughly east of the Mid-Atlantic/New England coast."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea",
+            "lat": 20.2,
+            "lon": 62.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Stacked map label includes “Abraham Lincoln CSG” near a single yellow diamond in the northern Arabian Sea, southwest of Pakistan and west of India.",
+            "rationale": "The adjacent diamond is in open water in the Arabian Sea; the same marker is shared by the nearby stacked carrier labels."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 20.2,
+            "lon": 62.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Stacked map label includes “George H.W. Bush CSG” immediately with the “Abraham Lincoln CSG” label next to the same yellow diamond in the northern Arabian Sea.",
+            "rationale": "Only one adjacent marker is shown for the stacked labels, so the carrier is placed at that visible open-water dot rather than a broader regional centroid."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Philippine Sea / western Pacific Ocean",
+            "lat": 14.5,
+            "lon": 139.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label reads “George Washington CSG” with a yellow diamond just to the left of the label, east of the Philippines in the western Pacific.",
+            "rationale": "The marker lies over open water east of the Philippine archipelago, consistent with the Philippine Sea/western Pacific position shown."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "western Pacific Ocean",
+            "lat": 26,
+            "lon": 169,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label reads “Theodore Roosevelt CSG” above “USS Essex (LHD-2)” with a yellow diamond just below/right of the text in the western Pacific.",
+            "rationale": "The aircraft carrier label is co-located with an amphibious ship label, but only the CVN from the allowlist is returned. The dot is over open Pacific water east of Japan/Marianas region."
+          }
+        ]
+      }
     }
   }
 }
