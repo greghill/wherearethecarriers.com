@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-14T14:08:40.391Z",
-  "lastChangedAt": "2026-07-14T14:08:40.391Z",
+  "generatedAt": "2026-07-16T03:31:17.629Z",
+  "lastChangedAt": "2026-07-16T03:31:17.629Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -84,8 +84,8 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-07-08",
       "summary": "GoNavy's latest table entry places USS Dwight D. Eisenhower in or near Norfolk, Virginia: 02Jul2026, returned to Norfolk",
       "sources": [
@@ -114,7 +114,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-07-13T18:04:04.413Z"
+      "lastChangedAt": "2026-07-16T03:31:17.629Z"
     },
     {
       "hull": "CVN-70",
