@@ -1718,6 +1718,76 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://worldview.stratfor.com/article/us-naval-update-map-july-16-2026|https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260715%20display.png|2026-07-16": {
+      "sourceKey": "stratfor",
+      "model": "gpt-5.5",
+      "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260715%20display.png",
+      "articleUrl": "https://worldview.stratfor.com/article/us-naval-update-map-july-16-2026",
+      "publishedAt": "2026-07-16",
+      "createdAt": "2026-07-16T06:28:33.230Z",
+      "result": {
+        "sourceKey": "stratfor",
+        "imageUrl": "https://worldview.stratfor.com/article/us-naval-update-map-july-16-2026",
+        "publishedAt": "2026-07-16",
+        "carriers": [
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "Eastern Pacific, off Southern California",
+            "lat": 31,
+            "lon": -122.3,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red CVN 70 marker appears just west-southwest of the San Diego, CA label.",
+            "rationale": "The current red/orange dot adjacent to the CVN 70 label is offshore from Southern California, slightly southwest of San Diego, over open Pacific water."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Central Pacific, south-southwest of Hawaii",
+            "lat": 13.5,
+            "lon": -161.4,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red CVN 71 current dot sits just south of the Pearl Harbor, HI area and adjacent to the CVN 71 label; older trail dots extend northward.",
+            "rationale": "Used the red/orange dot closest to the CVN 71 label, not the older trail point near Hawaii. The estimated point is in open Pacific water south-southwest of Hawaii."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea, off Oman",
+            "lat": 18.6,
+            "lon": 62.3,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red CVN 72 dot is shown in the northern Arabian Sea/Gulf of Oman area, just east-southeast of Oman and next to the CVN 72 label.",
+            "rationale": "Selected the upper of the two nearby orange/red carrier dots by the CVN 72 label. The coordinate is placed offshore over the Arabian Sea/Gulf of Oman, not on land."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Philippine Sea, west-northwest of Guam",
+            "lat": 16.7,
+            "lon": 137.4,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red CVN 73 current dot appears in the Philippine Sea, near and just below the CVN 73 label, with an older trail dot extending eastward toward Guam.",
+            "rationale": "Used the red/orange dot closest to the CVN 73 label and ignored the farther historical trail dot. The estimate is over open water west-northwest of Guam."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea, off Oman",
+            "lat": 16.2,
+            "lon": 60.9,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red CVN 77 dot is shown near the CVN 77 label in the Arabian Sea, southwest of the CVN 72 dot and near but separate from the blue LHD 4 marker.",
+            "rationale": "Selected the lower-left orange/red carrier dot adjacent to the CVN 77 label, preserving separation from CVN 72 and ignoring the nearby blue amphibious-ship marker. The coordinate is over open Arabian Sea water."
+          }
+        ]
+      }
     }
   }
 }
