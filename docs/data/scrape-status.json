@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-07-22T03:39:09.641Z",
-  "lastRunAt": "2026-07-22T03:39:09.641Z",
+  "generatedAt": "2026-07-22T06:39:56.269Z",
+  "lastRunAt": "2026-07-22T06:39:56.269Z",
   "sourceOutageGraceDays": 3,
   "sourceStatus": {
     "usni": {
       "status": "ok",
-      "lastFetchedAt": "2026-07-22T03:39:10.682Z",
-      "lastSuccessAt": "2026-07-22T03:39:10.682Z",
+      "lastFetchedAt": "2026-07-22T06:39:57.573Z",
+      "lastSuccessAt": "2026-07-22T06:39:57.573Z",
       "firstErrorAt": null,
       "lastErrorAt": "2026-05-30T14:46:20.138Z",
       "consecutiveFailures": 0,
@@ -14,8 +14,8 @@
     },
     "stratfor": {
       "status": "ok",
-      "lastFetchedAt": "2026-07-22T03:39:12.941Z",
-      "lastSuccessAt": "2026-07-22T03:39:12.941Z",
+      "lastFetchedAt": "2026-07-22T06:40:00.062Z",
+      "lastSuccessAt": "2026-07-22T06:40:00.062Z",
       "firstErrorAt": null,
       "lastErrorAt": "2026-06-30T12:22:09.133Z",
       "consecutiveFailures": 0,
@@ -23,8 +23,8 @@
     },
     "twz": {
       "status": "ok",
-      "lastFetchedAt": "2026-07-22T03:39:13.102Z",
-      "lastSuccessAt": "2026-07-22T03:39:13.102Z",
+      "lastFetchedAt": "2026-07-22T06:40:00.871Z",
+      "lastSuccessAt": "2026-07-22T06:40:00.871Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
@@ -32,8 +32,8 @@
     },
     "gonavy": {
       "status": "ok",
-      "lastFetchedAt": "2026-07-22T03:39:13.625Z",
-      "lastSuccessAt": "2026-07-22T03:39:13.625Z",
+      "lastFetchedAt": "2026-07-22T06:40:01.336Z",
+      "lastSuccessAt": "2026-07-22T06:40:01.336Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
@@ -41,8 +41,8 @@
     },
     "openaiImages": {
       "status": "ok",
-      "lastFetchedAt": "2026-07-22T03:39:13.627Z",
-      "lastSuccessAt": "2026-07-22T03:39:13.627Z",
+      "lastFetchedAt": "2026-07-22T06:40:01.338Z",
+      "lastSuccessAt": "2026-07-22T06:40:01.338Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
