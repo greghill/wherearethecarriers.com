@@ -1,30 +1,30 @@
 {
-  "generatedAt": "2026-07-22T12:00:34.499Z",
-  "lastRunAt": "2026-07-22T12:00:34.499Z",
+  "generatedAt": "2026-07-22T14:18:25.944Z",
+  "lastRunAt": "2026-07-22T14:18:25.944Z",
   "sourceOutageGraceDays": 3,
   "sourceStatus": {
     "usni": {
       "status": "ok",
-      "lastFetchedAt": "2026-07-22T12:00:35.330Z",
-      "lastSuccessAt": "2026-07-22T12:00:35.330Z",
+      "lastFetchedAt": "2026-07-22T14:18:26.857Z",
+      "lastSuccessAt": "2026-07-22T14:18:26.857Z",
       "firstErrorAt": null,
       "lastErrorAt": "2026-05-30T14:46:20.138Z",
       "consecutiveFailures": 0,
       "message": null
     },
     "stratfor": {
-      "status": "error",
-      "lastFetchedAt": "2026-07-22T12:02:54.334Z",
-      "lastSuccessAt": "2026-07-22T09:35:16.703Z",
-      "firstErrorAt": "2026-07-22T12:02:54.334Z",
+      "status": "ok",
+      "lastFetchedAt": "2026-07-22T14:18:29.107Z",
+      "lastSuccessAt": "2026-07-22T14:18:29.107Z",
+      "firstErrorAt": null,
       "lastErrorAt": "2026-07-22T12:02:54.334Z",
-      "consecutiveFailures": 1,
-      "message": "https://worldview.stratfor.com/article/us-naval-update-map-july-16-2026 returned 403"
+      "consecutiveFailures": 0,
+      "message": null
     },
     "twz": {
       "status": "ok",
-      "lastFetchedAt": "2026-07-22T12:02:54.497Z",
-      "lastSuccessAt": "2026-07-22T12:02:54.497Z",
+      "lastFetchedAt": "2026-07-22T14:18:29.154Z",
+      "lastSuccessAt": "2026-07-22T14:18:29.154Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
@@ -32,8 +32,8 @@
     },
     "gonavy": {
       "status": "ok",
-      "lastFetchedAt": "2026-07-22T12:02:55.118Z",
-      "lastSuccessAt": "2026-07-22T12:02:55.118Z",
+      "lastFetchedAt": "2026-07-22T14:18:29.823Z",
+      "lastSuccessAt": "2026-07-22T14:18:29.823Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
@@ -41,8 +41,8 @@
     },
     "openaiImages": {
       "status": "ok",
-      "lastFetchedAt": "2026-07-22T12:02:55.119Z",
-      "lastSuccessAt": "2026-07-22T12:02:55.119Z",
+      "lastFetchedAt": "2026-07-22T14:18:29.825Z",
+      "lastSuccessAt": "2026-07-22T14:18:29.825Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
