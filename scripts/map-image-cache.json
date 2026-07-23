@@ -1906,6 +1906,76 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://worldview.stratfor.com/article/us-naval-update-map-july-23-2026|https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607122display.png|2026-07-23": {
+      "sourceKey": "stratfor",
+      "model": "gpt-5.5",
+      "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607122display.png",
+      "articleUrl": "https://worldview.stratfor.com/article/us-naval-update-map-july-23-2026",
+      "publishedAt": "2026-07-23",
+      "createdAt": "2026-07-23T04:28:16.332Z",
+      "result": {
+        "sourceKey": "stratfor",
+        "imageUrl": "https://worldview.stratfor.com/article/us-naval-update-map-july-23-2026",
+        "publishedAt": "2026-07-23",
+        "carriers": [
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Western North Atlantic, east of Norfolk",
+            "lat": 36.8,
+            "lon": -70.7,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "Orange/red carrier dot immediately adjacent to the “CVN 69” label off the U.S. East Coast, east of the Norfolk, VA label.",
+            "rationale": "The current-week orange dot sits in open Atlantic water roughly east of Virginia, close to the CVN 69 text label."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Central Pacific south of Hawaii",
+            "lat": 13.1,
+            "lon": -160,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "Orange/red current-week dot next to the “CVN 71” label, south of the Pearl Harbor, HI label; older orange trail dots extend northward toward Hawaii.",
+            "rationale": "Following the Stratfor trail convention, the dot touching the CVN 71 label is the current position; it is over open Pacific water south of Hawaii."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Northern Arabian Sea / Gulf of Oman region",
+            "lat": 18.8,
+            "lon": 63.7,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red dot adjacent to the “CVN 72” label east-southeast of the Arabian Peninsula, separate from the nearby CVN 77 dot.",
+            "rationale": "The marker is placed offshore in the northern Arabian Sea/Gulf of Oman area and is visually tied to the CVN 72 label, not to the blue LHD marker nearby."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Philippine Sea west of Guam",
+            "lat": 16.7,
+            "lon": 139,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "Orange/red current-week dot adjacent to the “CVN 73” label, west of the Guam label, with older orange trail dot to the east.",
+            "rationale": "The current-week orange dot is west of Guam in open Philippine Sea water; the farther orange dot to the east is historical trail data and was not averaged."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea east of Oman",
+            "lat": 15,
+            "lon": 62.2,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red dot immediately next to the “CVN 77” label, southwest of the separate CVN 72 dot and near but distinct from the blue LHD 4 marker.",
+            "rationale": "The dot is over open Arabian Sea water east of Oman and is visually anchored to the CVN 77 label; nearby blue/teal amphibious markers were ignored."
+          }
+        ]
+      }
     }
   }
 }
