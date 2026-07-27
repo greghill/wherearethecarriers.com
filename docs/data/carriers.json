@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-23T04:28:12.201Z",
-  "lastChangedAt": "2026-07-23T04:28:12.201Z",
+  "generatedAt": "2026-07-27T17:51:46.926Z",
+  "lastChangedAt": "2026-07-27T17:51:46.926Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -64,9 +64,9 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
-      "lastSeen": "2026-07-23",
+      "confidence": "high",
+      "evidence": "corroborated",
+      "lastSeen": "2026-07-27",
       "summary": "GoNavy's latest table entry places USS Dwight D. Eisenhower in or near Norfolk, Virginia: 02Jul2026, returned to Norfolk",
       "sources": [
         {
@@ -102,24 +102,44 @@
           "publishedAt": "2026-05-26",
           "note": "Image estimate: Carrier label “USS DWIGHT D. EISENHOWER (CVN 69)” appears in the Norfolk, VA cluster.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: July 27, 2026",
+          "url": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
+          "publishedAt": "2026-07-27",
+          "note": "Image estimate: The map label reads “USS Dwight D. Eisenhower (CVN-69)” with a yellow diamond just southeast of the U.S. East Coast and north/east of the Bahamas.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: July 27, 2026",
+          "url": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
+          "publishedAt": "2026-07-27",
+          "note": "Text context: Norfolk, Virginia",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-07-23T04:28:12.201Z"
+      "lastChangedAt": "2026-07-27T17:51:46.926Z"
     },
     {
       "hull": "CVN-70",
       "name": "USS Carl Vinson",
-      "status": "port",
-      "locationName": "San Diego, California",
+      "status": "deployed",
+      "locationName": "Eastern Pacific",
       "position": {
-        "lat": 32.715,
-        "lon": -117.173
+        "lat": 31,
+        "lon": -121
       },
-      "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
-      "lastSeen": "2026-07-22",
-      "summary": "USNI News Fleet and Marine Tracker: July 20, 2026 places USS Carl Vinson in or near San Diego, California. The point is an approximate public-source assessment.",
+      "positionPrecision": "region",
+      "confidence": "low",
+      "evidence": "aging",
+      "lastSeen": "2026-07-15",
+      "summary": "GoNavy's latest table entry places USS Carl Vinson in or near Eastern Pacific: 10Jul-13Jul2016, Southern California Operating Areas",
       "sources": [
         {
           "role": "primary",
@@ -129,16 +149,6 @@
             "position",
             "summary"
           ],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: July 20, 2026",
-          "url": "https://news.usni.org/2026/07/20/usni-news-fleet-and-marine-tracker-july-20-2026",
-          "publishedAt": "2026-07-22",
-          "note": "Text context: San Diego, California",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_20_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
@@ -156,7 +166,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-07-22T22:13:57.351Z"
+      "lastChangedAt": "2026-07-27T17:51:46.926Z"
     },
     {
       "hull": "CVN-71",
@@ -170,8 +180,8 @@
       "positionPrecision": "port",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-07-22",
-      "summary": "USNI News Fleet and Marine Tracker: July 20, 2026 places USS Theodore Roosevelt in or near Pearl Harbor, Hawaii. The point is an approximate public-source assessment.",
+      "lastSeen": "2026-07-27",
+      "summary": "USNI News Fleet and Marine Tracker: July 27, 2026 places USS Theodore Roosevelt in or near Pearl Harbor, Hawaii. The point is an approximate public-source assessment.",
       "sources": [
         {
           "role": "primary",
@@ -182,11 +192,11 @@
             "summary"
           ],
           "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: July 20, 2026",
-          "url": "https://news.usni.org/2026/07/20/usni-news-fleet-and-marine-tracker-july-20-2026",
-          "publishedAt": "2026-07-22",
+          "title": "USNI News Fleet and Marine Tracker: July 27, 2026",
+          "url": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
+          "publishedAt": "2026-07-27",
           "note": "Text context: Pearl Harbor, Hawaii",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_20_26.jpg"
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg"
         },
         {
           "role": "backup",
@@ -202,11 +212,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: July 20, 2026",
-          "url": "https://news.usni.org/2026/07/20/usni-news-fleet-and-marine-tracker-july-20-2026",
-          "publishedAt": "2026-07-22",
-          "note": "Image estimate: The map label reads “Theodore Roosevelt CSG” with a yellow diamond immediately adjacent to the label in the open Pacific east of Japan/Marianas and near the date line.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_20_26.jpg"
+          "title": "USNI News Fleet and Marine Tracker: July 27, 2026",
+          "url": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
+          "publishedAt": "2026-07-27",
+          "note": "Image estimate: The map label reads “Theodore Roosevelt CSG” above “USS Essex (LHD-2)” with a yellow diamond in the western Pacific east-southeast of Japan.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg"
         },
         {
           "role": "backup",
@@ -219,57 +229,58 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-07-22T22:13:57.351Z"
+      "lastChangedAt": "2026-07-27T17:51:46.926Z"
     },
     {
       "hull": "CVN-72",
       "name": "USS Abraham Lincoln",
       "status": "deployed",
-      "locationName": "Northern Arabian Sea / Gulf of Oman region",
+      "locationName": "Arabian Sea",
       "position": {
-        "lat": 18.8,
-        "lon": 63.7
+        "lat": 17,
+        "lon": 67.5
       },
       "positionPrecision": "image_estimate",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-07-23",
-      "summary": "U.S. Naval Update Map: July 23, 2026 places USS Abraham Lincoln near Northern Arabian Sea / Gulf of Oman region from a public tracker map image.",
+      "lastSeen": "2026-07-27",
+      "summary": "USNI News Fleet and Marine Tracker: July 27, 2026 places USS Abraham Lincoln in or near Arabian Sea. The point is an approximate public-source assessment.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
-            "position",
             "summary"
           ],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: July 27, 2026",
+          "url": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
+          "publishedAt": "2026-07-27",
+          "note": "Text context: Arabian Sea",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg"
+        },
+        {
+          "role": "primary",
+          "usedFor": [
+            "coordinate_refinement"
+          ],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: July 27, 2026",
+          "url": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
+          "publishedAt": "2026-07-27",
+          "note": "Image estimate: The label stack reads “Abraham Lincoln CSG / George H.W. Bush CSG / Boxer ARG” with a single yellow diamond in the Arabian Sea west of India.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: July 23, 2026",
           "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-23-2026",
           "publishedAt": "2026-07-23",
           "note": "Image estimate: Orange/red dot adjacent to the “CVN 72” label east-southeast of the Arabian Peninsula, separate from the nearby CVN 77 dot.",
           "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607122display.png"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: July 20, 2026",
-          "url": "https://news.usni.org/2026/07/20/usni-news-fleet-and-marine-tracker-july-20-2026",
-          "publishedAt": "2026-07-22",
-          "note": "Text context: Arabian Sea",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_20_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: July 20, 2026",
-          "url": "https://news.usni.org/2026/07/20/usni-news-fleet-and-marine-tracker-july-20-2026",
-          "publishedAt": "2026-07-22",
-          "note": "Image estimate: The stacked label near the Arabian Sea reads “Abraham Lincoln CSG / George H.W. Bush CSG / Boxer ARG” with a single yellow diamond just west of India.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_20_26.jpg"
         },
         {
           "role": "backup",
@@ -291,7 +302,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-07-23T04:28:12.201Z"
+      "lastChangedAt": "2026-07-27T17:51:46.926Z"
     },
     {
       "hull": "CVN-73",
@@ -305,7 +316,7 @@
       "positionPrecision": "image_estimate",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-07-23",
+      "lastSeen": "2026-07-27",
       "summary": "U.S. Naval Update Map: July 23, 2026 places USS George Washington near Philippine Sea west of Guam from a public tracker map image.",
       "sources": [
         {
@@ -337,21 +348,21 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: July 20, 2026",
-          "url": "https://news.usni.org/2026/07/20/usni-news-fleet-and-marine-tracker-july-20-2026",
-          "publishedAt": "2026-07-22",
+          "title": "USNI News Fleet and Marine Tracker: July 27, 2026",
+          "url": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
+          "publishedAt": "2026-07-27",
           "note": "Text context: Western Pacific",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_20_26.jpg"
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg"
         },
         {
           "role": "backup",
           "usedFor": [],
           "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: July 20, 2026",
-          "url": "https://news.usni.org/2026/07/20/usni-news-fleet-and-marine-tracker-july-20-2026",
-          "publishedAt": "2026-07-22",
-          "note": "Image estimate: The map label reads “George Washington CSG” with a yellow diamond in the Philippine Sea east of the Philippines.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_20_26.jpg"
+          "title": "USNI News Fleet and Marine Tracker: July 27, 2026",
+          "url": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
+          "publishedAt": "2026-07-27",
+          "note": "Image estimate: The map label reads “George Washington CSG” with a yellow diamond in the South China Sea between Vietnam and the Philippines.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg"
         },
         {
           "role": "backup",
@@ -373,7 +384,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-07-23T04:28:12.201Z"
+      "lastChangedAt": "2026-07-27T17:51:46.926Z"
     },
     {
       "hull": "CVN-74",
@@ -505,41 +516,52 @@
       "hull": "CVN-77",
       "name": "USS George H.W. Bush",
       "status": "deployed",
-      "locationName": "Arabian Sea east of Oman",
+      "locationName": "Arabian Sea",
       "position": {
-        "lat": 15,
-        "lon": 62.2
+        "lat": 17,
+        "lon": 67.5
       },
       "positionPrecision": "image_estimate",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-07-23",
-      "summary": "U.S. Naval Update Map: July 23, 2026 places USS George H.W. Bush near Arabian Sea east of Oman from a public tracker map image.",
+      "lastSeen": "2026-07-27",
+      "summary": "USNI News Fleet and Marine Tracker: July 27, 2026 places USS George H.W. Bush in or near Arabian Sea. The point is an approximate public-source assessment.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
-            "position",
             "summary"
           ],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: July 27, 2026",
+          "url": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
+          "publishedAt": "2026-07-27",
+          "note": "Text context: Arabian Sea",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg"
+        },
+        {
+          "role": "primary",
+          "usedFor": [
+            "coordinate_refinement"
+          ],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: July 27, 2026",
+          "url": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
+          "publishedAt": "2026-07-27",
+          "note": "Image estimate: The label stack reads “Abraham Lincoln CSG / George H.W. Bush CSG / Boxer ARG” with a single yellow diamond in the Arabian Sea west of India.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: July 23, 2026",
           "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-23-2026",
           "publishedAt": "2026-07-23",
           "note": "Image estimate: Orange/red dot immediately next to the “CVN 77” label, southwest of the separate CVN 72 dot and near but distinct from the blue LHD 4 marker.",
           "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607122display.png"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: July 20, 2026",
-          "url": "https://news.usni.org/2026/07/20/usni-news-fleet-and-marine-tracker-july-20-2026",
-          "publishedAt": "2026-07-22",
-          "note": "Image estimate: The same stacked Arabian Sea label includes “George H.W. Bush CSG” with the yellow diamond just west of India.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_20_26.jpg"
         },
         {
           "role": "backup",
@@ -559,19 +581,9 @@
           "publishedAt": "2026-05-26",
           "note": "Image estimate: Green/deployed carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)*” is shown below the Abraham Lincoln marker in the Arabian Sea.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: July 20, 2026",
-          "url": "https://news.usni.org/2026/07/20/usni-news-fleet-and-marine-tracker-july-20-2026",
-          "publishedAt": "2026-07-22",
-          "note": "Text context: Arabian Sea",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_20_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-07-23T04:28:12.201Z"
+      "lastChangedAt": "2026-07-27T17:51:46.926Z"
     },
     {
       "hull": "CVN-78",

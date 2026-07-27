@@ -1976,6 +1976,76 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026|https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg|2026-07-27": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg",
+      "articleUrl": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
+      "publishedAt": "2026-07-27",
+      "createdAt": "2026-07-27T17:51:51.128Z",
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
+        "publishedAt": "2026-07-27",
+        "carriers": [
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Western Atlantic, east of Florida/Bahamas",
+            "lat": 30,
+            "lon": -74,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The map label reads “USS Dwight D. Eisenhower (CVN-69)” with a yellow diamond just southeast of the U.S. East Coast and north/east of the Bahamas.",
+            "rationale": "Placed on the adjacent yellow diamond next to the CVN-69 label, over open Atlantic water rather than on the U.S. mainland."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea, west of India",
+            "lat": 17,
+            "lon": 67.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The label stack reads “Abraham Lincoln CSG / George H.W. Bush CSG / Boxer ARG” with a single yellow diamond in the Arabian Sea west of India.",
+            "rationale": "The shared marker is just off India’s west coast in the Arabian Sea; Abraham Lincoln CSG is explicitly named in that label stack."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea, west of India",
+            "lat": 17,
+            "lon": 67.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The label stack reads “Abraham Lincoln CSG / George H.W. Bush CSG / Boxer ARG” with a single yellow diamond in the Arabian Sea west of India.",
+            "rationale": "The map does not show separate carrier dots for Abraham Lincoln and George H.W. Bush, so both visible CSG labels are anchored to the same Arabian Sea marker."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "South China Sea, west of the Philippines",
+            "lat": 12,
+            "lon": 113.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The map label reads “George Washington CSG” with a yellow diamond in the South China Sea between Vietnam and the Philippines.",
+            "rationale": "Placed on the marker adjacent to the George Washington CSG label, in open water west of the Philippines."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Philippine Sea / western Pacific east of Japan",
+            "lat": 26,
+            "lon": 155,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The map label reads “Theodore Roosevelt CSG” above “USS Essex (LHD-2)” with a yellow diamond in the western Pacific east-southeast of Japan.",
+            "rationale": "Included only the carrier from the combined label and omitted USS Essex; the coordinate is placed on the adjacent yellow diamond over open Philippine Sea/western Pacific water."
+          }
+        ]
+      }
     }
   }
 }
