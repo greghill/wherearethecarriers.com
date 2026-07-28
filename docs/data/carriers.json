@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-27T17:51:46.926Z",
-  "lastChangedAt": "2026-07-27T17:51:46.926Z",
+  "generatedAt": "2026-07-28T12:08:38.297Z",
+  "lastChangedAt": "2026-07-28T12:08:38.297Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -66,8 +66,8 @@
       "positionPrecision": "port",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-07-27",
-      "summary": "GoNavy's latest table entry places USS Dwight D. Eisenhower in or near Norfolk, Virginia: 02Jul2026, returned to Norfolk",
+      "lastSeen": "2026-07-29",
+      "summary": "GoNavy's latest table entry places USS Dwight D. Eisenhower in or near Norfolk, Virginia: 28Jul2026, returned to Norfolk",
       "sources": [
         {
           "role": "primary",
@@ -80,8 +80,8 @@
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-07-08",
-          "note": "Latest row: 02Jul2026, returned to Norfolk"
+          "publishedAt": "2026-07-29",
+          "note": "Latest row: 28Jul2026, returned to Norfolk"
         },
         {
           "role": "backup",
@@ -124,22 +124,22 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-07-27T17:51:46.926Z"
+      "lastChangedAt": "2026-07-28T12:08:38.297Z"
     },
     {
       "hull": "CVN-70",
       "name": "USS Carl Vinson",
-      "status": "deployed",
-      "locationName": "Eastern Pacific",
+      "status": "port",
+      "locationName": "San Diego, California",
       "position": {
-        "lat": 31,
-        "lon": -121
+        "lat": 32.715,
+        "lon": -117.173
       },
-      "positionPrecision": "region",
-      "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-07-15",
-      "summary": "GoNavy's latest table entry places USS Carl Vinson in or near Eastern Pacific: 10Jul-13Jul2016, Southern California Operating Areas",
+      "positionPrecision": "port",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-07-29",
+      "summary": "GoNavy's latest table entry places USS Carl Vinson in or near San Diego, California: 17Jul2026, returned to San Diego",
       "sources": [
         {
           "role": "primary",
@@ -152,8 +152,8 @@
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-07-15",
-          "note": "Latest row: 10Jul-13Jul2016, Southern California Operating Areas"
+          "publishedAt": "2026-07-29",
+          "note": "Latest row: 17Jul2026, returned to San Diego"
         },
         {
           "role": "backup",
@@ -166,7 +166,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-07-27T17:51:46.926Z"
+      "lastChangedAt": "2026-07-28T12:08:38.297Z"
     },
     {
       "hull": "CVN-71",
@@ -237,22 +237,32 @@
       "status": "deployed",
       "locationName": "Arabian Sea",
       "position": {
-        "lat": 17,
-        "lon": 67.5
+        "lat": 18,
+        "lon": 63
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-07-27",
-      "summary": "USNI News Fleet and Marine Tracker: July 27, 2026 places USS Abraham Lincoln in or near Arabian Sea. The point is an approximate public-source assessment.",
+      "lastSeen": "2026-07-29",
+      "summary": "GoNavy's latest table entry places USS Abraham Lincoln in or near Arabian Sea: 28Feb-27Jul2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-07-29",
+          "note": "Latest row: 28Feb-27Jul2026, North Arabian Sea in support of Operation Epic Fury"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: July 27, 2026",
           "url": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
@@ -261,10 +271,8 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg"
         },
         {
-          "role": "primary",
-          "usedFor": [
-            "coordinate_refinement"
-          ],
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: July 27, 2026",
           "url": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
@@ -285,15 +293,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-07-15",
-          "note": "Latest row: 28Feb-13Jul2026, North Arabian Sea in support of Operation Epic Fury"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
@@ -302,22 +301,22 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-07-27T17:51:46.926Z"
+      "lastChangedAt": "2026-07-28T12:08:38.297Z"
     },
     {
       "hull": "CVN-73",
       "name": "USS George Washington",
       "status": "deployed",
-      "locationName": "Philippine Sea west of Guam",
+      "locationName": "Western Pacific",
       "position": {
-        "lat": 16.7,
-        "lon": 139
+        "lat": 18,
+        "lon": 145
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-07-27",
-      "summary": "U.S. Naval Update Map: July 23, 2026 places USS George Washington near Philippine Sea west of Guam from a public tracker map image.",
+      "lastSeen": "2026-07-29",
+      "summary": "GoNavy's latest table entry places USS George Washington in or near Western Pacific: 26Jul-27Jul2026, South China Sea",
       "sources": [
         {
           "role": "primary",
@@ -327,6 +326,15 @@
             "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-07-29",
+          "note": "Latest row: 26Jul-27Jul2026, South China Sea"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: July 23, 2026",
           "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-23-2026",
@@ -367,15 +375,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-07-15",
-          "note": "Latest row: 02Jul-13Jul2026, Philippine Sea"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
@@ -384,7 +383,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-07-27T17:51:46.926Z"
+      "lastChangedAt": "2026-07-28T12:08:38.297Z"
     },
     {
       "hull": "CVN-74",
@@ -518,22 +517,32 @@
       "status": "deployed",
       "locationName": "Arabian Sea",
       "position": {
-        "lat": 17,
-        "lon": 67.5
+        "lat": 18,
+        "lon": 63
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-07-27",
-      "summary": "USNI News Fleet and Marine Tracker: July 27, 2026 places USS George H.W. Bush in or near Arabian Sea. The point is an approximate public-source assessment.",
+      "lastSeen": "2026-07-29",
+      "summary": "GoNavy's latest table entry places USS George H.W. Bush in or near Arabian Sea: 27Apr-27Jul2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-07-29",
+          "note": "Latest row: 27Apr-27Jul2026, North Arabian Sea in support of Operation Epic Fury"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: July 27, 2026",
           "url": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
@@ -542,10 +551,8 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/07/FT_7_27_26.jpg"
         },
         {
-          "role": "primary",
-          "usedFor": [
-            "coordinate_refinement"
-          ],
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: July 27, 2026",
           "url": "https://news.usni.org/2026/07/27/usni-news-fleet-and-marine-tracker-july-27-2026",
@@ -566,15 +573,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-07-15",
-          "note": "Latest row: 27Apr-13Jul2026, North Arabian Sea in support of Operation Epic Fury"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
@@ -583,7 +581,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-07-27T17:51:46.926Z"
+      "lastChangedAt": "2026-07-28T12:08:38.297Z"
     },
     {
       "hull": "CVN-78",
@@ -595,10 +593,10 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-07-15",
-      "summary": "GoNavy's latest table entry places USS Gerald R. Ford in or near Norfolk, Virginia: 07Jul-13Jul2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-07-29",
+      "summary": "GoNavy's latest table entry places USS Gerald R. Ford in or near Norfolk, Virginia: 07Jul-27Jul2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia",
       "sources": [
         {
           "role": "primary",
@@ -611,8 +609,8 @@
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-07-15",
-          "note": "Latest row: 07Jul-13Jul2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
+          "publishedAt": "2026-07-29",
+          "note": "Latest row: 07Jul-27Jul2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
         },
         {
           "role": "backup",
@@ -625,7 +623,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-07-23T00:11:11.931Z"
+      "lastChangedAt": "2026-07-28T12:08:38.297Z"
     }
   ]
 }
