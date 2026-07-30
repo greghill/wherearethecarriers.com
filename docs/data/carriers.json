@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-28T12:08:38.297Z",
-  "lastChangedAt": "2026-07-28T12:08:38.297Z",
+  "generatedAt": "2026-07-30T06:37:39.901Z",
+  "lastChangedAt": "2026-07-30T06:37:39.901Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -82,16 +82,6 @@
           "url": "http://www.gonavy.jp/CVLocation.html",
           "publishedAt": "2026-07-29",
           "note": "Latest row: 28Jul2026, returned to Norfolk"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: July 23, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-23-2026",
-          "publishedAt": "2026-07-23",
-          "note": "Image estimate: Orange/red carrier dot immediately adjacent to the “CVN 69” label off the U.S. East Coast, east of the Norfolk, VA label.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607122display.png"
         },
         {
           "role": "backup",
@@ -202,11 +192,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: July 23, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-23-2026",
-          "publishedAt": "2026-07-23",
-          "note": "Image estimate: Orange/red current-week dot next to the “CVN 71” label, south of the Pearl Harbor, HI label; older orange trail dots extend northward toward Hawaii.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607122display.png"
+          "title": "U.S. Naval Update Map: July 30, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-30-2026",
+          "publishedAt": "2026-07-30",
+          "note": "Image estimate: Orange/red carrier dot adjacent to the orange label “CVN 71” just southeast/east of the Hawaiian Islands near the Pearl Harbor label; blue LHD 2 marker nearby is ignored.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607129%20display.png"
         },
         {
           "role": "backup",
@@ -237,21 +227,32 @@
       "status": "deployed",
       "locationName": "Arabian Sea",
       "position": {
-        "lat": 18,
-        "lon": 63
+        "lat": 24,
+        "lon": 62.2
       },
-      "positionPrecision": "region",
+      "positionPrecision": "image_estimate",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-07-29",
+      "lastSeen": "2026-07-30",
       "summary": "GoNavy's latest table entry places USS Abraham Lincoln in or near Arabian Sea: 28Feb-27Jul2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
+            "coordinate_refinement"
+          ],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: July 30, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-30-2026",
+          "publishedAt": "2026-07-30",
+          "note": "Image estimate: Orange/red carrier dot beside the orange label “CVN 72” in the northern Arabian Sea/Gulf of Oman area, north of the separate CVN 77 dot and west of the blue LHD 4 marker.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607129%20display.png"
+        },
+        {
+          "role": "primary",
+          "usedFor": [
             "status",
             "location",
-            "position",
             "summary"
           ],
           "publisher": "GoNavy.jp",
@@ -283,16 +284,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: July 23, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-23-2026",
-          "publishedAt": "2026-07-23",
-          "note": "Image estimate: Orange/red dot adjacent to the “CVN 72” label east-southeast of the Arabian Peninsula, separate from the nearby CVN 77 dot.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607122display.png"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
@@ -301,22 +292,22 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-07-28T12:08:38.297Z"
+      "lastChangedAt": "2026-07-30T06:37:39.901Z"
     },
     {
       "hull": "CVN-73",
       "name": "USS George Washington",
-      "status": "deployed",
-      "locationName": "Western Pacific",
+      "status": "port",
+      "locationName": "Yokosuka, Japan",
       "position": {
-        "lat": 18,
-        "lon": 145
+        "lat": 35.29,
+        "lon": 139.67
       },
-      "positionPrecision": "region",
-      "confidence": "high",
-      "evidence": "corroborated",
-      "lastSeen": "2026-07-29",
-      "summary": "GoNavy's latest table entry places USS George Washington in or near Western Pacific: 26Jul-27Jul2026, South China Sea",
+      "positionPrecision": "image_estimate",
+      "confidence": "low",
+      "evidence": "aging",
+      "lastSeen": "2026-05-26",
+      "summary": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean places USS George Washington near Yokosuka, Japan from a public tracker map image.",
       "sources": [
         {
           "role": "primary",
@@ -326,31 +317,31 @@
             "position",
             "summary"
           ],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-07-29",
-          "note": "Latest row: 26Jul-27Jul2026, South China Sea"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: July 23, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-23-2026",
-          "publishedAt": "2026-07-23",
-          "note": "Image estimate: Orange/red current-week dot adjacent to the “CVN 73” label, west of the Guam label, with older orange trail dot to the east.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607122display.png"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
           "publishedAt": "2026-05-26",
           "note": "Image estimate: Green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)*” appears next to the “YOKOSUKA, JAPAN” label.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: July 30, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-30-2026",
+          "publishedAt": "2026-07-30",
+          "note": "Image estimate: Orange/red current-week carrier dot adjacent to the orange label “CVN 73” in the South China Sea, with older orange trail dots extending eastward toward Guam.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607129%20display.png"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-07-29",
+          "note": "Latest row: 26Jul-27Jul2026, South China Sea"
         },
         {
           "role": "backup",
@@ -383,7 +374,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-07-28T12:08:38.297Z"
+      "lastChangedAt": "2026-07-30T06:37:39.901Z"
     },
     {
       "hull": "CVN-74",
@@ -517,21 +508,32 @@
       "status": "deployed",
       "locationName": "Arabian Sea",
       "position": {
-        "lat": 18,
-        "lon": 63
+        "lat": 20.7,
+        "lon": 60.7
       },
-      "positionPrecision": "region",
+      "positionPrecision": "image_estimate",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-07-29",
+      "lastSeen": "2026-07-30",
       "summary": "GoNavy's latest table entry places USS George H.W. Bush in or near Arabian Sea: 27Apr-27Jul2026, North Arabian Sea in support of Operation Epic Fury",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
+            "coordinate_refinement"
+          ],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: July 30, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-30-2026",
+          "publishedAt": "2026-07-30",
+          "note": "Image estimate: Lower orange/red carrier dot adjacent to the orange label “CVN 77” in the Arabian Sea cluster, distinct from the upper CVN 72 dot and from the blue LHD 4 marker.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607129%20display.png"
+        },
+        {
+          "role": "primary",
+          "usedFor": [
             "status",
             "location",
-            "position",
             "summary"
           ],
           "publisher": "GoNavy.jp",
@@ -563,16 +565,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: July 23, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-23-2026",
-          "publishedAt": "2026-07-23",
-          "note": "Image estimate: Orange/red dot immediately next to the “CVN 77” label, southwest of the separate CVN 72 dot and near but distinct from the blue LHD 4 marker.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607122display.png"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
           "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
@@ -581,7 +573,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-07-28T12:08:38.297Z"
+      "lastChangedAt": "2026-07-30T06:37:39.901Z"
     },
     {
       "hull": "CVN-78",

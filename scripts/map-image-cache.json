@@ -2046,6 +2046,65 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://worldview.stratfor.com/article/us-naval-update-map-july-30-2026|https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607129%20display.png|2026-07-30": {
+      "sourceKey": "stratfor",
+      "model": "gpt-5.5",
+      "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607129%20display.png",
+      "articleUrl": "https://worldview.stratfor.com/article/us-naval-update-map-july-30-2026",
+      "publishedAt": "2026-07-30",
+      "createdAt": "2026-07-30T06:37:44.153Z",
+      "result": {
+        "sourceKey": "stratfor",
+        "imageUrl": "https://worldview.stratfor.com/article/us-naval-update-map-july-30-2026",
+        "publishedAt": "2026-07-30",
+        "carriers": [
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "southeast of Hawaii, central Pacific",
+            "lat": 18.8,
+            "lon": -152.7,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red carrier dot adjacent to the orange label “CVN 71” just southeast/east of the Hawaiian Islands near the Pearl Harbor label; blue LHD 2 marker nearby is ignored.",
+            "rationale": "The current-week orange/red dot nearest the CVN 71 label is plotted just southeast of Hawaii, not on land. The returned point is placed over open Pacific water close to that dot and separate from the nearby LHD marker."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "northern Arabian Sea / Gulf of Oman approaches",
+            "lat": 24,
+            "lon": 62.2,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red carrier dot beside the orange label “CVN 72” in the northern Arabian Sea/Gulf of Oman area, north of the separate CVN 77 dot and west of the blue LHD 4 marker.",
+            "rationale": "The dot associated with the CVN 72 label is the upper orange/red dot in the Arabian Sea cluster. Coordinates are placed over open water east of Oman and south of Pakistan, matching the visual marker."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "South China Sea, west of the Philippines",
+            "lat": 13.7,
+            "lon": 118,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange/red current-week carrier dot adjacent to the orange label “CVN 73” in the South China Sea, with older orange trail dots extending eastward toward Guam.",
+            "rationale": "Following the Stratfor trail convention, the orange/red dot touching the CVN 73 label is the current position; older trail dots farther east are not averaged. The returned point is over open water west of the Philippines."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea east-southeast of Oman",
+            "lat": 20.7,
+            "lon": 60.7,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Lower orange/red carrier dot adjacent to the orange label “CVN 77” in the Arabian Sea cluster, distinct from the upper CVN 72 dot and from the blue LHD 4 marker.",
+            "rationale": "The CVN 77 label is anchored to the lower orange/red dot in the Arabian Sea. The selected coordinates preserve the separation from CVN 72 and are over open water."
+          }
+        ]
+      }
     }
   }
 }
