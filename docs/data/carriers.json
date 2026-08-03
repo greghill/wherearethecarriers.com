@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-03T15:50:03.384Z",
-  "lastChangedAt": "2026-08-03T15:50:03.384Z",
+  "generatedAt": "2026-08-03T22:29:54.684Z",
+  "lastChangedAt": "2026-08-03T22:29:54.684Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -12,9 +12,9 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-07-15",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-07-28",
       "summary": "GoNavy's latest table entry places USS Nimitz in or near Norfolk, Virginia: 09Jul2026, arrived at new homeport Norfolk",
       "sources": [
         {
@@ -35,24 +35,14 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
-          "note": "Text context: Caribbean Sea",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
-          "note": "Image estimate: Orange/training carrier marker labeled “USS NIMITZ (CVN 68)” is shown in the Caribbean basin, north of Venezuela/Colombia.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Image estimate: Blue at-port label “USS NIMITZ (CVN 68)” is drawn adjacent to the Norfolk, VA homeport marker.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-07-23T00:11:11.931Z"
+      "lastChangedAt": "2026-08-03T22:29:54.684Z"
     },
     {
       "hull": "CVN-69",
@@ -88,11 +78,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
-          "note": "Image estimate: Carrier label “USS DWIGHT D. EISENHOWER (CVN 69)” appears in the Norfolk, VA cluster.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Image estimate: Blue at-port label “USS DWIGHT D. EISENHOWER (CVN 69)” appears immediately east of the Norfolk, VA marker.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
         },
         {
           "role": "backup",
@@ -102,6 +92,16 @@
           "url": "http://www.gonavy.jp/CVLocation.html",
           "publishedAt": "2026-07-29",
           "note": "Latest row: 28Jul2026, returned to Norfolk"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Text context: Norfolk, Virginia",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
       "lastChangedAt": "2026-08-03T15:50:03.384Z"
@@ -116,8 +116,8 @@
         "lon": -117.173
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "high",
+      "evidence": "corroborated",
       "lastSeen": "2026-07-29",
       "summary": "GoNavy's latest table entry places USS Carl Vinson in or near San Diego, California: 17Jul2026, returned to San Diego",
       "sources": [
@@ -139,54 +139,55 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
-          "note": "Image estimate: Carrier label “USS CARL VINSON (CVN 70)” appears in the San Diego, CA west-coast carrier cluster.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Image estimate: Blue at-port label “USS CARL VINSON (CVN 70)” is anchored to the San Diego, CA marker.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-07-28T12:08:38.297Z"
+      "lastChangedAt": "2026-08-03T22:29:54.684Z"
     },
     {
       "hull": "CVN-71",
       "name": "USS Theodore Roosevelt",
-      "status": "port",
-      "locationName": "Pearl Harbor, Hawaii",
+      "status": "deployed",
+      "locationName": "Western Pacific",
       "position": {
-        "lat": 21.354,
-        "lon": -157.95
+        "lat": 31,
+        "lon": 169
       },
-      "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "positionPrecision": "image_estimate",
+      "confidence": "high",
+      "evidence": "corroborated",
       "lastSeen": "2026-08-03",
-      "summary": "USNI News Fleet and Marine Tracker: Aug. 3, 2026 places USS Theodore Roosevelt in or near Pearl Harbor, Hawaii. The point is an approximate public-source assessment.",
+      "summary": "Where Are The Aircraft Carriers: July 28, 2026 places USS Theodore Roosevelt in or near Western Pacific.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
-            "status",
-            "location",
-            "position",
-            "summary"
+            "coordinate_refinement"
           ],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Aug. 3, 2026",
-          "url": "https://news.usni.org/2026/08/03/usni-news-fleet-and-marine-tracker-aug-3-2026",
-          "publishedAt": "2026-08-03",
-          "note": "Text context: Pearl Harbor, Hawaii",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_03_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Aug. 3, 2026",
           "url": "https://news.usni.org/2026/08/03/usni-news-fleet-and-marine-tracker-aug-3-2026",
           "publishedAt": "2026-08-03",
           "note": "Image estimate: Map label reads \"Theodore Roosevelt CSG\" with a yellow diamond in the open Northwest Pacific to the right of the label.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_03_26.jpg"
+        },
+        {
+          "role": "primary",
+          "usedFor": [
+            "status",
+            "location",
+            "summary"
+          ],
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Text context: Western Pacific",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
         },
         {
           "role": "backup",
@@ -202,14 +203,24 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
-          "note": "Image estimate: Carrier label “USS THEODORE ROOSEVELT (CVN 71)” is visible adjacent to the San Diego, CA cluster.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Image estimate: Orange training label “USS THEODORE ROOSEVELT (CVN 71)” is shown just southwest/west of the Pearl Harbor, HI homeport marker.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Aug. 3, 2026",
+          "url": "https://news.usni.org/2026/08/03/usni-news-fleet-and-marine-tracker-aug-3-2026",
+          "publishedAt": "2026-08-03",
+          "note": "Text context: Pearl Harbor, Hawaii",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_03_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-08-03T15:50:03.384Z"
+      "lastChangedAt": "2026-08-03T22:29:54.684Z"
     },
     {
       "hull": "CVN-72",
@@ -275,11 +286,21 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
-          "note": "Image estimate: Green/deployed carrier marker labeled “USS ABRAHAM LINCOLN (CVN 72)*” is shown in the north Arabian Sea/Gulf of Oman area.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Text context: Arabian Sea",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Image estimate: Green deployed label “USS ABRAHAM LINCOLN (CVN 72)” is shown in the northern Arabian Sea, east of the Horn of Africa and south of Oman.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
       "lastChangedAt": "2026-08-03T15:50:03.384Z"
@@ -287,32 +308,42 @@
     {
       "hull": "CVN-73",
       "name": "USS George Washington",
-      "status": "port",
-      "locationName": "Yokosuka, Japan",
+      "status": "deployed",
+      "locationName": "Western Pacific",
       "position": {
-        "lat": 35.29,
-        "lon": 139.67
+        "lat": 13.7,
+        "lon": 118
       },
       "positionPrecision": "image_estimate",
-      "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-05-26",
-      "summary": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean places USS George Washington near Yokosuka, Japan from a public tracker map image.",
+      "confidence": "high",
+      "evidence": "corroborated",
+      "lastSeen": "2026-07-30",
+      "summary": "GoNavy's latest table entry places USS George Washington in or near Western Pacific: 26Jul-27Jul2026, South China Sea",
       "sources": [
+        {
+          "role": "primary",
+          "usedFor": [
+            "coordinate_refinement"
+          ],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: July 30, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-30-2026",
+          "publishedAt": "2026-07-30",
+          "note": "Image estimate: Orange/red current-week carrier dot adjacent to the orange label “CVN 73” in the South China Sea, with older orange trail dots extending eastward toward Guam.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607129%20display.png"
+        },
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
-            "position",
             "summary"
           ],
-          "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
-          "note": "Image estimate: Green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)*” appears next to the “YOKOSUKA, JAPAN” label.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-07-29",
+          "note": "Latest row: 26Jul-27Jul2026, South China Sea"
         },
         {
           "role": "backup",
@@ -327,34 +358,25 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: July 30, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-30-2026",
-          "publishedAt": "2026-07-30",
-          "note": "Image estimate: Orange/red current-week carrier dot adjacent to the orange label “CVN 73” in the South China Sea, with older orange trail dots extending eastward toward Guam.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607129%20display.png"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-07-29",
-          "note": "Latest row: 26Jul-27Jul2026, South China Sea"
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Text context: Western Pacific",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
         },
         {
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
-          "note": "Text context: Yokosuka, Japan",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Image estimate: Green deployed label “USS GEORGE WASHINGTON (CVN 73)” appears west of the Philippines in the South China Sea area.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-07-30T06:37:39.901Z"
+      "lastChangedAt": "2026-08-03T22:29:54.684Z"
     },
     {
       "hull": "CVN-74",
@@ -389,11 +411,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
-          "note": "Image estimate: Carrier label “USS JOHN C. STENNIS (CVN 74)” is visible in the Virginia east-coast carrier cluster near Norfolk, VA.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Image estimate: Red maintenance label “USS JOHN C. STENNIS (CVN 74)” is in the Norfolk, VA cluster.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
       "lastChangedAt": "2026-05-25T20:08:09.924Z"
@@ -409,8 +431,8 @@
       },
       "positionPrecision": "port",
       "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-05-26",
+      "evidence": "stale",
+      "lastSeen": "2025-10-01",
       "summary": "GoNavy's latest table entry places USS Harry S. Truman in or near Norfolk, Virginia: 26Sep2025, returned to Norfolk",
       "sources": [
         {
@@ -431,14 +453,14 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
-          "note": "Image estimate: Carrier label “USS HARRY S. TRUMAN (CVN 75)” appears in the Norfolk, VA carrier cluster.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Image estimate: Red maintenance label “USS HARRY S. TRUMAN (CVN 75)” appears just below the Norfolk, VA carrier cluster.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-06-03T00:00:42.355Z"
+      "lastChangedAt": "2026-08-03T22:29:54.684Z"
     },
     {
       "hull": "CVN-76",
@@ -473,11 +495,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
-          "note": "Image estimate: Red/maintenance carrier marker labeled “USS RONALD REAGAN (CVN 76)” appears at the “BREMERTON, WA” label.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Image estimate: Red maintenance label “USS RONALD REAGAN (CVN 76)” is anchored to the Bremerton, WA marker.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
       "lastChangedAt": "2026-06-10T04:43:07.376Z"
@@ -546,11 +568,21 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
-          "note": "Image estimate: Green/deployed carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)*” is shown below the Abraham Lincoln marker in the Arabian Sea.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Text context: Arabian Sea",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Image estimate: Green deployed label “USS GEORGE H.W. BUSH (CVN 77)” is shown below Abraham Lincoln in the Arabian Sea region.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
       "lastChangedAt": "2026-08-03T15:50:03.384Z"
@@ -565,8 +597,8 @@
         "lon": -76.322
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "high",
+      "evidence": "corroborated",
       "lastSeen": "2026-07-29",
       "summary": "GoNavy's latest table entry places USS Gerald R. Ford in or near Norfolk, Virginia: 07Jul-27Jul2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia",
       "sources": [
@@ -588,14 +620,14 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Carriers As Of May 26, 2026: Nimitz Arrives In The Caribbean",
-          "url": "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean",
-          "publishedAt": "2026-05-26",
-          "note": "Image estimate: Carrier label “USS GERALD R. FORD (CVN 78)” is visible adjacent to the Norfolk, VA label and marker cluster.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/05/TWZ-Where-Are-The-Carriers-As-Of-May-26-2026-Full-Res-copy.jpg?quality=85&w=1536"
+          "title": "Where Are The Aircraft Carriers: July 28, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026",
+          "publishedAt": "2026-07-28",
+          "note": "Image estimate: Blue at-port label “USS GERALD R. FORD (CVN 78)” is shown next to the Norfolk, VA marker.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/07/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-July-28-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-07-28T12:08:38.297Z"
+      "lastChangedAt": "2026-08-03T22:29:54.684Z"
     }
   ]
 }
