@@ -3,6 +3,10 @@ import assert from "node:assert/strict";
 
 import {
   articleDateFromTitle,
+  findLatestTwzUrl,
+  twzDateToken,
+  applyAssessment,
+  effectiveConfidenceWeight,
   parseGoNavyDate,
   goNavyEntries,
   sectionizeUsniArticle,
@@ -29,6 +33,111 @@ test("articleDateFromTitle parses full and abbreviated months", () => {
 // wp-json `date` field — but other sources still parse the title.
 test("articleDateFromTitle should handle full-word April", { todo: true }, () => {
   assert.equal(articleDateFromTitle("April 13, 2026"), "2026-04-13");
+});
+
+test("findLatestTwzUrl matches old and new slug formats, newest-first", () => {
+  const html =
+    '<a href="https://www.twz.com/category/carrier-tracker">Carrier Tracker</a>' +
+    '<a href="https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026">new</a>' +
+    '<a href="https://www.twz.com/sea/where-are-the-aircraft-carriers-july-20-2026">older</a>' +
+    '<a href="https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean">oldest</a>';
+  assert.equal(
+    findLatestTwzUrl(html),
+    "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026"
+  );
+
+  const oldOnly =
+    '<a href="https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean">old</a>';
+  assert.equal(
+    findLatestTwzUrl(oldOnly),
+    "https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean"
+  );
+
+  assert.equal(findLatestTwzUrl('<a href="https://www.twz.com/sea/unrelated-story">x</a>'), null);
+});
+
+test("twzDateToken extracts the date from old and new slug formats", () => {
+  assert.equal(
+    twzDateToken("https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean"),
+    "may-26-2026"
+  );
+  assert.equal(
+    twzDateToken("https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026"),
+    "july-28-2026"
+  );
+  assert.equal(
+    twzDateToken("https://www.twz.com/sea/carrier-tracker-as-of-april-12-2026"),
+    "april-12-2026"
+  );
+  assert.equal(twzDateToken("https://www.twz.com/category/carrier-tracker"), undefined);
+});
+
+const GENERATED_AT = "2026-08-03T12:00:00Z";
+
+function bareCarrier() {
+  return {
+    hull: "CVN-68",
+    name: "USS Nimitz",
+    status: "unknown",
+    locationName: "Unknown",
+    position: null,
+    positionPrecision: "unknown",
+    confidence: "unknown",
+    lastSeen: null,
+    summary: "none",
+    sources: []
+  };
+}
+
+function textAssessment({ confidence, lastSeen, locationName }) {
+  return {
+    hull: "CVN-68",
+    status: "underway",
+    locationName,
+    position: null,
+    confidence,
+    lastSeen,
+    summary: `${locationName} per test`,
+    sources: [{ publisher: "Test", title: "t", url: `https://example.com/${locationName}`, publishedAt: lastSeen }]
+  };
+}
+
+test("effectiveConfidenceWeight decays with source age", () => {
+  assert.equal(effectiveConfidenceWeight("high", "2026-08-01", GENERATED_AT), 3);
+  assert.equal(effectiveConfidenceWeight("high", "2026-06-15", GENERATED_AT), 2);
+  assert.equal(effectiveConfidenceWeight("high", "2026-04-01", GENERATED_AT), 1);
+  assert.equal(effectiveConfidenceWeight("medium", "2026-04-01", GENERATED_AT), 1);
+  // Undated inputs are left alone.
+  assert.equal(effectiveConfidenceWeight("medium", null, GENERATED_AT), 2);
+});
+
+test("applyAssessment prefers a fresh source over a stale higher-confidence one", () => {
+  const carrier = bareCarrier();
+  applyAssessment(carrier, textAssessment({ confidence: "high", lastSeen: "2026-04-01", locationName: "Old Position" }), GENERATED_AT);
+  applyAssessment(carrier, textAssessment({ confidence: "medium", lastSeen: "2026-08-01", locationName: "New Position" }), GENERATED_AT);
+  assert.equal(carrier.locationName, "New Position");
+  assert.equal(carrier.lastSeen, "2026-08-01");
+});
+
+test("applyAssessment still lets a stale source fill a vacuum", () => {
+  const carrier = bareCarrier();
+  applyAssessment(carrier, textAssessment({ confidence: "medium", lastSeen: "2026-04-01", locationName: "Only Known Position" }), GENERATED_AT);
+  assert.equal(carrier.locationName, "Only Known Position");
+});
+
+test("applyAssessment breaks equal-weight ties by recency in either order", () => {
+  const newer = textAssessment({ confidence: "medium", lastSeen: "2026-08-01", locationName: "Newer" });
+  const older = textAssessment({ confidence: "medium", lastSeen: "2026-07-20", locationName: "Older" });
+
+  const carrier = bareCarrier();
+  applyAssessment(carrier, older, GENERATED_AT);
+  applyAssessment(carrier, newer, GENERATED_AT);
+  assert.equal(carrier.locationName, "Newer");
+
+  const reversed = bareCarrier();
+  applyAssessment(reversed, newer, GENERATED_AT);
+  applyAssessment(reversed, older, GENERATED_AT);
+  assert.equal(reversed.locationName, "Newer");
 });
 
 test("parseGoNavyDate handles GoNavy formats and rejects junk", () => {

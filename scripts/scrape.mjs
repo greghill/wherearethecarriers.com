@@ -155,7 +155,7 @@ function findLatestStratforMapUrl(html) {
 function findLatestTwzUrl(html) {
   return firstUniqueUrl(
     linksFromHtml(html, SOURCE_URLS.twzIndex)
-      .filter((link) => /twz\.com\/sea\/(?:where-are-the-carriers|carrier-tracker-as-of)/i.test(link.url))
+      .filter((link) => /twz\.com\/sea\/(?:where-are-the-(?:aircraft-)?carriers|carrier-tracker-as-of)/i.test(link.url))
   );
 }
 
@@ -190,7 +190,8 @@ function imageWidth(url) {
 }
 
 function twzDateToken(baseUrl) {
-  const match = baseUrl.match(/as-of-([a-z]+-\d{1,2}-\d{4})/i);
+  // Slugs have used "…-as-of-may-26-2026-…" and "…-aircraft-carriers-july-28-2026".
+  const match = baseUrl.match(/(?:as-of|carriers)-([a-z]+-\d{1,2}-\d{4})/i);
   return match?.[1]?.toLowerCase();
 }
 
@@ -423,9 +424,21 @@ function blankCarrier(record) {
   };
 }
 
-function applyAssessment(carrier, assessment) {
-  const currentWeight = confidenceWeight(carrier.confidence);
-  const nextWeight = confidenceWeight(assessment.confidence);
+// Scraper-assigned confidence says how solid the report is, not how old it is. Decay
+// the weight used for the replace decision so a stale-but-confident assessment cannot
+// outrank a fresh one; it can still fill a vacuum (weight 1 beats unknown's 0).
+function effectiveConfidenceWeight(confidence, lastSeen, generatedAt) {
+  const weight = confidenceWeight(confidence);
+  const ageDays = daysBetween(lastSeen, generatedAt);
+  if (ageDays === null) return weight;
+  if (ageDays > AGING_SOURCE_DAYS) return Math.min(weight, 1);
+  if (ageDays > CURRENT_SOURCE_DAYS) return Math.min(weight, 2);
+  return weight;
+}
+
+function applyAssessment(carrier, assessment, generatedAt) {
+  const currentWeight = effectiveConfidenceWeight(carrier.confidence, carrier.lastSeen, generatedAt);
+  const nextWeight = effectiveConfidenceWeight(assessment.confidence, assessment.lastSeen, generatedAt);
   const nextNewer = !carrier.lastSeen || (assessment.lastSeen && assessment.lastSeen >= carrier.lastSeen);
   const nextIsImage = isImageAssessment(assessment);
   const currentIsImage = carrier.positionPrecision === "image_estimate";
@@ -1366,7 +1379,7 @@ async function main() {
       };
       for (const assessment of result.assessments || []) {
         assessmentsByHull.get(assessment.hull)?.push(assessment);
-        applyAssessment(carriers.get(assessment.hull), assessment);
+        applyAssessment(carriers.get(assessment.hull), assessment, generatedAt);
       }
     } catch (error) {
       recordStatus(sourceStatus, key, "error", error.message);
@@ -1394,13 +1407,13 @@ async function main() {
   for (const rawAssessment of await loadOpenAiImageAssessments(sourceSummaries, sourceStatus)) {
     const assessment = await deLandImageAssessment(rawAssessment);
     assessmentsByHull.get(assessment.hull)?.push(assessment);
-    applyAssessment(carriers.get(assessment.hull), assessment);
+    applyAssessment(carriers.get(assessment.hull), assessment, generatedAt);
   }
 
   for (const rawAssessment of await loadImagePointAssessments(sourceSummaries)) {
     const assessment = await deLandImageAssessment(rawAssessment);
     assessmentsByHull.get(assessment.hull)?.push(assessment);
-    applyAssessment(carriers.get(assessment.hull), assessment);
+    applyAssessment(carriers.get(assessment.hull), assessment, generatedAt);
   }
 
   for (const oldCarrier of previous.carriers || []) {
@@ -1480,6 +1493,10 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
 
 export {
   articleDateFromTitle,
+  findLatestTwzUrl,
+  twzDateToken,
+  applyAssessment,
+  effectiveConfidenceWeight,
   parseGoNavyDate,
   goNavyEntries,
   sectionizeUsniArticle,
