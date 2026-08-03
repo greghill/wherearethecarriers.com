@@ -2105,6 +2105,65 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://news.usni.org/2026/08/03/usni-news-fleet-and-marine-tracker-aug-3-2026|https://news.usni.org/wp-content/uploads/2026/08/FT_8_03_26.jpg|2026-08-03": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_03_26.jpg",
+      "articleUrl": "https://news.usni.org/2026/08/03/usni-news-fleet-and-marine-tracker-aug-3-2026",
+      "publishedAt": "2026-08-03",
+      "createdAt": "2026-08-03T15:50:07.643Z",
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/08/03/usni-news-fleet-and-marine-tracker-aug-3-2026",
+        "publishedAt": "2026-08-03",
+        "carriers": [
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Northwest Pacific Ocean east of Japan",
+            "lat": 31,
+            "lon": 169,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label reads \"Theodore Roosevelt CSG\" with a yellow diamond in the open Northwest Pacific to the right of the label.",
+            "rationale": "The adjacent marker is well east of Japan and north of the Philippine Sea, clearly over open Pacific water. Position is estimated from the marker/label placement, not a regional centroid."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea / Gulf of Oman area",
+            "lat": 21.5,
+            "lon": 62,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label reads \"Abraham Lincoln CSG\" in the northern Arabian Sea area with the adjacent yellow diamond also serving the stacked carrier labels.",
+            "rationale": "The marker sits offshore between Oman and the Indian subcontinent, over open water. The stacked label also lists George H.W. Bush CSG and Boxer ARG at the same plotted point."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Da Nang, Vietnam",
+            "lat": 16.1,
+            "lon": 108.2,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "Map label reads \"George Washington CSG\" and \"Da Nang, Vietnam\" next to a yellow diamond on Vietnam’s central coast.",
+            "rationale": "The marker is visually anchored at Da Nang on the central Vietnam coast; returned coordinate is at/near Da Nang port water as explicitly labeled."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea / Gulf of Oman area",
+            "lat": 21.5,
+            "lon": 62,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label reads \"George H.W. Bush CSG\" in the same stacked label as Abraham Lincoln CSG near the northern Arabian Sea marker.",
+            "rationale": "The label shares the adjacent yellow diamond offshore between Oman and India/Pakistan. The coordinate is placed over open Arabian Sea/Gulf of Oman water consistent with the visible marker."
+          }
+        ]
+      }
     }
   }
 }
