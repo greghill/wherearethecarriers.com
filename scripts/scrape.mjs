@@ -6,6 +6,7 @@ const DATA_PATH = new URL("../docs/data/carriers.json", import.meta.url);
 const SCRAPE_STATUS_PATH = new URL("../docs/data/scrape-status.json", import.meta.url);
 const IMAGE_POINTS_PATH = new URL("./image-points.json", import.meta.url);
 const IMAGE_ANALYSIS_CACHE_PATH = new URL("./map-image-cache.json", import.meta.url);
+const TEXT_ANALYSIS_CACHE_PATH = new URL("./text-analysis-cache.json", import.meta.url);
 const LAND_POLYGONS_PATH = new URL("./land-polygons.json", import.meta.url);
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-5.5";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
@@ -44,30 +45,6 @@ const CARRIERS = [
   { hull: "CVN-76", name: "USS Ronald Reagan", aliases: ["USS Ronald Reagan", "Ronald Reagan", "CVN-76", "CVN 76"] },
   { hull: "CVN-77", name: "USS George H.W. Bush", aliases: ["USS George H.W. Bush", "USS George H. W. Bush", "George H.W. Bush", "George H. W. Bush", "CVN-77", "CVN 77"] },
   { hull: "CVN-78", name: "USS Gerald R. Ford", aliases: ["USS Gerald R. Ford", "Gerald R. Ford", "CVN-78", "CVN 78"] }
-];
-
-const LOCATION_HINTS = [
-  { match: /north arabian sea|arabian sea|centcom/i, name: "Arabian Sea", lat: 18.0, lon: 63.0, status: "deployed" },
-  { match: /caribbean|southern seas|southcom/i, name: "Caribbean Sea", lat: 18.0, lon: -75.0, status: "deployed" },
-  { match: /newport news shipyard|newport news shipbuilding|outfitting berth/i, name: "Newport News, Virginia", lat: 36.986, lon: -76.432, status: "maintenance" },
-  { match: /puget sound naval shipyard|psns|dry dock/i, name: "Bremerton, Washington", lat: 47.561, lon: -122.648, status: "maintenance" },
-  { match: /yokosuka/i, name: "Yokosuka, Japan", lat: 35.281, lon: 139.672, status: "port" },
-  { match: /sasebo/i, name: "Sasebo, Japan", lat: 33.159, lon: 129.715, status: "port" },
-  { match: /san diego|north island/i, name: "San Diego, California", lat: 32.715, lon: -117.173, status: "port" },
-  { match: /norfolk/i, name: "Norfolk, Virginia", lat: 36.946, lon: -76.322, status: "port" },
-  { match: /bremerton|kitsap/i, name: "Bremerton, Washington", lat: 47.561, lon: -122.648, status: "port" },
-  { match: /pearl harbor/i, name: "Pearl Harbor, Hawaii", lat: 21.354, lon: -157.950, status: "port" },
-  { match: /red sea/i, name: "Red Sea", lat: 19.5, lon: 38.0, status: "deployed" },
-  { match: /eastern mediterranean/i, name: "Eastern Mediterranean Sea", lat: 34.5, lon: 29.5, status: "deployed" },
-  { match: /mediterranean/i, name: "Mediterranean Sea", lat: 36.0, lon: 18.0, status: "deployed" },
-  { match: /south atlantic|eastern coast of brazil|coast of brazil|guanabara bay|rio de janeiro/i, name: "South Atlantic", lat: -24.0, lon: -35.0, status: "deployed" },
-  { match: /western atlantic/i, name: "Western Atlantic", lat: 33.0, lon: -68.0, status: "deployed" },
-  { match: /virginia capes|east coast of the united states/i, name: "Western Atlantic", lat: 33.0, lon: -68.0, status: "deployed" },
-  { match: /eastern pacific/i, name: "Eastern Pacific", lat: 24.0, lon: -128.0, status: "deployed" },
-  { match: /southern california operating areas/i, name: "Eastern Pacific", lat: 31.0, lon: -121.0, status: "deployed" },
-  { match: /western pacific/i, name: "Western Pacific", lat: 18.0, lon: 145.0, status: "deployed" },
-  { match: /philippine sea|south china sea|sulu sea/i, name: "Western Pacific", lat: 18.0, lon: 145.0, status: "deployed" },
-  { match: /indo-pacific/i, name: "Indo-Pacific", lat: 8.0, lon: 126.0, status: "deployed" }
 ];
 
 const textDecoder = new TextDecoder("utf-8");
@@ -152,11 +129,27 @@ function findLatestStratforMapUrl(html) {
   );
 }
 
+// TWZ has renamed its tracker slugs before (where-are-the-carriers-as-of-…,
+// carrier-tracker-as-of-…, where-are-the-aircraft-carriers-…). Rank candidates by
+// the date embedded in the slug so an old-format article lingering on the page
+// can never outrank a newer post, and fall back to document order for undated slugs.
 function findLatestTwzUrl(html) {
-  return firstUniqueUrl(
-    linksFromHtml(html, SOURCE_URLS.twzIndex)
-      .filter((link) => /twz\.com\/sea\/(?:where-are-the-(?:aircraft-)?carriers|carrier-tracker-as-of)/i.test(link.url))
-  );
+  const seen = new Set();
+  const candidates = [];
+  for (const link of linksFromHtml(html, SOURCE_URLS.twzIndex)) {
+    if (!/twz\.com\/sea\/(?:where-are-the-(?:aircraft-)?carriers|carrier-tracker-as-of)/i.test(link.url)) continue;
+    if (seen.has(link.url)) continue;
+    seen.add(link.url);
+    const token = twzDateToken(link.url);
+    const date = token ? new Date(token.replace(/-/g, " ")) : null;
+    candidates.push({
+      url: link.url,
+      time: date && !Number.isNaN(date.getTime()) ? date.getTime() : -1,
+      order: candidates.length
+    });
+  }
+  candidates.sort((a, b) => b.time - a.time || a.order - b.order);
+  return candidates[0]?.url || null;
 }
 
 function imageUrlsFromHtml(html, baseUrl) {
@@ -244,79 +237,6 @@ function articleTextFromHtml(html, stopPattern) {
   return text;
 }
 
-function findLocationHint(text) {
-  return LOCATION_HINTS.find((hint) => hint.match.test(text));
-}
-
-function containsAlias(text, record) {
-  const lower = text.toLowerCase();
-  return record.aliases.some((alias) => lower.includes(alias.toLowerCase()));
-}
-
-function matchingAlias(text, record) {
-  return record.aliases.find((alias) => text.toLowerCase().includes(alias.toLowerCase()));
-}
-
-function contextAround(text, alias, radius = 220) {
-  const index = text.toLowerCase().indexOf(alias.toLowerCase());
-  if (index === -1) return "";
-  return text.slice(Math.max(0, index - radius), Math.min(text.length, index + radius));
-}
-
-function splitSentences(text) {
-  return text
-    .replace(/\s+/g, " ")
-    .split(/(?<=[.!?])\s+|(?=\b[A-Z][a-z]+craft carrier USS\b)|(?=\bCarrier USS\b)|(?=\bUSS\b)/)
-    .map((item) => item.trim())
-    .filter(Boolean);
-}
-
-function scoreLocationText(text, record) {
-  const hint = findLocationHint(text);
-  if (!hint) return null;
-
-  let score = containsAlias(text, record) ? 5 : 0;
-  if (/\boperating\b|\bunderway\b|\bin support of\b|\bconducting\b/i.test(text)) score += 5;
-  if (/\breturned\b|\barrived\b|\banchored\b|\bin port\b/i.test(text)) score += 4;
-  if (/\bdeparted\b/i.test(text)) score += 1;
-  if (/\bhomeported\b|\bhome port\b|from Naval Air Station|from Naval Station/i.test(text)) score -= 8;
-  return { hint, score, text };
-}
-
-function bestCarrierLocation(text, record, fallbackHeading = "") {
-  const candidates = [];
-  for (const sentence of splitSentences(text)) {
-    if (!containsAlias(sentence, record)) continue;
-    const candidate = scoreLocationText(sentence, record);
-    if (candidate) candidates.push(candidate);
-  }
-
-  const alias = matchingAlias(text, record);
-  if (alias) {
-    const nearby = contextAround(text, alias, 260);
-    const nearbyCandidate = scoreLocationText(nearby, record);
-    if (nearbyCandidate) candidates.push(nearbyCandidate);
-  }
-
-  const headingCandidate = scoreLocationText(fallbackHeading, record);
-  if (headingCandidate) candidates.push({ ...headingCandidate, score: headingCandidate.score + 1 });
-
-  candidates.sort((a, b) => b.score - a.score);
-  return candidates[0] || null;
-}
-
-function sectionizeUsniArticle(html) {
-  const body = (html.match(/<article[\s\S]*?<\/article>/i)?.[0] || html).replace(/\r/g, "");
-  const parts = body.split(/<h2[^>]*>/i).slice(1);
-  return parts.map((part) => {
-    const [headingRaw, ...rest] = part.split(/<\/h2>/i);
-    const content = rest.join("</h2>").split(/<h2[^>]*>/i)[0];
-    return {
-      heading: stripTags(headingRaw),
-      text: stripTags(content)
-    };
-  });
-}
 
 function extractTableCells(row) {
   return [...row.matchAll(/<TD[^>]*>([\s\S]*?)<\/TD>/gi)].map((match) => match[1]);
@@ -354,44 +274,6 @@ function extractPublishedDate(html, fallbackText = "") {
   return articleDateFromTitle(fallbackText);
 }
 
-function twzRespectivelyAssessments(text, { title, articleUrl, publishedAt, imageUrl }) {
-  const assessments = [];
-  const pattern = /USS George Washington\s*,\s*USS Dwight D\. Eisenhower\s*,\s*and USS Theodore Roosevelt[\s\S]{0,260}?pulled into Yokosuka,\s*Norfolk,\s*and San Diego,\s*respectively/i;
-  if (!pattern.test(text)) return assessments;
-
-  const mappings = [
-    ["CVN-73", "Yokosuka, Japan"],
-    ["CVN-69", "Norfolk, Virginia"],
-    ["CVN-71", "San Diego, California"]
-  ];
-
-  for (const [hull, locationName] of mappings) {
-    const record = CARRIERS.find((item) => item.hull === hull);
-    const hint = LOCATION_HINTS.find((item) => item.name === locationName);
-    if (!record || !hint) continue;
-    assessments.push({
-      hull,
-      status: "port",
-      locationName: hint.name,
-      position: { lat: hint.lat, lon: hint.lon },
-      confidence: "medium",
-      lastSeen: publishedAt,
-      summary: `${title} reports ${record.name} pulled into ${hint.name}.`,
-      sources: [
-        sourceFromArticle({
-          publisher: "The War Zone",
-          title,
-          url: articleUrl,
-          publishedAt,
-          note: `Text context: pulled into ${hint.name}`,
-          imageUrl
-        })
-      ]
-    });
-  }
-
-  return assessments;
-}
 
 function rowForCarrier(html, record) {
   return [...html.matchAll(/<TR>([\s\S]*?)<\/TR>/gi)]
@@ -442,7 +324,7 @@ function applyAssessment(carrier, assessment, generatedAt) {
   const nextNewer = !carrier.lastSeen || (assessment.lastSeen && assessment.lastSeen >= carrier.lastSeen);
   const nextIsImage = isImageAssessment(assessment);
   const currentIsImage = carrier.positionPrecision === "image_estimate";
-  const imageCanRefine = nextIsImage && nextWeight >= 2 && nextNewer && isBroadRegionalAssessment(carrier) && imageMatchesCentroidRegion(carrier, assessment);
+  const imageCanRefine = nextIsImage && nextWeight >= 2 && nextNewer && isBroadRegionalAssessment(carrier) && imageMatchesCarrierRegion(carrier, assessment);
   const imageCanReplaceImage = nextIsImage && currentIsImage && (nextWeight > currentWeight || (nextWeight === currentWeight && nextNewer));
   const shouldReplace = nextIsImage
     ? carrier.confidence === "unknown" || imageCanRefine || imageCanReplaceImage
@@ -564,54 +446,37 @@ function isImageAssessment(assessment) {
   return assessment.positionPrecision === "image_estimate";
 }
 
+// Both text and image assessments now carry model-estimated coordinates, so
+// "do these two reads agree" is a plain distance question (with a longitude
+// wrap so the Western Pacific doesn't straddle the dateline), backed by exact
+// place-name equality for positionless assessments.
+function positionsNearby(a, b, degrees = 8) {
+  if (!a || !b) return false;
+  const dLon = Math.abs(a.lon - b.lon);
+  return Math.abs(a.lat - b.lat) <= degrees && Math.min(dLon, 360 - dLon) <= degrees;
+}
+
+function namesMatch(a = "", b = "") {
+  const left = a.trim().toLowerCase();
+  const right = b.trim().toLowerCase();
+  return Boolean(left) && left === right;
+}
+
 function isBroadRegionalAssessment(carrier) {
   if (!carrier.position) return true;
-  if (carrier.positionPrecision === "image_estimate") return false;
-  return /sea|ocean|atlantic|pacific|mediterranean|indo-pacific|caribbean|centcom/i.test(carrier.locationName || "");
+  return carrier.positionPrecision === "region";
 }
 
-function imageMatchesCentroidRegion(carrier, assessment) {
-  // Shared ocean (e.g. both mention "atlantic") is a stronger signal than the
-  // hint-table match, which can mislabel (LOCATION_HINTS treats every "western
-  // atlantic" string as Virginia Capes even when the image places the carrier
-  // off northern Brazil).
-  if (sharedWaterRegion(carrier.locationName, assessment.locationName)) return true;
-
-  const carrierHint = findLocationHint(carrier.locationName || "");
-  const imageHint = findLocationHint(assessment.locationName || "");
-  if (carrierHint && imageHint && carrierHint.name === imageHint.name) return true;
-
-  const ref = carrier.position;
-  const candidate = assessment.position;
-  if (!ref || !candidate) return false;
-  return Math.abs(ref.lat - candidate.lat) <= 8 && Math.abs(ref.lon - candidate.lon) <= 8;
-}
-
-function sharedWaterRegion(a = "", b = "") {
-  const left = a.toLowerCase();
-  const right = b.toLowerCase();
-  return ["atlantic", "pacific", "mediterranean", "arabian sea", "red sea", "south china sea", "philippine sea"]
-    .some((region) => left.includes(region) && right.includes(region));
-}
-
-function locationsAgree(a = "", b = "") {
-  if (!a || !b) return false;
-  if (a === b) return true;
-  if (sharedWaterRegion(a, b)) return true;
-  const leftHint = findLocationHint(a);
-  const rightHint = findLocationHint(b);
-  return Boolean(leftHint && rightHint && leftHint.name === rightHint.name);
+function imageMatchesCarrierRegion(carrier, assessment) {
+  if (namesMatch(carrier.locationName, assessment.locationName)) return true;
+  return positionsNearby(carrier.position, assessment.position);
 }
 
 function assessmentSupportsCarrier(assessment, carrier) {
   if (!assessment || !carrier) return false;
   if ((assessment.status || "unknown") !== (carrier.status || "unknown")) return false;
-  if (locationsAgree(assessment.locationName, carrier.locationName)) return true;
-
-  const ref = carrier.position;
-  const candidate = assessment.position;
-  if (!ref || !candidate) return false;
-  return Math.abs(ref.lat - candidate.lat) <= 8 && Math.abs(ref.lon - candidate.lon) <= 8;
+  if (namesMatch(assessment.locationName, carrier.locationName)) return true;
+  return positionsNearby(assessment.position, carrier.position);
 }
 
 function assessmentPublisher(assessment) {
@@ -662,34 +527,7 @@ function deriveCarrierEvidence(carrier, assessments, generatedAt) {
 function inferPositionPrecision(assessment) {
   if (assessment.positionPrecision) return assessment.positionPrecision;
   if (assessment.status === "port" || assessment.status === "maintenance") return "port";
-  if (/sea|ocean|atlantic|pacific|mediterranean|indo-pacific|caribbean|centcom/i.test(assessment.locationName || "")) return "region";
-  return "unknown";
-}
-
-// Shared assessment shape for the text-based scrapers (USNI, TWZ). Each caller resolves
-// the location `hint` and `confidence` its own way, then this builds the common record.
-// Status is the hint's status: the previous per-scraper "returned" status overrides were
-// no-ops (their ternary branches were identical), so they were removed.
-function buildTextAssessment({ record, hint, publisher, title, articleUrl, publishedAt, imageUrl, confidence, summarySuffix = "" }) {
-  return {
-    hull: record.hull,
-    status: hint.status,
-    locationName: hint.name,
-    position: { lat: hint.lat, lon: hint.lon },
-    confidence,
-    lastSeen: publishedAt,
-    summary: `${title} places ${record.name} in or near ${hint.name}.${summarySuffix}`,
-    sources: [
-      sourceFromArticle({
-        publisher,
-        title,
-        url: articleUrl,
-        publishedAt,
-        note: `Text context: ${hint.name}`,
-        imageUrl
-      })
-    ]
-  };
+  return assessment.position ? "region" : "unknown";
 }
 
 async function scrapeUsni() {
@@ -711,40 +549,7 @@ async function scrapeUsni() {
   const publishedAt = (post.modified || post.date || "").slice(0, 10) || articleDateFromTitle(title);
   const imageUrl = bestMapImageUrl(articleHtml, articleUrl, "usni");
   const articleText = articleTextFromHtml(articleHtml);
-  const sections = sectionizeUsniArticle(articleHtml);
-  const assessments = [];
-
-  for (const record of CARRIERS) {
-    if (!containsAlias(articleText, record)) continue;
-
-    const carrierSections = sections.filter((candidate) => containsAlias(candidate.text, record));
-    const best = carrierSections
-      .map((section) => ({
-        section,
-        candidate: bestCarrierLocation(section.text, record, section.heading)
-      }))
-      .filter((item) => item.candidate)
-      .sort((a, b) => b.candidate.score - a.candidate.score)[0];
-
-    if (!best) continue;
-
-    const hint = best.candidate.hint;
-    const context = best.candidate.text;
-    const confidence = /operating|returned|underway|deployed|in support of|after visiting/i.test(context) ? "medium" : "low";
-    assessments.push(
-      buildTextAssessment({
-        record,
-        hint,
-        publisher: "USNI News",
-        title,
-        articleUrl,
-        publishedAt,
-        imageUrl,
-        confidence,
-        summarySuffix: " The point is an approximate public-source assessment."
-      })
-    );
-  }
+  const assessments = await extractTextAssessments("usni", articleText, { title, articleUrl, publishedAt, imageUrl });
 
   return {
     ok: true,
@@ -786,30 +591,7 @@ async function scrapeTwz() {
   const publishedAt = extractPublishedDate(articleHtml, title);
   const imageUrl = bestMapImageUrl(articleHtml, articleUrl, "twz");
   const articleText = articleTextFromHtml(articleHtml, /Latest in Carrier Tracker|More in Carrier Tracker|The War Zone Wire/);
-  const assessments = twzRespectivelyAssessments(articleText, { title, articleUrl, publishedAt, imageUrl });
-
-  for (const record of CARRIERS) {
-    if (!containsAlias(articleText, record)) continue;
-    if (assessments.some((assessment) => assessment.hull === record.hull)) continue;
-
-    const best = bestCarrierLocation(articleText, record, title);
-    if (!best || best.score < 5) continue;
-
-    const hint = best.hint;
-
-    assessments.push(
-      buildTextAssessment({
-        record,
-        hint,
-        publisher: "The War Zone",
-        title,
-        articleUrl,
-        publishedAt,
-        imageUrl,
-        confidence: "medium"
-      })
-    );
-  }
+  const assessments = await extractTextAssessments("twz", articleText, { title, articleUrl, publishedAt, imageUrl });
 
   return {
     ok: true,
@@ -823,43 +605,33 @@ async function scrapeTwz() {
 
 async function scrapeGoNavy() {
   const html = await fetchText(SOURCE_URLS.gonavy);
-  const assessments = [];
 
+  // The table itself is structured — rows, dates, schedule markers — so code
+  // parses it. Only the free-text location phrase in each row goes to the model,
+  // as one combined per-carrier document (a single extraction call).
+  const lines = [];
+  const lastSeenByHull = {};
   for (const record of CARRIERS) {
     const row = rowForCarrier(html, record);
     if (!row) continue;
 
     const remarksHtml = row.cells[2] || "";
     const lastUpdate = parseGoNavyDate(stripTags(row.cells[3] || ""));
-    const entries = goNavyEntries(remarksHtml);
-    const latestEntry = entries.at(-1);
+    const latestEntry = goNavyEntries(remarksHtml).at(-1);
     if (!latestEntry) continue;
 
-    const best = bestCarrierLocation(`${record.name} ${record.hull}. ${latestEntry}`, record);
-    if (!best) continue;
-
-    const hint = best.hint;
-    const returned = /\breturned\b|\barrived\b|\banchored\b/i.test(latestEntry);
-    const departedOnly = /\bdeparted\b/i.test(latestEntry) && !/\bfor\b|\ben route\b|\boperating\b|\bin the\b/i.test(latestEntry);
-    assessments.push({
-      hull: record.hull,
-      status: departedOnly ? "unknown" : returned && hint.status === "port" ? "port" : hint.status,
-      locationName: hint.name,
-      position: { lat: hint.lat, lon: hint.lon },
-      confidence: "medium",
-      lastSeen: lastUpdate,
-      summary: `GoNavy's latest table entry places ${record.name} in or near ${hint.name}: ${latestEntry}`,
-      sources: [
-        sourceFromArticle({
-          publisher: "GoNavy.jp",
-          title: "Aircraft Carrier Locations",
-          url: SOURCE_URLS.gonavy,
-          publishedAt: lastUpdate,
-          note: `Latest row: ${latestEntry}`
-        })
-      ]
-    });
+    lastSeenByHull[record.hull] = lastUpdate;
+    lines.push(`${record.hull} ${record.name} — latest entry: ${latestEntry}`);
   }
+
+  if (!lines.length) return { ok: true, assessments: [] };
+
+  const assessments = await extractTextAssessments("gonavy", lines.join("\n"), {
+    title: "Aircraft Carrier Locations",
+    articleUrl: SOURCE_URLS.gonavy,
+    publishedAt: null,
+    lastSeenByHull
+  });
 
   return { ok: true, assessments };
 }
@@ -900,6 +672,208 @@ async function loadImageAnalysisCache() {
 
 async function saveImageAnalysisCache(cache) {
   await writeFile(IMAGE_ANALYSIS_CACHE_PATH, `${JSON.stringify(cache, null, 2)}\n`);
+}
+
+// ---------------------------------------------------------------------------
+// Text extraction: articles and table rows are prose, so a structured LLM call
+// reads them (mirroring the map-image pipeline); everything downstream — merge
+// policy, recency decay, corroboration — stays deterministic code.
+// ---------------------------------------------------------------------------
+
+function fnv1aHash(text) {
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < text.length; i++) {
+    hash ^= text.charCodeAt(i);
+    hash = Math.imul(hash, 0x01000193) >>> 0;
+  }
+  return hash.toString(16).padStart(8, "0");
+}
+
+function cacheKeyForText(sourceKey, meta, articleText) {
+  return [OPENAI_MODEL, sourceKey, meta.articleUrl || "", meta.publishedAt || "", fnv1aHash(articleText)].join("|");
+}
+
+const TEXT_CACHE_MAX_ENTRIES = 40;
+
+async function loadTextAnalysisCache() {
+  if (!existsSync(TEXT_ANALYSIS_CACHE_PATH)) {
+    return { version: 1, analyses: {} };
+  }
+  const cache = JSON.parse(await readFile(TEXT_ANALYSIS_CACHE_PATH, "utf8"));
+  const entries = Object.entries(cache.analyses || {})
+    .filter(([key, entry]) => (entry.model || key.split("|")[0]) === OPENAI_MODEL)
+    .sort(([, a], [, b]) => String(b.createdAt || "").localeCompare(String(a.createdAt || "")))
+    .slice(0, TEXT_CACHE_MAX_ENTRIES);
+  cache.analyses = Object.fromEntries(entries);
+  return cache;
+}
+
+async function saveTextAnalysisCache(cache) {
+  await writeFile(TEXT_ANALYSIS_CACHE_PATH, `${JSON.stringify(cache, null, 2)}\n`);
+}
+
+function carrierTextSchema() {
+  return {
+    type: "object",
+    additionalProperties: false,
+    required: ["carriers"],
+    properties: {
+      carriers: {
+        type: "array",
+        items: {
+          type: "object",
+          additionalProperties: false,
+          required: ["hull", "name", "locationName", "lat", "lon", "status", "precision", "confidence", "evidenceQuote"],
+          properties: {
+            hull: { type: "string", enum: CARRIERS.map((carrier) => carrier.hull) },
+            name: { type: "string" },
+            locationName: { type: "string" },
+            lat: { type: "number" },
+            lon: { type: "number" },
+            status: { type: "string", enum: ["deployed", "port", "maintenance", "unknown"] },
+            precision: { type: "string", enum: ["port", "point", "region", "none"] },
+            confidence: { type: "string", enum: ["high", "medium", "low"] },
+            evidenceQuote: { type: "string" }
+          }
+        }
+      }
+    }
+  };
+}
+
+function openAiTextPrompt(sourceKey, articleText, meta) {
+  const carrierList = CARRIERS.map((carrier) => `${carrier.hull} ${carrier.name}`).join("\n");
+  return `Extract current U.S. aircraft carrier locations from this public naval-tracking text.
+
+Return only carriers from this allowlist:
+${carrierList}
+
+Rules:
+- Report a carrier only when the text states its CURRENT location or status as of the text's date. Ignore purely historical movements and future or planned ones ("will deploy", "is scheduled to").
+- evidenceQuote MUST be copied verbatim from the text — the sentence or table row that places the carrier. Never paraphrase inside evidenceQuote; it is checked against the text and the carrier is dropped if it does not match.
+- locationName: a short place name as the text gives it ("Da Nang, Vietnam", "South China Sea", "Norfolk, Virginia").
+- lat/lon: best estimate of the ship's position. For a named port use that port's coordinates. For a sea or region use a central open-water point of the specific region named (not of a broader ocean). At-sea coordinates must fall on water.
+- precision: "port" pierside or anchored in a named port; "point" the text gives a specific position; "region" a sea or ocean area; "none" the text does not allow locating the ship (lat/lon then ignored — use 0).
+- status: "port" in port or returned to port; "maintenance" in shipyard, dry dock, or overhaul; "deployed" at sea, underway, operating, or on deployment; "unknown" unclear (for example, departed with no stated destination).
+- confidence: "high" explicit and clearly current; "medium" clear but indirect; "low" vague or inferred.
+- Omit carriers the text does not place.
+
+Source: ${sourceKeyToPublisher(sourceKey)}
+Title: ${meta.title || "unknown"}
+URL: ${meta.articleUrl || "unknown"}
+Published date: ${meta.publishedAt || "unknown"}
+
+Text:
+"""
+${articleText.slice(0, 28000)}
+"""`;
+}
+
+async function callOpenAiForText(sourceKey, articleText, meta) {
+  const response = await fetch("https://api.openai.com/v1/responses", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      authorization: `Bearer ${OPENAI_API_KEY}`
+    },
+    body: JSON.stringify({
+      model: OPENAI_MODEL,
+      input: [
+        {
+          role: "user",
+          content: [{ type: "input_text", text: openAiTextPrompt(sourceKey, articleText, meta) }]
+        }
+      ],
+      text: {
+        format: {
+          type: "json_schema",
+          name: "carrier_text_analysis",
+          strict: true,
+          schema: carrierTextSchema()
+        }
+      }
+    })
+  });
+
+  const body = await response.text();
+  if (!response.ok) {
+    throw new Error(`OpenAI text parse failed for ${sourceKey}: ${response.status} ${body.slice(0, 300)}`);
+  }
+
+  const parsed = JSON.parse(body);
+  const outputText = parsed.output_text || parsed.output?.flatMap((item) => item.content || []).find((item) => item.type === "output_text")?.text;
+  if (!outputText) {
+    throw new Error(`OpenAI text parse returned no output_text for ${sourceKey}`);
+  }
+  return JSON.parse(outputText);
+}
+
+function normalizeForQuoteMatch(value = "") {
+  return String(value).toLowerCase().replace(/["“”'‘’`]/g, "").replace(/\s+/g, " ").trim();
+}
+
+function textResultToAssessments(result, sourceKey, meta, articleText) {
+  const publisher = sourceKeyToPublisher(sourceKey);
+  const haystack = normalizeForQuoteMatch(articleText);
+  return (result.carriers || [])
+    .filter((item) => CARRIERS.some((carrier) => carrier.hull === item.hull))
+    // Hallucination guard: the quote must actually appear in the article.
+    .filter((item) => {
+      const quote = normalizeForQuoteMatch(item.evidenceQuote);
+      return quote.length >= 10 && haystack.includes(quote);
+    })
+    .map((item) => {
+      const record = CARRIERS.find((carrier) => carrier.hull === item.hull);
+      const lat = Number(item.lat);
+      const lon = Number(item.lon);
+      const hasPosition =
+        item.precision !== "none" &&
+        Number.isFinite(lat) && Number.isFinite(lon) &&
+        Math.abs(lat) <= 90 && Math.abs(lon) <= 180 &&
+        !(lat === 0 && lon === 0);
+      const lastSeen = meta.lastSeenByHull?.[item.hull] || meta.publishedAt || null;
+      return {
+        hull: item.hull,
+        status: item.status,
+        locationName: item.locationName,
+        position: hasPosition ? { lat, lon } : null,
+        positionPrecision: hasPosition ? item.precision : "unknown",
+        confidence: item.confidence,
+        lastSeen,
+        summary: `${meta.title || publisher} places ${record.name} ${item.precision === "port" ? "in" : "in or near"} ${item.locationName}.`,
+        sources: [
+          sourceFromArticle({
+            publisher,
+            title: meta.title,
+            url: meta.articleUrl,
+            publishedAt: lastSeen,
+            note: `Text context: ${String(item.evidenceQuote).slice(0, 240)}`,
+            imageUrl: meta.imageUrl
+          })
+        ]
+      };
+    });
+}
+
+async function extractTextAssessments(sourceKey, articleText, meta) {
+  if (!articleText || articleText.trim().length < 40) return [];
+  const cache = await loadTextAnalysisCache();
+  const cacheKey = cacheKeyForText(sourceKey, meta, articleText);
+  if (!cache.analyses[cacheKey]) {
+    if (!OPENAI_API_KEY) {
+      throw new Error(`OPENAI_API_KEY not set and no cached text analysis for ${sourceKey}`);
+    }
+    cache.analyses[cacheKey] = {
+      sourceKey,
+      model: OPENAI_MODEL,
+      articleUrl: meta.articleUrl || null,
+      publishedAt: meta.publishedAt || null,
+      createdAt: new Date().toISOString(),
+      result: await callOpenAiForText(sourceKey, articleText, meta)
+    };
+    await saveTextAnalysisCache(cache);
+  }
+  return textResultToAssessments(cache.analyses[cacheKey].result, sourceKey, meta, articleText);
 }
 
 function carrierMapSchema() {
@@ -1080,27 +1054,24 @@ async function isSolidlyInland(lat, lon) {
   return neighbors.every(([dLat, dLon]) => pointIsLand(polygons, lat + dLat, lon + dLon));
 }
 
-// Carriers are warships at sea (or pierside in a named port handled via text
-// hints). An image estimate that lands solidly inland is a mis-anchored read:
-// drop the bogus coordinate and fall back to the named region's water centroid
-// when we have one, otherwise discard the position entirely.
-async function deLandImageAssessment(assessment) {
-  if (assessment.positionPrecision !== "image_estimate") return assessment;
+// Carriers are warships at sea or pierside in a named port. A model-estimated
+// coordinate (text or image) that lands solidly inland is a misread: drop the
+// bogus position and lower confidence rather than plot a carrier in a continent.
+// Port-precision fixes are exempt — piers sit on coastlines by definition.
+async function deLandAssessment(assessment) {
+  if (assessment.positionPrecision === "port") return assessment;
   const pos = assessment.position;
   if (!pos || !(await isSolidlyInland(pos.lat, pos.lon))) return assessment;
 
-  const hint = findLocationHint(assessment.locationName || "");
-  const note = hint
-    ? `Auto-corrected: image estimate (${pos.lat}, ${pos.lon}) fell on land; snapped to ${hint.name} region centroid.`
-    : `Auto-corrected: image estimate (${pos.lat}, ${pos.lon}) fell on land and no region centroid was available; position dropped.`;
+  const note = `Auto-corrected: estimated position (${pos.lat}, ${pos.lon}) fell on land; position dropped.`;
   const sources = (assessment.sources || []).map((source, index) =>
     index === 0 ? { ...source, note: source.note ? `${source.note} | ${note}` : note } : source
   );
 
   return {
     ...assessment,
-    position: hint ? { lat: hint.lat, lon: hint.lon } : null,
-    positionPrecision: hint ? "region" : "unknown",
+    position: null,
+    positionPrecision: "unknown",
     confidence: assessment.confidence === "high" ? "medium" : assessment.confidence,
     sources
   };
@@ -1115,7 +1086,9 @@ function imageResultToAssessments(result, sourceKey, sourceSummary) {
       const record = CARRIERS.find((carrier) => carrier.hull === item.hull);
       return {
         hull: item.hull,
-        status: findLocationHint(item.locationName)?.status || "deployed",
+        // Image estimates only fill vacuums or refine broad regional fixes, and
+        // those are at-sea cases; a pierside carrier keeps its text-sourced status.
+        status: "deployed",
         locationName: item.locationName,
         position: { lat: Number(item.lat), lon: Number(item.lon) },
         positionPrecision: "image_estimate",
@@ -1377,7 +1350,8 @@ async function main() {
         publisher: SOURCE_PUBLISHERS[key],
         ...result
       };
-      for (const assessment of result.assessments || []) {
+      for (const rawAssessment of result.assessments || []) {
+        const assessment = await deLandAssessment(rawAssessment);
         assessmentsByHull.get(assessment.hull)?.push(assessment);
         applyAssessment(carriers.get(assessment.hull), assessment, generatedAt);
       }
@@ -1405,13 +1379,13 @@ async function main() {
   }
 
   for (const rawAssessment of await loadOpenAiImageAssessments(sourceSummaries, sourceStatus)) {
-    const assessment = await deLandImageAssessment(rawAssessment);
+    const assessment = await deLandAssessment(rawAssessment);
     assessmentsByHull.get(assessment.hull)?.push(assessment);
     applyAssessment(carriers.get(assessment.hull), assessment, generatedAt);
   }
 
   for (const rawAssessment of await loadImagePointAssessments(sourceSummaries)) {
-    const assessment = await deLandImageAssessment(rawAssessment);
+    const assessment = await deLandAssessment(rawAssessment);
     assessmentsByHull.get(assessment.hull)?.push(assessment);
     applyAssessment(carriers.get(assessment.hull), assessment, generatedAt);
   }
@@ -1499,9 +1473,9 @@ export {
   effectiveConfidenceWeight,
   parseGoNavyDate,
   goNavyEntries,
-  sectionizeUsniArticle,
-  scoreLocationText,
-  bestCarrierLocation,
+  textResultToAssessments,
+  assessmentSupportsCarrier,
+  positionsNearby,
   sourceIdentity,
   addCarrierSource,
   canUsePriorSourceDuringOutage

@@ -33,7 +33,7 @@ jobs:
         run: |
           cache_changed=0
           status_changed=0
-          git diff --quiet scripts/map-image-cache.json || cache_changed=1
+          git diff --quiet scripts/map-image-cache.json scripts/text-analysis-cache.json || cache_changed=1
           if [ -n "$(git status --porcelain -- docs/data/scrape-status.json)" ]; then
             status_changed=1
           fi
@@ -45,12 +45,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [ -n "$CHANGED_HULLS" ]; then
-            git add docs/data/carriers.json docs/data/scrape-status.json scripts/map-image-cache.json
+            git add docs/data/carriers.json docs/data/scrape-status.json scripts/map-image-cache.json scripts/text-analysis-cache.json
             hulls=$(echo "$CHANGED_HULLS" | sed 's/,/, /g')
             git commit -m "Update carrier data: $hulls"
           elif [ "$cache_changed" -ne 0 ]; then
-            git add docs/data/scrape-status.json scripts/map-image-cache.json
-            git commit -m "Refresh image analysis cache"
+            git add docs/data/scrape-status.json scripts/map-image-cache.json scripts/text-analysis-cache.json
+            git commit -m "Refresh analysis caches"
           else
             git add docs/data/scrape-status.json
             git commit -m "Update scrape status"

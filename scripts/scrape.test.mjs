@@ -9,15 +9,13 @@ import {
   effectiveConfidenceWeight,
   parseGoNavyDate,
   goNavyEntries,
-  sectionizeUsniArticle,
-  scoreLocationText,
-  bestCarrierLocation,
+  textResultToAssessments,
+  assessmentSupportsCarrier,
+  positionsNearby,
   sourceIdentity,
   addCarrierSource,
   canUsePriorSourceDuringOutage
 } from "./scrape.mjs";
-
-const NIMITZ = { hull: "CVN-68", name: "USS Nimitz", aliases: ["USS Nimitz", "CVN-68", "CVN 68"] };
 
 test("articleDateFromTitle parses full and abbreviated months", () => {
   assert.equal(articleDateFromTitle("USNI News Fleet and Marine Tracker: May 26, 2026"), "2026-05-26");
@@ -35,12 +33,13 @@ test("articleDateFromTitle should handle full-word April", { todo: true }, () =>
   assert.equal(articleDateFromTitle("April 13, 2026"), "2026-04-13");
 });
 
-test("findLatestTwzUrl matches old and new slug formats, newest-first", () => {
+test("findLatestTwzUrl ranks matching slugs by embedded date, not document order", () => {
+  // The newest article is listed LAST here — slug-date ranking must still win.
   const html =
     '<a href="https://www.twz.com/category/carrier-tracker">Carrier Tracker</a>' +
-    '<a href="https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026">new</a>' +
+    '<a href="https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean">oldest</a>' +
     '<a href="https://www.twz.com/sea/where-are-the-aircraft-carriers-july-20-2026">older</a>' +
-    '<a href="https://www.twz.com/sea/where-are-the-carriers-as-of-may-26-2026-nimitz-arrives-in-the-caribbean">oldest</a>';
+    '<a href="https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026">new</a>';
   assert.equal(
     findLatestTwzUrl(html),
     "https://www.twz.com/sea/where-are-the-aircraft-carriers-july-28-2026"
@@ -161,41 +160,95 @@ test("goNavyEntries extracts dated operational rows and stops at the schedule", 
   assert.ok(!entries.some((e) => /30Jun2026/.test(e)));
 });
 
-test("sectionizeUsniArticle splits on <h2> with no <article> wrapper (wp-json path)", () => {
-  const html = "<h2>In the Red Sea</h2><p>USS Truman here.</p><h2>In Norfolk</h2><p>USS Bush.</p>";
-  const sections = sectionizeUsniArticle(html);
-  assert.deepEqual(sections, [
-    { heading: "In the Red Sea", text: "USS Truman here." },
-    { heading: "In Norfolk", text: "USS Bush." }
-  ]);
+const USNI_META = {
+  title: "USNI News Fleet and Marine Tracker: Aug. 3, 2026",
+  articleUrl: "https://news.usni.org/tracker",
+  publishedAt: "2026-08-03",
+  imageUrl: "https://news.usni.org/map.jpg"
+};
+
+const ARTICLE_TEXT =
+  "Aircraft carrier USS George Washington (CVN-73) arrived Thursday in Da Nang, Vietnam for a port visit. " +
+  "USS Nimitz (CVN-68) is operating in the Caribbean Sea.";
+
+test("textResultToAssessments builds assessments from verbatim-quoted extractions", () => {
+  const result = {
+    carriers: [
+      {
+        hull: "CVN-73", name: "USS George Washington", locationName: "Da Nang, Vietnam",
+        lat: 16.07, lon: 108.22, status: "port", precision: "port", confidence: "high",
+        evidenceQuote: "arrived Thursday in Da Nang, Vietnam for a port visit"
+      }
+    ]
+  };
+  const assessments = textResultToAssessments(result, "usni", USNI_META, ARTICLE_TEXT);
+  assert.equal(assessments.length, 1);
+  const [a] = assessments;
+  assert.equal(a.hull, "CVN-73");
+  assert.equal(a.status, "port");
+  assert.equal(a.positionPrecision, "port");
+  assert.deepEqual(a.position, { lat: 16.07, lon: 108.22 });
+  assert.equal(a.lastSeen, "2026-08-03");
+  assert.equal(a.sources[0].publisher, "USNI News");
+  assert.match(a.sources[0].note, /^Text context: /);
 });
 
-test("sectionizeUsniArticle prefers the <article> body when present", () => {
-  const html =
-    "<header><h2>Site Nav</h2></header>" +
-    "<article><h2>In the Arabian Sea</h2><p>USS Lincoln operating.</p></article>" +
-    "<footer><h2>Newsletter</h2></footer>";
-  const sections = sectionizeUsniArticle(html);
-  assert.equal(sections.length, 1);
-  assert.equal(sections[0].heading, "In the Arabian Sea");
+test("textResultToAssessments drops hallucinated quotes and honors precision none", () => {
+  const result = {
+    carriers: [
+      {
+        hull: "CVN-73", name: "USS George Washington", locationName: "Yokosuka, Japan",
+        lat: 35.28, lon: 139.67, status: "port", precision: "port", confidence: "high",
+        evidenceQuote: "pulled into Yokosuka for repairs" // not in the article
+      },
+      {
+        hull: "CVN-68", name: "USS Nimitz", locationName: "Unknown",
+        lat: 0, lon: 0, status: "unknown", precision: "none", confidence: "low",
+        evidenceQuote: "USS Nimitz (CVN-68) is operating in the Caribbean Sea."
+      }
+    ]
+  };
+  const assessments = textResultToAssessments(result, "usni", USNI_META, ARTICLE_TEXT);
+  assert.equal(assessments.length, 1); // hallucinated CVN-73 entry dropped
+  assert.equal(assessments[0].hull, "CVN-68");
+  assert.equal(assessments[0].position, null);
+  assert.equal(assessments[0].positionPrecision, "unknown");
 });
 
-test("scoreLocationText rewards action verbs and penalizes home-port language", () => {
-  const operating = scoreLocationText("USS Nimitz is operating in the Arabian Sea", NIMITZ);
-  assert.equal(operating.hint.name, "Arabian Sea");
-  assert.equal(operating.score, 10); // +5 alias, +5 operating
-
-  const home = scoreLocationText("USS Nimitz is homeported in San Diego", NIMITZ);
-  assert.equal(home.score, -3); // +5 alias, -8 homeported
-
-  assert.equal(scoreLocationText("USS Nimitz somewhere vague", NIMITZ), null); // no hint
+test("textResultToAssessments prefers per-hull lastSeen dates (GoNavy rows)", () => {
+  const doc = "CVN-68 USS Nimitz — latest entry: 24Jul2026 operating in the South China Sea";
+  const result = {
+    carriers: [
+      {
+        hull: "CVN-68", name: "USS Nimitz", locationName: "South China Sea",
+        lat: 12, lon: 114, status: "deployed", precision: "region", confidence: "medium",
+        evidenceQuote: "24Jul2026 operating in the South China Sea"
+      }
+    ]
+  };
+  const meta = { title: "Aircraft Carrier Locations", articleUrl: "http://www.gonavy.jp/CVLocation.html", publishedAt: null, lastSeenByHull: { "CVN-68": "2026-07-29" } };
+  const [a] = textResultToAssessments(result, "gonavy", meta, doc);
+  assert.equal(a.lastSeen, "2026-07-29");
 });
 
-test("bestCarrierLocation picks the highest-scoring location for the carrier", () => {
-  const best = bestCarrierLocation("USS Nimitz arrived in the Caribbean Sea.", NIMITZ, "");
-  assert.ok(best);
-  assert.equal(best.hint.name, "Caribbean Sea");
-  assert.ok(best.score >= 5);
+test("positionsNearby handles the antimeridian and rejects distant points", () => {
+  assert.equal(positionsNearby({ lat: 15, lon: 179 }, { lat: 14, lon: -179 }), true); // 2° across the dateline
+  assert.equal(positionsNearby({ lat: 16, lon: 108 }, { lat: 12, lon: 114 }), true); // Da Nang vs South China Sea
+  assert.equal(positionsNearby({ lat: 16, lon: 108 }, { lat: 18, lon: 145 }), false); // Da Nang vs Philippine Sea centroid
+  assert.equal(positionsNearby(null, { lat: 0, lon: 0 }), false);
+});
+
+test("assessmentSupportsCarrier agrees via coordinates, not shared word lists", () => {
+  const carrier = { status: "deployed", locationName: "South China Sea", position: { lat: 12, lon: 114 } };
+  const nearby = { status: "deployed", locationName: "waters off Vietnam", position: { lat: 14, lon: 111 } };
+  const farAway = { status: "deployed", locationName: "Arabian Sea", position: { lat: 18, lon: 63 } };
+  const wrongStatus = { status: "port", locationName: "South China Sea", position: { lat: 12, lon: 114 } };
+  const sameNameNoPosition = { status: "deployed", locationName: "south china sea", position: null };
+
+  assert.equal(assessmentSupportsCarrier(nearby, carrier), true);
+  assert.equal(assessmentSupportsCarrier(farAway, carrier), false);
+  assert.equal(assessmentSupportsCarrier(wrongStatus, carrier), false);
+  assert.equal(assessmentSupportsCarrier(sameNameNoPosition, carrier), true);
 });
 
 test("sourceIdentity keys on url + note", () => {
