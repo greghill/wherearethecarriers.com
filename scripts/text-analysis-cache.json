@@ -1,127 +1,6 @@
 {
   "version": 1,
   "analyses": {
-    "gpt-5.5|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-august-3-2026|2026-08-03|457c9d21": {
-      "sourceKey": "twz",
-      "model": "gpt-5.5",
-      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-3-2026",
-      "publishedAt": "2026-08-03",
-      "createdAt": "2026-08-03T23:20:29.750Z",
-      "result": {
-        "carriers": [
-          {
-            "hull": "CVN-73",
-            "name": "USS George Washington",
-            "locationName": "Da Nang, Vietnam",
-            "lat": 16.117,
-            "lon": 108.223,
-            "status": "port",
-            "precision": "port",
-            "confidence": "high",
-            "evidenceQuote": "USS George Washington dropped anchor off the coast of Da Nang, Vietnam, on July 30, beginning a five-day port call."
-          },
-          {
-            "hull": "CVN-71",
-            "name": "USS Theodore Roosevelt",
-            "locationName": "Departed Pearl Harbor",
-            "lat": 0,
-            "lon": 0,
-            "status": "deployed",
-            "precision": "none",
-            "confidence": "medium",
-            "evidenceQuote": "USS Theodore Roosevelt departed Pearl Harbor over the weekend and will head back to San Diego before deploying, likely to replace the Abraham Lincoln CSG in the Middle East, depending on how negotiations with Iran play out in the near term."
-          },
-          {
-            "hull": "CVN-72",
-            "name": "USS Abraham Lincoln",
-            "locationName": "Middle East",
-            "lat": 18,
-            "lon": 63,
-            "status": "deployed",
-            "precision": "region",
-            "confidence": "medium",
-            "evidenceQuote": "In the Middle East, U.S. forces, led by USS Abraham Lincoln and USS George H.W. Bush , \"continue to strictly enforce the U.S. blockade against Iran,\" U.S. Central Command (CENTCOM) posted on X this morning."
-          },
-          {
-            "hull": "CVN-77",
-            "name": "USS George H.W. Bush",
-            "locationName": "Middle East",
-            "lat": 18,
-            "lon": 63,
-            "status": "deployed",
-            "precision": "region",
-            "confidence": "medium",
-            "evidenceQuote": "In the Middle East, U.S. forces, led by USS Abraham Lincoln and USS George H.W. Bush , \"continue to strictly enforce the U.S. blockade against Iran,\" U.S. Central Command (CENTCOM) posted on X this morning."
-          }
-        ]
-      }
-    },
-    "gpt-5.5|usni|https://news.usni.org/2026/08/03/usni-news-fleet-and-marine-tracker-aug-3-2026|2026-08-03|a0a2aff1": {
-      "sourceKey": "usni",
-      "model": "gpt-5.5",
-      "articleUrl": "https://news.usni.org/2026/08/03/usni-news-fleet-and-marine-tracker-aug-3-2026",
-      "publishedAt": "2026-08-03",
-      "createdAt": "2026-08-03T23:20:21.188Z",
-      "result": {
-        "carriers": [
-          {
-            "hull": "CVN-73",
-            "name": "USS George Washington",
-            "locationName": "Da Nang, Vietnam",
-            "lat": 16.1206,
-            "lon": 108.2141,
-            "status": "port",
-            "precision": "port",
-            "confidence": "high",
-            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73) arrived Thursday in Da Nang, Vietnam for a port visit, according to ship spotters."
-          },
-          {
-            "hull": "CVN-71",
-            "name": "USS Theodore Roosevelt",
-            "locationName": "Hawaiian Operating Areas",
-            "lat": 22.5,
-            "lon": -158.5,
-            "status": "deployed",
-            "precision": "region",
-            "confidence": "medium",
-            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) arrived Tuesday and departed Saturday from Pearl Harbor, Hawaii, according to ship spotters."
-          },
-          {
-            "hull": "CVN-72",
-            "name": "USS Abraham Lincoln",
-            "locationName": "Arabian Sea",
-            "lat": 15,
-            "lon": 63,
-            "status": "deployed",
-            "precision": "region",
-            "confidence": "high",
-            "evidenceQuote": "The Abraham Lincoln Carrier Strike Group is operating in the Arabian Sea in support of Operation Epic Fury."
-          },
-          {
-            "hull": "CVN-77",
-            "name": "USS George H.W. Bush",
-            "locationName": "Arabian Sea",
-            "lat": 15,
-            "lon": 63,
-            "status": "deployed",
-            "precision": "region",
-            "confidence": "high",
-            "evidenceQuote": "The George H.W. Bush Carrier Strike Group is also operating in the Arabian Sea."
-          },
-          {
-            "hull": "CVN-69",
-            "name": "USS Dwight D. Eisenhower",
-            "locationName": "Norfolk, Va.",
-            "lat": 36.9466,
-            "lon": -76.3306,
-            "status": "port",
-            "precision": "port",
-            "confidence": "high",
-            "evidenceQuote": "Aircraft carrier USS Dwight D. Eisenhower (CVN-69) returned Monday to Norfolk, Va., according to ship spotters ."
-          }
-        ]
-      }
-    },
     "gpt-5.5|gonavy|http://www.gonavy.jp/CVLocation.html||0a0a498c": {
       "sourceKey": "gonavy",
       "model": "gpt-5.5",
@@ -250,6 +129,259 @@
             "precision": "port",
             "confidence": "high",
             "evidenceQuote": "CVN-78 USS Gerald R. Ford — latest entry: 07Jul-27Jul2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
+          }
+        ]
+      }
+    },
+    "gpt-5.5|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-august-3-2026|2026-08-03|457c9d21": {
+      "sourceKey": "twz",
+      "model": "gpt-5.5",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-3-2026",
+      "publishedAt": "2026-08-03",
+      "createdAt": "2026-08-03T23:20:29.750Z",
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Da Nang, Vietnam",
+            "lat": 16.117,
+            "lon": 108.223,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "USS George Washington dropped anchor off the coast of Da Nang, Vietnam, on July 30, beginning a five-day port call."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Departed Pearl Harbor",
+            "lat": 0,
+            "lon": 0,
+            "status": "deployed",
+            "precision": "none",
+            "confidence": "medium",
+            "evidenceQuote": "USS Theodore Roosevelt departed Pearl Harbor over the weekend and will head back to San Diego before deploying, likely to replace the Abraham Lincoln CSG in the Middle East, depending on how negotiations with Iran play out in the near term."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Middle East",
+            "lat": 18,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "In the Middle East, U.S. forces, led by USS Abraham Lincoln and USS George H.W. Bush , \"continue to strictly enforce the U.S. blockade against Iran,\" U.S. Central Command (CENTCOM) posted on X this morning."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Middle East",
+            "lat": 18,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "In the Middle East, U.S. forces, led by USS Abraham Lincoln and USS George H.W. Bush , \"continue to strictly enforce the U.S. blockade against Iran,\" U.S. Central Command (CENTCOM) posted on X this morning."
+          }
+        ]
+      }
+    },
+    "gpt-5.5|usni|https://news.usni.org/2026/08/03/usni-news-fleet-and-marine-tracker-aug-3-2026|2026-08-03|a0a2aff1": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "articleUrl": "https://news.usni.org/2026/08/03/usni-news-fleet-and-marine-tracker-aug-3-2026",
+      "publishedAt": "2026-08-03",
+      "createdAt": "2026-08-03T23:20:21.188Z",
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Da Nang, Vietnam",
+            "lat": 16.1206,
+            "lon": 108.2141,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73) arrived Thursday in Da Nang, Vietnam for a port visit, according to ship spotters."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Hawaiian Operating Areas",
+            "lat": 22.5,
+            "lon": -158.5,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) arrived Tuesday and departed Saturday from Pearl Harbor, Hawaii, according to ship spotters."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The Abraham Lincoln Carrier Strike Group is operating in the Arabian Sea in support of Operation Epic Fury."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The George H.W. Bush Carrier Strike Group is also operating in the Arabian Sea."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk, Va.",
+            "lat": 36.9466,
+            "lon": -76.3306,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Dwight D. Eisenhower (CVN-69) returned Monday to Norfolk, Va., according to ship spotters ."
+          }
+        ]
+      }
+    },
+    "gpt-5.5|gonavy|http://www.gonavy.jp/CVLocation.html||32157af1": {
+      "sourceKey": "gonavy",
+      "model": "gpt-5.5",
+      "articleUrl": "http://www.gonavy.jp/CVLocation.html",
+      "publishedAt": null,
+      "createdAt": "2026-08-04T12:14:52.853Z",
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Norfolk",
+            "lat": 36.9467,
+            "lon": -76.3306,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-68 USS Nimitz — latest entry: 09Jul2026, arrived at new homeport Norfolk"
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk",
+            "lat": 36.9467,
+            "lon": -76.3306,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-69 USS Dwight D. Eisenhower — latest entry: 27Jul2026, returned to Norfolk"
+          },
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "unknown",
+            "lat": 0,
+            "lon": 0,
+            "status": "unknown",
+            "precision": "none",
+            "confidence": "low",
+            "evidenceQuote": "CVN-70 USS Carl Vinson — latest entry: 03Aug2026, departed San Diego"
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Eastern Pacific Ocean",
+            "lat": 20,
+            "lon": -125,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "CVN-71 USS Theodore Roosevelt — latest entry: 02Aug-03Aug2026, Eastern Pacific Ocean"
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "North Arabian Sea",
+            "lat": 20,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "CVN-72 USS Abraham Lincoln — latest entry: 28Feb-05Aug2026, North Arabian Sea in support of Operation Epic Fury"
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Tien Sa Port in Da Nang, Vietnam",
+            "lat": 16.121,
+            "lon": 108.233,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-73 USS George Washington — latest entry: 30Jul-03Aug2026, anchored off the coast of Tien Sa Port in Da Nang, Vietnam"
+          },
+          {
+            "hull": "CVN-74",
+            "name": "USS John C. Stennis",
+            "locationName": "Newport News Shipbuilding in Newport News, Virginia",
+            "lat": 36.979,
+            "lon": -76.434,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-74 USS John C. Stennis — latest entry: 08Apr2024, moved to an outfitting berth at Newport News Shipbuilding in Newport News, Virginia"
+          },
+          {
+            "hull": "CVN-75",
+            "name": "USS Harry S. Truman",
+            "locationName": "Norfolk",
+            "lat": 36.9467,
+            "lon": -76.3306,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-75 USS Harry S. Truman — latest entry: 26Sep2025, returned to Norfolk"
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "Puget Sound Naval Shipyard and Intermediate Maintenance Facility",
+            "lat": 47.5615,
+            "lon": -122.645,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-76 USS Ronald Reagan — latest entry: 17Mar2025, entered the Dry Dock in Puget Sound Naval Shipyard and Intermediate Maintenance Facility (PSNS&IMF)"
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "North Arabian Sea",
+            "lat": 20,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "CVN-77 USS George H.W. Bush — latest entry: 27Apr-03Aug2026, North Arabian Sea in support of Operation Epic Fury"
+          },
+          {
+            "hull": "CVN-78",
+            "name": "USS Gerald R. Ford",
+            "locationName": "Norfolk Naval Shipyard in Portsmouth, Virginia",
+            "lat": 36.817,
+            "lon": -76.295,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-78 USS Gerald R. Ford — latest entry: 07Jul-03Aug2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
           }
         ]
       }
