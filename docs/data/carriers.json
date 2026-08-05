@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-04T12:14:49.236Z",
-  "lastChangedAt": "2026-08-04T12:14:49.236Z",
+  "generatedAt": "2026-08-05T03:27:42.875Z",
+  "lastChangedAt": "2026-08-05T03:27:42.875Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -144,8 +144,8 @@
         "lon": -125
       },
       "positionPrecision": "region",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "high",
+      "evidence": "corroborated",
       "lastSeen": "2026-08-05",
       "summary": "Aircraft Carrier Locations places USS Theodore Roosevelt in or near Eastern Pacific Ocean.",
       "sources": [
@@ -214,7 +214,7 @@
           "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607129%20display.png"
         }
       ],
-      "lastChangedAt": "2026-08-04T12:14:49.236Z"
+      "lastChangedAt": "2026-08-05T03:27:42.875Z"
     },
     {
       "hull": "CVN-72",
@@ -258,6 +258,16 @@
         {
           "role": "backup",
           "usedFor": [],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: July 30, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-30-2026",
+          "publishedAt": "2026-07-30",
+          "note": "Image estimate: Orange/red carrier dot beside the orange label “CVN 72” in the northern Arabian Sea/Gulf of Oman area, north of the separate CVN 77 dot and west of the blue LHD 4 marker.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607129%20display.png"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers: August 3, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-3-2026",
@@ -284,16 +294,6 @@
           "publishedAt": "2026-08-03",
           "note": "Image estimate: A green deployed label in the northwestern Indian Ocean/Arabian Sea reads “USS ABRAHAM LINCOLN (CVN 72).”",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-August-3-2026-Full-Res.png?w=2048&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: July 30, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-30-2026",
-          "publishedAt": "2026-07-30",
-          "note": "Image estimate: Orange/red carrier dot beside the orange label “CVN 72” in the northern Arabian Sea/Gulf of Oman area, north of the separate CVN 77 dot and west of the blue LHD 4 marker.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607129%20display.png"
         }
       ],
       "lastChangedAt": "2026-08-04T12:14:49.236Z"
@@ -360,22 +360,22 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers: August 3, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-3-2026",
-          "publishedAt": "2026-08-03",
-          "note": "Image estimate: A green deployed label in the western Pacific reads “USS GEORGE WASHINGTON (CVN 73).”",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-August-3-2026-Full-Res.png?w=2048&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: July 30, 2026",
           "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-30-2026",
           "publishedAt": "2026-07-30",
           "note": "Image estimate: Orange/red current-week carrier dot adjacent to the orange label “CVN 73” in the South China Sea, with older orange trail dots extending eastward toward Guam.",
           "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607129%20display.png"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers: August 3, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-3-2026",
+          "publishedAt": "2026-08-03",
+          "note": "Image estimate: A green deployed label in the western Pacific reads “USS GEORGE WASHINGTON (CVN 73).”",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-August-3-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
       "lastChangedAt": "2026-08-04T12:14:49.236Z"
@@ -548,6 +548,16 @@
         {
           "role": "backup",
           "usedFor": [],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: July 30, 2026",
+          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-30-2026",
+          "publishedAt": "2026-07-30",
+          "note": "Image estimate: Lower orange/red carrier dot adjacent to the orange label “CVN 77” in the Arabian Sea cluster, distinct from the upper CVN 72 dot and from the blue LHD 4 marker.",
+          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607129%20display.png"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers: August 3, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-3-2026",
@@ -574,16 +584,6 @@
           "publishedAt": "2026-08-03",
           "note": "Image estimate: A green deployed label below Abraham Lincoln in the Arabian Sea reads “USS GEORGE H.W. BUSH (CVN 77).”",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-August-3-2026-Full-Res.png?w=2048&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: July 30, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-july-30-2026",
-          "publishedAt": "2026-07-30",
-          "note": "Image estimate: Lower orange/red carrier dot adjacent to the orange label “CVN 77” in the Arabian Sea cluster, distinct from the upper CVN 72 dot and from the blue LHD 4 marker.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%20202607129%20display.png"
         }
       ],
       "lastChangedAt": "2026-08-04T12:14:49.236Z"
