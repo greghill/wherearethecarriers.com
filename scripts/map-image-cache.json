@@ -2506,6 +2506,54 @@
           }
         ]
       }
+    },
+    "gpt-5.5|https://news.usni.org/2026/08/10/usni-news-fleet-and-marine-tracker-aug-10-2026|https://news.usni.org/wp-content/uploads/2026/08/FT_8_10_26.jpg|2026-08-10": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_10_26.jpg",
+      "articleUrl": "https://news.usni.org/2026/08/10/usni-news-fleet-and-marine-tracker-aug-10-2026",
+      "publishedAt": "2026-08-10",
+      "createdAt": "2026-08-10T18:01:24.501Z",
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/08/10/usni-news-fleet-and-marine-tracker-aug-10-2026",
+        "publishedAt": "2026-08-10",
+        "carriers": [
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea",
+            "lat": 18.5,
+            "lon": 65.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label reads “Abraham Lincoln CSG” in a stacked label over the Arabian Sea, with the adjacent yellow diamond marker just east-southeast of the text.",
+            "rationale": "The marker is offshore in the Arabian Sea, west of India and south of Pakistan/Oman. It appears to be the shared nearby marker for the stacked Abraham Lincoln / George H.W. Bush labels."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 18.5,
+            "lon": 65.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Map label reads “George H.W. Bush CSG” in the same Arabian Sea stacked label, with the nearest yellow diamond marker immediately adjacent below/right of the label block.",
+            "rationale": "The label is paired with the same visible Arabian Sea marker as Abraham Lincoln; no separate marker is shown, so the same approximate open-water position is returned."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "South China Sea",
+            "lat": 14.5,
+            "lon": 116,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "Map label reads “George Washington CSG” with a yellow diamond marker directly beneath/near the text in the South China Sea west of the Philippines.",
+            "rationale": "The marker is over open water between Vietnam and the Philippines, consistent with the South China Sea and very close to the label location."
+          }
+        ]
+      }
     }
   }
 }
