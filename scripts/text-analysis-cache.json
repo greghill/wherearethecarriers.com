@@ -1,6 +1,72 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.5|usni|https://news.usni.org/2026/08/10/usni-news-fleet-and-marine-tracker-aug-10-2026|2026-08-10|e915047d": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "articleUrl": "https://news.usni.org/2026/08/10/usni-news-fleet-and-marine-tracker-aug-10-2026",
+      "publishedAt": "2026-08-10",
+      "createdAt": "2026-08-10T18:00:58.937Z",
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "South China Sea",
+            "lat": 12,
+            "lon": 114,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73) is in the South China Sea."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 65,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The Abraham Lincoln Carrier Strike Group is operating in the Arabian Sea in support of Operation Epic Fury."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 65,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The George H.W. Bush Carrier Strike Group is also operating in the Arabian Sea."
+          },
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "San Diego, Calif.",
+            "lat": 32.7157,
+            "lon": -117.1611,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Carl Vinson (CVN-70) departed Monday and returned Thursday to San Diego, Calif., according to ship spotters."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "San Diego",
+            "lat": 32.7157,
+            "lon": -117.1611,
+            "status": "port",
+            "precision": "port",
+            "confidence": "medium",
+            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) arrived Thursday in San Diego and was underway for the day on Saturday for a friends and family cruise."
+          }
+        ]
+      }
+    },
     "gpt-5.5|gonavy|http://www.gonavy.jp/CVLocation.html||32157af1": {
       "sourceKey": "gonavy",
       "model": "gpt-5.5",
@@ -386,19 +452,19 @@
         ]
       }
     },
-    "gpt-5.5|usni|https://news.usni.org/2026/08/10/usni-news-fleet-and-marine-tracker-aug-10-2026|2026-08-10|e915047d": {
+    "gpt-5.5|usni|https://news.usni.org/2026/08/10/usni-news-fleet-and-marine-tracker-aug-10-2026|2026-08-10|55560cba": {
       "sourceKey": "usni",
       "model": "gpt-5.5",
       "articleUrl": "https://news.usni.org/2026/08/10/usni-news-fleet-and-marine-tracker-aug-10-2026",
       "publishedAt": "2026-08-10",
-      "createdAt": "2026-08-10T18:00:58.937Z",
+      "createdAt": "2026-08-10T19:11:36.967Z",
       "result": {
         "carriers": [
           {
             "hull": "CVN-73",
             "name": "USS George Washington",
             "locationName": "South China Sea",
-            "lat": 12,
+            "lat": 13.5,
             "lon": 114,
             "status": "deployed",
             "precision": "region",
@@ -410,7 +476,7 @@
             "name": "USS Abraham Lincoln",
             "locationName": "Arabian Sea",
             "lat": 15,
-            "lon": 65,
+            "lon": 63,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
@@ -421,7 +487,7 @@
             "name": "USS George H.W. Bush",
             "locationName": "Arabian Sea",
             "lat": 15,
-            "lon": 65,
+            "lon": 63,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
@@ -431,8 +497,8 @@
             "hull": "CVN-70",
             "name": "USS Carl Vinson",
             "locationName": "San Diego, Calif.",
-            "lat": 32.7157,
-            "lon": -117.1611,
+            "lat": 32.6849,
+            "lon": -117.173,
             "status": "port",
             "precision": "port",
             "confidence": "high",
@@ -442,8 +508,8 @@
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
             "locationName": "San Diego",
-            "lat": 32.7157,
-            "lon": -117.1611,
+            "lat": 32.6849,
+            "lon": -117.173,
             "status": "port",
             "precision": "port",
             "confidence": "medium",

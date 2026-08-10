@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-10T18:00:57.907Z",
-  "lastChangedAt": "2026-08-10T18:00:57.907Z",
+  "generatedAt": "2026-08-10T19:11:35.981Z",
+  "lastChangedAt": "2026-08-10T19:11:35.981Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -92,8 +92,8 @@
       "status": "port",
       "locationName": "San Diego, Calif.",
       "position": {
-        "lat": 32.7157,
-        "lon": -117.1611
+        "lat": 32.6849,
+        "lon": -117.173
       },
       "positionPrecision": "port",
       "confidence": "medium",
@@ -136,7 +136,7 @@
           "note": "Text context: CVN-70 USS Carl Vinson — latest entry: 03Aug2026, departed San Diego"
         }
       ],
-      "lastChangedAt": "2026-08-10T18:00:57.907Z"
+      "lastChangedAt": "2026-08-10T19:11:35.981Z"
     },
     {
       "hull": "CVN-71",
