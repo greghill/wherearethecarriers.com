@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-10T19:11:35.981Z",
-  "lastChangedAt": "2026-08-10T19:11:35.981Z",
+  "generatedAt": "2026-08-11T02:23:09.982Z",
+  "lastChangedAt": "2026-08-11T02:23:09.982Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -305,8 +305,8 @@
         "lon": 116
       },
       "positionPrecision": "image_estimate",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-08-10",
       "summary": "USNI News Fleet and Marine Tracker: Aug. 10, 2026 places USS George Washington in or near South China Sea.",
       "sources": [
@@ -366,7 +366,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-August-3-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-08-10T18:00:57.907Z"
+      "lastChangedAt": "2026-08-11T02:23:09.982Z"
     },
     {
       "hull": "CVN-74",
