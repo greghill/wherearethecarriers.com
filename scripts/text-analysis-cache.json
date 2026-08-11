@@ -1,6 +1,72 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.5|usni|https://news.usni.org/2026/08/10/usni-news-fleet-and-marine-tracker-aug-10-2026|2026-08-10|55560cba": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "articleUrl": "https://news.usni.org/2026/08/10/usni-news-fleet-and-marine-tracker-aug-10-2026",
+      "publishedAt": "2026-08-10",
+      "createdAt": "2026-08-10T19:11:36.967Z",
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "South China Sea",
+            "lat": 13.5,
+            "lon": 114,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73) is in the South China Sea."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The Abraham Lincoln Carrier Strike Group is operating in the Arabian Sea in support of Operation Epic Fury."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The George H.W. Bush Carrier Strike Group is also operating in the Arabian Sea."
+          },
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "San Diego, Calif.",
+            "lat": 32.6849,
+            "lon": -117.173,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Carl Vinson (CVN-70) departed Monday and returned Thursday to San Diego, Calif., according to ship spotters."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "San Diego",
+            "lat": 32.6849,
+            "lon": -117.173,
+            "status": "port",
+            "precision": "port",
+            "confidence": "medium",
+            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) arrived Thursday in San Diego and was underway for the day on Saturday for a friends and family cruise."
+          }
+        ]
+      }
+    },
     "gpt-5.5|usni|https://news.usni.org/2026/08/10/usni-news-fleet-and-marine-tracker-aug-10-2026|2026-08-10|e915047d": {
       "sourceKey": "usni",
       "model": "gpt-5.5",
@@ -452,68 +518,134 @@
         ]
       }
     },
-    "gpt-5.5|usni|https://news.usni.org/2026/08/10/usni-news-fleet-and-marine-tracker-aug-10-2026|2026-08-10|55560cba": {
-      "sourceKey": "usni",
+    "gpt-5.5|gonavy|http://www.gonavy.jp/CVLocation.html||78ff3225": {
+      "sourceKey": "gonavy",
       "model": "gpt-5.5",
-      "articleUrl": "https://news.usni.org/2026/08/10/usni-news-fleet-and-marine-tracker-aug-10-2026",
-      "publishedAt": "2026-08-10",
-      "createdAt": "2026-08-10T19:11:36.967Z",
+      "articleUrl": "http://www.gonavy.jp/CVLocation.html",
+      "publishedAt": null,
+      "createdAt": "2026-08-11T11:01:35.000Z",
       "result": {
         "carriers": [
           {
-            "hull": "CVN-73",
-            "name": "USS George Washington",
-            "locationName": "South China Sea",
-            "lat": 13.5,
-            "lon": 114,
-            "status": "deployed",
-            "precision": "region",
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Norfolk",
+            "lat": 36.946,
+            "lon": -76.329,
+            "status": "port",
+            "precision": "port",
             "confidence": "high",
-            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73) is in the South China Sea."
+            "evidenceQuote": "CVN-68 USS Nimitz — latest entry: 09Jul2026, arrived at new homeport Norfolk"
           },
           {
-            "hull": "CVN-72",
-            "name": "USS Abraham Lincoln",
-            "locationName": "Arabian Sea",
-            "lat": 15,
-            "lon": 63,
-            "status": "deployed",
-            "precision": "region",
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk",
+            "lat": 36.946,
+            "lon": -76.329,
+            "status": "port",
+            "precision": "port",
             "confidence": "high",
-            "evidenceQuote": "The Abraham Lincoln Carrier Strike Group is operating in the Arabian Sea in support of Operation Epic Fury."
-          },
-          {
-            "hull": "CVN-77",
-            "name": "USS George H.W. Bush",
-            "locationName": "Arabian Sea",
-            "lat": 15,
-            "lon": 63,
-            "status": "deployed",
-            "precision": "region",
-            "confidence": "high",
-            "evidenceQuote": "The George H.W. Bush Carrier Strike Group is also operating in the Arabian Sea."
+            "evidenceQuote": "CVN-69 USS Dwight D. Eisenhower — latest entry: 27Jul2026, returned to Norfolk"
           },
           {
             "hull": "CVN-70",
             "name": "USS Carl Vinson",
-            "locationName": "San Diego, Calif.",
-            "lat": 32.6849,
-            "lon": -117.173,
-            "status": "port",
-            "precision": "port",
-            "confidence": "high",
-            "evidenceQuote": "Aircraft carrier USS Carl Vinson (CVN-70) departed Monday and returned Thursday to San Diego, Calif., according to ship spotters."
+            "locationName": "San Diego",
+            "lat": 32.713,
+            "lon": -117.174,
+            "status": "unknown",
+            "precision": "none",
+            "confidence": "low",
+            "evidenceQuote": "CVN-70 USS Carl Vinson — latest entry: 10Aug2026, departed San Diego"
           },
           {
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
-            "locationName": "San Diego",
-            "lat": 32.6849,
-            "lon": -117.173,
+            "locationName": "San Diego area",
+            "lat": 32.65,
+            "lon": -117.25,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "CVN-71 USS Theodore Roosevelt — latest entry: 08Aug2026, one-day friends and family cruise"
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "North Arabian Sea",
+            "lat": 24,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "CVN-72 USS Abraham Lincoln — latest entry: 28Feb-10Aug2026, North Arabian Sea in support of Operation Epic Fury"
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "South China Sea",
+            "lat": 14,
+            "lon": 114,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "CVN-73 USS George Washington — latest entry: 06Aug-10Aug2026, South China Sea"
+          },
+          {
+            "hull": "CVN-74",
+            "name": "USS John C. Stennis",
+            "locationName": "Newport News, Virginia",
+            "lat": 36.979,
+            "lon": -76.429,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-74 USS John C. Stennis — latest entry: 08Apr2024, moved to an outfitting berth at Newport News Shipbuilding in Newport News, Virginia"
+          },
+          {
+            "hull": "CVN-75",
+            "name": "USS Harry S. Truman",
+            "locationName": "Norfolk",
+            "lat": 36.946,
+            "lon": -76.329,
             "status": "port",
             "precision": "port",
-            "confidence": "medium",
-            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) arrived Thursday in San Diego and was underway for the day on Saturday for a friends and family cruise."
+            "confidence": "high",
+            "evidenceQuote": "CVN-75 USS Harry S. Truman — latest entry: 26Sep2025, returned to Norfolk"
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "Puget Sound Naval Shipyard and Intermediate Maintenance Facility",
+            "lat": 47.556,
+            "lon": -122.635,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-76 USS Ronald Reagan — latest entry: 17Mar2025, entered the Dry Dock in Puget Sound Naval Shipyard and Intermediate Maintenance Facility (PSNS&IMF)"
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "North Arabian Sea",
+            "lat": 24,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "CVN-77 USS George H.W. Bush — latest entry: 27Apr-10Aug2026, North Arabian Sea in support of Operation Epic Fury"
+          },
+          {
+            "hull": "CVN-78",
+            "name": "USS Gerald R. Ford",
+            "locationName": "Norfolk Naval Shipyard, Portsmouth, Virginia",
+            "lat": 36.82,
+            "lon": -76.297,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-78 USS Gerald R. Ford — latest entry: 07Jul-10Aug2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
           }
         ]
       }
