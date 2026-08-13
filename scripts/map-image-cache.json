@@ -2561,7 +2561,7 @@
       "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-10-2026.png?quality=85&w=1536",
       "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026",
       "publishedAt": "2026-08-11",
-      "createdAt": "2026-08-13T20:58:27.176Z",
+      "createdAt": "2026-08-13T21:57:46.404Z",
       "result": {
         "sourceKey": "twz",
         "imageUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026",
@@ -2570,35 +2570,35 @@
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
-            "locationName": "northern Arabian Sea",
-            "lat": 20,
-            "lon": 64,
+            "locationName": "Arabian Sea / Gulf of Oman area",
+            "lat": 20.8,
+            "lon": 62.7,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The map shows the green carrier silhouette and label “USS ABRAHAM LINCOLN (CVN 72)” in the northern Arabian Sea area, west of India/Pakistan and southeast of Oman.",
-            "rationale": "Estimated from the carrier label/marker position, with the returned point placed in open water close to the visual label rather than on adjacent land or at a broad regional centroid."
+            "evidenceText": "Green carrier silhouette and label “USS ABRAHAM LINCOLN (CVN 72)” are plotted in the northern Arabian Sea, west of India and southeast of the Arabian Peninsula.",
+            "rationale": "Estimated from the visual placement of the CVN-72 label/ship marker, using the adjacent Arabian Sea coastline and keeping the point offshore over open water rather than on the Arabian Peninsula, Iran, Pakistan, or India."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
-            "locationName": "central Arabian Sea",
-            "lat": 14.5,
-            "lon": 63,
+            "locationName": "Arabian Sea",
+            "lat": 15.8,
+            "lon": 61.5,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The map shows the green carrier silhouette and label “USS GEORGE H.W. BUSH (CVN 77)” below Abraham Lincoln in the Arabian Sea, west-southwest of India.",
-            "rationale": "Estimated from the separate lower carrier marker/label and kept distinct from CVN-72; coordinate is adjusted to nearby open Arabian Sea water consistent with the visual placement."
+            "evidenceText": "Green carrier silhouette and label “USS GEORGE H.W. BUSH (CVN 77)” appear below the Abraham Lincoln marker in the central/northern Arabian Sea.",
+            "rationale": "Estimated from the separate CVN-77 marker directly beneath CVN-72 on the map; point is placed over open Arabian Sea and preserves the north-south separation shown between the two carrier markers."
           },
           {
             "hull": "CVN-73",
             "name": "USS George Washington",
-            "locationName": "South China Sea",
-            "lat": 13,
-            "lon": 113,
+            "locationName": "South China Sea / western Pacific near the Philippines",
+            "lat": 12.2,
+            "lon": 122.7,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The map shows the green carrier silhouette and label “USS GEORGE WASHINGTON (CVN 73)” in the South China Sea region, west of the Philippines and east of Vietnam.",
-            "rationale": "Estimated from the carrier silhouette/label position and placed over open water in the central South China Sea, close to the visual map marker."
+            "evidenceText": "Green carrier silhouette and label “USS GEORGE WASHINGTON (CVN 73)” are shown east of Vietnam and around the Philippines/South China Sea region.",
+            "rationale": "Estimated from the visual center/label anchor of the CVN-73 carrier marker near the Philippine archipelago; coordinate is adjusted to nearby open water consistent with the plotted marker rather than onto land."
           }
         ]
       }
