@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-11T15:13:09.923Z",
-  "lastChangedAt": "2026-08-11T15:13:09.923Z",
+  "generatedAt": "2026-08-13T02:41:58.384Z",
+  "lastChangedAt": "2026-08-13T02:41:58.384Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -44,8 +44,8 @@
         "lon": -76.329
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-08-05",
       "summary": "Aircraft Carrier Locations places USS Dwight D. Eisenhower in Norfolk.",
       "sources": [
@@ -64,7 +64,7 @@
           "note": "Text context: CVN-69 USS Dwight D. Eisenhower — latest entry: 27Jul2026, returned to Norfolk"
         }
       ],
-      "lastChangedAt": "2026-08-11T11:01:31.385Z"
+      "lastChangedAt": "2026-08-13T02:41:58.384Z"
     },
     {
       "hull": "CVN-70",
@@ -190,18 +190,6 @@
           "note": "Text context: CVN-72 USS Abraham Lincoln — latest entry: 28Feb-10Aug2026, North Arabian Sea in support of Operation Epic Fury"
         },
         {
-          "role": "primary",
-          "usedFor": [
-            "coordinate_refinement"
-          ],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: Aug. 6, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-aug-6-2026",
-          "publishedAt": "2026-08-06",
-          "note": "Image estimate: Orange label 'CVN 72' is in the Arabian Sea region; its adjacent orange/red dot is the northern of the two nearby CVN dots east of Oman.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260805%20display.png"
-        },
-        {
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
@@ -228,7 +216,7 @@
           "title": "Where Are The Aircraft Carriers: August 11, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026",
           "publishedAt": "2026-08-11",
-          "note": "Image estimate: Green carrier silhouette and label \"USS ABRAHAM LINCOLN (CVN 72)\" are shown over the northern Arabian Sea, above the USS George H.W. Bush label.",
+          "note": "Image estimate: Green carrier silhouette and label “USS ABRAHAM LINCOLN (CVN 72)*” are shown over the northern Arabian Sea, east of Oman and west of Pakistan/India.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-10-2026.png?quality=85&w=1536"
         },
         {
@@ -310,7 +298,7 @@
           "title": "Where Are The Aircraft Carriers: August 11, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026",
           "publishedAt": "2026-08-11",
-          "note": "Image estimate: Green carrier silhouette and label \"USS GEORGE WASHINGTON (CVN 73)\" are shown over the South China Sea, west of the Philippines and southeast of mainland China.",
+          "note": "Image estimate: Green carrier silhouette and label “USS GEORGE WASHINGTON (CVN 73)” are shown over the South China Sea west of the Philippines and east of Vietnam/Malay Peninsula.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-10-2026.png?quality=85&w=1536"
         }
       ],
@@ -442,18 +430,6 @@
           "note": "Text context: CVN-77 USS George H.W. Bush — latest entry: 27Apr-10Aug2026, North Arabian Sea in support of Operation Epic Fury"
         },
         {
-          "role": "primary",
-          "usedFor": [
-            "coordinate_refinement"
-          ],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: Aug. 6, 2026",
-          "url": "https://worldview.stratfor.com/article/us-naval-update-map-aug-6-2026",
-          "publishedAt": "2026-08-06",
-          "note": "Image estimate: Orange label 'CVN 77' is just below CVN 72 in the Arabian Sea; the adjacent orange/red dot is the southern/western orange dot near, but distinct from, the blue LHD 4 marker.",
-          "imageUrl": "https://www.stratfor.com/sites/default/files/naval%20update%20map%2020260805%20display.png"
-        },
-        {
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
@@ -480,7 +456,7 @@
           "title": "Where Are The Aircraft Carriers: August 11, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026",
           "publishedAt": "2026-08-11",
-          "note": "Image estimate: Green carrier silhouette and label \"USS GEORGE H.W. BUSH (CVN 77)\" are shown below Abraham Lincoln in the Arabian Sea.",
+          "note": "Image estimate: Green carrier silhouette and label “USS GEORGE H.W. BUSH (CVN 77)*” appear below the Abraham Lincoln marker in the Arabian Sea.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-10-2026.png?quality=85&w=1536"
         },
         {
