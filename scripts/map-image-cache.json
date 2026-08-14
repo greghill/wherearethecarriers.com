@@ -2561,7 +2561,7 @@
       "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-10-2026.png?quality=85&w=1536",
       "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026",
       "publishedAt": "2026-08-11",
-      "createdAt": "2026-08-14T20:41:15.809Z",
+      "createdAt": "2026-08-14T21:36:28.271Z",
       "result": {
         "sourceKey": "twz",
         "imageUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026",
@@ -2570,35 +2570,35 @@
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
-            "locationName": "Arabian Sea",
-            "lat": 20.8,
-            "lon": 62.4,
+            "locationName": "North Arabian Sea / Gulf of Oman approaches",
+            "lat": 22.1,
+            "lon": 62.9,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The map visibly labels “USS ABRAHAM LINCOLN (CVN 72)” on the upper green carrier icon in the northern Arabian Sea, above the USS George H.W. Bush label.",
-            "rationale": "Estimated from the upper CVN label/icon position over open water southeast of Oman and west-southwest of Pakistan/India. The coordinate is placed in the northern Arabian Sea and kept separate from the lower Bush marker."
+            "evidenceText": "The green carrier icon and label 'USS ABRAHAM LINCOLN (CVN 72)' are shown above the George H.W. Bush label in the northern Arabian Sea area, west of India and south/southeast of Iran/Pakistan.",
+            "rationale": "I anchored the estimate to the carrier label/icon position rather than the surrounding region. The selected point is in open water in the northern Arabian Sea/Gulf of Oman approaches and preserves its separation from CVN-77, which is shown farther south."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
             "locationName": "Arabian Sea",
-            "lat": 15.2,
-            "lon": 62.1,
+            "lat": 17.5,
+            "lon": 62.5,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The map visibly labels “USS GEORGE H.W. BUSH (CVN 77)” on a second green carrier icon below the Abraham Lincoln icon in the Arabian Sea.",
-            "rationale": "Estimated from the lower CVN label/icon position over open water in the central Arabian Sea. The coordinate preserves the visible north-south separation from Abraham Lincoln."
+            "evidenceText": "The green carrier icon and label 'USS GEORGE H.W. BUSH (CVN 77)' are shown below CVN-72 in the Arabian Sea, west of India and east/southeast of Oman.",
+            "rationale": "The coordinate is placed on open water adjacent to the visual label/icon and kept several degrees south of CVN-72 as depicted on the map."
           },
           {
             "hull": "CVN-73",
             "name": "USS George Washington",
             "locationName": "South China Sea",
-            "lat": 12.5,
-            "lon": 114.2,
+            "lat": 14.6,
+            "lon": 116.2,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The map visibly labels “USS GEORGE WASHINGTON (CVN 73)” on a green carrier icon west of the Philippines and south of China, near the South China Sea.",
-            "rationale": "Estimated from the CVN label/icon location over open water in the South China Sea, west of the Philippines. The returned point is anchored to the visible George Washington label/icon rather than to the nearby Yokosuka/Sasebo port symbols."
+            "evidenceText": "The green carrier icon and label 'USS GEORGE WASHINGTON (CVN 73)' are shown in the South China Sea area, west of the Philippines and east of Vietnam.",
+            "rationale": "The estimate is anchored near the carrier label/icon and placed over open water in the South China Sea, consistent with the visual placement between Southeast Asia and the Philippines."
           }
         ]
       }
