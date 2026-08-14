@@ -2561,44 +2561,44 @@
       "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-10-2026.png?quality=85&w=1536",
       "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026",
       "publishedAt": "2026-08-11",
-      "createdAt": "2026-08-13T23:53:45.054Z",
+      "createdAt": "2026-08-14T02:40:34.479Z",
       "result": {
         "sourceKey": "twz",
-        "imageUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026",
+        "imageUrl": "",
         "publishedAt": "2026-08-11",
         "carriers": [
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
-            "locationName": "Gulf of Oman / northern Arabian Sea",
-            "lat": 23.4,
-            "lon": 60.2,
+            "locationName": "northern Arabian Sea",
+            "lat": 21,
+            "lon": 64.5,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The green carrier silhouette and label 'USS ABRAHAM LINCOLN (CVN 72)*' are plotted just south of Iran/Pakistan and east of Oman, in the northern Arabian Sea/Gulf of Oman area.",
-            "rationale": "Estimated from the visual position of the carrier graphic adjacent to its label; the returned point is placed in nearby open water and kept separate from the lower CVN-77 marker."
+            "evidenceText": "Visible green carrier label reads “USS ABRAHAM LINCOLN (CVN 72)*” in the Arabian Sea area, above the nearby CVN-77 label.",
+            "rationale": "Estimated from the visual position of the CVN-72 label/green carrier marker west of India and south of the Iran/Pakistan coast; coordinate placed on open water in the northern Arabian Sea."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
-            "locationName": "Arabian Sea",
-            "lat": 17.6,
-            "lon": 60,
+            "locationName": "central Arabian Sea",
+            "lat": 14,
+            "lon": 64,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The green carrier silhouette and label 'USS GEORGE H.W. BUSH (CVN 77)*' appear below the CVN-72 label, over the Arabian Sea west of India.",
-            "rationale": "Estimated at the carrier graphic/label position in open Arabian Sea water, preserving the north-south separation from USS Abraham Lincoln shown on the map."
+            "evidenceText": "Visible green carrier label reads “USS GEORGE H.W. BUSH (CVN 77)*” below the CVN-72 label in the Arabian Sea area.",
+            "rationale": "Estimated from the separate lower green carrier marker/label in the Arabian Sea; coordinate preserves the visual separation from CVN-72 and is placed on open water."
           },
           {
             "hull": "CVN-73",
             "name": "USS George Washington",
             "locationName": "South China Sea",
-            "lat": 13,
-            "lon": 116.5,
+            "lat": 12.5,
+            "lon": 115,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The green carrier silhouette and label 'USS GEORGE WASHINGTON (CVN 73)‡' are shown over the South China Sea, west of the Philippines and southeast of mainland China.",
-            "rationale": "Estimated from the visual center of the carrier graphic adjacent to the label; the coordinate is placed over open water in the South China Sea, not on surrounding landmasses."
+            "evidenceText": "Visible green carrier label reads “USS GEORGE WASHINGTON (CVN 73)” over the South China Sea/Philippines region.",
+            "rationale": "Estimated from the green carrier marker and adjacent label west of the Philippines and north of Borneo; coordinate placed on open water in the South China Sea."
           }
         ]
       }
