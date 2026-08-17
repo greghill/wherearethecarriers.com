@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-17T10:45:41.687Z",
-  "lastRunAt": "2026-08-17T10:45:41.687Z",
+  "generatedAt": "2026-08-17T11:35:41.951Z",
+  "lastRunAt": "2026-08-17T11:35:41.951Z",
   "sourceOutageGraceDays": 3,
   "sourceStatus": {
     "usni": {
       "status": "ok",
-      "lastFetchedAt": "2026-08-17T10:45:42.583Z",
-      "lastSuccessAt": "2026-08-17T10:45:42.583Z",
+      "lastFetchedAt": "2026-08-17T11:35:42.819Z",
+      "lastSuccessAt": "2026-08-17T11:35:42.819Z",
       "firstErrorAt": null,
       "lastErrorAt": "2026-05-30T14:46:20.138Z",
       "consecutiveFailures": 0,
@@ -14,26 +14,26 @@
     },
     "stratfor": {
       "status": "error",
-      "lastFetchedAt": "2026-08-17T10:45:43.277Z",
+      "lastFetchedAt": "2026-08-17T11:35:43.398Z",
       "lastSuccessAt": "2026-08-08T02:17:47.200Z",
       "firstErrorAt": "2026-08-08T04:18:15.487Z",
-      "lastErrorAt": "2026-08-17T10:45:43.277Z",
-      "consecutiveFailures": 164,
+      "lastErrorAt": "2026-08-17T11:35:43.398Z",
+      "consecutiveFailures": 165,
       "message": "https://worldview.stratfor.com/topic/tracking-us-naval-power returned no naval update map link"
     },
     "twz": {
-      "status": "ok",
-      "lastFetchedAt": "2026-08-17T10:45:43.512Z",
+      "status": "error",
+      "lastFetchedAt": "2026-08-17T11:35:43.553Z",
       "lastSuccessAt": "2026-08-17T10:45:43.512Z",
-      "firstErrorAt": null,
-      "lastErrorAt": null,
-      "consecutiveFailures": 0,
-      "message": null
+      "firstErrorAt": "2026-08-17T11:35:43.553Z",
+      "lastErrorAt": "2026-08-17T11:35:43.553Z",
+      "consecutiveFailures": 1,
+      "message": "https://www.twz.com/category/carrier-tracker returned 403"
     },
     "gonavy": {
       "status": "ok",
-      "lastFetchedAt": "2026-08-17T10:45:44.086Z",
-      "lastSuccessAt": "2026-08-17T10:45:44.086Z",
+      "lastFetchedAt": "2026-08-17T11:35:44.172Z",
+      "lastSuccessAt": "2026-08-17T11:35:44.172Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
@@ -41,8 +41,8 @@
     },
     "openaiImages": {
       "status": "ok",
-      "lastFetchedAt": "2026-08-17T10:46:12.900Z",
-      "lastSuccessAt": "2026-08-17T10:46:12.900Z",
+      "lastFetchedAt": "2026-08-17T11:35:44.176Z",
+      "lastSuccessAt": "2026-08-17T11:35:44.176Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
