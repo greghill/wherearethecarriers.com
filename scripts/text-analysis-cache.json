@@ -1,6 +1,50 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.5|usni|https://news.usni.org/2026/08/17/usni-news-fleet-and-marine-tracker-aug-17-2026|2026-08-17|75edc0e0": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "articleUrl": "https://news.usni.org/2026/08/17/usni-news-fleet-and-marine-tracker-aug-17-2026",
+      "publishedAt": "2026-08-17",
+      "createdAt": "2026-08-17T17:38:32.963Z",
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea",
+            "lat": 18,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The Abraham Lincoln Carrier Strike Group is operating in the Arabian Sea in support of Operation Epic Fury."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Singapore Strait",
+            "lat": 1.2,
+            "lon": 103.7,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and escorts USS Robert Smalls (CG-62) and USS Shoup (DDG-86), was spotted transiting westbound in the Singapore Strait on Thursday, according to ship spotters ."
+          },
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "San Diego, Calif.",
+            "lat": 32.713,
+            "lon": -117.176,
+            "status": "unknown",
+            "precision": "none",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Carl Vinson (CVN-70) departed Monday from San Diego, Calif., according to ship spotters."
+          }
+        ]
+      }
+    },
     "gpt-5.5|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026|2026-08-11|d7597eca": {
       "sourceKey": "twz",
       "model": "gpt-5.5",
@@ -705,19 +749,19 @@
         ]
       }
     },
-    "gpt-5.5|usni|https://news.usni.org/2026/08/17/usni-news-fleet-and-marine-tracker-aug-17-2026|2026-08-17|75edc0e0": {
+    "gpt-5.5|usni|https://news.usni.org/2026/08/17/usni-news-fleet-and-marine-tracker-aug-17-2026|2026-08-17|2a1f9531": {
       "sourceKey": "usni",
       "model": "gpt-5.5",
       "articleUrl": "https://news.usni.org/2026/08/17/usni-news-fleet-and-marine-tracker-aug-17-2026",
       "publishedAt": "2026-08-17",
-      "createdAt": "2026-08-17T17:38:32.963Z",
+      "createdAt": "2026-08-17T19:36:29.509Z",
       "result": {
         "carriers": [
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
             "locationName": "Arabian Sea",
-            "lat": 18,
+            "lat": 15,
             "lon": 63,
             "status": "deployed",
             "precision": "region",
@@ -725,22 +769,33 @@
             "evidenceQuote": "The Abraham Lincoln Carrier Strike Group is operating in the Arabian Sea in support of Operation Epic Fury."
           },
           {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "Carrier USS George H. W. Bush (CVN-77), homeported at Naval Station Norfolk, Va."
+          },
+          {
             "hull": "CVN-73",
             "name": "USS George Washington",
             "locationName": "Singapore Strait",
-            "lat": 1.2,
-            "lon": 103.7,
+            "lat": 1.22,
+            "lon": 103.85,
             "status": "deployed",
             "precision": "region",
-            "confidence": "high",
+            "confidence": "medium",
             "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and escorts USS Robert Smalls (CG-62) and USS Shoup (DDG-86), was spotted transiting westbound in the Singapore Strait on Thursday, according to ship spotters ."
           },
           {
             "hull": "CVN-70",
             "name": "USS Carl Vinson",
-            "locationName": "San Diego, Calif.",
-            "lat": 32.713,
-            "lon": -117.176,
+            "locationName": "departed San Diego, Calif.",
+            "lat": 0,
+            "lon": 0,
             "status": "unknown",
             "precision": "none",
             "confidence": "high",
