@@ -1,6 +1,61 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.5|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026|2026-08-11|d7597eca": {
+      "sourceKey": "twz",
+      "model": "gpt-5.5",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026",
+      "publishedAt": "2026-08-11",
+      "createdAt": "2026-08-11T15:13:13.042Z",
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "northern Arabian Sea",
+            "lat": 23.5,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Both supercarriers are on station in the northern Arabian Sea."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "northern Arabian Sea",
+            "lat": 23.5,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Both supercarriers are on station in the northern Arabian Sea."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "west of the Philippines, off Luzon",
+            "lat": 15.5,
+            "lon": 118.3,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Open-source flight tracking data most recently placed the four-ship strike group to the west of the Philippines, approximately 100 nautical miles off the coast of Luzon."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "San Diego",
+            "lat": 32.6992,
+            "lon": -117.2153,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Further east, USS Theodore Roosevelt returned home to San Diego after two months away following participation in large-scale exercise Rim of the Pacific (RIMPAC) 2026."
+          }
+        ]
+      }
+    },
     "gpt-5.5|gonavy|http://www.gonavy.jp/CVLocation.html||78ff3225": {
       "sourceKey": "gonavy",
       "model": "gpt-5.5",
@@ -650,57 +705,46 @@
         ]
       }
     },
-    "gpt-5.5|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026|2026-08-11|d7597eca": {
-      "sourceKey": "twz",
+    "gpt-5.5|usni|https://news.usni.org/2026/08/17/usni-news-fleet-and-marine-tracker-aug-17-2026|2026-08-17|75edc0e0": {
+      "sourceKey": "usni",
       "model": "gpt-5.5",
-      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026",
-      "publishedAt": "2026-08-11",
-      "createdAt": "2026-08-11T15:13:13.042Z",
+      "articleUrl": "https://news.usni.org/2026/08/17/usni-news-fleet-and-marine-tracker-aug-17-2026",
+      "publishedAt": "2026-08-17",
+      "createdAt": "2026-08-17T17:38:32.963Z",
       "result": {
         "carriers": [
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
-            "locationName": "northern Arabian Sea",
-            "lat": 23.5,
+            "locationName": "Arabian Sea",
+            "lat": 18,
             "lon": 63,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "Both supercarriers are on station in the northern Arabian Sea."
-          },
-          {
-            "hull": "CVN-77",
-            "name": "USS George H.W. Bush",
-            "locationName": "northern Arabian Sea",
-            "lat": 23.5,
-            "lon": 63,
-            "status": "deployed",
-            "precision": "region",
-            "confidence": "high",
-            "evidenceQuote": "Both supercarriers are on station in the northern Arabian Sea."
+            "evidenceQuote": "The Abraham Lincoln Carrier Strike Group is operating in the Arabian Sea in support of Operation Epic Fury."
           },
           {
             "hull": "CVN-73",
             "name": "USS George Washington",
-            "locationName": "west of the Philippines, off Luzon",
-            "lat": 15.5,
-            "lon": 118.3,
+            "locationName": "Singapore Strait",
+            "lat": 1.2,
+            "lon": 103.7,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "Open-source flight tracking data most recently placed the four-ship strike group to the west of the Philippines, approximately 100 nautical miles off the coast of Luzon."
+            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and escorts USS Robert Smalls (CG-62) and USS Shoup (DDG-86), was spotted transiting westbound in the Singapore Strait on Thursday, according to ship spotters ."
           },
           {
-            "hull": "CVN-71",
-            "name": "USS Theodore Roosevelt",
-            "locationName": "San Diego",
-            "lat": 32.6992,
-            "lon": -117.2153,
-            "status": "port",
-            "precision": "port",
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "San Diego, Calif.",
+            "lat": 32.713,
+            "lon": -117.176,
+            "status": "unknown",
+            "precision": "none",
             "confidence": "high",
-            "evidenceQuote": "Further east, USS Theodore Roosevelt returned home to San Diego after two months away following participation in large-scale exercise Rim of the Pacific (RIMPAC) 2026."
+            "evidenceQuote": "Aircraft carrier USS Carl Vinson (CVN-70) departed Monday from San Diego, Calif., according to ship spotters."
           }
         ]
       }
