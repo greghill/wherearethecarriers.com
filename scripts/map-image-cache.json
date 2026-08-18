@@ -2614,50 +2614,138 @@
         ]
       }
     },
-    "gpt-5.5|https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026|https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-10-2026.png?quality=85&w=1536|2026-08-11": {
+    "gpt-5.5|https://www.twz.com/sea/where-are-the-aircraft-carriers-august-17-2026|https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-17-2026-Full-Res.png?w=2048&quality=85|2026-08-17": {
       "sourceKey": "twz",
       "model": "gpt-5.5",
-      "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-10-2026.png?quality=85&w=1536",
-      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026",
-      "publishedAt": "2026-08-11",
-      "createdAt": "2026-08-17T23:33:16.149Z",
+      "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-17-2026-Full-Res.png?w=2048&quality=85",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-17-2026",
+      "publishedAt": "2026-08-17",
+      "createdAt": "2026-08-18T01:47:37.784Z",
       "result": {
         "sourceKey": "twz",
-        "imageUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-11-2026",
-        "publishedAt": "2026-08-11",
+        "imageUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-17-2026",
+        "publishedAt": "2026-08-17",
         "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Norfolk, VA / Hampton Roads",
+            "lat": 36.92,
+            "lon": -76.27,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Blue at-port label 'USS NIMITZ (CVN 68)' is shown in the Norfolk, VA cluster below USS Dwight D. Eisenhower.",
+            "rationale": "The TWZ graphic uses a callout around the Norfolk homeport group; the carrier is explicitly shown at port, so the coordinate is placed on Hampton Roads/Norfolk port water rather than inland callout graphics."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk, VA / Hampton Roads",
+            "lat": 36.95,
+            "lon": -76.29,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Blue at-port label 'USS DWIGHT D. EISENHOWER (CVN 69)' appears in the Norfolk, VA group above the Nimitz label.",
+            "rationale": "Placed on open port water at Norfolk/Hampton Roads, preserving slight separation from the nearby Nimitz label."
+          },
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "Central North Pacific, between Hawaii and Southern California",
+            "lat": 26.7,
+            "lon": -140.8,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Orange training label 'USS CARL VINSON (CVN 70)' with adjacent orange ship marker is plotted west-southwest of the San Diego callout and east of Pearl Harbor.",
+            "rationale": "Estimated from the orange marker adjacent to the Carl Vinson label; point is in open North Pacific water."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "San Diego, CA",
+            "lat": 32.7,
+            "lon": -117.2,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Blue at-port label 'USS THEODORE ROOSEVELT (CVN 71)' is associated with the San Diego, CA homeport callout.",
+            "rationale": "The at-port carrier callout is tied to the named San Diego port; coordinate is placed in San Diego Bay/North Island port water."
+          },
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
-            "locationName": "Northern Arabian Sea",
-            "lat": 22.5,
-            "lon": 63.5,
+            "locationName": "Gulf of Oman / northern Arabian Sea",
+            "lat": 23.9,
+            "lon": 61.8,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "Green deployed label 'USS ABRAHAM LINCOLN (CVN 72)' appears with its marker in the northern Arabian Sea area near Oman.",
+            "rationale": "Estimated from the green marker adjacent to the label; coordinate falls over open water in the Gulf of Oman/northern Arabian Sea."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Bay of Bengal / Andaman Sea",
+            "lat": 9.7,
+            "lon": 91.8,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "Green deployed label 'USS GEORGE WASHINGTON (CVN 73)' is shown east of India, below the Arabian Sea stack.",
+            "rationale": "Estimated from the green marker adjacent to the label; coordinate is over open water in the eastern Bay of Bengal/Andaman Sea region."
+          },
+          {
+            "hull": "CVN-74",
+            "name": "USS John C. Stennis",
+            "locationName": "Norfolk, VA / Hampton Roads",
+            "lat": 36.99,
+            "lon": -76.43,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Green carrier silhouette and label “USS ABRAHAM LINCOLN (CVN 72)” are shown over the northern Arabian Sea, south of Iran/Pakistan and east of Oman.",
-            "rationale": "Placed the point on open water near the center of the visible CVN-72 marker/label area, avoiding nearby land in Oman, Iran, and Pakistan."
+            "evidenceText": "Red maintenance label 'USS JOHN C. STENNIS (CVN 74)' is shown in the Norfolk, VA cluster.",
+            "rationale": "The red maintenance callout is visually offset in the congested U.S. East Coast cluster; placed on nearby Hampton Roads/Newport News port water consistent with the Norfolk grouping."
+          },
+          {
+            "hull": "CVN-75",
+            "name": "USS Harry S. Truman",
+            "locationName": "Norfolk, VA / Hampton Roads",
+            "lat": 36.91,
+            "lon": -76.33,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Red maintenance label 'USS HARRY S. TRUMAN (CVN 75)' appears below John C. Stennis in the Norfolk, VA cluster.",
+            "rationale": "Placed on Hampton Roads port water, with a small separation from the other Norfolk-cluster carriers to reflect the separate label."
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "Bremerton, WA",
+            "lat": 47.56,
+            "lon": -122.65,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Red maintenance label 'USS RONALD REAGAN (CVN 76)' is associated with the Bremerton, WA callout.",
+            "rationale": "The carrier is explicitly shown in the Bremerton port/maintenance group; coordinate is placed on the Bremerton waterfront/port area rather than the offset callout graphic."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
             "locationName": "Arabian Sea",
-            "lat": 16.8,
-            "lon": 62,
+            "lat": 17.6,
+            "lon": 62.4,
             "overWater": true,
-            "confidence": "medium",
-            "evidenceText": "Green carrier silhouette and label “USS GEORGE H.W. BUSH (CVN 77)” appear below CVN-72 in the Arabian Sea.",
-            "rationale": "Estimated the adjacent marker position as a separate open-water point south of CVN-72, consistent with the visual separation on the map."
+            "confidence": "high",
+            "evidenceText": "Green deployed label 'USS GEORGE H.W. BUSH (CVN 77)' appears below Abraham Lincoln in the Arabian Sea stack.",
+            "rationale": "Estimated from the green marker adjacent to the label; coordinate falls over open Arabian Sea water and preserves the separation from Abraham Lincoln."
           },
           {
-            "hull": "CVN-73",
-            "name": "USS George Washington",
-            "locationName": "South China Sea",
-            "lat": 12.5,
-            "lon": 115,
+            "hull": "CVN-78",
+            "name": "USS Gerald R. Ford",
+            "locationName": "Norfolk, VA / Hampton Roads",
+            "lat": 36.98,
+            "lon": -76.32,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Green carrier silhouette and label “USS GEORGE WASHINGTON (CVN 73)” are shown in the South China Sea west of the Philippines and north of Borneo.",
-            "rationale": "Placed the point near the center of the visible CVN-73 marker/label over open water in the South China Sea, not on nearby islands or mainland."
+            "evidenceText": "Red maintenance label 'USS GERALD R. FORD (CVN 78)' is shown at the top of the Norfolk, VA carrier cluster.",
+            "rationale": "The maintenance marker is part of the Norfolk callout cluster; coordinate is placed on Norfolk/Hampton Roads port water, consistent with the named port label."
           }
         ]
       }

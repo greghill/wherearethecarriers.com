@@ -1,6 +1,61 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.5|usni|https://news.usni.org/2026/08/17/usni-news-fleet-and-marine-tracker-aug-17-2026|2026-08-17|2a1f9531": {
+      "sourceKey": "usni",
+      "model": "gpt-5.5",
+      "articleUrl": "https://news.usni.org/2026/08/17/usni-news-fleet-and-marine-tracker-aug-17-2026",
+      "publishedAt": "2026-08-17",
+      "createdAt": "2026-08-17T19:36:29.509Z",
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The Abraham Lincoln Carrier Strike Group is operating in the Arabian Sea in support of Operation Epic Fury."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "Carrier USS George H. W. Bush (CVN-77), homeported at Naval Station Norfolk, Va."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Singapore Strait",
+            "lat": 1.22,
+            "lon": 103.85,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and escorts USS Robert Smalls (CG-62) and USS Shoup (DDG-86), was spotted transiting westbound in the Singapore Strait on Thursday, according to ship spotters ."
+          },
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "departed San Diego, Calif.",
+            "lat": 0,
+            "lon": 0,
+            "status": "unknown",
+            "precision": "none",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Carl Vinson (CVN-70) departed Monday from San Diego, Calif., according to ship spotters."
+          }
+        ]
+      }
+    },
     "gpt-5.5|usni|https://news.usni.org/2026/08/17/usni-news-fleet-and-marine-tracker-aug-17-2026|2026-08-17|75edc0e0": {
       "sourceKey": "usni",
       "model": "gpt-5.5",
@@ -749,14 +804,25 @@
         ]
       }
     },
-    "gpt-5.5|usni|https://news.usni.org/2026/08/17/usni-news-fleet-and-marine-tracker-aug-17-2026|2026-08-17|2a1f9531": {
-      "sourceKey": "usni",
+    "gpt-5.5|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-august-17-2026|2026-08-17|7e0ad5ad": {
+      "sourceKey": "twz",
       "model": "gpt-5.5",
-      "articleUrl": "https://news.usni.org/2026/08/17/usni-news-fleet-and-marine-tracker-aug-17-2026",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-17-2026",
       "publishedAt": "2026-08-17",
-      "createdAt": "2026-08-17T19:36:29.509Z",
+      "createdAt": "2026-08-18T01:46:58.102Z",
       "result": {
         "carriers": [
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Indian Ocean",
+            "lat": 6,
+            "lon": 78,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The three-ship strike group, led by flagship USS George Washington , transited the Malacca Strait northbound before entering the Andaman Sea the following day and continued steaming west, most recently operating at an undisclosed location in the Indian Ocean."
+          },
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
@@ -766,40 +832,29 @@
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "The Abraham Lincoln Carrier Strike Group is operating in the Arabian Sea in support of Operation Epic Fury."
+            "evidenceQuote": "Nimitz-class aircraft carrier USS Abraham Lincoln (CVN 72), right, Supply-class fast combat support ship USNS Arctic (T-AOE 8), middle, and Lewis and Clark-class dry cargo ship USNS Alan Shepard (T-AKE-3) sail in the Arabian Sea, Aug. 16, 2026."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
-            "locationName": "Arabian Sea",
-            "lat": 15,
-            "lon": 63,
+            "locationName": "U.S. Central Command area of responsibility (AOR)",
+            "lat": 20,
+            "lon": 60,
             "status": "deployed",
             "precision": "region",
             "confidence": "medium",
-            "evidenceQuote": "Carrier USS George H. W. Bush (CVN-77), homeported at Naval Station Norfolk, Va."
+            "evidenceQuote": "Moving to the Middle East, USS Abraham Lincoln and USS George H.W. Bush are still operating in the U.S. Central Command area of responsibility (AOR) as of publication."
           },
           {
-            "hull": "CVN-73",
-            "name": "USS George Washington",
-            "locationName": "Singapore Strait",
-            "lat": 1.22,
-            "lon": 103.85,
-            "status": "deployed",
-            "precision": "region",
-            "confidence": "medium",
-            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and escorts USS Robert Smalls (CG-62) and USS Shoup (DDG-86), was spotted transiting westbound in the Singapore Strait on Thursday, according to ship spotters ."
-          },
-          {
-            "hull": "CVN-70",
-            "name": "USS Carl Vinson",
-            "locationName": "departed San Diego, Calif.",
-            "lat": 0,
-            "lon": 0,
-            "status": "unknown",
-            "precision": "none",
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "San Diego",
+            "lat": 32.699,
+            "lon": -117.215,
+            "status": "port",
+            "precision": "port",
             "confidence": "high",
-            "evidenceQuote": "Aircraft carrier USS Carl Vinson (CVN-70) departed Monday from San Diego, Calif., according to ship spotters."
+            "evidenceQuote": "USS Theodore Roosevelt , on deck to deploy next from the West Coast, is still pierside in San Diego, based on satellite imagery reviewed by TWZ ."
           }
         ]
       }
