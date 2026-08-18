@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-18T01:46:56.282Z",
-  "lastChangedAt": "2026-08-18T01:46:56.282Z",
+  "generatedAt": "2026-08-18T13:04:05.011Z",
+  "lastChangedAt": "2026-08-18T13:04:05.011Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -8,8 +8,8 @@
       "status": "port",
       "locationName": "Norfolk",
       "position": {
-        "lat": 36.946,
-        "lon": -76.329
+        "lat": 36.9467,
+        "lon": -76.3226
       },
       "positionPrecision": "port",
       "confidence": "low",
@@ -42,7 +42,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-17-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-08-11T11:01:31.385Z"
+      "lastChangedAt": "2026-08-18T13:04:05.011Z"
     },
     {
       "hull": "CVN-69",
@@ -50,8 +50,8 @@
       "status": "port",
       "locationName": "Norfolk",
       "position": {
-        "lat": 36.946,
-        "lon": -76.329
+        "lat": 36.9467,
+        "lon": -76.3226
       },
       "positionPrecision": "port",
       "confidence": "low",
@@ -84,7 +84,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-17-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-08-13T02:41:58.384Z"
+      "lastChangedAt": "2026-08-18T13:04:05.011Z"
     },
     {
       "hull": "CVN-70",
@@ -131,15 +131,6 @@
           "publishedAt": "2026-08-17",
           "note": "Image estimate: Orange training label 'USS CARL VINSON (CVN 70)' with adjacent orange ship marker is plotted west-southwest of the San Diego callout and east of Pearl Harbor.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-17-2026-Full-Res.png?w=2048&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-08-12",
-          "note": "Text context: CVN-70 USS Carl Vinson — latest entry: 10Aug2026, departed San Diego"
         }
       ],
       "lastChangedAt": "2026-08-17T19:36:28.538Z"
@@ -183,15 +174,6 @@
           "publishedAt": "2026-08-17",
           "note": "Image estimate: Blue at-port label 'USS THEODORE ROOSEVELT (CVN 71)' is associated with the San Diego, CA homeport callout.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-17-2026-Full-Res.png?w=2048&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-08-12",
-          "note": "Text context: CVN-71 USS Theodore Roosevelt — latest entry: 08Aug2026, one-day friends and family cruise"
         }
       ],
       "lastChangedAt": "2026-08-18T01:46:56.282Z"
@@ -206,8 +188,8 @@
         "lon": 61.8
       },
       "positionPrecision": "image_estimate",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-08-17",
       "summary": "Where Are The Aircraft Carriers?: August 17, 2026 places USS Abraham Lincoln near Gulf of Oman / northern Arabian Sea from a public tracker map image.",
       "sources": [
@@ -252,8 +234,8 @@
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-08-12",
-          "note": "Text context: CVN-72 USS Abraham Lincoln — latest entry: 28Feb-10Aug2026, North Arabian Sea in support of Operation Epic Fury"
+          "publishedAt": "2026-08-19",
+          "note": "Text context: CVN-72 USS Abraham Lincoln — latest entry: 03Mar-17Aug2026, North Arabian Sea in support of Operation Epic Fury early July 2026, Duqm port in Oman"
         },
         {
           "role": "backup",
@@ -266,7 +248,7 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_17_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-08-18T01:46:56.282Z"
+      "lastChangedAt": "2026-08-18T13:04:05.011Z"
     },
     {
       "hull": "CVN-73",
@@ -274,14 +256,14 @@
       "status": "deployed",
       "locationName": "Indian Ocean",
       "position": {
-        "lat": 6,
-        "lon": 78
+        "lat": -10,
+        "lon": 80
       },
       "positionPrecision": "region",
-      "confidence": "medium",
-      "evidence": "current",
-      "lastSeen": "2026-08-17",
-      "summary": "Where Are The Aircraft Carriers?: August 17, 2026 places USS George Washington in or near Indian Ocean.",
+      "confidence": "high",
+      "evidence": "corroborated",
+      "lastSeen": "2026-08-19",
+      "summary": "Aircraft Carrier Locations places USS George Washington in or near Indian Ocean.",
       "sources": [
         {
           "role": "primary",
@@ -291,6 +273,15 @@
             "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-08-19",
+          "note": "Text context: CVN-73 USS George Washington — latest entry: 15Aug-17Aug2026, Indian Ocean"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: August 17, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-17-2026",
@@ -321,15 +312,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-08-12",
-          "note": "Text context: CVN-73 USS George Washington — latest entry: 06Aug-10Aug2026, South China Sea"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Aug. 17, 2026",
           "url": "https://news.usni.org/2026/08/17/usni-news-fleet-and-marine-tracker-aug-17-2026",
@@ -338,22 +320,22 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_17_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-08-18T01:46:56.282Z"
+      "lastChangedAt": "2026-08-18T13:04:05.011Z"
     },
     {
       "hull": "CVN-74",
       "name": "USS John C. Stennis",
       "status": "maintenance",
-      "locationName": "Newport News, Virginia",
+      "locationName": "Newport News Shipbuilding in Newport News, Virginia",
       "position": {
-        "lat": 36.979,
-        "lon": -76.429
+        "lat": 36.9908,
+        "lon": -76.4381
       },
       "positionPrecision": "port",
       "confidence": "low",
       "evidence": "stale",
       "lastSeen": "2025-10-22",
-      "summary": "Aircraft Carrier Locations places USS John C. Stennis in Newport News, Virginia.",
+      "summary": "Aircraft Carrier Locations places USS John C. Stennis in Newport News Shipbuilding in Newport News, Virginia.",
       "sources": [
         {
           "role": "primary",
@@ -380,7 +362,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-17-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-08-11T11:01:31.385Z"
+      "lastChangedAt": "2026-08-18T13:04:05.011Z"
     },
     {
       "hull": "CVN-75",
@@ -388,8 +370,8 @@
       "status": "port",
       "locationName": "Norfolk",
       "position": {
-        "lat": 36.946,
-        "lon": -76.329
+        "lat": 36.9467,
+        "lon": -76.3226
       },
       "positionPrecision": "port",
       "confidence": "low",
@@ -422,22 +404,22 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-17-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-08-11T11:01:31.385Z"
+      "lastChangedAt": "2026-08-18T13:04:05.011Z"
     },
     {
       "hull": "CVN-76",
       "name": "USS Ronald Reagan",
       "status": "maintenance",
-      "locationName": "Puget Sound Naval Shipyard and Intermediate Maintenance Facility",
+      "locationName": "Puget Sound Naval Shipyard and Intermediate Maintenance Facility (PSNS&IMF)",
       "position": {
-        "lat": 47.556,
-        "lon": -122.635
+        "lat": 47.5615,
+        "lon": -122.6471
       },
       "positionPrecision": "port",
       "confidence": "low",
       "evidence": "stale",
       "lastSeen": "2026-03-11",
-      "summary": "Aircraft Carrier Locations places USS Ronald Reagan in Puget Sound Naval Shipyard and Intermediate Maintenance Facility.",
+      "summary": "Aircraft Carrier Locations places USS Ronald Reagan in Puget Sound Naval Shipyard and Intermediate Maintenance Facility (PSNS&IMF).",
       "sources": [
         {
           "role": "primary",
@@ -464,7 +446,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-17-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-08-11T11:01:31.385Z"
+      "lastChangedAt": "2026-08-18T13:04:05.011Z"
     },
     {
       "hull": "CVN-77",
@@ -472,39 +454,38 @@
       "status": "deployed",
       "locationName": "North Arabian Sea",
       "position": {
-        "lat": 17.6,
-        "lon": 62.4
+        "lat": 22,
+        "lon": 63
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-08-17",
+      "lastSeen": "2026-08-19",
       "summary": "Aircraft Carrier Locations places USS George H.W. Bush in or near North Arabian Sea.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
-            "coordinate_refinement"
+            "status",
+            "location",
+            "position",
+            "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-08-19",
+          "note": "Text context: CVN-77 USS George H.W. Bush — latest entry: 27Apr-17Aug2026, North Arabian Sea in support of Operation Epic Fury"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: August 17, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-17-2026",
           "publishedAt": "2026-08-17",
           "note": "Image estimate: Green deployed label 'USS GEORGE H.W. BUSH (CVN 77)' appears below Abraham Lincoln in the Arabian Sea stack.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-17-2026-Full-Res.png?w=2048&quality=85"
-        },
-        {
-          "role": "primary",
-          "usedFor": [
-            "status",
-            "location",
-            "summary"
-          ],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-08-12",
-          "note": "Text context: CVN-77 USS George H.W. Bush — latest entry: 27Apr-10Aug2026, North Arabian Sea in support of Operation Epic Fury"
         },
         {
           "role": "backup",
@@ -537,22 +518,22 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_17_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-08-18T01:46:56.282Z"
+      "lastChangedAt": "2026-08-18T13:04:05.011Z"
     },
     {
       "hull": "CVN-78",
       "name": "USS Gerald R. Ford",
       "status": "maintenance",
-      "locationName": "Norfolk Naval Shipyard, Portsmouth, Virginia",
+      "locationName": "Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia",
       "position": {
-        "lat": 36.82,
-        "lon": -76.297
+        "lat": 36.818,
+        "lon": -76.294
       },
       "positionPrecision": "port",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-08-12",
-      "summary": "Aircraft Carrier Locations places USS Gerald R. Ford in Norfolk Naval Shipyard, Portsmouth, Virginia.",
+      "lastSeen": "2026-08-19",
+      "summary": "Aircraft Carrier Locations places USS Gerald R. Ford in Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia.",
       "sources": [
         {
           "role": "primary",
@@ -565,8 +546,8 @@
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-08-12",
-          "note": "Text context: CVN-78 USS Gerald R. Ford — latest entry: 07Jul-10Aug2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
+          "publishedAt": "2026-08-19",
+          "note": "Text context: CVN-78 USS Gerald R. Ford — latest entry: 07Jul-18Aug2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
         },
         {
           "role": "backup",
@@ -579,7 +560,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Tracker-as-of-August-17-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-08-11T11:01:31.385Z"
+      "lastChangedAt": "2026-08-18T13:04:05.011Z"
     }
   ]
 }
