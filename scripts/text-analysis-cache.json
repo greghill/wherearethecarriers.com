@@ -1,6 +1,72 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.5|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-august-17-2026|2026-08-17|ce6c1b43": {
+      "sourceKey": "twz",
+      "model": "gpt-5.5",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-17-2026",
+      "publishedAt": "2026-08-17",
+      "createdAt": "2026-08-18T16:45:15.873Z",
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Indian Ocean",
+            "lat": 8,
+            "lon": 75,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The three-ship strike group, led by flagship USS George Washington , transited the Malacca Strait northbound before entering the Andaman Sea the following day and continued steaming west, most recently operating at an undisclosed location in the Indian Ocean."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Nimitz-class aircraft carrier USS Abraham Lincoln (CVN 72), right, Supply-class fast combat support ship USNS Arctic (T-AOE 8), middle, and Lewis and Clark-class dry cargo ship USNS Alan Shepard (T-AKE-3) sail in the Arabian Sea, Aug. 16, 2026."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "U.S. Central Command area of responsibility (AOR)",
+            "lat": 20,
+            "lon": 60,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Moving to the Middle East, USS Abraham Lincoln and USS George H.W. Bush are still operating in the U.S. Central Command area of responsibility (AOR) as of publication."
+          },
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "unknown",
+            "lat": 0,
+            "lon": 0,
+            "status": "unknown",
+            "precision": "none",
+            "confidence": "low",
+            "evidenceQuote": "Vinson’s current mission set is not publicly available, but she has been working up in preparation for a future deployment."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "San Diego",
+            "lat": 32.6992,
+            "lon": -117.2153,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "USS Theodore Roosevelt , on deck to deploy next from the West Coast, is still pierside in San Diego, based on satellite imagery reviewed by TWZ ."
+          }
+        ]
+      }
+    },
     "gpt-5.5|gonavy|http://www.gonavy.jp/CVLocation.html||79b9ed7a": {
       "sourceKey": "gonavy",
       "model": "gpt-5.5",
@@ -969,68 +1035,79 @@
         ]
       }
     },
-    "gpt-5.5|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-august-17-2026|2026-08-17|ce6c1b43": {
+    "gpt-5.5|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026|2026-08-24|23280ee1": {
       "sourceKey": "twz",
       "model": "gpt-5.5",
-      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-17-2026",
-      "publishedAt": "2026-08-17",
-      "createdAt": "2026-08-18T16:45:15.873Z",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
+      "publishedAt": "2026-08-24",
+      "createdAt": "2026-08-25T01:48:37.940Z",
       "result": {
         "carriers": [
           {
-            "hull": "CVN-73",
-            "name": "USS George Washington",
-            "locationName": "Indian Ocean",
-            "lat": 8,
-            "lon": 75,
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "U.S. 3rd Fleet area of operations",
+            "lat": 32.5,
+            "lon": -118,
             "status": "deployed",
             "precision": "region",
-            "confidence": "high",
-            "evidenceQuote": "The three-ship strike group, led by flagship USS George Washington , transited the Malacca Strait northbound before entering the Andaman Sea the following day and continued steaming west, most recently operating at an undisclosed location in the Indian Ocean."
+            "confidence": "medium",
+            "evidenceQuote": "Carl Vinson, the flagship of Carrier Strike Group 1, is currently underway conducting routine operations in the U.S. 3rd Fleet area of operations."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "35 nautical miles off the coast",
+            "lat": 36.85,
+            "lon": -75.55,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "USS Dwight D. Eisenhower , homeported at Naval Station Norfolk, got underway on August 21 and is operating 35 nautical miles off the coast with her AIS transponder on ."
           },
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
+            "locationName": "Indian Ocean",
+            "lat": 8,
+            "lon": 88,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The supercarrier was most recently transiting eastbound in the Indian Ocean, once again operating under U.S. Pacific Command (PACOM)."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
             "locationName": "Arabian Sea",
             "lat": 15,
             "lon": 63,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "Nimitz-class aircraft carrier USS Abraham Lincoln (CVN 72), right, Supply-class fast combat support ship USNS Arctic (T-AOE 8), middle, and Lewis and Clark-class dry cargo ship USNS Alan Shepard (T-AKE-3) sail in the Arabian Sea, Aug. 16, 2026."
-          },
-          {
-            "hull": "CVN-77",
-            "name": "USS George H.W. Bush",
-            "locationName": "U.S. Central Command area of responsibility (AOR)",
-            "lat": 20,
-            "lon": 60,
-            "status": "deployed",
-            "precision": "region",
-            "confidence": "high",
-            "evidenceQuote": "Moving to the Middle East, USS Abraham Lincoln and USS George H.W. Bush are still operating in the U.S. Central Command area of responsibility (AOR) as of publication."
-          },
-          {
-            "hull": "CVN-70",
-            "name": "USS Carl Vinson",
-            "locationName": "unknown",
-            "lat": 0,
-            "lon": 0,
-            "status": "unknown",
-            "precision": "none",
-            "confidence": "low",
-            "evidenceQuote": "Vinson’s current mission set is not publicly available, but she has been working up in preparation for a future deployment."
+            "evidenceQuote": "In Lincoln’s stead, USS George Washington has taken up station in the Arabian Sea, as the Navy maintains dual-carrier coverage in theater to support the ongoing blockade of Iran."
           },
           {
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
             "locationName": "San Diego",
-            "lat": 32.6992,
-            "lon": -117.2153,
+            "lat": 32.684,
+            "lon": -117.119,
             "status": "port",
             "precision": "port",
             "confidence": "high",
-            "evidenceQuote": "USS Theodore Roosevelt , on deck to deploy next from the West Coast, is still pierside in San Diego, based on satellite imagery reviewed by TWZ ."
+            "evidenceQuote": "The next carrier scheduled to deploy, USS Theodore Roosevelt , is still pierside in San Diego, based on commercial satellite imagery."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The second carrier underway in the CENTCOM AOR, USS George H.W. Bush , has been deployed for more than four months and is operating at an undisclosed location in the Arabian Sea."
           }
         ]
       }
