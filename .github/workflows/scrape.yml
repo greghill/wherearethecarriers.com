@@ -25,7 +25,7 @@ jobs:
         run: npm run scrape
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.5' }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.6-sol' }}
           FORCE_IMAGE_REPROCESS: ${{ inputs.force_image_reprocess && '1' || '' }}
       - name: Commit updated data
         env:

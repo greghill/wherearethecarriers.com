@@ -8,7 +8,7 @@ const IMAGE_POINTS_PATH = new URL("./image-points.json", import.meta.url);
 const IMAGE_ANALYSIS_CACHE_PATH = new URL("./map-image-cache.json", import.meta.url);
 const TEXT_ANALYSIS_CACHE_PATH = new URL("./text-analysis-cache.json", import.meta.url);
 const LAND_POLYGONS_PATH = new URL("./land-polygons.json", import.meta.url);
-const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-5.5";
+const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-5.6-sol";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 // USD per million tokens for gpt-5.5 (the OPENAI_MODEL default above). Cached input
 // is a discounted slice of input_tokens; reasoning tokens are billed as output.

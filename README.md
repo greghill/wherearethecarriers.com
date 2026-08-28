@@ -50,10 +50,10 @@ OPENAI_API_KEY
 Optional GitHub Actions variable:
 
 ```text
-OPENAI_MODEL=gpt-5.5
+OPENAI_MODEL=gpt-5.6-sol
 ```
 
-(`gpt-5.5` is also the default if the variable is unset.)
+(`gpt-5.6-sol` is also the default if the variable is unset.)
 
 When enabled, the scraper sends the latest tracker map images to the OpenAI Responses API and asks for approximate carrier positions as structured JSON. Results are cached in `scripts/map-image-cache.json` by image URL/model/date so unchanged map images are not reprocessed every scheduled run.
 
