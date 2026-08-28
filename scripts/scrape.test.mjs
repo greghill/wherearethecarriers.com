@@ -328,3 +328,20 @@ test("estimateUsageUsd discounts cached input and does not double-bill reasoning
     0
   );
 });
+
+test("article and GoNavy dates do not shift with the runner's timezone", () => {
+  const original = process.env.TZ;
+  try {
+    // Zones either side of UTC: local midnight lands on the previous UTC day in
+    // Auckland and the next one in New York, which is what used to move the date.
+    for (const zone of ["UTC", "Europe/London", "America/New_York", "Pacific/Auckland"]) {
+      process.env.TZ = zone;
+      assert.equal(articleDateFromTitle("USNI News Fleet and Marine Tracker: May 26, 2026"), "2026-05-26", zone);
+      assert.equal(parseGoNavyDate("25MAY2026"), "2026-05-25", zone);
+      assert.equal(parseGoNavyDate("2026.05.25"), "2026-05-25", zone);
+    }
+  } finally {
+    if (original === undefined) delete process.env.TZ;
+    else process.env.TZ = original;
+  }
+});
