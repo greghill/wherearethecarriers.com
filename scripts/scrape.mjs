@@ -216,11 +216,22 @@ function bestMapImageUrl(html, baseUrl, sourceKey) {
   return sourceKey === "stratfor" ? upgradeStratforImageUrl(picked) : picked;
 }
 
+// Sources date their articles as bare calendar days ("May 26, 2026", "25MAY2026"),
+// which Date parses at LOCAL midnight. toISOString() would then re-express that
+// instant in UTC and shift the day for any runner not on UTC, so read the calendar
+// fields back out in the frame they were parsed in. Downstream these strings are
+// re-anchored with an explicit T00:00:00Z (see effectiveConfidenceWeight).
+function toIsoDate(parsed) {
+  if (Number.isNaN(parsed.getTime())) return null;
+  const month = String(parsed.getMonth() + 1).padStart(2, "0");
+  const day = String(parsed.getDate()).padStart(2, "0");
+  return `${parsed.getFullYear()}-${month}-${day}`;
+}
+
 function articleDateFromTitle(title) {
   const match = title?.match(/(?:May|Apr|March|Mar|June|Jun|July|Jul|August|Aug|September|Sept|October|Oct|November|Nov|December|Dec|January|Jan|February|Feb)\.?\s+\d{1,2},?\s+\d{4}/i);
   if (!match) return null;
-  const parsed = new Date(match[0].replace(/,\s*/, " "));
-  return Number.isNaN(parsed.getTime()) ? null : parsed.toISOString().slice(0, 10);
+  return toIsoDate(new Date(match[0].replace(/,\s*/, " ")));
 }
 
 function sourceFromArticle({ publisher, title, url, publishedAt, note, imageUrl }) {
@@ -248,8 +259,7 @@ function extractTableCells(row) {
 function parseGoNavyDate(value) {
   if (!value) return null;
   const cleaned = value.replace(/\./g, " ").replace(/\s+/g, " ").trim();
-  const parsed = new Date(cleaned);
-  return Number.isNaN(parsed.getTime()) ? null : parsed.toISOString().slice(0, 10);
+  return toIsoDate(new Date(cleaned));
 }
 
 function goNavyEntries(remarksHtml) {
