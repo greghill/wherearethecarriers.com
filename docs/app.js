@@ -53,14 +53,12 @@ const esri = (path, attribution = "Tiles &copy; Esri") => L.tileLayer(
   `https://services.arcgisonline.com/arcgis/rest/services/${path}/MapServer/tile/{z}/{y}/{x}`,
   { ...tileOpts, attribution }
 );
-const carto = (style) => L.tileLayer(
-  `https://{s}.basemaps.cartocdn.com/${style}/{z}/{x}/{y}{r}.png`,
-  { ...tileOpts, attribution: "&copy; OpenStreetMap contributors &copy; CARTO", subdomains: "abcd" }
-);
 
 const baseLayers = {
-  "CARTO Voyager": carto("rastertiles/voyager"),
-  "CARTO Positron": carto("light_all"),
+  "Esri Light Gray Canvas": L.layerGroup([
+    esri("Canvas/World_Light_Gray_Base"),
+    esri("Canvas/World_Light_Gray_Reference", "")
+  ]),
   "OpenStreetMap": L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     ...tileOpts, attribution: "&copy; OpenStreetMap contributors"
   }),
@@ -68,10 +66,6 @@ const baseLayers = {
     ...tileOpts, attribution: "&copy; OpenStreetMap contributors, SRTM | &copy; OpenTopoMap (CC-BY-SA)", subdomains: "abc"
   }),
   "Esri National Geographic": esri("NatGeo_World_Map"),
-  "Esri Light Gray Canvas": L.layerGroup([
-    esri("Canvas/World_Light_Gray_Base"),
-    esri("Canvas/World_Light_Gray_Reference", "")
-  ]),
   "Esri World Street Map": esri("World_Street_Map"),
   "Esri World Topographic": esri("World_Topo_Map"),
   "Esri Satellite Imagery": L.layerGroup([
@@ -80,7 +74,7 @@ const baseLayers = {
   ])
 };
 
-const defaultBasemap = "CARTO Voyager";
+const defaultBasemap = "Esri Light Gray Canvas";
 let activeBasemap = baseLayers[defaultBasemap].addTo(map);
 
 const BasemapControl = L.Control.extend({

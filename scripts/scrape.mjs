@@ -10,6 +10,9 @@ const TEXT_ANALYSIS_CACHE_PATH = new URL("./text-analysis-cache.json", import.me
 const LAND_POLYGONS_PATH = new URL("./land-polygons.json", import.meta.url);
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-5.5";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+// USD per million tokens for gpt-5.5 (the OPENAI_MODEL default above). Cached input
+// is a discounted slice of input_tokens; reasoning tokens are billed as output.
+const OPENAI_USD_PER_MILLION = { input: 5, cachedInput: 0.5, output: 30 };
 const FORCE_IMAGE_REPROCESS = /^(1|true|yes)$/i.test(process.env.FORCE_IMAGE_REPROCESS || "");
 const CURRENT_SOURCE_DAYS = 7;
 const AGING_SOURCE_DAYS = 90;
@@ -769,6 +772,47 @@ ${articleText.slice(0, 28000)}
 """`;
 }
 
+// ---------------------------------------------------------------------------
+// OpenAI usage accounting: the Responses API reports token counts per call, so
+// each live call folds its usage into runUsage (for the end-of-run summary) and
+// keeps its own copy in the cache entry, making historical spend auditable from
+// git history. A cache hit makes no call and contributes nothing.
+// ---------------------------------------------------------------------------
+
+const runUsage = { calls: 0, inputTokens: 0, cachedInputTokens: 0, outputTokens: 0, reasoningTokens: 0 };
+
+function normalizeUsage(usage) {
+  if (!usage) return null;
+  return {
+    inputTokens: Number(usage.input_tokens) || 0,
+    cachedInputTokens: Number(usage.input_tokens_details?.cached_tokens) || 0,
+    outputTokens: Number(usage.output_tokens) || 0,
+    reasoningTokens: Number(usage.output_tokens_details?.reasoning_tokens) || 0,
+    totalTokens: Number(usage.total_tokens) || 0
+  };
+}
+
+// Counts the call either way: a response with no usage block still cost money,
+// it just can't be attributed.
+function recordUsage(usage) {
+  runUsage.calls += 1;
+  if (!usage) return null;
+  runUsage.inputTokens += usage.inputTokens;
+  runUsage.cachedInputTokens += usage.cachedInputTokens;
+  runUsage.outputTokens += usage.outputTokens;
+  runUsage.reasoningTokens += usage.reasoningTokens;
+  return usage;
+}
+
+function estimateUsageUsd(usage) {
+  const freshInputTokens = Math.max(0, usage.inputTokens - usage.cachedInputTokens);
+  return (
+    freshInputTokens * OPENAI_USD_PER_MILLION.input +
+    usage.cachedInputTokens * OPENAI_USD_PER_MILLION.cachedInput +
+    usage.outputTokens * OPENAI_USD_PER_MILLION.output
+  ) / 1_000_000;
+}
+
 async function callOpenAiForText(sourceKey, articleText, meta) {
   const response = await fetch("https://api.openai.com/v1/responses", {
     method: "POST",
@@ -805,7 +849,7 @@ async function callOpenAiForText(sourceKey, articleText, meta) {
   if (!outputText) {
     throw new Error(`OpenAI text parse returned no output_text for ${sourceKey}`);
   }
-  return JSON.parse(outputText);
+  return { result: JSON.parse(outputText), usage: recordUsage(normalizeUsage(parsed.usage)) };
 }
 
 function normalizeForQuoteMatch(value = "") {
@@ -863,13 +907,15 @@ async function extractTextAssessments(sourceKey, articleText, meta) {
     if (!OPENAI_API_KEY) {
       throw new Error(`OPENAI_API_KEY not set and no cached text analysis for ${sourceKey}`);
     }
+    const { result, usage } = await callOpenAiForText(sourceKey, articleText, meta);
     cache.analyses[cacheKey] = {
       sourceKey,
       model: OPENAI_MODEL,
       articleUrl: meta.articleUrl || null,
       publishedAt: meta.publishedAt || null,
       createdAt: new Date().toISOString(),
-      result: await callOpenAiForText(sourceKey, articleText, meta)
+      usage,
+      result
     };
     await saveTextAnalysisCache(cache);
   }
@@ -981,7 +1027,7 @@ async function callOpenAiForMapImage(sourceKey, sourceSummary) {
   if (!outputText) {
     throw new Error(`OpenAI map parse returned no output_text for ${sourceKey}`);
   }
-  return JSON.parse(outputText);
+  return { result: JSON.parse(outputText), usage: recordUsage(normalizeUsage(parsed.usage)) };
 }
 
 // Coarse global land polygons (Natural Earth 1:110m), used to reject image
@@ -1130,6 +1176,7 @@ async function loadOpenAiImageAssessments(sourceSummaries, sourceStatus) {
           skipped.push(sourceKey);
           continue;
         }
+        const { result, usage } = await callOpenAiForMapImage(sourceKey, summary);
         cache.analyses[cacheKey] = {
           sourceKey,
           model: OPENAI_MODEL,
@@ -1137,7 +1184,8 @@ async function loadOpenAiImageAssessments(sourceSummaries, sourceStatus) {
           articleUrl: summary.articleUrl,
           publishedAt: summary.publishedAt,
           createdAt: new Date().toISOString(),
-          result: await callOpenAiForMapImage(sourceKey, summary)
+          usage,
+          result
         };
         cacheChanged = true;
       }
@@ -1447,6 +1495,15 @@ async function main() {
   console.log(`Wrote ${output.carriers.length} carrier records to ${DATA_PATH.pathname}`);
   console.log(`Wrote scrape status to ${SCRAPE_STATUS_PATH.pathname}`);
   console.log(`changedHulls=${changedHulls.join(",")}`);
+  if (runUsage.calls) {
+    console.log(
+      `openaiUsage: ${OPENAI_MODEL} calls=${runUsage.calls} input=${runUsage.inputTokens} ` +
+      `cached=${runUsage.cachedInputTokens} output=${runUsage.outputTokens} ` +
+      `reasoning=${runUsage.reasoningTokens} estimatedUsd=${estimateUsageUsd(runUsage).toFixed(4)}`
+    );
+  } else {
+    console.log("openaiUsage: no OpenAI calls this run (cache hits only)");
+  }
   if (process.env.GITHUB_OUTPUT) {
     await appendFile(process.env.GITHUB_OUTPUT, `changedHulls=${changedHulls.join(",")}\n`);
   }
@@ -1467,6 +1524,8 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
 
 export {
   articleDateFromTitle,
+  normalizeUsage,
+  estimateUsageUsd,
   findLatestTwzUrl,
   twzDateToken,
   applyAssessment,
