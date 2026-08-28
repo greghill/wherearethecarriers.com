@@ -3,6 +3,8 @@ import assert from "node:assert/strict";
 
 import {
   articleDateFromTitle,
+  normalizeUsage,
+  estimateUsageUsd,
   findLatestTwzUrl,
   twzDateToken,
   applyAssessment,
@@ -285,4 +287,44 @@ test("canUsePriorSourceDuringOutage respects status and grace window", () => {
   assert.equal(canUsePriorSourceDuringOutage(mk("error", "2026-05-28T00:00:00Z"), "usni", generatedAt), true); // 2d <= 3
   assert.equal(canUsePriorSourceDuringOutage(mk("error", "2026-05-24T00:00:00Z"), "usni", generatedAt), false); // 6d > 3
   assert.equal(canUsePriorSourceDuringOutage({}, "usni", generatedAt), false); // no entry
+});
+
+test("normalizeUsage flattens the Responses API usage block and tolerates missing details", () => {
+  assert.deepEqual(
+    normalizeUsage({
+      input_tokens: 12000,
+      input_tokens_details: { cached_tokens: 8000 },
+      output_tokens: 900,
+      output_tokens_details: { reasoning_tokens: 640 },
+      total_tokens: 12900
+    }),
+    { inputTokens: 12000, cachedInputTokens: 8000, outputTokens: 900, reasoningTokens: 640, totalTokens: 12900 }
+  );
+  assert.deepEqual(normalizeUsage({ input_tokens: 5 }), {
+    inputTokens: 5,
+    cachedInputTokens: 0,
+    outputTokens: 0,
+    reasoningTokens: 0,
+    totalTokens: 0
+  });
+  // A response without a usage block must not be reported as a zero-cost call.
+  assert.equal(normalizeUsage(undefined), null);
+});
+
+test("estimateUsageUsd discounts cached input and does not double-bill reasoning", () => {
+  // 1M fresh input ($5) + 1M cached input ($0.50) + 1M output ($30); the reasoning
+  // tokens are a subset of the output tokens, so they add nothing on their own.
+  assert.equal(
+    estimateUsageUsd({
+      inputTokens: 2_000_000,
+      cachedInputTokens: 1_000_000,
+      outputTokens: 1_000_000,
+      reasoningTokens: 500_000
+    }),
+    35.5
+  );
+  assert.equal(
+    estimateUsageUsd({ inputTokens: 0, cachedInputTokens: 0, outputTokens: 0, reasoningTokens: 0 }),
+    0
+  );
 });
