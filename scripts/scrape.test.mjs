@@ -312,19 +312,29 @@ test("normalizeUsage flattens the Responses API usage block and tolerates missin
 });
 
 test("estimateUsageUsd discounts cached input and does not double-bill reasoning", () => {
-  // 1M fresh input ($5) + 1M cached input ($0.50) + 1M output ($30); the reasoning
-  // tokens are a subset of the output tokens, so they add nothing on their own.
+  const usage = {
+    inputTokens: 2_000_000,
+    cachedInputTokens: 1_000_000,
+    outputTokens: 1_000_000,
+    reasoningTokens: 500_000
+  };
+  // gpt-5.6-sol: 1M fresh input ($4) + 1M cached input ($0.40) + 1M output ($20); the
+  // reasoning tokens are a subset of the output tokens, so they add nothing on their own.
+  assert.equal(estimateUsageUsd(usage, "gpt-5.6-sol").toFixed(4), "24.4000");
+  // The superseded card stays priced so older cache entries remain auditable.
+  assert.equal(estimateUsageUsd(usage, "gpt-5.5").toFixed(4), "35.5000");
   assert.equal(
-    estimateUsageUsd({
-      inputTokens: 2_000_000,
-      cachedInputTokens: 1_000_000,
-      outputTokens: 1_000_000,
-      reasoningTokens: 500_000
-    }),
-    35.5
-  );
-  assert.equal(
-    estimateUsageUsd({ inputTokens: 0, cachedInputTokens: 0, outputTokens: 0, reasoningTokens: 0 }),
+    estimateUsageUsd({ inputTokens: 0, cachedInputTokens: 0, outputTokens: 0, reasoningTokens: 0 }, "gpt-5.6-sol"),
     0
+  );
+});
+
+test("estimateUsageUsd reports an unknown model as unpriced, not as zero", () => {
+  assert.equal(
+    estimateUsageUsd(
+      { inputTokens: 1_000_000, cachedInputTokens: 0, outputTokens: 1_000_000, reasoningTokens: 0 },
+      "gpt-5.7-unreleased"
+    ),
+    null
   );
 });

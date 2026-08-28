@@ -10,9 +10,16 @@ const TEXT_ANALYSIS_CACHE_PATH = new URL("./text-analysis-cache.json", import.me
 const LAND_POLYGONS_PATH = new URL("./land-polygons.json", import.meta.url);
 const OPENAI_MODEL = process.env.OPENAI_MODEL || "gpt-5.5";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-// USD per million tokens for gpt-5.5 (the OPENAI_MODEL default above). Cached input
-// is a discounted slice of input_tokens; reasoning tokens are billed as output.
-const OPENAI_USD_PER_MILLION = { input: 5, cachedInput: 0.5, output: 30 };
+// USD per million tokens, keyed by model id so the rates track OPENAI_MODEL above
+// instead of drifting from it. Cached input is a discounted slice of input_tokens;
+// reasoning tokens are billed as output. A model with no entry here leaves the run
+// unpriced rather than costed at another model's rates. Both models surcharge prompts
+// over 272K input tokens, which this scraper never approaches; gpt-5.6-sol rates are
+// promotional through 2026-11-21.
+const OPENAI_USD_PER_MILLION = {
+  "gpt-5.5": { input: 5, cachedInput: 0.5, output: 30 },
+  "gpt-5.6-sol": { input: 4, cachedInput: 0.4, output: 20 }
+};
 const FORCE_IMAGE_REPROCESS = /^(1|true|yes)$/i.test(process.env.FORCE_IMAGE_REPROCESS || "");
 const CURRENT_SOURCE_DAYS = 7;
 const AGING_SOURCE_DAYS = 90;
@@ -804,12 +811,14 @@ function recordUsage(usage) {
   return usage;
 }
 
-function estimateUsageUsd(usage) {
+function estimateUsageUsd(usage, model = OPENAI_MODEL) {
+  const rates = OPENAI_USD_PER_MILLION[model];
+  if (!rates) return null;
   const freshInputTokens = Math.max(0, usage.inputTokens - usage.cachedInputTokens);
   return (
-    freshInputTokens * OPENAI_USD_PER_MILLION.input +
-    usage.cachedInputTokens * OPENAI_USD_PER_MILLION.cachedInput +
-    usage.outputTokens * OPENAI_USD_PER_MILLION.output
+    freshInputTokens * rates.input +
+    usage.cachedInputTokens * rates.cachedInput +
+    usage.outputTokens * rates.output
   ) / 1_000_000;
 }
 
@@ -1496,11 +1505,15 @@ async function main() {
   console.log(`Wrote scrape status to ${SCRAPE_STATUS_PATH.pathname}`);
   console.log(`changedHulls=${changedHulls.join(",")}`);
   if (runUsage.calls) {
+    const estimatedUsd = estimateUsageUsd(runUsage);
     console.log(
       `openaiUsage: ${OPENAI_MODEL} calls=${runUsage.calls} input=${runUsage.inputTokens} ` +
       `cached=${runUsage.cachedInputTokens} output=${runUsage.outputTokens} ` +
-      `reasoning=${runUsage.reasoningTokens} estimatedUsd=${estimateUsageUsd(runUsage).toFixed(4)}`
+      `reasoning=${runUsage.reasoningTokens} estimatedUsd=${estimatedUsd === null ? "unpriced" : estimatedUsd.toFixed(4)}`
     );
+    if (estimatedUsd === null) {
+      console.log(`openaiUsage: no rates for ${OPENAI_MODEL}; add them to OPENAI_USD_PER_MILLION to price this run`);
+    }
   } else {
     console.log("openaiUsage: no OpenAI calls this run (cache hits only)");
   }
