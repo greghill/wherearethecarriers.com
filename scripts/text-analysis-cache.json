@@ -1,6 +1,145 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.6-sol|gonavy|http://www.gonavy.jp/CVLocation.html||41917cf9": {
+      "sourceKey": "gonavy",
+      "model": "gpt-5.6-sol",
+      "articleUrl": "http://www.gonavy.jp/CVLocation.html",
+      "publishedAt": null,
+      "createdAt": "2026-08-28T18:37:22.833Z",
+      "usage": {
+        "inputTokens": 1002,
+        "cachedInputTokens": 0,
+        "outputTokens": 1248,
+        "reasoningTokens": 351,
+        "totalTokens": 2250
+      },
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Norfolk",
+            "lat": 36.95,
+            "lon": -76.33,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-68 USS Nimitz — latest entry: 09Jul2026, arrived at new homeport Norfolk"
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk",
+            "lat": 36.95,
+            "lon": -76.33,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-69 USS Dwight D. Eisenhower — latest entry: 27Jul2026, returned to Norfolk"
+          },
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "Southern California Operating Areas",
+            "lat": 32.7,
+            "lon": -118.3,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "CVN-70 USS Carl Vinson — latest entry: 10Aug-24Aug2016, Southern California Operating Areas"
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "",
+            "lat": 0,
+            "lon": 0,
+            "status": "deployed",
+            "precision": "none",
+            "confidence": "high",
+            "evidenceQuote": "CVN-71 USS Theodore Roosevelt — latest entry: 08Aug2026, one-day friends and family cruise"
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Indian Ocean",
+            "lat": -10,
+            "lon": 80,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "CVN-72 USS Abraham Lincoln — latest entry: 21Aug-25Aug2026, Indian Ocean"
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "North Arabian Sea",
+            "lat": 22,
+            "lon": 64,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "CVN-73 USS George Washington — latest entry: 21Aug-25Aug2026, North Arabian Sea in support of Operation Epic Fury"
+          },
+          {
+            "hull": "CVN-74",
+            "name": "USS John C. Stennis",
+            "locationName": "Newport News, Virginia",
+            "lat": 36.98,
+            "lon": -76.44,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-74 USS John C. Stennis — latest entry: 08Apr2024, moved to an outfitting berth at Newport News Shipbuilding in Newport News, Virginia"
+          },
+          {
+            "hull": "CVN-75",
+            "name": "USS Harry S. Truman",
+            "locationName": "Norfolk",
+            "lat": 36.95,
+            "lon": -76.33,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-75 USS Harry S. Truman — latest entry: 26Sep2025, returned to Norfolk"
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "Puget Sound Naval Shipyard",
+            "lat": 47.56,
+            "lon": -122.65,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-76 USS Ronald Reagan — latest entry: 17Mar2025, entered the Dry Dock in Puget Sound Naval Shipyard and Intermediate Maintenance Facility (PSNS&IMF)"
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "North Arabian Sea",
+            "lat": 22,
+            "lon": 64,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "CVN-77 USS George H.W. Bush — latest entry: 27Apr-24Aug2026, North Arabian Sea in support of Operation Epic Fury"
+          },
+          {
+            "hull": "CVN-78",
+            "name": "USS Gerald R. Ford",
+            "locationName": "Portsmouth, Virginia",
+            "lat": 36.82,
+            "lon": -76.3,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-78 USS Gerald R. Ford — latest entry: 07Jul-25Aug2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
+          }
+        ]
+      }
+    },
     "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026|2026-08-24|cc1726ff": {
       "sourceKey": "twz",
       "model": "gpt-5.6-sol",
@@ -158,18 +297,18 @@
         ]
       }
     },
-    "gpt-5.6-sol|gonavy|http://www.gonavy.jp/CVLocation.html||41917cf9": {
+    "gpt-5.6-sol|gonavy|http://www.gonavy.jp/CVLocation.html||980f205a": {
       "sourceKey": "gonavy",
       "model": "gpt-5.6-sol",
       "articleUrl": "http://www.gonavy.jp/CVLocation.html",
       "publishedAt": null,
-      "createdAt": "2026-08-28T18:37:22.833Z",
+      "createdAt": "2026-08-29T09:59:16.477Z",
       "usage": {
-        "inputTokens": 1002,
+        "inputTokens": 1034,
         "cachedInputTokens": 0,
-        "outputTokens": 1248,
-        "reasoningTokens": 351,
-        "totalTokens": 2250
+        "outputTokens": 1707,
+        "reasoningTokens": 773,
+        "totalTokens": 2741
       },
       "result": {
         "carriers": [
@@ -177,7 +316,7 @@
             "hull": "CVN-68",
             "name": "USS Nimitz",
             "locationName": "Norfolk",
-            "lat": 36.95,
+            "lat": 36.946,
             "lon": -76.33,
             "status": "port",
             "precision": "port",
@@ -187,20 +326,20 @@
           {
             "hull": "CVN-69",
             "name": "USS Dwight D. Eisenhower",
-            "locationName": "Norfolk",
-            "lat": 36.95,
-            "lon": -76.33,
-            "status": "port",
-            "precision": "port",
+            "locationName": "Virginia Capes Operating Areas",
+            "lat": 36.7,
+            "lon": -74.9,
+            "status": "deployed",
+            "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "CVN-69 USS Dwight D. Eisenhower — latest entry: 27Jul2026, returned to Norfolk"
+            "evidenceQuote": "CVN-69 USS Dwight D. Eisenhower — latest entry: 21Aug-24Aug2026, Virginia Capes Operating Areas"
           },
           {
             "hull": "CVN-70",
             "name": "USS Carl Vinson",
             "locationName": "Southern California Operating Areas",
-            "lat": 32.7,
-            "lon": -118.3,
+            "lat": 32.5,
+            "lon": -118.2,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
@@ -209,24 +348,24 @@
           {
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
-            "locationName": "",
+            "locationName": "Unknown",
             "lat": 0,
             "lon": 0,
             "status": "deployed",
             "precision": "none",
-            "confidence": "high",
+            "confidence": "medium",
             "evidenceQuote": "CVN-71 USS Theodore Roosevelt — latest entry: 08Aug2026, one-day friends and family cruise"
           },
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
             "locationName": "Indian Ocean",
-            "lat": -10,
-            "lon": 80,
+            "lat": 10,
+            "lon": 75,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "CVN-72 USS Abraham Lincoln — latest entry: 21Aug-25Aug2026, Indian Ocean"
+            "evidenceQuote": "CVN-72 USS Abraham Lincoln — latest entry: 22Aug-25Aug2026, transiting eastward in the Indian Ocean after having been relieved in the Arabian Sea by the USS George Washington (CVN 73) CSG"
           },
           {
             "hull": "CVN-73",
@@ -243,8 +382,8 @@
             "hull": "CVN-74",
             "name": "USS John C. Stennis",
             "locationName": "Newport News, Virginia",
-            "lat": 36.98,
-            "lon": -76.44,
+            "lat": 36.992,
+            "lon": -76.445,
             "status": "maintenance",
             "precision": "port",
             "confidence": "high",
@@ -254,7 +393,7 @@
             "hull": "CVN-75",
             "name": "USS Harry S. Truman",
             "locationName": "Norfolk",
-            "lat": 36.95,
+            "lat": 36.946,
             "lon": -76.33,
             "status": "port",
             "precision": "port",
@@ -266,7 +405,7 @@
             "name": "USS Ronald Reagan",
             "locationName": "Puget Sound Naval Shipyard",
             "lat": 47.56,
-            "lon": -122.65,
+            "lon": -122.64,
             "status": "maintenance",
             "precision": "port",
             "confidence": "high",
