@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-31T19:59:21.571Z",
-  "lastChangedAt": "2026-08-31T19:59:21.571Z",
+  "generatedAt": "2026-09-01T04:59:45.956Z",
+  "lastChangedAt": "2026-09-01T04:59:45.956Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -200,8 +200,8 @@
         "lon": -117.13
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-08-24",
       "summary": "Where Are The Aircraft Carriers?: August 24, 2026 places USS Theodore Roosevelt in San Diego.",
       "sources": [
@@ -240,7 +240,7 @@
           "note": "Text context: CVN-71 USS Theodore Roosevelt — latest entry: 08Aug2026, one-day friends and family cruise"
         }
       ],
-      "lastChangedAt": "2026-08-28T18:36:25.324Z"
+      "lastChangedAt": "2026-09-01T04:59:45.956Z"
     },
     {
       "hull": "CVN-72",
@@ -248,14 +248,14 @@
       "status": "deployed",
       "locationName": "Indian Ocean",
       "position": {
-        "lat": 8,
-        "lon": 90
+        "lat": 10,
+        "lon": 75
       },
       "positionPrecision": "region",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-08-26",
-      "summary": "Where Are The Aircraft Carriers?: August 24, 2026 places USS Abraham Lincoln in or near Indian Ocean.",
+      "summary": "Aircraft Carrier Locations places USS Abraham Lincoln in or near Indian Ocean.",
       "sources": [
         {
           "role": "primary",
@@ -265,21 +265,21 @@
             "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-08-26",
+          "note": "Text context: CVN-72 USS Abraham Lincoln — latest entry: 22Aug-25Aug2026, transiting eastward in the Indian Ocean after having been relieved in the Arabian Sea by the USS George Washington (CVN 73) CSG"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: August 24, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
           "publishedAt": "2026-08-24",
           "note": "Text context: The supercarrier was most recently transiting eastbound in the Indian Ocean, once again operating under U.S. Pacific Command (PACOM).",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-08-26",
-          "note": "Text context: CVN-72 USS Abraham Lincoln — latest entry: 22Aug-25Aug2026, transiting eastward in the Indian Ocean after having been relieved in the Arabian Sea by the USS George Washington (CVN 73) CSG"
         },
         {
           "role": "backup",
@@ -312,7 +312,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-08-31T19:59:21.571Z"
+      "lastChangedAt": "2026-09-01T04:59:45.956Z"
     },
     {
       "hull": "CVN-73",
