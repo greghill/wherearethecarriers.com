@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-01T14:49:10.787Z",
-  "lastChangedAt": "2026-09-01T14:49:10.787Z",
+  "generatedAt": "2026-09-04T22:19:35.938Z",
+  "lastChangedAt": "2026-09-04T22:19:35.938Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -14,7 +14,7 @@
       "positionPrecision": "port",
       "confidence": "low",
       "evidence": "aging",
-      "lastSeen": "2026-07-15",
+      "lastSeen": "2026-08-24",
       "summary": "Aircraft Carrier Locations places USS Nimitz in Norfolk.",
       "sources": [
         {
@@ -42,7 +42,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-09-01T14:49:10.787Z"
+      "lastChangedAt": "2026-09-04T22:19:35.938Z"
     },
     {
       "hull": "CVN-69",
@@ -86,16 +86,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Aug. 31, 2026",
-          "url": "https://news.usni.org/2026/08/31/usni-news-fleet-and-marine-tracker-aug-31-2026",
-          "publishedAt": "2026-08-31",
-          "note": "Image estimate: The label “USS Dwight D. Eisenhower (CVN-69)” shares a yellow diamond with USS Kearsarge east of the United States.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_27_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: August 24, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
@@ -112,6 +102,16 @@
           "publishedAt": "2026-08-24",
           "note": "Image estimate: Orange USS Dwight D. Eisenhower (CVN 69) silhouette is shown immediately east of the Norfolk group.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Aug. 31, 2026",
+          "url": "https://news.usni.org/2026/08/31/usni-news-fleet-and-marine-tracker-aug-31-2026",
+          "publishedAt": "2026-08-31",
+          "note": "Image estimate: The label “USS Dwight D. Eisenhower (CVN-69)” shares a yellow diamond with USS Kearsarge east of the United States.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_27_26.jpg"
         }
       ],
       "lastChangedAt": "2026-09-01T14:49:10.787Z"
@@ -158,16 +158,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Aug. 31, 2026",
-          "url": "https://news.usni.org/2026/08/31/usni-news-fleet-and-marine-tracker-aug-31-2026",
-          "publishedAt": "2026-08-31",
-          "note": "Image estimate: The label “USS Carl Vinson (CVN-70)” shares a yellow diamond with USS Makin Island west of Southern California.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_27_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: August 24, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
@@ -184,6 +174,16 @@
           "publishedAt": "2026-08-24",
           "note": "Image estimate: Orange USS Carl Vinson (CVN 70) silhouette is plotted adjacent to and east of the Pearl Harbor, HI marker.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Aug. 31, 2026",
+          "url": "https://news.usni.org/2026/08/31/usni-news-fleet-and-marine-tracker-aug-31-2026",
+          "publishedAt": "2026-08-31",
+          "note": "Image estimate: The label “USS Carl Vinson (CVN-70)” shares a yellow diamond with USS Makin Island west of Southern California.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_27_26.jpg"
         }
       ],
       "lastChangedAt": "2026-09-01T14:49:10.787Z"
@@ -191,46 +191,21 @@
     {
       "hull": "CVN-71",
       "name": "USS Theodore Roosevelt",
-      "status": "port",
-      "locationName": "San Diego",
-      "position": {
-        "lat": 32.68,
-        "lon": -117.13
-      },
-      "positionPrecision": "port",
+      "status": "deployed",
+      "locationName": "Unknown",
+      "position": null,
+      "positionPrecision": "unknown",
       "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-08-24",
-      "summary": "Where Are The Aircraft Carriers?: August 24, 2026 places USS Theodore Roosevelt in San Diego.",
+      "evidence": "stale",
+      "lastSeen": "2026-08-12",
+      "summary": "Aircraft Carrier Locations places USS Theodore Roosevelt in or near .",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
             "status",
-            "location",
-            "position",
             "summary"
           ],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Text context: The next carrier scheduled to deploy, USS Theodore Roosevelt , is still pierside in San Diego, based on commercial satellite imagery.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Image estimate: Blue USS Theodore Roosevelt (CVN 71) silhouette is connected visually with the San Diego, CA port marker.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
@@ -238,7 +213,7 @@
           "note": "Text context: CVN-71 USS Theodore Roosevelt — latest entry: 08Aug2026, one-day friends and family cruise"
         }
       ],
-      "lastChangedAt": "2026-09-01T04:59:45.956Z"
+      "lastChangedAt": "2026-09-04T22:19:35.938Z"
     },
     {
       "hull": "CVN-72",
@@ -282,6 +257,16 @@
         {
           "role": "backup",
           "usedFor": [],
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
+          "publishedAt": "2026-08-24",
+          "note": "Image estimate: Green USS Abraham Lincoln (CVN 72) silhouette is the easternmost deployed carrier marker in the northern Indian Ocean portion of the map.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Aug. 31, 2026",
           "url": "https://news.usni.org/2026/08/31/usni-news-fleet-and-marine-tracker-aug-31-2026",
@@ -298,16 +283,6 @@
           "publishedAt": "2026-08-31",
           "note": "Image estimate: The label “Abraham Lincoln CSG” is directly above a yellow diamond between the Malay Peninsula and Borneo.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_27_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Image estimate: Green USS Abraham Lincoln (CVN 72) silhouette is the easternmost deployed carrier marker in the northern Indian Ocean portion of the map.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
       "lastChangedAt": "2026-09-01T14:49:10.787Z"
@@ -364,22 +339,22 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Aug. 31, 2026",
-          "url": "https://news.usni.org/2026/08/31/usni-news-fleet-and-marine-tracker-aug-31-2026",
-          "publishedAt": "2026-08-31",
-          "note": "Image estimate: “George Washington CSG” appears with George H.W. Bush CSG and Boxer ARG above the same yellow diamond.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_27_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: August 24, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
           "publishedAt": "2026-08-24",
           "note": "Image estimate: Green USS George Washington (CVN 73) silhouette appears in the Arabian Sea below the George H.W. Bush marker.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Aug. 31, 2026",
+          "url": "https://news.usni.org/2026/08/31/usni-news-fleet-and-marine-tracker-aug-31-2026",
+          "publishedAt": "2026-08-31",
+          "note": "Image estimate: “George Washington CSG” appears with George H.W. Bush CSG and Boxer ARG above the same yellow diamond.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_27_26.jpg"
         }
       ],
       "lastChangedAt": "2026-09-01T14:49:10.787Z"
@@ -395,8 +370,8 @@
       },
       "positionPrecision": "port",
       "confidence": "low",
-      "evidence": "stale",
-      "lastSeen": "2025-10-22",
+      "evidence": "aging",
+      "lastSeen": "2026-08-24",
       "summary": "Aircraft Carrier Locations places USS John C. Stennis in Newport News, Virginia.",
       "sources": [
         {
@@ -424,7 +399,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-09-01T14:49:10.787Z"
+      "lastChangedAt": "2026-09-04T22:19:35.938Z"
     },
     {
       "hull": "CVN-75",
@@ -437,8 +412,8 @@
       },
       "positionPrecision": "port",
       "confidence": "low",
-      "evidence": "stale",
-      "lastSeen": "2025-10-01",
+      "evidence": "aging",
+      "lastSeen": "2026-08-24",
       "summary": "Aircraft Carrier Locations places USS Harry S. Truman in Norfolk.",
       "sources": [
         {
@@ -466,7 +441,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-09-01T14:49:10.787Z"
+      "lastChangedAt": "2026-09-04T22:19:35.938Z"
     },
     {
       "hull": "CVN-76",
@@ -479,8 +454,8 @@
       },
       "positionPrecision": "port",
       "confidence": "low",
-      "evidence": "stale",
-      "lastSeen": "2026-03-11",
+      "evidence": "aging",
+      "lastSeen": "2026-08-24",
       "summary": "Aircraft Carrier Locations places USS Ronald Reagan in Puget Sound Naval Shipyard.",
       "sources": [
         {
@@ -508,7 +483,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-09-01T14:49:10.787Z"
+      "lastChangedAt": "2026-09-04T22:19:35.938Z"
     },
     {
       "hull": "CVN-77",
@@ -562,22 +537,22 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Aug. 31, 2026",
-          "url": "https://news.usni.org/2026/08/31/usni-news-fleet-and-marine-tracker-aug-31-2026",
-          "publishedAt": "2026-08-31",
-          "note": "Image estimate: “George H.W. Bush CSG” appears in a three-unit label above a yellow diamond in the Arabian Sea.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_27_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: August 24, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
           "publishedAt": "2026-08-24",
           "note": "Image estimate: Green USS George H.W. Bush (CVN 77) silhouette is the northernmost deployed carrier marker near Oman and Pakistan.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Aug. 31, 2026",
+          "url": "https://news.usni.org/2026/08/31/usni-news-fleet-and-marine-tracker-aug-31-2026",
+          "publishedAt": "2026-08-31",
+          "note": "Image estimate: “George H.W. Bush CSG” appears in a three-unit label above a yellow diamond in the Arabian Sea.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/08/FT_8_27_26.jpg"
         }
       ],
       "lastChangedAt": "2026-09-01T14:49:10.787Z"
