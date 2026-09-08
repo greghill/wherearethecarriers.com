@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-05T00:53:19.465Z",
-  "lastChangedAt": "2026-09-05T00:53:19.465Z",
+  "generatedAt": "2026-09-08T04:27:40.258Z",
+  "lastChangedAt": "2026-09-08T04:27:40.258Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -54,8 +54,8 @@
         "lon": -74.5
       },
       "positionPrecision": "region",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-09-02",
       "summary": "Aircraft Carrier Locations places USS Dwight D. Eisenhower in or near Virginia Capes Operating Areas.",
       "sources": [
@@ -114,7 +114,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-09-01T14:49:10.787Z"
+      "lastChangedAt": "2026-09-08T04:27:40.258Z"
     },
     {
       "hull": "CVN-70",
@@ -126,8 +126,8 @@
         "lon": -118.5
       },
       "positionPrecision": "region",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-09-02",
       "summary": "Aircraft Carrier Locations places USS Carl Vinson in or near Southern California Operating Areas.",
       "sources": [
@@ -186,7 +186,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-09-01T14:49:10.787Z"
+      "lastChangedAt": "2026-09-08T04:27:40.258Z"
     },
     {
       "hull": "CVN-71",
@@ -250,8 +250,8 @@
         "lon": 114
       },
       "positionPrecision": "region",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-09-02",
       "summary": "Aircraft Carrier Locations places USS Abraham Lincoln in or near South China Sea.",
       "sources": [
@@ -310,7 +310,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-09-01T14:49:10.787Z"
+      "lastChangedAt": "2026-09-08T04:27:40.258Z"
     },
     {
       "hull": "CVN-73",
@@ -322,8 +322,8 @@
         "lon": 64
       },
       "positionPrecision": "region",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-09-02",
       "summary": "Aircraft Carrier Locations places USS George Washington in or near North Arabian Sea.",
       "sources": [
@@ -382,7 +382,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-09-01T14:49:10.787Z"
+      "lastChangedAt": "2026-09-08T04:27:40.258Z"
     },
     {
       "hull": "CVN-74",
@@ -520,8 +520,8 @@
         "lon": 64
       },
       "positionPrecision": "region",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-09-02",
       "summary": "Aircraft Carrier Locations places USS George H.W. Bush in or near North Arabian Sea.",
       "sources": [
@@ -580,7 +580,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-09-01T14:49:10.787Z"
+      "lastChangedAt": "2026-09-08T04:27:40.258Z"
     },
     {
       "hull": "CVN-78",
