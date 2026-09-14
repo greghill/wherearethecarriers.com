@@ -1,6 +1,101 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.6-sol|usni|https://news.usni.org/2026/09/08/usni-news-fleet-and-marine-tracker-sept-8-2026|2026-09-11|22b3fcf3": {
+      "sourceKey": "usni",
+      "model": "gpt-5.6-sol",
+      "articleUrl": "https://news.usni.org/2026/09/08/usni-news-fleet-and-marine-tracker-sept-8-2026",
+      "publishedAt": "2026-09-11",
+      "createdAt": "2026-09-11T22:31:26.653Z",
+      "usage": {
+        "inputTokens": 3595,
+        "cachedInputTokens": 0,
+        "outputTokens": 1786,
+        "reasoningTokens": 1220,
+        "totalTokens": 5381
+      },
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk, Va.",
+            "lat": 36.946,
+            "lon": -76.33,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Dwight D. Eisenhower (CVN-69) returned Wednesday to Norfolk, Va., according to ship spotters ."
+          },
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "San Diego, Calif.",
+            "lat": 32.713,
+            "lon": -117.175,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Carl Vinson (CVN-70) returned Friday to San Diego, according to ship spotters ."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Eastern Pacific",
+            "lat": 20,
+            "lon": -120,
+            "status": "unknown",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) departed Saturday from San Diego, Calif., according to ship spotters ."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "South China Sea",
+            "lat": 13,
+            "lon": 114,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The Abraham Lincoln Carrier Strike Group arrived Wednesday and departed Sunday from Laem Chabang, Thailand, according to ship spotters ."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 65,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and USS Shoup (DDG-86), are operating in the Arabian Sea in support of Operation Epic Fury ."
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "Bremerton, Wash.",
+            "lat": 47.56,
+            "lon": -122.64,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Ronald Reagan (CVN-76) departed Thursday and returned Monday to Bremerton, Wash., according to ship spotters ."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 65,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The George H. W. Bush Carrier Strike Group is operating in the Arabian Sea in support of Operation Epic Fury."
+          }
+        ]
+      }
+    },
     "gpt-5.6-sol|gonavy|http://www.gonavy.jp/CVLocation.html||ef2b4387": {
       "sourceKey": "gonavy",
       "model": "gpt-5.6-sol",
@@ -1105,54 +1200,21 @@
         ]
       }
     },
-    "gpt-5.6-sol|usni|https://news.usni.org/2026/09/08/usni-news-fleet-and-marine-tracker-sept-8-2026|2026-09-11|22b3fcf3": {
+    "gpt-5.6-sol|usni|https://news.usni.org/2026/09/14/usni-news-fleet-and-marine-tracker-sept-14-2026|2026-09-14|eecf416b": {
       "sourceKey": "usni",
       "model": "gpt-5.6-sol",
-      "articleUrl": "https://news.usni.org/2026/09/08/usni-news-fleet-and-marine-tracker-sept-8-2026",
-      "publishedAt": "2026-09-11",
-      "createdAt": "2026-09-11T22:31:26.653Z",
+      "articleUrl": "https://news.usni.org/2026/09/14/usni-news-fleet-and-marine-tracker-sept-14-2026",
+      "publishedAt": "2026-09-14",
+      "createdAt": "2026-09-14T23:05:58.888Z",
       "usage": {
-        "inputTokens": 3595,
+        "inputTokens": 3547,
         "cachedInputTokens": 0,
-        "outputTokens": 1786,
-        "reasoningTokens": 1220,
-        "totalTokens": 5381
+        "outputTokens": 544,
+        "reasoningTokens": 211,
+        "totalTokens": 4091
       },
       "result": {
         "carriers": [
-          {
-            "hull": "CVN-69",
-            "name": "USS Dwight D. Eisenhower",
-            "locationName": "Norfolk, Va.",
-            "lat": 36.946,
-            "lon": -76.33,
-            "status": "port",
-            "precision": "port",
-            "confidence": "high",
-            "evidenceQuote": "Aircraft carrier USS Dwight D. Eisenhower (CVN-69) returned Wednesday to Norfolk, Va., according to ship spotters ."
-          },
-          {
-            "hull": "CVN-70",
-            "name": "USS Carl Vinson",
-            "locationName": "San Diego, Calif.",
-            "lat": 32.713,
-            "lon": -117.175,
-            "status": "port",
-            "precision": "port",
-            "confidence": "high",
-            "evidenceQuote": "Aircraft carrier USS Carl Vinson (CVN-70) returned Friday to San Diego, according to ship spotters ."
-          },
-          {
-            "hull": "CVN-71",
-            "name": "USS Theodore Roosevelt",
-            "locationName": "Eastern Pacific",
-            "lat": 20,
-            "lon": -120,
-            "status": "unknown",
-            "precision": "region",
-            "confidence": "medium",
-            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) departed Saturday from San Diego, Calif., according to ship spotters ."
-          },
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
@@ -1162,40 +1224,40 @@
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "The Abraham Lincoln Carrier Strike Group arrived Wednesday and departed Sunday from Laem Chabang, Thailand, according to ship spotters ."
+            "evidenceQuote": "The Abraham Lincoln Carrier Strike Group is in the South China Sea heading back from a deployment."
           },
           {
             "hull": "CVN-73",
             "name": "USS George Washington",
             "locationName": "Arabian Sea",
-            "lat": 15,
+            "lat": 16,
             "lon": 65,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and USS Shoup (DDG-86), are operating in the Arabian Sea in support of Operation Epic Fury ."
-          },
-          {
-            "hull": "CVN-76",
-            "name": "USS Ronald Reagan",
-            "locationName": "Bremerton, Wash.",
-            "lat": 47.56,
-            "lon": -122.64,
-            "status": "port",
-            "precision": "port",
-            "confidence": "high",
-            "evidenceQuote": "Aircraft carrier USS Ronald Reagan (CVN-76) departed Thursday and returned Monday to Bremerton, Wash., according to ship spotters ."
+            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and USS Shoup (DDG-86), are operating in the Arabian Sea in support of U.S. operations against Iran."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
             "locationName": "Arabian Sea",
-            "lat": 15,
+            "lat": 16,
             "lon": 65,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "The George H. W. Bush Carrier Strike Group is operating in the Arabian Sea in support of Operation Epic Fury."
+            "evidenceQuote": "The George H. W. Bush Carrier Strike Group is operating in the Arabian Sea in support of U.S. operations in the Middle East."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "San Diego, Calif.",
+            "lat": 32.684,
+            "lon": -117.126,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) returned Friday to San Diego, Calif., according to ship spotters ."
           }
         ]
       }
