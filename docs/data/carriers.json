@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-15T13:28:52.719Z",
-  "lastChangedAt": "2026-09-15T13:28:52.719Z",
+  "generatedAt": "2026-09-17T00:29:24.568Z",
+  "lastChangedAt": "2026-09-17T00:29:24.568Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -54,8 +54,8 @@
         "lon": -76.33
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-09-09",
       "summary": "Aircraft Carrier Locations places USS Dwight D. Eisenhower in Norfolk.",
       "sources": [
@@ -94,7 +94,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-09-15T13:28:52.719Z"
+      "lastChangedAt": "2026-09-17T00:29:24.568Z"
     },
     {
       "hull": "CVN-70",
@@ -106,8 +106,8 @@
         "lon": -117.19
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-09-09",
       "summary": "Aircraft Carrier Locations places USS Carl Vinson in San Diego.",
       "sources": [
@@ -146,7 +146,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-09-15T13:28:52.719Z"
+      "lastChangedAt": "2026-09-17T00:29:24.568Z"
     },
     {
       "hull": "CVN-71",
@@ -364,8 +364,8 @@
         "lon": -76.445
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-09-09",
       "summary": "Aircraft Carrier Locations places USS John C. Stennis in Newport News Shipbuilding, Newport News, Virginia.",
       "sources": [
@@ -394,7 +394,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-09-15T13:28:52.719Z"
+      "lastChangedAt": "2026-09-17T00:29:24.568Z"
     },
     {
       "hull": "CVN-75",
@@ -448,8 +448,8 @@
         "lon": -122.64
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-09-09",
       "summary": "Aircraft Carrier Locations places USS Ronald Reagan in Kitsap-Bremerton.",
       "sources": [
@@ -478,7 +478,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-09-15T13:28:52.719Z"
+      "lastChangedAt": "2026-09-17T00:29:24.568Z"
     },
     {
       "hull": "CVN-77",
