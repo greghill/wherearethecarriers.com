@@ -484,6 +484,61 @@
           }
         ]
       }
+    },
+    "gpt-5.6-sol|https://news.usni.org/2026/09/21/usni-news-fleet-and-marine-tracker-sept-21-2026|https://news.usni.org/wp-content/uploads/2026/09/FT_9_21_26.jpg|2026-09-21": {
+      "sourceKey": "usni",
+      "model": "gpt-5.6-sol",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/09/FT_9_21_26.jpg",
+      "articleUrl": "https://news.usni.org/2026/09/21/usni-news-fleet-and-marine-tracker-sept-21-2026",
+      "publishedAt": "2026-09-21",
+      "createdAt": "2026-09-21T19:22:52.567Z",
+      "usage": {
+        "inputTokens": 3753,
+        "cachedInputTokens": 0,
+        "outputTokens": 3747,
+        "reasoningTokens": 3358,
+        "totalTokens": 7500
+      },
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/09/21/usni-news-fleet-and-marine-tracker-sept-21-2026",
+        "publishedAt": "2026-09-21",
+        "carriers": [
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 17,
+            "lon": 65,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The grouped label “George H.W. Bush CSG / George Washington CSG / Boxer ARG” appears above a single yellow diamond in the Arabian Sea.",
+            "rationale": "The shared marker is plotted over open water southwest of India. The map does not visually separate the two carrier strike groups, so both carriers are anchored to the same approximate marker."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Arabian Sea",
+            "lat": 17,
+            "lon": 65,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The grouped label “George H.W. Bush CSG / George Washington CSG / Boxer ARG” appears above a single yellow diamond in the Arabian Sea.",
+            "rationale": "The shared marker is plotted over open water southwest of India. No separate George Washington marker is shown, so its position is estimated from the common diamond."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Western Pacific Ocean",
+            "lat": 13,
+            "lon": 152,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "The label “Abraham Lincoln CSG” is immediately above a yellow diamond east of the Philippines and Guam region.",
+            "rationale": "The diamond is clearly isolated over open western Pacific water and directly associated with the Abraham Lincoln label."
+          }
+        ]
+      }
     }
   }
 }
