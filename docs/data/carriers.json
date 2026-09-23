@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-09-22T14:47:05.659Z",
-  "lastChangedAt": "2026-09-22T14:47:05.659Z",
+  "generatedAt": "2026-09-23T20:16:49.889Z",
+  "lastChangedAt": "2026-09-23T20:16:49.889Z",
   "carriers": [
     {
       "hull": "CVN-68",
       "name": "USS Nimitz",
       "status": "port",
-      "locationName": "Norfolk",
+      "locationName": "Naval Station Norfolk",
       "position": {
-        "lat": 36.95,
-        "lon": -76.33
+        "lat": 36.946,
+        "lon": -76.329
       },
       "positionPrecision": "port",
-      "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-07-15",
-      "summary": "Aircraft Carrier Locations places USS Nimitz in Norfolk.",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-09-23",
+      "summary": "Where Are The Aircraft Carriers?: September 23, 2026 places USS Nimitz in Naval Station Norfolk.",
       "sources": [
         {
           "role": "primary",
@@ -25,6 +25,16 @@
             "position",
             "summary"
           ],
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers?: September 23, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+          "publishedAt": "2026-09-23",
+          "note": "Text context: USS Nimitz was stationed at Naval Base Kitsap-Bremerton before circumnavigating South America to Naval Station Norfolk this summer, where she is being used primarily for training before deactivation in 2027.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
@@ -35,14 +45,14 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Image estimate: Blue USS Nimitz (CVN 68) silhouette appears beside the Norfolk, VA port marker.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
+          "title": "Where Are The Aircraft Carriers?: September 23, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+          "publishedAt": "2026-09-23",
+          "note": "Image estimate: The blue USS NIMITZ (CVN 68) symbol is associated with the map's NORFOLK, VA port marker.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-09-22T14:47:05.659Z"
+      "lastChangedAt": "2026-09-23T20:16:49.889Z"
     },
     {
       "hull": "CVN-69",
@@ -77,21 +87,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Text context: USS Dwight D. Eisenhower , homeported at Naval Station Norfolk, got underway on August 21 and is operating 35 nautical miles off the coast with her AIS transponder on .",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Image estimate: Orange USS Dwight D. Eisenhower (CVN 69) silhouette is shown immediately east of the Norfolk group.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
+          "title": "Where Are The Aircraft Carriers?: September 23, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+          "publishedAt": "2026-09-23",
+          "note": "Image estimate: The blue USS DWIGHT D. EISENHOWER (CVN 69) symbol appears directly below Nimitz beside the NORFOLK, VA marker.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536"
         }
       ],
       "lastChangedAt": "2026-09-22T14:47:05.659Z"
@@ -129,21 +129,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Text context: USS Carl Vinson departed San Diego on August 10 and is conducting Tailored Ship’s Training Availability (TSTA) and Final Evaluation Period (FEP).",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Image estimate: Orange USS Carl Vinson (CVN 70) silhouette is plotted adjacent to and east of the Pearl Harbor, HI marker.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
+          "title": "Where Are The Aircraft Carriers?: September 23, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+          "publishedAt": "2026-09-23",
+          "note": "Image estimate: The blue USS CARL VINSON (CVN 70) symbol is connected to the SAN DIEGO, CA port marker.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536"
         }
       ],
       "lastChangedAt": "2026-09-22T14:47:05.659Z"
@@ -181,21 +171,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Text context: The next carrier scheduled to deploy, USS Theodore Roosevelt , is still pierside in San Diego, based on commercial satellite imagery.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Image estimate: Blue USS Theodore Roosevelt (CVN 71) silhouette is connected visually with the San Diego, CA port marker.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
+          "title": "Where Are The Aircraft Carriers?: September 23, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+          "publishedAt": "2026-09-23",
+          "note": "Image estimate: The blue USS THEODORE ROOSEVELT (CVN 71) symbol is shown separately below Carl Vinson at SAN DIEGO, CA.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536"
         }
       ],
       "lastChangedAt": "2026-09-22T14:47:05.659Z"
@@ -204,25 +184,34 @@
       "hull": "CVN-72",
       "name": "USS Abraham Lincoln",
       "status": "deployed",
-      "locationName": "Philippine Sea",
+      "locationName": "U.S. 7th Fleet area of responsibility",
       "position": {
         "lat": 15,
         "lon": 135
       },
-      "positionPrecision": "region",
+      "positionPrecision": "unknown",
       "confidence": "high",
       "evidence": "corroborated",
       "lastSeen": "2026-09-23",
-      "summary": "USNI News Fleet and Marine Tracker: Sept. 21, 2026 places USS Abraham Lincoln in or near Philippine Sea.",
+      "summary": "Where Are The Aircraft Carriers?: September 23, 2026 places USS Abraham Lincoln in or near U.S. 7th Fleet area of responsibility.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
-            "position",
             "summary"
           ],
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers?: September 23, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+          "publishedAt": "2026-09-23",
+          "note": "Text context: The USS Abraham Lincoln is currently conducting routine operations at an undisclosed location in the U.S. 7th Fleet area of responsibility (AOR), presumably steaming east en route to her homeport at Naval Air Station North Island in San Die",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Sept. 21, 2026",
           "url": "https://news.usni.org/2026/09/21/usni-news-fleet-and-marine-tracker-sept-21-2026",
@@ -243,34 +232,14 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Text context: The supercarrier was most recently transiting eastbound in the Indian Ocean, once again operating under U.S. Pacific Command (PACOM).",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
           "publishedAt": "2026-09-23",
           "note": "Text context: CVN-72 USS Abraham Lincoln — latest entry: 21Sep-22Sep2026, in the U.S. 7th Fleet Area of Operations"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Image estimate: Green USS Abraham Lincoln (CVN 72) silhouette is the easternmost deployed carrier marker in the northern Indian Ocean portion of the map.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-09-22T14:47:05.659Z"
+      "lastChangedAt": "2026-09-23T20:16:49.889Z"
     },
     {
       "hull": "CVN-73",
@@ -315,11 +284,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Text context: In Lincoln’s stead, USS George Washington has taken up station in the Arabian Sea, as the Navy maintains dual-carrier coverage in theater to support the ongoing blockade of Iran.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
+          "title": "Where Are The Aircraft Carriers?: September 23, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+          "publishedAt": "2026-09-23",
+          "note": "Text context: TWZ understands additional destroyers operating in the U.S. Central Command (CENTCOM) AOR are also escorting Washington , but a U.S. official declined to say which ones.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536"
         },
         {
           "role": "backup",
@@ -330,16 +299,6 @@
           "publishedAt": "2026-09-21",
           "note": "Image estimate: The grouped label “George H.W. Bush CSG / George Washington CSG / Boxer ARG” appears above a single yellow diamond in the Arabian Sea.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/09/FT_9_21_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Image estimate: Green USS George Washington (CVN 73) silhouette appears in the Arabian Sea below the George H.W. Bush marker.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
       "lastChangedAt": "2026-09-22T14:47:05.659Z"
@@ -377,11 +336,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Image estimate: Red USS John C. Stennis (CVN 74) silhouette appears within the map's Norfolk, VA maintenance group.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
+          "title": "Where Are The Aircraft Carriers?: September 23, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+          "publishedAt": "2026-09-23",
+          "note": "Image estimate: The red USS JOHN C. STENNIS (CVN 74) symbol is grouped with the NORFOLK, VA/Hampton Roads marker.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536"
         }
       ],
       "lastChangedAt": "2026-09-22T14:47:05.659Z"
@@ -419,11 +378,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Image estimate: Red USS Harry S. Truman (CVN 75) silhouette is included in the Norfolk, VA maintenance cluster.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
+          "title": "Where Are The Aircraft Carriers?: September 23, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+          "publishedAt": "2026-09-23",
+          "note": "Image estimate: The red USS HARRY S. TRUMAN (CVN 75) symbol appears as a separate entry beneath Stennis near the NORFOLK, VA marker.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536"
         }
       ],
       "lastChangedAt": "2026-09-22T14:47:05.659Z"
@@ -431,26 +390,32 @@
     {
       "hull": "CVN-76",
       "name": "USS Ronald Reagan",
-      "status": "port",
-      "locationName": "Kitsap-Bremerton",
-      "position": {
-        "lat": 47.56,
-        "lon": -122.64
-      },
-      "positionPrecision": "port",
-      "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-09-09",
-      "summary": "Aircraft Carrier Locations places USS Ronald Reagan in Kitsap-Bremerton.",
+      "status": "unknown",
+      "locationName": "Undisclosed",
+      "position": null,
+      "positionPrecision": "unknown",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-09-23",
+      "summary": "Where Are The Aircraft Carriers?: September 23, 2026 places USS Ronald Reagan in or near Undisclosed.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
-            "position",
             "summary"
           ],
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers?: September 23, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+          "publishedAt": "2026-09-23",
+          "note": "Text context: The Navy, in a recent statement , confirmed the flattop “returned to the fleet capable and mission-ready.”",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
@@ -461,14 +426,14 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Image estimate: Red USS Ronald Reagan (CVN 76) silhouette is attached to the Bremerton, WA port marker.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
+          "title": "Where Are The Aircraft Carriers?: September 23, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+          "publishedAt": "2026-09-23",
+          "note": "Image estimate: The blue USS RONALD REAGAN (CVN 76) symbol is connected to the BREMERTON, WA port marker.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-09-17T00:29:24.568Z"
+      "lastChangedAt": "2026-09-23T20:16:49.889Z"
     },
     {
       "hull": "CVN-77",
@@ -502,6 +467,16 @@
         {
           "role": "backup",
           "usedFor": [],
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers?: September 23, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+          "publishedAt": "2026-09-23",
+          "note": "Text context: In addition to Washington , Bush is still working the blockade from the Arabian Sea, nearly six months into her deployment.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Sept. 21, 2026",
           "url": "https://news.usni.org/2026/09/21/usni-news-fleet-and-marine-tracker-sept-21-2026",
@@ -512,32 +487,12 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Text context: The second carrier underway in the CENTCOM AOR, USS George H.W. Bush , has been deployed for more than four months and is operating at an undisclosed location in the Arabian Sea.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Sept. 21, 2026",
           "url": "https://news.usni.org/2026/09/21/usni-news-fleet-and-marine-tracker-sept-21-2026",
           "publishedAt": "2026-09-21",
           "note": "Image estimate: The grouped label “George H.W. Bush CSG / George Washington CSG / Boxer ARG” appears above a single yellow diamond in the Arabian Sea.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/09/FT_9_21_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Image estimate: Green USS George H.W. Bush (CVN 77) silhouette is the northernmost deployed carrier marker near Oman and Pakistan.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
         }
       ],
       "lastChangedAt": "2026-09-22T14:47:05.659Z"
@@ -575,11 +530,11 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: August 24, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-august-24-2026",
-          "publishedAt": "2026-08-24",
-          "note": "Image estimate: Red USS Gerald R. Ford (CVN 78) silhouette appears beside the Norfolk, VA port marker.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/08/TWZ-Carrier-Fleet-Tracker-as-of-August-24-2026-Full-Res.png?w=2048&quality=85"
+          "title": "Where Are The Aircraft Carriers?: September 23, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+          "publishedAt": "2026-09-23",
+          "note": "Image estimate: The red USS GERALD R. FORD (CVN 78) symbol is associated with the NORFOLK, VA marker and shown separately above Stennis and Truman.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536"
         }
       ],
       "lastChangedAt": "2026-09-22T14:47:05.659Z"

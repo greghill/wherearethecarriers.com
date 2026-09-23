@@ -539,6 +539,116 @@
           }
         ]
       }
+    },
+    "gpt-5.6-sol|https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026|https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536|2026-09-23": {
+      "sourceKey": "twz",
+      "model": "gpt-5.6-sol",
+      "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+      "publishedAt": "2026-09-23",
+      "createdAt": "2026-09-23T20:17:43.460Z",
+      "usage": {
+        "inputTokens": 2536,
+        "cachedInputTokens": 0,
+        "outputTokens": 2224,
+        "reasoningTokens": 1278,
+        "totalTokens": 4760
+      },
+      "result": {
+        "sourceKey": "twz",
+        "imageUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+        "publishedAt": "2026-09-23",
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Norfolk, Virginia",
+            "lat": 36.948,
+            "lon": -76.328,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The blue USS NIMITZ (CVN 68) symbol is associated with the map's NORFOLK, VA port marker.",
+            "rationale": "The infographic is schematic rather than geographically precise. Coordinates are placed in navigable water at Naval Station Norfolk and slightly separated from the other Norfolk carrier estimates."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk, Virginia",
+            "lat": 36.944,
+            "lon": -76.326,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The blue USS DWIGHT D. EISENHOWER (CVN 69) symbol appears directly below Nimitz beside the NORFOLK, VA marker.",
+            "rationale": "Estimated at a separate Norfolk waterfront berth consistent with the named port; exact berth cannot be recovered from the stylized map."
+          },
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "San Diego, California",
+            "lat": 32.699,
+            "lon": -117.197,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The blue USS CARL VINSON (CVN 70) symbol is connected to the SAN DIEGO, CA port marker.",
+            "rationale": "Placed in San Diego Bay beside Naval Air Station North Island, with a small separation from Theodore Roosevelt."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "San Diego, California",
+            "lat": 32.696,
+            "lon": -117.196,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The blue USS THEODORE ROOSEVELT (CVN 71) symbol is shown separately below Carl Vinson at SAN DIEGO, CA.",
+            "rationale": "Estimated at a distinct carrier berth in San Diego Bay; the source graphic provides port-level rather than berth-level precision."
+          },
+          {
+            "hull": "CVN-74",
+            "name": "USS John C. Stennis",
+            "locationName": "Hampton Roads, Virginia",
+            "lat": 36.995,
+            "lon": -76.443,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The red USS JOHN C. STENNIS (CVN 74) symbol is grouped with the NORFOLK, VA/Hampton Roads marker.",
+            "rationale": "The map uses Norfolk as the regional marker. The estimate is placed on the Newport News shipyard waterfront within Hampton Roads, consistent with a maintenance-status carrier and safely on port water."
+          },
+          {
+            "hull": "CVN-75",
+            "name": "USS Harry S. Truman",
+            "locationName": "Norfolk, Virginia",
+            "lat": 36.941,
+            "lon": -76.324,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The red USS HARRY S. TRUMAN (CVN 75) symbol appears as a separate entry beneath Stennis near the NORFOLK, VA marker.",
+            "rationale": "Placed at a distinct Naval Station Norfolk waterfront position; the schematic does not identify an exact pier."
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "Bremerton, Washington",
+            "lat": 47.557,
+            "lon": -122.649,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The blue USS RONALD REAGAN (CVN 76) symbol is connected to the BREMERTON, WA port marker.",
+            "rationale": "Coordinates are in Sinclair Inlet along the Bremerton naval shipyard waterfront, rather than on the inland position of the schematic symbol."
+          },
+          {
+            "hull": "CVN-78",
+            "name": "USS Gerald R. Ford",
+            "locationName": "Norfolk, Virginia",
+            "lat": 36.951,
+            "lon": -76.33,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The red USS GERALD R. FORD (CVN 78) symbol is associated with the NORFOLK, VA marker and shown separately above Stennis and Truman.",
+            "rationale": "Estimated at a separate Norfolk carrier berth in navigable waterfront water; exact placement is limited by the infographic's schematic layout."
+          }
+        ]
+      }
     }
   }
 }
