@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-23T20:16:49.889Z",
-  "lastChangedAt": "2026-09-23T20:16:49.889Z",
+  "generatedAt": "2026-09-24T04:39:35.148Z",
+  "lastChangedAt": "2026-09-24T04:39:35.148Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -148,8 +148,8 @@
         "lon": -117.18
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-09-16",
       "summary": "Aircraft Carrier Locations places USS Theodore Roosevelt in San Diego.",
       "sources": [
@@ -178,7 +178,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/09/TWZ-CARRIER-FLEET-TRACKER-AS-OF-SEPTEMBER-23-2026.png?quality=85&w=1536"
         }
       ],
-      "lastChangedAt": "2026-09-22T14:47:05.659Z"
+      "lastChangedAt": "2026-09-24T04:39:35.148Z"
     },
     {
       "hull": "CVN-72",
