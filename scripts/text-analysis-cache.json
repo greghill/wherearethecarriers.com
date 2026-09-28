@@ -1,6 +1,79 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026|2026-09-23|d0a00acd": {
+      "sourceKey": "twz",
+      "model": "gpt-5.6-sol",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
+      "publishedAt": "2026-09-23",
+      "createdAt": "2026-09-23T20:17:13.783Z",
+      "usage": {
+        "inputTokens": 2784,
+        "cachedInputTokens": 0,
+        "outputTokens": 1289,
+        "reasoningTokens": 840,
+        "totalTokens": 4073
+      },
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Naval Station Norfolk",
+            "lat": 36.946,
+            "lon": -76.329,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "USS Nimitz was stationed at Naval Base Kitsap-Bremerton before circumnavigating South America to Naval Station Norfolk this summer, where she is being used primarily for training before deactivation in 2027."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "U.S. 7th Fleet area of responsibility",
+            "lat": 0,
+            "lon": 0,
+            "status": "deployed",
+            "precision": "none",
+            "confidence": "high",
+            "evidenceQuote": "The USS Abraham Lincoln is currently conducting routine operations at an undisclosed location in the U.S. 7th Fleet area of responsibility (AOR), presumably steaming east en route to her homeport at Naval Air Station North Island in San Diego."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "U.S. Central Command area of responsibility",
+            "lat": 0,
+            "lon": 0,
+            "status": "deployed",
+            "precision": "none",
+            "confidence": "medium",
+            "evidenceQuote": "TWZ understands additional destroyers operating in the U.S. Central Command (CENTCOM) AOR are also escorting Washington , but a U.S. official declined to say which ones."
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "Undisclosed",
+            "lat": 0,
+            "lon": 0,
+            "status": "unknown",
+            "precision": "none",
+            "confidence": "high",
+            "evidenceQuote": "The Navy, in a recent statement , confirmed the flattop “returned to the fleet capable and mission-ready.”"
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 65,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "In addition to Washington , Bush is still working the blockade from the Arabian Sea, nearly six months into her deployment."
+          }
+        ]
+      }
+    },
     "gpt-5.6-sol|gonavy|http://www.gonavy.jp/CVLocation.html||6d03fc4a": {
       "sourceKey": "gonavy",
       "model": "gpt-5.6-sol",
@@ -1591,75 +1664,64 @@
         ]
       }
     },
-    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026|2026-09-23|d0a00acd": {
-      "sourceKey": "twz",
+    "gpt-5.6-sol|usni|https://news.usni.org/2026/09/28/usni-news-fleet-and-marine-tracker-sept-28-2026|2026-09-28|cd0e8e25": {
+      "sourceKey": "usni",
       "model": "gpt-5.6-sol",
-      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-23-2026",
-      "publishedAt": "2026-09-23",
-      "createdAt": "2026-09-23T20:17:13.783Z",
+      "articleUrl": "https://news.usni.org/2026/09/28/usni-news-fleet-and-marine-tracker-sept-28-2026",
+      "publishedAt": "2026-09-28",
+      "createdAt": "2026-09-28T21:55:03.997Z",
       "usage": {
-        "inputTokens": 2784,
+        "inputTokens": 3730,
         "cachedInputTokens": 0,
-        "outputTokens": 1289,
-        "reasoningTokens": 840,
-        "totalTokens": 4073
+        "outputTokens": 692,
+        "reasoningTokens": 350,
+        "totalTokens": 4422
       },
       "result": {
         "carriers": [
           {
-            "hull": "CVN-68",
-            "name": "USS Nimitz",
-            "locationName": "Naval Station Norfolk",
-            "lat": 36.946,
-            "lon": -76.329,
-            "status": "port",
-            "precision": "port",
-            "confidence": "high",
-            "evidenceQuote": "USS Nimitz was stationed at Naval Base Kitsap-Bremerton before circumnavigating South America to Naval Station Norfolk this summer, where she is being used primarily for training before deactivation in 2027."
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Eastern Pacific",
+            "lat": 30.5,
+            "lon": -119.5,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) departed on deployment Sunday from San Diego, Calif."
           },
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
-            "locationName": "U.S. 7th Fleet area of responsibility",
-            "lat": 0,
-            "lon": 0,
+            "locationName": "near Hawaii",
+            "lat": 21.3,
+            "lon": -158.3,
             "status": "deployed",
-            "precision": "none",
+            "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "The USS Abraham Lincoln is currently conducting routine operations at an undisclosed location in the U.S. 7th Fleet area of responsibility (AOR), presumably steaming east en route to her homeport at Naval Air Station North Island in San Diego."
+            "evidenceQuote": "On Sunday, Acting Secretary of the Navy Hung Cao visited Lincoln while the carrier was sailing near Hawaii."
           },
           {
             "hull": "CVN-73",
             "name": "USS George Washington",
-            "locationName": "U.S. Central Command area of responsibility",
-            "lat": 0,
-            "lon": 0,
+            "locationName": "Arabian Sea",
+            "lat": 16,
+            "lon": 64,
             "status": "deployed",
-            "precision": "none",
-            "confidence": "medium",
-            "evidenceQuote": "TWZ understands additional destroyers operating in the U.S. Central Command (CENTCOM) AOR are also escorting Washington , but a U.S. official declined to say which ones."
-          },
-          {
-            "hull": "CVN-76",
-            "name": "USS Ronald Reagan",
-            "locationName": "Undisclosed",
-            "lat": 0,
-            "lon": 0,
-            "status": "unknown",
-            "precision": "none",
+            "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "The Navy, in a recent statement , confirmed the flattop “returned to the fleet capable and mission-ready.”"
+            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and USS Shoup (DDG-86), are operating in the Arabian Sea in support of U.S. operations against Iran."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
             "locationName": "Arabian Sea",
-            "lat": 15,
-            "lon": 65,
+            "lat": 16,
+            "lon": 64,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "In addition to Washington , Bush is still working the blockade from the Arabian Sea, nearly six months into her deployment."
+            "evidenceQuote": "The George H. W. Bush Carrier Strike Group is operating in the Arabian Sea in support of U.S. operations in the Middle East."
           }
         ]
       }
