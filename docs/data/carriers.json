@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-30T23:43:30.312Z",
-  "lastChangedAt": "2026-09-30T23:43:30.312Z",
+  "generatedAt": "2026-10-01T18:50:43.487Z",
+  "lastChangedAt": "2026-10-01T18:50:43.487Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -48,7 +48,7 @@
       "hull": "CVN-69",
       "name": "USS Dwight D. Eisenhower",
       "status": "deployed",
-      "locationName": "off the coast of Virginia",
+      "locationName": "Off the coast of Virginia",
       "position": {
         "lat": 36.94,
         "lon": -76.34
@@ -57,7 +57,7 @@
       "confidence": "medium",
       "evidence": "current",
       "lastSeen": "2026-09-30",
-      "summary": "Where Are The Aircraft Carriers?: September 30, 2026 places USS Dwight D. Eisenhower in or near off the coast of Virginia.",
+      "summary": "Where Are The Aircraft Carriers?: September 30, 2026 places USS Dwight D. Eisenhower in or near Off the coast of Virginia.",
       "sources": [
         {
           "role": "primary",
@@ -95,7 +95,7 @@
           "note": "Text context: CVN-69 USS Dwight D. Eisenhower — latest entry: 02Sep2026, returned to Norfolk"
         }
       ],
-      "lastChangedAt": "2026-09-30T23:43:30.312Z"
+      "lastChangedAt": "2026-10-01T18:50:43.487Z"
     },
     {
       "hull": "CVN-70",

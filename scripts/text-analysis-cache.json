@@ -1,6 +1,79 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-september-30-2026|2026-09-30|d9a057ab": {
+      "sourceKey": "twz",
+      "model": "gpt-5.6-sol",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-30-2026",
+      "publishedAt": "2026-09-30",
+      "createdAt": "2026-09-30T23:44:06.996Z",
+      "usage": {
+        "inputTokens": 4269,
+        "cachedInputTokens": 0,
+        "outputTokens": 2402,
+        "reasoningTokens": 1945,
+        "totalTokens": 6671
+      },
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "U.S. 3rd Fleet area of operations",
+            "lat": 30,
+            "lon": -120,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The Theodore Roosevelt Carrier Strike Group is underway conducting routine operations in the U.S. 3rd Fleet area of operations."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Hawaiian Islands operating area",
+            "lat": 22,
+            "lon": -154.5,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Acting Secretary of the Navy Hung Cao flew out to the flight deck of USS Abraham Lincoln as she was sailing eastbound in the Hawaiian Islands operating area, en route to her homeport in San Diego."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "off the coast of Virginia",
+            "lat": 36.5,
+            "lon": -74.5,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The incident took place on Monday around 6:18 p.m. Eastern Daylight Time as the vessel was underway off the coast of Virginia."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "U.S. 5th Fleet AOR",
+            "lat": 20,
+            "lon": 64,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "If such a transit occurs, this would leave one carrier , the USS George Washington , on station in the U.S. 5th Fleet AOR for the first time since April ."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 0,
+            "lon": 0,
+            "status": "deployed",
+            "precision": "none",
+            "confidence": "low",
+            "evidenceQuote": "If the timeline holds, it means Bush is likely already en route from her station in the Arabian Sea, where the CSG was most recently operating as of September 25, according to DVIDS."
+          }
+        ]
+      }
+    },
     "gpt-5.6-sol|gonavy|http://www.gonavy.jp/CVLocation.html||535a694c": {
       "sourceKey": "gonavy",
       "model": "gpt-5.6-sol",
@@ -1865,18 +1938,18 @@
         ]
       }
     },
-    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-september-30-2026|2026-09-30|d9a057ab": {
+    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-september-30-2026|2026-09-30|c9346733": {
       "sourceKey": "twz",
       "model": "gpt-5.6-sol",
       "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-30-2026",
       "publishedAt": "2026-09-30",
-      "createdAt": "2026-09-30T23:44:06.996Z",
+      "createdAt": "2026-10-01T18:51:12.945Z",
       "usage": {
-        "inputTokens": 4269,
+        "inputTokens": 4272,
         "cachedInputTokens": 0,
-        "outputTokens": 2402,
-        "reasoningTokens": 1945,
-        "totalTokens": 6671
+        "outputTokens": 1881,
+        "reasoningTokens": 1414,
+        "totalTokens": 6153
       },
       "result": {
         "carriers": [
@@ -1884,8 +1957,8 @@
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
             "locationName": "U.S. 3rd Fleet area of operations",
-            "lat": 30,
-            "lon": -120,
+            "lat": 31.5,
+            "lon": -119.5,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
@@ -1895,8 +1968,8 @@
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
             "locationName": "Hawaiian Islands operating area",
-            "lat": 22,
-            "lon": -154.5,
+            "lat": 20.5,
+            "lon": -157.5,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
@@ -1905,35 +1978,35 @@
           {
             "hull": "CVN-69",
             "name": "USS Dwight D. Eisenhower",
-            "locationName": "off the coast of Virginia",
+            "locationName": "Off the coast of Virginia",
             "lat": 36.5,
-            "lon": -74.5,
+            "lon": -74.7,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
             "evidenceQuote": "The incident took place on Monday around 6:18 p.m. Eastern Daylight Time as the vessel was underway off the coast of Virginia."
           },
           {
-            "hull": "CVN-73",
-            "name": "USS George Washington",
-            "locationName": "U.S. 5th Fleet AOR",
-            "lat": 20,
-            "lon": 64,
-            "status": "deployed",
-            "precision": "region",
-            "confidence": "medium",
-            "evidenceQuote": "If such a transit occurs, this would leave one carrier , the USS George Washington , on station in the U.S. 5th Fleet AOR for the first time since April ."
-          },
-          {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
-            "locationName": "Arabian Sea",
+            "locationName": "En route from the Arabian Sea",
             "lat": 0,
             "lon": 0,
             "status": "deployed",
             "precision": "none",
             "confidence": "low",
             "evidenceQuote": "If the timeline holds, it means Bush is likely already en route from her station in the Arabian Sea, where the CSG was most recently operating as of September 25, according to DVIDS."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "U.S. 5th Fleet area of operations",
+            "lat": 20,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "If such a transit occurs, this would leave one carrier , the USS George Washington , on station in the U.S. 5th Fleet AOR for the first time since April ."
           }
         ]
       }
