@@ -641,9 +641,8 @@ ul {
 .fleet-button {
   display: grid;
   width: 100%;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 10px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 4px;
   border: 1px solid transparent;
   border-radius: 8px;
   background: transparent;
@@ -662,15 +661,18 @@ ul {
   outline: none;
 }
 
-.fleet-button strong,
 .fleet-button span:first-child {
   min-width: 0;
+}
+
+.fleet-button strong {
+  white-space: nowrap;
 }
 
 .fleet-location {
   color: var(--muted);
   font-size: 0.78rem;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .carrier-marker {
