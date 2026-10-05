@@ -1,6 +1,79 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-september-30-2026|2026-09-30|c9346733": {
+      "sourceKey": "twz",
+      "model": "gpt-5.6-sol",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-30-2026",
+      "publishedAt": "2026-09-30",
+      "createdAt": "2026-10-01T18:51:12.945Z",
+      "usage": {
+        "inputTokens": 4272,
+        "cachedInputTokens": 0,
+        "outputTokens": 1881,
+        "reasoningTokens": 1414,
+        "totalTokens": 6153
+      },
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "U.S. 3rd Fleet area of operations",
+            "lat": 31.5,
+            "lon": -119.5,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The Theodore Roosevelt Carrier Strike Group is underway conducting routine operations in the U.S. 3rd Fleet area of operations."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Hawaiian Islands operating area",
+            "lat": 20.5,
+            "lon": -157.5,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Acting Secretary of the Navy Hung Cao flew out to the flight deck of USS Abraham Lincoln as she was sailing eastbound in the Hawaiian Islands operating area, en route to her homeport in San Diego."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Off the coast of Virginia",
+            "lat": 36.5,
+            "lon": -74.7,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The incident took place on Monday around 6:18 p.m. Eastern Daylight Time as the vessel was underway off the coast of Virginia."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "En route from the Arabian Sea",
+            "lat": 0,
+            "lon": 0,
+            "status": "deployed",
+            "precision": "none",
+            "confidence": "low",
+            "evidenceQuote": "If the timeline holds, it means Bush is likely already en route from her station in the Arabian Sea, where the CSG was most recently operating as of September 25, according to DVIDS."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "U.S. 5th Fleet area of operations",
+            "lat": 20,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "If such a transit occurs, this would leave one carrier , the USS George Washington , on station in the U.S. 5th Fleet AOR for the first time since April ."
+          }
+        ]
+      }
+    },
     "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-september-30-2026|2026-09-30|d9a057ab": {
       "sourceKey": "twz",
       "model": "gpt-5.6-sol",
@@ -1938,75 +2011,86 @@
         ]
       }
     },
-    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-september-30-2026|2026-09-30|c9346733": {
-      "sourceKey": "twz",
+    "gpt-5.6-sol|usni|https://news.usni.org/2026/10/05/usni-news-fleet-and-marine-tracker-oct-5-2026|2026-10-05|60a51635": {
+      "sourceKey": "usni",
       "model": "gpt-5.6-sol",
-      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-september-30-2026",
-      "publishedAt": "2026-09-30",
-      "createdAt": "2026-10-01T18:51:12.945Z",
+      "articleUrl": "https://news.usni.org/2026/10/05/usni-news-fleet-and-marine-tracker-oct-5-2026",
+      "publishedAt": "2026-10-05",
+      "createdAt": "2026-10-05T22:35:04.608Z",
       "usage": {
-        "inputTokens": 4272,
+        "inputTokens": 4466,
         "cachedInputTokens": 0,
-        "outputTokens": 1881,
-        "reasoningTokens": 1414,
-        "totalTokens": 6153
+        "outputTokens": 882,
+        "reasoningTokens": 348,
+        "totalTokens": 5348
       },
       "result": {
         "carriers": [
           {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Phuket, Thailand",
+            "lat": 7.84,
+            "lon": 98.42,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS George H. W. Bush (CVN-77) arrived Sunday in Phuket, Thailand, for a port visit."
+          },
+          {
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
-            "locationName": "U.S. 3rd Fleet area of operations",
-            "lat": 31.5,
-            "lon": -119.5,
+            "locationName": "Pacific Ocean",
+            "lat": 25,
+            "lon": -145,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "The Theodore Roosevelt Carrier Strike Group is underway conducting routine operations in the U.S. 3rd Fleet area of operations."
+            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) is transiting the Pacific Ocean in U.S. 3rd Fleet westward on deployment."
           },
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
-            "locationName": "Hawaiian Islands operating area",
-            "lat": 20.5,
-            "lon": -157.5,
+            "locationName": "Pacific Ocean",
+            "lat": 25,
+            "lon": -145,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "Acting Secretary of the Navy Hung Cao flew out to the flight deck of USS Abraham Lincoln as she was sailing eastbound in the Hawaiian Islands operating area, en route to her homeport in San Diego."
+            "evidenceQuote": "The Abraham Lincoln Carrier Strike Group is transiting eastward in the Pacific Ocean en route home to California after a deployment that lasted more than 300 days."
           },
           {
-            "hull": "CVN-69",
-            "name": "USS Dwight D. Eisenhower",
-            "locationName": "Off the coast of Virginia",
-            "lat": 36.5,
-            "lon": -74.7,
-            "status": "deployed",
-            "precision": "region",
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "San Diego",
+            "lat": 32.68,
+            "lon": -117.17,
+            "status": "port",
+            "precision": "port",
             "confidence": "high",
-            "evidenceQuote": "The incident took place on Monday around 6:18 p.m. Eastern Daylight Time as the vessel was underway off the coast of Virginia."
-          },
-          {
-            "hull": "CVN-77",
-            "name": "USS George H.W. Bush",
-            "locationName": "En route from the Arabian Sea",
-            "lat": 0,
-            "lon": 0,
-            "status": "deployed",
-            "precision": "none",
-            "confidence": "low",
-            "evidenceQuote": "If the timeline holds, it means Bush is likely already en route from her station in the Arabian Sea, where the CSG was most recently operating as of September 25, according to DVIDS."
+            "evidenceQuote": "Aircraft carrier USS Ronald Reagan (CVN-76) departed Wednesday from Bremerton, Wash., and arrived Monday in San Diego, according to ship spotters."
           },
           {
             "hull": "CVN-73",
             "name": "USS George Washington",
-            "locationName": "U.S. 5th Fleet area of operations",
-            "lat": 20,
-            "lon": 63,
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 65,
             "status": "deployed",
             "precision": "region",
-            "confidence": "medium",
-            "evidenceQuote": "If such a transit occurs, this would leave one carrier , the USS George Washington , on station in the U.S. 5th Fleet AOR for the first time since April ."
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and USS Shoup (DDG-86), are operating in the Arabian Sea in support of U.S. operations against Iran."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk, Va.",
+            "lat": 36.95,
+            "lon": -76.33,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Dwight D. Eisenhower (CVN-69) arrived Monday in Norfolk, Va., following the loss of an EA-18G Growler due to a carrier launch and recovery system mishap on Sept. 28."
           }
         ]
       }

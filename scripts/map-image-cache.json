@@ -858,6 +858,94 @@
           }
         ]
       }
+    },
+    "gpt-5.6-sol|https://news.usni.org/2026/10/05/usni-news-fleet-and-marine-tracker-oct-5-2026|https://news.usni.org/wp-content/uploads/2026/10/FT_10_05_26.jpg|2026-10-05": {
+      "sourceKey": "usni",
+      "model": "gpt-5.6-sol",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_05_26.jpg",
+      "articleUrl": "https://news.usni.org/2026/10/05/usni-news-fleet-and-marine-tracker-oct-5-2026",
+      "publishedAt": "2026-10-05",
+      "createdAt": "2026-10-05T22:36:23.334Z",
+      "usage": {
+        "inputTokens": 3753,
+        "cachedInputTokens": 0,
+        "outputTokens": 3852,
+        "reasoningTokens": 3205,
+        "totalTokens": 7605
+      },
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/10/05/usni-news-fleet-and-marine-tracker-oct-5-2026",
+        "publishedAt": "2026-10-05",
+        "carriers": [
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Northeastern Pacific Ocean",
+            "lat": 47,
+            "lon": -153.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "A yellow diamond appears beside the “Theodore Roosevelt CSG” label in the northeastern Pacific, south of Alaska and well west of the continental United States.",
+            "rationale": "Position estimated from the label-adjacent diamond and adjusted to open Pacific water."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Eastern Pacific Ocean",
+            "lat": 30,
+            "lon": -135.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "A separate yellow diamond is shown immediately above the “Abraham Lincoln CSG” label, offshore west of Baja California and Southern California.",
+            "rationale": "The marker is distinct from the Theodore Roosevelt marker and lies over the eastern Pacific."
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "San Diego, California",
+            "lat": 32.71,
+            "lon": -117.19,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "The map explicitly labels “USS Ronald Reagan (CVN-76) — San Diego, Calif.” with an adjacent yellow diamond.",
+            "rationale": "Placed in the navigable waters of San Diego Bay because the map explicitly identifies the carrier as being in port."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk, Virginia",
+            "lat": 36.95,
+            "lon": -76.33,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "The map explicitly labels “USS Dwight D. Eisenhower (CVN-69) — Norfolk, Va.” beside a yellow diamond.",
+            "rationale": "Placed at the Norfolk naval waterfront because the map explicitly identifies the carrier as being in port."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Arabian Sea",
+            "lat": 16.5,
+            "lon": 65.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "A yellow diamond associated with the “George Washington CSG” label appears in the Arabian Sea between the Arabian Peninsula and India.",
+            "rationale": "Estimated from the label-adjacent marker and kept in open Arabian Sea water."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Phuket, Thailand",
+            "lat": 7.81,
+            "lon": 98.41,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "The map labels “George H.W. Bush CSG — Phuket, Thailand” next to a yellow diamond near southwestern Thailand.",
+            "rationale": "Placed in coastal port waters at Phuket because the map explicitly names the port location."
+          }
+        ]
+      }
     }
   }
 }
