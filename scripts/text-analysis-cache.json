@@ -1,6 +1,145 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.6-sol|gonavy|http://www.gonavy.jp/CVLocation.html||218a9507": {
+      "sourceKey": "gonavy",
+      "model": "gpt-5.6-sol",
+      "articleUrl": "http://www.gonavy.jp/CVLocation.html",
+      "publishedAt": null,
+      "createdAt": "2026-10-06T17:09:44.267Z",
+      "usage": {
+        "inputTokens": 1177,
+        "cachedInputTokens": 0,
+        "outputTokens": 1454,
+        "reasoningTokens": 418,
+        "totalTokens": 2631
+      },
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Unknown after departing Norfolk",
+            "lat": 0,
+            "lon": 0,
+            "status": "unknown",
+            "precision": "none",
+            "confidence": "medium",
+            "evidenceQuote": "CVN-68 USS Nimitz — latest entry: 05Oct2026, departed Norfolk for independent steaming exercise"
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk",
+            "lat": 36.9469,
+            "lon": -76.3301,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-69 USS Dwight D. Eisenhower — latest entry: 06Oct2026, returned to Norfolk after the September 28 incident that injured four sailors and resulted in the loss of an EA-18G."
+          },
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "San Diego",
+            "lat": 32.6848,
+            "lon": -117.1811,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-70 USS Carl Vinson — latest entry: 04Sep2026, returned to San Diego"
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Pacific Ocean, U.S. 3rd Fleet",
+            "lat": 25,
+            "lon": -145,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "CVN-71 USS Theodore Roosevelt — latest entry: 03Oct-05Oct2026, transiting the Pacific Ocean in U.S. 3rd Fleet westward on deployment"
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Pacific Ocean, U.S. 3rd Fleet Area of Operations",
+            "lat": 25,
+            "lon": -140,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "CVN-72 USS Abraham Lincoln — latest entry: 28Sep-05Oct2026, transiting the Pacific Ocean, U.S. 3rd Fleet Area of Operations en route to home port San Diego, California"
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "North Arabian Sea",
+            "lat": 22,
+            "lon": 64.5,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "CVN-73 USS George Washington — latest entry: 21Aug-05Oct2026, North Arabian Sea in support of Operation Epic Fury"
+          },
+          {
+            "hull": "CVN-74",
+            "name": "USS John C. Stennis",
+            "locationName": "Newport News Shipbuilding, Newport News, Virginia",
+            "lat": 36.9882,
+            "lon": -76.4477,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-74 USS John C. Stennis — latest entry: 08Apr2024, moved to an outfitting berth at Newport News Shipbuilding in Newport News, Virginia"
+          },
+          {
+            "hull": "CVN-75",
+            "name": "USS Harry S. Truman",
+            "locationName": "Newport News Shipbuilding",
+            "lat": 36.9882,
+            "lon": -76.4477,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-75 USS Harry S. Truman — latest entry: 30Sep2026, moved from Naval Station Norfolk to Newport News Shipbuilding , beginning the next major phase of the Refueling and Complex Overhaul (RCOH)."
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "San Diego",
+            "lat": 32.6848,
+            "lon": -117.1811,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-76 USS Ronald Reagan — latest entry: 05Oct2026, San Diego"
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Phuket Deep Sea Port, Thailand",
+            "lat": 7.819,
+            "lon": 98.403,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-77 USS George H.W. Bush — latest entry: 04Oct-06Oct2026, anchored offshore Phuket Deep Sea Port, Thailand after unannounced departure from Middle East and will spend time from October 4 to 8, then, will depart Phuket Deep Sea Port October 9"
+          },
+          {
+            "hull": "CVN-78",
+            "name": "USS Gerald R. Ford",
+            "locationName": "Norfolk Naval Shipyard, Portsmouth, Virginia",
+            "lat": 36.8152,
+            "lon": -76.2971,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "CVN-78 USS Gerald R. Ford — latest entry: 07Jul-05Oct2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
+          }
+        ]
+      }
+    },
     "gpt-5.6-sol|usni|https://news.usni.org/2026/10/05/usni-news-fleet-and-marine-tracker-oct-5-2026|2026-10-06|a84d1c35": {
       "sourceKey": "usni",
       "model": "gpt-5.6-sol",
@@ -2179,141 +2318,97 @@
         ]
       }
     },
-    "gpt-5.6-sol|gonavy|http://www.gonavy.jp/CVLocation.html||218a9507": {
-      "sourceKey": "gonavy",
+    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-october-6-2026|2026-10-06|e3c9adf1": {
+      "sourceKey": "twz",
       "model": "gpt-5.6-sol",
-      "articleUrl": "http://www.gonavy.jp/CVLocation.html",
-      "publishedAt": null,
-      "createdAt": "2026-10-06T17:09:44.267Z",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-6-2026",
+      "publishedAt": "2026-10-06",
+      "createdAt": "2026-10-06T22:37:48.124Z",
       "usage": {
-        "inputTokens": 1177,
+        "inputTokens": 3655,
         "cachedInputTokens": 0,
-        "outputTokens": 1454,
-        "reasoningTokens": 418,
-        "totalTokens": 2631
+        "outputTokens": 2771,
+        "reasoningTokens": 2068,
+        "totalTokens": 6426
       },
       "result": {
         "carriers": [
           {
-            "hull": "CVN-68",
-            "name": "USS Nimitz",
-            "locationName": "Unknown after departing Norfolk",
-            "lat": 0,
-            "lon": 0,
-            "status": "unknown",
-            "precision": "none",
-            "confidence": "medium",
-            "evidenceQuote": "CVN-68 USS Nimitz — latest entry: 05Oct2026, departed Norfolk for independent steaming exercise"
-          },
-          {
-            "hull": "CVN-69",
-            "name": "USS Dwight D. Eisenhower",
-            "locationName": "Norfolk",
-            "lat": 36.9469,
-            "lon": -76.3301,
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Phuket, Thailand",
+            "lat": 7.82,
+            "lon": 98.39,
             "status": "port",
             "precision": "port",
             "confidence": "high",
-            "evidenceQuote": "CVN-69 USS Dwight D. Eisenhower — latest entry: 06Oct2026, returned to Norfolk after the September 28 incident that injured four sailors and resulted in the loss of an EA-18G."
-          },
-          {
-            "hull": "CVN-70",
-            "name": "USS Carl Vinson",
-            "locationName": "San Diego",
-            "lat": 32.6848,
-            "lon": -117.1811,
-            "status": "port",
-            "precision": "port",
-            "confidence": "high",
-            "evidenceQuote": "CVN-70 USS Carl Vinson — latest entry: 04Sep2026, returned to San Diego"
-          },
-          {
-            "hull": "CVN-71",
-            "name": "USS Theodore Roosevelt",
-            "locationName": "Pacific Ocean, U.S. 3rd Fleet",
-            "lat": 25,
-            "lon": -145,
-            "status": "deployed",
-            "precision": "region",
-            "confidence": "high",
-            "evidenceQuote": "CVN-71 USS Theodore Roosevelt — latest entry: 03Oct-05Oct2026, transiting the Pacific Ocean in U.S. 3rd Fleet westward on deployment"
-          },
-          {
-            "hull": "CVN-72",
-            "name": "USS Abraham Lincoln",
-            "locationName": "Pacific Ocean, U.S. 3rd Fleet Area of Operations",
-            "lat": 25,
-            "lon": -140,
-            "status": "deployed",
-            "precision": "region",
-            "confidence": "high",
-            "evidenceQuote": "CVN-72 USS Abraham Lincoln — latest entry: 28Sep-05Oct2026, transiting the Pacific Ocean, U.S. 3rd Fleet Area of Operations en route to home port San Diego, California"
+            "evidenceQuote": "Aircraft carrier USS George H.W. Bush arrived in Phuket, Thailand, on Sunday for a scheduled port call after 188 days at sea, leaving just one carrier strike group, led by USS George Washington , in the Middle East for the first time in months."
           },
           {
             "hull": "CVN-73",
             "name": "USS George Washington",
-            "locationName": "North Arabian Sea",
-            "lat": 22,
-            "lon": 64.5,
+            "locationName": "Middle East",
+            "lat": 25,
+            "lon": 58,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "CVN-73 USS George Washington — latest entry: 21Aug-05Oct2026, North Arabian Sea in support of Operation Epic Fury"
+            "evidenceQuote": "Aircraft carrier USS George H.W. Bush arrived in Phuket, Thailand, on Sunday for a scheduled port call after 188 days at sea, leaving just one carrier strike group, led by USS George Washington , in the Middle East for the first time in months."
           },
           {
-            "hull": "CVN-74",
-            "name": "USS John C. Stennis",
-            "locationName": "Newport News Shipbuilding, Newport News, Virginia",
-            "lat": 36.9882,
-            "lon": -76.4477,
-            "status": "maintenance",
-            "precision": "port",
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "off the coast of California",
+            "lat": 30.35,
+            "lon": -119.95,
+            "status": "deployed",
+            "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "CVN-74 USS John C. Stennis — latest entry: 08Apr2024, moved to an outfitting berth at Newport News Shipbuilding in Newport News, Virginia"
-          },
-          {
-            "hull": "CVN-75",
-            "name": "USS Harry S. Truman",
-            "locationName": "Newport News Shipbuilding",
-            "lat": 36.9882,
-            "lon": -76.4477,
-            "status": "maintenance",
-            "precision": "port",
-            "confidence": "high",
-            "evidenceQuote": "CVN-75 USS Harry S. Truman — latest entry: 30Sep2026, moved from Naval Station Norfolk to Newport News Shipbuilding , beginning the next major phase of the Refueling and Complex Overhaul (RCOH)."
+            "evidenceQuote": "However, instead of returning home, Lincoln is holding off the coast of California, disembarking Carrier Air Wing (CVW) 9 and offloading ammunition alongside Lewis and Clark class dry cargo ship USNS Washington Chambers ."
           },
           {
             "hull": "CVN-76",
             "name": "USS Ronald Reagan",
-            "locationName": "San Diego",
-            "lat": 32.6848,
-            "lon": -117.1811,
+            "locationName": "Naval Air Station North Island",
+            "lat": 32.699,
+            "lon": -117.198,
             "status": "port",
             "precision": "port",
             "confidence": "high",
-            "evidenceQuote": "CVN-76 USS Ronald Reagan — latest entry: 05Oct2026, San Diego"
+            "evidenceQuote": "Reagan is currently berthed at Kilo Pier on Naval Air Station North Island, a spot now available after USS Theodore Roosevelt vacated it on September 27."
           },
           {
-            "hull": "CVN-77",
-            "name": "USS George H.W. Bush",
-            "locationName": "Phuket Deep Sea Port, Thailand",
-            "lat": 7.819,
-            "lon": 98.403,
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Naval Station Norfolk",
+            "lat": 36.946,
+            "lon": -76.318,
             "status": "port",
             "precision": "port",
             "confidence": "high",
-            "evidenceQuote": "CVN-77 USS George H.W. Bush — latest entry: 04Oct-06Oct2026, anchored offshore Phuket Deep Sea Port, Thailand after unannounced departure from Middle East and will spend time from October 4 to 8, then, will depart Phuket Deep Sea Port October 9"
+            "evidenceQuote": "Following an incident off the east coast that resulted in the loss of an EA-18G Growler electronic attack jet, the USS Dwight D. Eisenhower returned to Naval Station Norfolk on October 5 after an eight-day underway."
           },
           {
-            "hull": "CVN-78",
-            "name": "USS Gerald R. Ford",
-            "locationName": "Norfolk Naval Shipyard, Portsmouth, Virginia",
-            "lat": 36.8152,
-            "lon": -76.2971,
+            "hull": "CVN-75",
+            "name": "USS Harry S. Truman",
+            "locationName": "Dry Dock 11, Newport News Shipbuilding",
+            "lat": 36.992,
+            "lon": -76.444,
             "status": "maintenance",
             "precision": "port",
             "confidence": "high",
-            "evidenceQuote": "CVN-78 USS Gerald R. Ford — latest entry: 07Jul-05Oct2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
+            "evidenceQuote": "USS Harry S. Truman left Naval Station Norfolk on September 30 and moved \"dead stick\" into Dry Dock 11 at Huntington Ingalls Industries' (HII) Newport News Shipbuilding (NNS) facility the same day."
+          },
+          {
+            "hull": "CVN-74",
+            "name": "USS John C. Stennis",
+            "locationName": "Newport News Shipbuilding",
+            "lat": 36.992,
+            "lon": -76.444,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "USS John C. Stennis is also currently completing RCOH at NNS, but there has been no announcement of a return to service, as of publication."
           }
         ]
       }
