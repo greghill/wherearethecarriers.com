@@ -1177,6 +1177,94 @@
           }
         ]
       }
+    },
+    "gpt-5.6-sol|https://news.usni.org/2026/10/05/usni-news-fleet-and-marine-tracker-oct-5-2026|https://news.usni.org/wp-content/uploads/2026/10/FT_10_05_26.jpg|2026-10-11": {
+      "sourceKey": "usni",
+      "model": "gpt-5.6-sol",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_05_26.jpg",
+      "articleUrl": "https://news.usni.org/2026/10/05/usni-news-fleet-and-marine-tracker-oct-5-2026",
+      "publishedAt": "2026-10-11",
+      "createdAt": "2026-10-12T02:19:31.208Z",
+      "usage": {
+        "inputTokens": 3753,
+        "cachedInputTokens": 0,
+        "outputTokens": 2672,
+        "reasoningTokens": 2070,
+        "totalTokens": 6425
+      },
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/10/05/usni-news-fleet-and-marine-tracker-oct-5-2026",
+        "publishedAt": "2026-10-11",
+        "carriers": [
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "North Pacific Ocean south of the Aleutian Islands",
+            "lat": 43.5,
+            "lon": -164,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Theodore Roosevelt CSG / Makin Island ARG",
+            "rationale": "The carrier-group label is adjacent to the westernmost yellow diamond in the North Pacific. The estimate places that marker over open water south of the Aleutians."
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "San Diego, California",
+            "lat": 32.7,
+            "lon": -117.2,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "USS Ronald Reagan (CVN-76) / San Diego, Calif.",
+            "rationale": "The yellow diamond is directly beside the San Diego label; coordinates are placed in the port waters of San Diego Bay."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Eastern North Pacific Ocean west of Baja California",
+            "lat": 29,
+            "lon": -133,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "Abraham Lincoln CSG",
+            "rationale": "The yellow diamond lies well west of the California–Baja coast and immediately above the carrier-group label."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk, Virginia",
+            "lat": 36.95,
+            "lon": -76.33,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "USS Dwight D. Eisenhower (CVN-69) / Norfolk, Va.",
+            "rationale": "The diamond is anchored to the named Norfolk port label; coordinates are placed at the Norfolk waterfront."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Arabian Sea",
+            "lat": 17,
+            "lon": 61.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "George Washington CSG / Boxer ARG",
+            "rationale": "The adjacent yellow diamond is in the Arabian Sea east of Oman and west of India, over open water."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Phuket, Thailand",
+            "lat": 7.9,
+            "lon": 98.3,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "George H.W. Bush CSG / Phuket, Thailand",
+            "rationale": "The yellow diamond is directly beside the Phuket label on Thailand's Andaman Sea coast; coordinates are placed in coastal port waters."
+          }
+        ]
+      }
     }
   }
 }

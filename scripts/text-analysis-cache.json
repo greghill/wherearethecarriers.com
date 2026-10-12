@@ -1,6 +1,101 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-october-6-2026|2026-10-06|e3c9adf1": {
+      "sourceKey": "twz",
+      "model": "gpt-5.6-sol",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-6-2026",
+      "publishedAt": "2026-10-06",
+      "createdAt": "2026-10-06T22:37:48.124Z",
+      "usage": {
+        "inputTokens": 3655,
+        "cachedInputTokens": 0,
+        "outputTokens": 2771,
+        "reasoningTokens": 2068,
+        "totalTokens": 6426
+      },
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Phuket, Thailand",
+            "lat": 7.82,
+            "lon": 98.39,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS George H.W. Bush arrived in Phuket, Thailand, on Sunday for a scheduled port call after 188 days at sea, leaving just one carrier strike group, led by USS George Washington , in the Middle East for the first time in months."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Middle East",
+            "lat": 25,
+            "lon": 58,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS George H.W. Bush arrived in Phuket, Thailand, on Sunday for a scheduled port call after 188 days at sea, leaving just one carrier strike group, led by USS George Washington , in the Middle East for the first time in months."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "off the coast of California",
+            "lat": 30.35,
+            "lon": -119.95,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "However, instead of returning home, Lincoln is holding off the coast of California, disembarking Carrier Air Wing (CVW) 9 and offloading ammunition alongside Lewis and Clark class dry cargo ship USNS Washington Chambers ."
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "Naval Air Station North Island",
+            "lat": 32.699,
+            "lon": -117.198,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Reagan is currently berthed at Kilo Pier on Naval Air Station North Island, a spot now available after USS Theodore Roosevelt vacated it on September 27."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Naval Station Norfolk",
+            "lat": 36.946,
+            "lon": -76.318,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Following an incident off the east coast that resulted in the loss of an EA-18G Growler electronic attack jet, the USS Dwight D. Eisenhower returned to Naval Station Norfolk on October 5 after an eight-day underway."
+          },
+          {
+            "hull": "CVN-75",
+            "name": "USS Harry S. Truman",
+            "locationName": "Dry Dock 11, Newport News Shipbuilding",
+            "lat": 36.992,
+            "lon": -76.444,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "USS Harry S. Truman left Naval Station Norfolk on September 30 and moved \"dead stick\" into Dry Dock 11 at Huntington Ingalls Industries' (HII) Newport News Shipbuilding (NNS) facility the same day."
+          },
+          {
+            "hull": "CVN-74",
+            "name": "USS John C. Stennis",
+            "locationName": "Newport News Shipbuilding",
+            "lat": 36.992,
+            "lon": -76.444,
+            "status": "maintenance",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "USS John C. Stennis is also currently completing RCOH at NNS, but there has been no announcement of a return to service, as of publication."
+          }
+        ]
+      }
+    },
     "gpt-5.6-sol|gonavy|http://www.gonavy.jp/CVLocation.html||218a9507": {
       "sourceKey": "gonavy",
       "model": "gpt-5.6-sol",
@@ -2318,18 +2413,18 @@
         ]
       }
     },
-    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-october-6-2026|2026-10-06|e3c9adf1": {
-      "sourceKey": "twz",
+    "gpt-5.6-sol|usni|https://news.usni.org/2026/10/05/usni-news-fleet-and-marine-tracker-oct-5-2026|2026-10-11|b631c00d": {
+      "sourceKey": "usni",
       "model": "gpt-5.6-sol",
-      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-6-2026",
-      "publishedAt": "2026-10-06",
-      "createdAt": "2026-10-06T22:37:48.124Z",
+      "articleUrl": "https://news.usni.org/2026/10/05/usni-news-fleet-and-marine-tracker-oct-5-2026",
+      "publishedAt": "2026-10-11",
+      "createdAt": "2026-10-12T02:18:47.097Z",
       "usage": {
-        "inputTokens": 3655,
+        "inputTokens": 4464,
         "cachedInputTokens": 0,
-        "outputTokens": 2771,
-        "reasoningTokens": 2068,
-        "totalTokens": 6426
+        "outputTokens": 736,
+        "reasoningTokens": 202,
+        "totalTokens": 5200
       },
       "result": {
         "carriers": [
@@ -2337,78 +2432,67 @@
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
             "locationName": "Phuket, Thailand",
-            "lat": 7.82,
-            "lon": 98.39,
+            "lat": 7.84,
+            "lon": 98.4,
             "status": "port",
             "precision": "port",
             "confidence": "high",
-            "evidenceQuote": "Aircraft carrier USS George H.W. Bush arrived in Phuket, Thailand, on Sunday for a scheduled port call after 188 days at sea, leaving just one carrier strike group, led by USS George Washington , in the Middle East for the first time in months."
+            "evidenceQuote": "Aircraft carrier USS George H. W. Bush (CVN-77) arrived Sunday in Phuket, Thailand, for a port visit."
           },
           {
-            "hull": "CVN-73",
-            "name": "USS George Washington",
-            "locationName": "Middle East",
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Pacific Ocean",
             "lat": 25,
-            "lon": 58,
+            "lon": -145,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "Aircraft carrier USS George H.W. Bush arrived in Phuket, Thailand, on Sunday for a scheduled port call after 188 days at sea, leaving just one carrier strike group, led by USS George Washington , in the Middle East for the first time in months."
+            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) is transiting the Pacific Ocean in U.S. 3rd Fleet westward on deployment."
           },
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
-            "locationName": "off the coast of California",
-            "lat": 30.35,
-            "lon": -119.95,
+            "locationName": "Pacific Ocean",
+            "lat": 25,
+            "lon": -145,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "However, instead of returning home, Lincoln is holding off the coast of California, disembarking Carrier Air Wing (CVW) 9 and offloading ammunition alongside Lewis and Clark class dry cargo ship USNS Washington Chambers ."
+            "evidenceQuote": "The Abraham Lincoln Carrier Strike Group is transiting eastward in the Pacific Ocean en route home to California after a deployment that lasted more than 300 days."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Arabian Sea",
+            "lat": 16,
+            "lon": 63,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and USS Shoup (DDG-86), are operating in the Arabian Sea in support of U.S. operations against Iran."
           },
           {
             "hull": "CVN-76",
             "name": "USS Ronald Reagan",
-            "locationName": "Naval Air Station North Island",
-            "lat": 32.699,
-            "lon": -117.198,
+            "locationName": "San Diego",
+            "lat": 32.68,
+            "lon": -117.17,
             "status": "port",
             "precision": "port",
             "confidence": "high",
-            "evidenceQuote": "Reagan is currently berthed at Kilo Pier on Naval Air Station North Island, a spot now available after USS Theodore Roosevelt vacated it on September 27."
+            "evidenceQuote": "Aircraft carrier USS Ronald Reagan (CVN-76) departed Wednesday from Bremerton, Wash., and arrived Monday in San Diego, according to ship spotters."
           },
           {
             "hull": "CVN-69",
             "name": "USS Dwight D. Eisenhower",
-            "locationName": "Naval Station Norfolk",
-            "lat": 36.946,
-            "lon": -76.318,
+            "locationName": "Norfolk, Virginia",
+            "lat": 36.95,
+            "lon": -76.33,
             "status": "port",
             "precision": "port",
             "confidence": "high",
-            "evidenceQuote": "Following an incident off the east coast that resulted in the loss of an EA-18G Growler electronic attack jet, the USS Dwight D. Eisenhower returned to Naval Station Norfolk on October 5 after an eight-day underway."
-          },
-          {
-            "hull": "CVN-75",
-            "name": "USS Harry S. Truman",
-            "locationName": "Dry Dock 11, Newport News Shipbuilding",
-            "lat": 36.992,
-            "lon": -76.444,
-            "status": "maintenance",
-            "precision": "port",
-            "confidence": "high",
-            "evidenceQuote": "USS Harry S. Truman left Naval Station Norfolk on September 30 and moved \"dead stick\" into Dry Dock 11 at Huntington Ingalls Industries' (HII) Newport News Shipbuilding (NNS) facility the same day."
-          },
-          {
-            "hull": "CVN-74",
-            "name": "USS John C. Stennis",
-            "locationName": "Newport News Shipbuilding",
-            "lat": 36.992,
-            "lon": -76.444,
-            "status": "maintenance",
-            "precision": "port",
-            "confidence": "high",
-            "evidenceQuote": "USS John C. Stennis is also currently completing RCOH at NNS, but there has been no announcement of a return to service, as of publication."
+            "evidenceQuote": "Aircraft carrier USS Dwight D. Eisenhower (CVN-69) arrived Monday in Norfolk, Va., following the loss of an EA-18G Growler due to a carrier launch and recovery system mishap on Sept. 28."
           }
         ]
       }
