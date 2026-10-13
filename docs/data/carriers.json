@@ -1,31 +1,35 @@
 {
-  "generatedAt": "2026-10-12T02:18:35.949Z",
-  "lastChangedAt": "2026-10-12T02:18:35.949Z",
+  "generatedAt": "2026-10-13T18:12:14.117Z",
+  "lastChangedAt": "2026-10-13T18:12:14.117Z",
   "carriers": [
     {
       "hull": "CVN-68",
       "name": "USS Nimitz",
-      "status": "unknown",
-      "locationName": "Unknown after departing Norfolk",
-      "position": null,
-      "positionPrecision": "unknown",
+      "status": "port",
+      "locationName": "Norfolk",
+      "position": {
+        "lat": 36.946,
+        "lon": -76.301
+      },
+      "positionPrecision": "port",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-10-07",
-      "summary": "Aircraft Carrier Locations places USS Nimitz in or near Unknown after departing Norfolk.",
+      "lastSeen": "2026-10-14",
+      "summary": "Aircraft Carrier Locations places USS Nimitz in Norfolk.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-10-07",
-          "note": "Text context: CVN-68 USS Nimitz — latest entry: 05Oct2026, departed Norfolk for independent steaming exercise"
+          "publishedAt": "2026-10-14",
+          "note": "Text context: CVN-68 USS Nimitz — latest entry: 08Oct2026, returned to Norfolk"
         },
         {
           "role": "backup",
@@ -38,7 +42,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Carrier-Fleet-Tracker-As-Of-October-6-2026-High-Resolution.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-10-06T17:09:12.042Z"
+      "lastChangedAt": "2026-10-13T18:12:14.117Z"
     },
     {
       "hull": "CVN-69",
@@ -118,8 +122,8 @@
       "status": "port",
       "locationName": "San Diego",
       "position": {
-        "lat": 32.6848,
-        "lon": -117.1811
+        "lat": 32.7,
+        "lon": -117.19
       },
       "positionPrecision": "port",
       "confidence": "low",
@@ -152,7 +156,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Carrier-Fleet-Tracker-As-Of-October-6-2026-High-Resolution.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-10-06T17:09:12.042Z"
+      "lastChangedAt": "2026-10-13T18:12:14.117Z"
     },
     {
       "hull": "CVN-71",
@@ -219,17 +223,17 @@
     {
       "hull": "CVN-72",
       "name": "USS Abraham Lincoln",
-      "status": "deployed",
-      "locationName": "Pacific Ocean",
+      "status": "port",
+      "locationName": "San Diego",
       "position": {
-        "lat": 25,
-        "lon": -145
+        "lat": 32.7,
+        "lon": -117.19
       },
-      "positionPrecision": "region",
-      "confidence": "high",
-      "evidence": "corroborated",
-      "lastSeen": "2026-10-11",
-      "summary": "USNI News Fleet and Marine Tracker: Oct. 5, 2026 places USS Abraham Lincoln in or near Pacific Ocean.",
+      "positionPrecision": "port",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-10-14",
+      "summary": "Aircraft Carrier Locations places USS Abraham Lincoln in San Diego.",
       "sources": [
         {
           "role": "primary",
@@ -239,21 +243,21 @@
             "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-10-14",
+          "note": "Text context: CVN-72 USS Abraham Lincoln — latest entry: 08Oct2026, returned to San Diego"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Oct. 5, 2026",
           "url": "https://news.usni.org/2026/10/05/usni-news-fleet-and-marine-tracker-oct-5-2026",
           "publishedAt": "2026-10-11",
           "note": "Text context: The Abraham Lincoln Carrier Strike Group is transiting eastward in the Pacific Ocean en route home to California after a deployment that lasted more than 300 days.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_05_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-10-07",
-          "note": "Text context: CVN-72 USS Abraham Lincoln — latest entry: 28Sep-05Oct2026, transiting the Pacific Ocean, U.S. 3rd Fleet Area of Operations en route to home port San Diego, California"
         },
         {
           "role": "backup",
@@ -286,7 +290,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Carrier-Fleet-Tracker-As-Of-October-6-2026-High-Resolution.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-10-12T02:18:35.949Z"
+      "lastChangedAt": "2026-10-13T18:12:14.117Z"
     },
     {
       "hull": "CVN-73",
@@ -419,8 +423,8 @@
       "status": "maintenance",
       "locationName": "Newport News Shipbuilding",
       "position": {
-        "lat": 36.9882,
-        "lon": -76.4477
+        "lat": 36.99,
+        "lon": -76.445
       },
       "positionPrecision": "port",
       "confidence": "high",
@@ -463,22 +467,22 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Carrier-Fleet-Tracker-As-Of-October-6-2026-High-Resolution.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-10-06T22:37:04.808Z"
+      "lastChangedAt": "2026-10-13T18:12:14.117Z"
     },
     {
       "hull": "CVN-76",
       "name": "USS Ronald Reagan",
-      "status": "port",
-      "locationName": "San Diego",
+      "status": "deployed",
+      "locationName": "Southern California Operating Areas",
       "position": {
-        "lat": 32.68,
-        "lon": -117.17
+        "lat": 32.5,
+        "lon": -119
       },
-      "positionPrecision": "port",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-10-11",
-      "summary": "USNI News Fleet and Marine Tracker: Oct. 5, 2026 places USS Ronald Reagan in San Diego.",
+      "lastSeen": "2026-10-14",
+      "summary": "Aircraft Carrier Locations places USS Ronald Reagan in or near Southern California Operating Areas.",
       "sources": [
         {
           "role": "primary",
@@ -488,6 +492,15 @@
             "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-10-14",
+          "note": "Text context: CVN-76 USS Ronald Reagan — latest entry: 07Oct-12Oct2026, Southern California Operating Areas"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Oct. 5, 2026",
           "url": "https://news.usni.org/2026/10/05/usni-news-fleet-and-marine-tracker-oct-5-2026",
@@ -504,15 +517,6 @@
           "publishedAt": "2026-10-11",
           "note": "Image estimate: USS Ronald Reagan (CVN-76) / San Diego, Calif.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_05_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-10-07",
-          "note": "Text context: CVN-76 USS Ronald Reagan — latest entry: 05Oct2026, San Diego"
         },
         {
           "role": "backup",
@@ -535,7 +539,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Carrier-Fleet-Tracker-As-Of-October-6-2026-High-Resolution.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-10-12T02:18:35.949Z"
+      "lastChangedAt": "2026-10-13T18:12:14.117Z"
     },
     {
       "hull": "CVN-77",
@@ -580,21 +584,21 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-10-07",
-          "note": "Text context: CVN-77 USS George H.W. Bush — latest entry: 04Oct-06Oct2026, anchored offshore Phuket Deep Sea Port, Thailand after unannounced departure from Middle East and will spend time from October 4 to 8, then, will depart Phuket Deep Sea Port Octob"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: October 6, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-6-2026",
           "publishedAt": "2026-10-06",
           "note": "Text context: Aircraft carrier USS George H.W. Bush arrived in Phuket, Thailand, on Sunday for a scheduled port call after 188 days at sea, leaving just one carrier strike group, led by USS George Washington , in the Middle East for the first time in mon",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Carrier-Fleet-Tracker-As-Of-October-6-2026-High-Resolution.png?w=2048&quality=85"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-10-14",
+          "note": "Text context: CVN-77 USS George H.W. Bush — latest entry: 09Oct-10Oct2026, routine operations in the U.S. 7th Fleet area of operations"
         },
         {
           "role": "backup",
@@ -615,13 +619,13 @@
       "status": "maintenance",
       "locationName": "Norfolk Naval Shipyard, Portsmouth, Virginia",
       "position": {
-        "lat": 36.8152,
-        "lon": -76.2971
+        "lat": 36.815,
+        "lon": -76.297
       },
       "positionPrecision": "port",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-10-07",
+      "lastSeen": "2026-10-14",
       "summary": "Aircraft Carrier Locations places USS Gerald R. Ford in Norfolk Naval Shipyard, Portsmouth, Virginia.",
       "sources": [
         {
@@ -635,8 +639,8 @@
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-10-07",
-          "note": "Text context: CVN-78 USS Gerald R. Ford — latest entry: 07Jul-05Oct2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
+          "publishedAt": "2026-10-14",
+          "note": "Text context: CVN-78 USS Gerald R. Ford — latest entry: 07Jul-12Oct2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
         },
         {
           "role": "backup",
@@ -649,7 +653,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Carrier-Fleet-Tracker-As-Of-October-6-2026-High-Resolution.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-10-06T17:09:12.042Z"
+      "lastChangedAt": "2026-10-13T18:12:14.117Z"
     }
   ]
 }
