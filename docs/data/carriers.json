@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-14T04:45:41.886Z",
-  "lastChangedAt": "2026-10-14T04:45:41.886Z",
+  "generatedAt": "2026-10-14T10:06:29.054Z",
+  "lastChangedAt": "2026-10-14T10:06:29.054Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -314,22 +314,22 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: October 6, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-6-2026",
-          "publishedAt": "2026-10-06",
-          "note": "Text context: Aircraft carrier USS George H.W. Bush arrived in Phuket, Thailand, on Sunday for a scheduled port call after 188 days at sea, leaving just one carrier strike group, led by USS George Washington , in the Middle East for the first time in mon",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Carrier-Fleet-Tracker-As-Of-October-6-2026-High-Resolution.png?w=2048&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Oct. 13, 2026",
           "url": "https://news.usni.org/2026/10/13/usni-news-fleet-and-marine-tracker-oct-13-2026",
           "publishedAt": "2026-10-13",
           "note": "Image estimate: “George Washington CSG” appears in the same stacked Arabian Sea label immediately above the yellow diamond.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_13_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers?: October 6, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-6-2026",
+          "publishedAt": "2026-10-06",
+          "note": "Text context: Aircraft carrier USS George H.W. Bush arrived in Phuket, Thailand, on Sunday for a scheduled port call after 188 days at sea, leaving just one carrier strike group, led by USS George Washington , in the Middle East for the first time in mon",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Carrier-Fleet-Tracker-As-Of-October-6-2026-High-Resolution.png?w=2048&quality=85"
         },
         {
           "role": "backup",
@@ -350,7 +350,7 @@
       "status": "maintenance",
       "locationName": "Newport News Shipbuilding",
       "position": {
-        "lat": 36.992,
+        "lat": 36.99,
         "lon": -76.444
       },
       "positionPrecision": "port",
@@ -394,7 +394,7 @@
           "note": "Text context: CVN-74 USS John C. Stennis — latest entry: 08Apr2024, moved to an outfitting berth at Newport News Shipbuilding in Newport News, Virginia"
         }
       ],
-      "lastChangedAt": "2026-10-14T04:45:41.886Z"
+      "lastChangedAt": "2026-10-14T10:06:29.054Z"
     },
     {
       "hull": "CVN-75",
@@ -566,7 +566,7 @@
           "title": "Where Are The Aircraft Carriers?: October 6, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-6-2026",
           "publishedAt": "2026-10-06",
-          "note": "Text context: Aircraft carrier USS George H.W. Bush arrived in Phuket, Thailand, on Sunday for a scheduled port call after 188 days at sea, leaving just one carrier strike group, led by USS George Washington , in the Middle East for the first time in mon",
+          "note": "Text context: The carrier dropped anchor approximately two nautical miles off the coast of Phuket the following day.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Carrier-Fleet-Tracker-As-Of-October-6-2026-High-Resolution.png?w=2048&quality=85"
         },
         {
