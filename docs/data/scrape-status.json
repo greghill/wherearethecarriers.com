@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-10-14T10:06:29.054Z",
-  "lastRunAt": "2026-10-14T10:06:29.054Z",
+  "generatedAt": "2026-10-14T15:06:44.244Z",
+  "lastRunAt": "2026-10-14T15:06:44.244Z",
   "sourceOutageGraceDays": 3,
   "sourceStatus": {
     "usni": {
       "status": "ok",
-      "lastFetchedAt": "2026-10-14T10:06:30.281Z",
-      "lastSuccessAt": "2026-10-14T10:06:30.281Z",
+      "lastFetchedAt": "2026-10-14T15:06:45.402Z",
+      "lastSuccessAt": "2026-10-14T15:06:45.402Z",
       "firstErrorAt": null,
       "lastErrorAt": "2026-05-30T14:46:20.138Z",
       "consecutiveFailures": 0,
@@ -14,17 +14,17 @@
     },
     "stratfor": {
       "status": "error",
-      "lastFetchedAt": "2026-10-14T10:06:31.029Z",
+      "lastFetchedAt": "2026-10-14T15:06:46.233Z",
       "lastSuccessAt": "2026-08-08T02:17:47.200Z",
       "firstErrorAt": "2026-08-08T04:18:15.487Z",
-      "lastErrorAt": "2026-10-14T10:06:31.029Z",
-      "consecutiveFailures": 611,
+      "lastErrorAt": "2026-10-14T15:06:46.233Z",
+      "consecutiveFailures": 612,
       "message": "https://worldview.stratfor.com/topic/tracking-us-naval-power returned no naval update map link"
     },
     "twz": {
       "status": "ok",
-      "lastFetchedAt": "2026-10-14T10:06:53.485Z",
-      "lastSuccessAt": "2026-10-14T10:06:53.485Z",
+      "lastFetchedAt": "2026-10-14T15:06:46.577Z",
+      "lastSuccessAt": "2026-10-14T15:06:46.577Z",
       "firstErrorAt": null,
       "lastErrorAt": "2026-09-04T22:19:40.001Z",
       "consecutiveFailures": 0,
@@ -32,8 +32,8 @@
     },
     "gonavy": {
       "status": "ok",
-      "lastFetchedAt": "2026-10-14T10:06:54.043Z",
-      "lastSuccessAt": "2026-10-14T10:06:54.043Z",
+      "lastFetchedAt": "2026-10-14T15:06:47.076Z",
+      "lastSuccessAt": "2026-10-14T15:06:47.076Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
@@ -41,8 +41,8 @@
     },
     "openaiImages": {
       "status": "ok",
-      "lastFetchedAt": "2026-10-14T10:06:54.045Z",
-      "lastSuccessAt": "2026-10-14T10:06:54.045Z",
+      "lastFetchedAt": "2026-10-14T15:06:47.078Z",
+      "lastSuccessAt": "2026-10-14T15:06:47.078Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
