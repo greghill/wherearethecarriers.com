@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-14T10:06:29.054Z",
-  "lastChangedAt": "2026-10-14T10:06:29.054Z",
+  "generatedAt": "2026-10-15T04:28:35.867Z",
+  "lastChangedAt": "2026-10-15T04:28:35.867Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -64,8 +64,8 @@
         "lon": -76.329
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-10-07",
       "summary": "Aircraft Carrier Locations places USS Dwight D. Eisenhower in Norfolk.",
       "sources": [
@@ -104,7 +104,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Carrier-Fleet-Tracker-As-Of-October-6-2026-High-Resolution.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-10-14T04:45:41.886Z"
+      "lastChangedAt": "2026-10-15T04:28:35.867Z"
     },
     {
       "hull": "CVN-70",
@@ -406,8 +406,8 @@
         "lon": -76.444
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-10-07",
       "summary": "Aircraft Carrier Locations places USS Harry S. Truman in Newport News Shipbuilding.",
       "sources": [
@@ -446,7 +446,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Carrier-Fleet-Tracker-As-Of-October-6-2026-High-Resolution.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-10-14T04:45:41.886Z"
+      "lastChangedAt": "2026-10-15T04:28:35.867Z"
     },
     {
       "hull": "CVN-76",
