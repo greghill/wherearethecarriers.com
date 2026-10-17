@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-17T19:21:24.331Z",
-  "lastChangedAt": "2026-10-17T19:21:24.331Z",
+  "generatedAt": "2026-10-17T22:14:04.316Z",
+  "lastChangedAt": "2026-10-17T22:14:04.316Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -144,7 +144,7 @@
       "status": "port",
       "locationName": "Yokosuka, Japan",
       "position": {
-        "lat": 35.292,
+        "lat": 35.293,
         "lon": 139.671
       },
       "positionPrecision": "port",
@@ -208,22 +208,22 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_13_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-10-17T19:21:24.331Z"
+      "lastChangedAt": "2026-10-17T22:14:04.316Z"
     },
     {
       "hull": "CVN-72",
       "name": "USS Abraham Lincoln",
       "status": "port",
-      "locationName": "Naval Air Station North Island, San Diego",
+      "locationName": "Naval Air Station North Island",
       "position": {
         "lat": 32.699,
-        "lon": -117.207
+        "lon": -117.205
       },
       "positionPrecision": "port",
       "confidence": "high",
       "evidence": "corroborated",
       "lastSeen": "2026-10-17",
-      "summary": "Where Are The Aircraft Carriers?: October 17, 2026 places USS Abraham Lincoln in Naval Air Station North Island, San Diego.",
+      "summary": "Where Are The Aircraft Carriers?: October 17, 2026 places USS Abraham Lincoln in Naval Air Station North Island.",
       "sources": [
         {
           "role": "primary",
@@ -270,13 +270,13 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_13_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-10-17T19:21:24.331Z"
+      "lastChangedAt": "2026-10-17T22:14:04.316Z"
     },
     {
       "hull": "CVN-73",
       "name": "USS George Washington",
       "status": "deployed",
-      "locationName": "North Arabian Sea",
+      "locationName": "U.S. 5th Fleet AOR",
       "position": {
         "lat": 21,
         "lon": 65
@@ -285,7 +285,7 @@
       "confidence": "high",
       "evidence": "corroborated",
       "lastSeen": "2026-10-17",
-      "summary": "Aircraft Carrier Locations places USS George Washington in or near North Arabian Sea.",
+      "summary": "Where Are The Aircraft Carriers?: October 17, 2026 places USS George Washington in or near U.S. 5th Fleet AOR.",
       "sources": [
         {
           "role": "primary",
@@ -294,11 +294,12 @@
             "location",
             "summary"
           ],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-10-14",
-          "note": "Text context: CVN-73 USS George Washington — latest entry: 21Aug-13Oct2026, North Arabian Sea in support of Operation Epic Fury"
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers?: October 17, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-17-2026",
+          "publishedAt": "2026-10-17",
+          "note": "Text context: Imagery on DVIDS confirms that the CSG returned to the Middle East and operating in the U.S. 5th Fleet AOR to \"support maritime security and stability,\" joining the George Washington CSG once again as the second strike group in the region.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-High-Resolution.png?w=2048&quality=85"
         },
         {
           "role": "primary",
@@ -315,22 +316,21 @@
         {
           "role": "backup",
           "usedFor": [],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-10-14",
+          "note": "Text context: CVN-73 USS George Washington — latest entry: 21Aug-13Oct2026, North Arabian Sea in support of Operation Epic Fury"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Oct. 13, 2026",
           "url": "https://news.usni.org/2026/10/13/usni-news-fleet-and-marine-tracker-oct-13-2026",
           "publishedAt": "2026-10-13",
           "note": "Text context: Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and USS Shoup (DDG-86), are operating in the Arabian Sea in support of U.S. operations against Iran.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_13_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: October 17, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-17-2026",
-          "publishedAt": "2026-10-17",
-          "note": "Text context: Imagery on DVIDS confirms that the CSG returned to the Middle East and operating in the U.S. 5th Fleet AOR to \"support maritime security and stability,\" joining the George Washington CSG once again as the second strike group in the region.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-High-Resolution.png?w=2048&quality=85"
         },
         {
           "role": "backup",
@@ -343,7 +343,7 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_13_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-10-17T19:21:24.331Z"
+      "lastChangedAt": "2026-10-17T22:14:04.316Z"
     },
     {
       "hull": "CVN-74",
@@ -496,16 +496,16 @@
       "hull": "CVN-77",
       "name": "USS George H.W. Bush",
       "status": "deployed",
-      "locationName": "Middle East, U.S. 5th Fleet AOR",
+      "locationName": "U.S. 5th Fleet AOR",
       "position": {
         "lat": 20,
-        "lon": 63
+        "lon": 65
       },
       "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
       "lastSeen": "2026-10-17",
-      "summary": "Where Are The Aircraft Carriers?: October 17, 2026 places USS George H.W. Bush in or near Middle East, U.S. 5th Fleet AOR.",
+      "summary": "Where Are The Aircraft Carriers?: October 17, 2026 places USS George H.W. Bush in or near U.S. 5th Fleet AOR.",
       "sources": [
         {
           "role": "primary",
@@ -562,7 +562,7 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_13_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-10-17T19:21:24.331Z"
+      "lastChangedAt": "2026-10-17T22:14:04.316Z"
     },
     {
       "hull": "CVN-78",
