@@ -1,6 +1,68 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-october-17-2026|2026-10-17|eddfa482": {
+      "sourceKey": "twz",
+      "model": "gpt-5.6-sol",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-17-2026",
+      "publishedAt": "2026-10-17",
+      "createdAt": "2026-10-17T22:14:24.519Z",
+      "usage": {
+        "inputTokens": 3975,
+        "cachedInputTokens": 0,
+        "outputTokens": 1193,
+        "reasoningTokens": 771,
+        "totalTokens": 5168
+      },
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Yokosuka, Japan",
+            "lat": 35.293,
+            "lon": 139.671,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Roosevelt and Chosin chopped into the U.S. 7th Fleet-Pacific Command (PACOM) area of responsibility (AOR) and arrived at Commander, Fleet Activities Yokosuka on the morning of October 16."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "Naval Air Station North Island",
+            "lat": 32.699,
+            "lon": -117.205,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Lincoln pulled into Naval Air Station North Island and moored at Berth Lima on October 8, 321 days after casting off on November 21, 2025."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "U.S. 5th Fleet AOR",
+            "lat": 20,
+            "lon": 65,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Imagery on DVIDS confirms that the CSG returned to the Middle East and operating in the U.S. 5th Fleet AOR to \"support maritime security and stability,\" joining the George Washington CSG once again as the second strike group in the region."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "U.S. 5th Fleet AOR",
+            "lat": 20,
+            "lon": 65,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Imagery on DVIDS confirms that the CSG returned to the Middle East and operating in the U.S. 5th Fleet AOR to \"support maritime security and stability,\" joining the George Washington CSG once again as the second strike group in the region."
+          }
+        ]
+      }
+    },
     "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-october-17-2026|2026-10-17|54b5e1bd": {
       "sourceKey": "twz",
       "model": "gpt-5.6-sol",
@@ -3016,64 +3078,64 @@
         ]
       }
     },
-    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-october-17-2026|2026-10-17|eddfa482": {
-      "sourceKey": "twz",
+    "gpt-5.6-sol|usni|https://news.usni.org/2026/10/19/usni-news-fleet-and-marine-tracker-oct-19-2026|2026-10-19|6aafd561": {
+      "sourceKey": "usni",
       "model": "gpt-5.6-sol",
-      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-17-2026",
-      "publishedAt": "2026-10-17",
-      "createdAt": "2026-10-17T22:14:24.519Z",
+      "articleUrl": "https://news.usni.org/2026/10/19/usni-news-fleet-and-marine-tracker-oct-19-2026",
+      "publishedAt": "2026-10-19",
+      "createdAt": "2026-10-19T21:00:40.206Z",
       "usage": {
-        "inputTokens": 3975,
+        "inputTokens": 3592,
         "cachedInputTokens": 0,
-        "outputTokens": 1193,
-        "reasoningTokens": 771,
-        "totalTokens": 5168
+        "outputTokens": 617,
+        "reasoningTokens": 271,
+        "totalTokens": 4209
       },
       "result": {
         "carriers": [
           {
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
-            "locationName": "Yokosuka, Japan",
-            "lat": 35.293,
-            "lon": 139.671,
-            "status": "port",
-            "precision": "port",
+            "locationName": "Departed Yokosuka, Japan",
+            "lat": 0,
+            "lon": 0,
+            "status": "unknown",
+            "precision": "none",
             "confidence": "high",
-            "evidenceQuote": "Roosevelt and Chosin chopped into the U.S. 7th Fleet-Pacific Command (PACOM) area of responsibility (AOR) and arrived at Commander, Fleet Activities Yokosuka on the morning of October 16."
-          },
-          {
-            "hull": "CVN-72",
-            "name": "USS Abraham Lincoln",
-            "locationName": "Naval Air Station North Island",
-            "lat": 32.699,
-            "lon": -117.205,
-            "status": "port",
-            "precision": "port",
-            "confidence": "high",
-            "evidenceQuote": "Lincoln pulled into Naval Air Station North Island and moored at Berth Lima on October 8, 321 days after casting off on November 21, 2025."
+            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) arrived Friday and departed Monday from Yokosuka, Japan, according to ship spotters ."
           },
           {
             "hull": "CVN-73",
             "name": "USS George Washington",
-            "locationName": "U.S. 5th Fleet AOR",
-            "lat": 20,
-            "lon": 65,
+            "locationName": "Arabian Sea",
+            "lat": 17,
+            "lon": 64,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "Imagery on DVIDS confirms that the CSG returned to the Middle East and operating in the U.S. 5th Fleet AOR to \"support maritime security and stability,\" joining the George Washington CSG once again as the second strike group in the region."
+            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and USS Shoup (DDG-86), are operating in the Arabian Sea in support of U.S. operations in the Middle East."
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "San Diego",
+            "lat": 32.6992,
+            "lon": -117.2157,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Ronald Reagan (CVN-76) returned Tuesday to San Diego, according to ship spotters ."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
-            "locationName": "U.S. 5th Fleet AOR",
-            "lat": 20,
-            "lon": 65,
+            "locationName": "Arabian Sea",
+            "lat": 17,
+            "lon": 64,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "Imagery on DVIDS confirms that the CSG returned to the Middle East and operating in the U.S. 5th Fleet AOR to \"support maritime security and stability,\" joining the George Washington CSG once again as the second strike group in the region."
+            "evidenceQuote": "The George H.W. Bush Carrier Strike Group is operating in the Arabian Sea in support of U.S. operations in the Middle East."
           }
         ]
       }
