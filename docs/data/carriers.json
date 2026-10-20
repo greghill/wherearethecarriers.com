@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-19T21:00:29.892Z",
-  "lastChangedAt": "2026-10-19T21:00:29.892Z",
+  "generatedAt": "2026-10-20T05:57:56.145Z",
+  "lastChangedAt": "2026-10-20T05:57:56.145Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -132,13 +132,13 @@
       "hull": "CVN-71",
       "name": "USS Theodore Roosevelt",
       "status": "unknown",
-      "locationName": "Departed Yokosuka, Japan",
+      "locationName": "Unknown",
       "position": null,
       "positionPrecision": "unknown",
       "confidence": "medium",
       "evidence": "current",
       "lastSeen": "2026-10-19",
-      "summary": "USNI News Fleet and Marine Tracker: Oct. 19, 2026 places USS Theodore Roosevelt in or near Departed Yokosuka, Japan.",
+      "summary": "USNI News Fleet and Marine Tracker: Oct. 19, 2026 places USS Theodore Roosevelt in or near Unknown.",
       "sources": [
         {
           "role": "primary",
@@ -194,7 +194,7 @@
           "note": "Text context: CVN-71 USS Theodore Roosevelt — latest entry: 13Oct2026, transiting the Pacific Ocean in U.S. 7th Fleet westward"
         }
       ],
-      "lastChangedAt": "2026-10-19T21:00:29.892Z"
+      "lastChangedAt": "2026-10-20T05:57:56.145Z"
     },
     {
       "hull": "CVN-72",
@@ -411,8 +411,8 @@
       "status": "port",
       "locationName": "San Diego",
       "position": {
-        "lat": 32.6992,
-        "lon": -117.2157
+        "lat": 32.7,
+        "lon": -117.2
       },
       "positionPrecision": "port",
       "confidence": "medium",
@@ -465,7 +465,7 @@
           "note": "Text context: CVN-76 USS Ronald Reagan — latest entry: 07Oct-13Oct2026, Southern California Operating Areas"
         }
       ],
-      "lastChangedAt": "2026-10-19T21:00:29.892Z"
+      "lastChangedAt": "2026-10-20T05:57:56.145Z"
     },
     {
       "hull": "CVN-77",

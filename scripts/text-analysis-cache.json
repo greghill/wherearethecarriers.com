@@ -1,6 +1,68 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.6-sol|usni|https://news.usni.org/2026/10/19/usni-news-fleet-and-marine-tracker-oct-19-2026|2026-10-19|6aafd561": {
+      "sourceKey": "usni",
+      "model": "gpt-5.6-sol",
+      "articleUrl": "https://news.usni.org/2026/10/19/usni-news-fleet-and-marine-tracker-oct-19-2026",
+      "publishedAt": "2026-10-19",
+      "createdAt": "2026-10-19T21:00:40.206Z",
+      "usage": {
+        "inputTokens": 3592,
+        "cachedInputTokens": 0,
+        "outputTokens": 617,
+        "reasoningTokens": 271,
+        "totalTokens": 4209
+      },
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Departed Yokosuka, Japan",
+            "lat": 0,
+            "lon": 0,
+            "status": "unknown",
+            "precision": "none",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) arrived Friday and departed Monday from Yokosuka, Japan, according to ship spotters ."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Arabian Sea",
+            "lat": 17,
+            "lon": 64,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and USS Shoup (DDG-86), are operating in the Arabian Sea in support of U.S. operations in the Middle East."
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "San Diego",
+            "lat": 32.6992,
+            "lon": -117.2157,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Ronald Reagan (CVN-76) returned Tuesday to San Diego, according to ship spotters ."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 17,
+            "lon": 64,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The George H.W. Bush Carrier Strike Group is operating in the Arabian Sea in support of U.S. operations in the Middle East."
+          }
+        ]
+      }
+    },
     "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-october-17-2026|2026-10-17|eddfa482": {
       "sourceKey": "twz",
       "model": "gpt-5.6-sol",
@@ -3078,25 +3140,25 @@
         ]
       }
     },
-    "gpt-5.6-sol|usni|https://news.usni.org/2026/10/19/usni-news-fleet-and-marine-tracker-oct-19-2026|2026-10-19|6aafd561": {
+    "gpt-5.6-sol|usni|https://news.usni.org/2026/10/19/usni-news-fleet-and-marine-tracker-oct-19-2026|2026-10-19|5b720d7a": {
       "sourceKey": "usni",
       "model": "gpt-5.6-sol",
       "articleUrl": "https://news.usni.org/2026/10/19/usni-news-fleet-and-marine-tracker-oct-19-2026",
       "publishedAt": "2026-10-19",
-      "createdAt": "2026-10-19T21:00:40.206Z",
+      "createdAt": "2026-10-20T05:58:06.360Z",
       "usage": {
-        "inputTokens": 3592,
+        "inputTokens": 3593,
         "cachedInputTokens": 0,
         "outputTokens": 617,
-        "reasoningTokens": 271,
-        "totalTokens": 4209
+        "reasoningTokens": 279,
+        "totalTokens": 4210
       },
       "result": {
         "carriers": [
           {
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
-            "locationName": "Departed Yokosuka, Japan",
+            "locationName": "Unknown",
             "lat": 0,
             "lon": 0,
             "status": "unknown",
@@ -3108,8 +3170,8 @@
             "hull": "CVN-73",
             "name": "USS George Washington",
             "locationName": "Arabian Sea",
-            "lat": 17,
-            "lon": 64,
+            "lat": 15,
+            "lon": 65,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
@@ -3119,8 +3181,8 @@
             "hull": "CVN-76",
             "name": "USS Ronald Reagan",
             "locationName": "San Diego",
-            "lat": 32.6992,
-            "lon": -117.2157,
+            "lat": 32.7,
+            "lon": -117.2,
             "status": "port",
             "precision": "port",
             "confidence": "high",
@@ -3130,8 +3192,8 @@
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
             "locationName": "Arabian Sea",
-            "lat": 17,
-            "lon": 64,
+            "lat": 15,
+            "lon": 65,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
