@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-20T16:54:44.644Z",
-  "lastChangedAt": "2026-10-20T16:54:44.644Z",
+  "generatedAt": "2026-10-22T04:34:36.985Z",
+  "lastChangedAt": "2026-10-22T04:34:36.985Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -12,8 +12,8 @@
         "lon": -76.3299
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-10-14",
       "summary": "Aircraft Carrier Locations places USS Nimitz in Norfolk.",
       "sources": [
@@ -42,7 +42,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-High-Resolution.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-10-20T16:54:44.644Z"
+      "lastChangedAt": "2026-10-22T04:34:36.985Z"
     },
     {
       "hull": "CVN-69",
