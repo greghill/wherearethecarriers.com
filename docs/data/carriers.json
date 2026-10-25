@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-22T04:34:36.985Z",
-  "lastChangedAt": "2026-10-22T04:34:36.985Z",
+  "generatedAt": "2026-10-25T01:04:11.701Z",
+  "lastChangedAt": "2026-10-25T01:04:11.701Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -210,8 +210,8 @@
         "lon": -117.19
       },
       "positionPrecision": "port",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-10-21",
       "summary": "Aircraft Carrier Locations places USS Abraham Lincoln in San Diego.",
       "sources": [
@@ -250,7 +250,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-High-Resolution.png?w=2048&quality=85"
         }
       ],
-      "lastChangedAt": "2026-10-20T16:54:44.644Z"
+      "lastChangedAt": "2026-10-25T01:04:11.701Z"
     },
     {
       "hull": "CVN-73",
