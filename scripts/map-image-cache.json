@@ -1540,6 +1540,83 @@
           }
         ]
       }
+    },
+    "gpt-5.6-sol|https://news.usni.org/2026/10/26/usni-news-fleet-and-marine-tracker-oct-26-2026|https://news.usni.org/wp-content/uploads/2026/10/FT_10_26_26.jpg|2026-10-26": {
+      "sourceKey": "usni",
+      "model": "gpt-5.6-sol",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_26_26.jpg",
+      "articleUrl": "https://news.usni.org/2026/10/26/usni-news-fleet-and-marine-tracker-oct-26-2026",
+      "publishedAt": "2026-10-26",
+      "createdAt": "2026-10-26T19:14:03.354Z",
+      "usage": {
+        "inputTokens": 3753,
+        "cachedInputTokens": 0,
+        "outputTokens": 2178,
+        "reasoningTokens": 1632,
+        "totalTokens": 5931
+      },
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/10/26/usni-news-fleet-and-marine-tracker-oct-26-2026",
+        "publishedAt": "2026-10-26",
+        "carriers": [
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "San Diego, California",
+            "lat": 32.7,
+            "lon": -117.2,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "The label “USS Ronald Reagan (CVN-76)” is attached to a yellow diamond at the Southern California coast.",
+            "rationale": "The diamond is visually anchored at San Diego; coordinates are placed in the harbor rather than inland."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk, Virginia",
+            "lat": 36.9,
+            "lon": -76.3,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "The label “USS Dwight D. Eisenhower (CVN-69)” appears beside a yellow diamond at the Virginia coast.",
+            "rationale": "The marker aligns with the Norfolk/Hampton Roads port area; coordinates are placed on navigable harbor water."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 14.5,
+            "lon": 65.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "“George H.W. Bush CSG” is listed immediately above the yellow diamond in the Arabian Sea.",
+            "rationale": "The shared marker lies southwest of India in open Arabian Sea water. The map does not show a separate Bush marker."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Arabian Sea",
+            "lat": 14.5,
+            "lon": 65.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "“George Washington CSG” is listed with the group labels immediately above the yellow Arabian Sea diamond.",
+            "rationale": "The map uses the same visible marker for George Washington and the adjacent listed groups; no separate carrier dot is shown."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Philippine Sea",
+            "lat": 17,
+            "lon": 136,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "The label “Theodore Roosevelt CSG” sits directly above a yellow diamond east of the Philippines.",
+            "rationale": "The diamond is clearly offshore in the Philippine Sea, and the estimate follows the marker rather than the label center."
+          }
+        ]
+      }
     }
   }
 }
