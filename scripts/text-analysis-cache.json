@@ -1,6 +1,134 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026|2026-10-27|eae13350": {
+      "sourceKey": "twz",
+      "model": "gpt-5.6-sol",
+      "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
+      "publishedAt": "2026-10-27",
+      "createdAt": "2026-10-28T01:16:13.850Z",
+      "usage": {
+        "inputTokens": 3172,
+        "cachedInputTokens": 0,
+        "outputTokens": 2699,
+        "reasoningTokens": 1895,
+        "totalTokens": 5871
+      },
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Not stated",
+            "lat": 0,
+            "lon": 0,
+            "status": "deployed",
+            "precision": "none",
+            "confidence": "high",
+            "evidenceQuote": "USS Nimitz , homeported in Norfolk, welcomed the public with tours during Naval Station Norfolk's Fleet Fest over the weekend, and got underway again for training on October 27."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Not stated",
+            "lat": 0,
+            "lon": 0,
+            "status": "unknown",
+            "precision": "none",
+            "confidence": "medium",
+            "evidenceQuote": "USS Dwight D. Eisenhower, also based at NS Norfolk, left port for work ups on October 24."
+          },
+          {
+            "hull": "CVN-70",
+            "name": "USS Carl Vinson",
+            "locationName": "San Diego",
+            "lat": 32.713,
+            "lon": -117.191,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "On the other side of the country, USS Carl Vinson is in port in San Diego."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Philippine Sea",
+            "lat": 18,
+            "lon": 132,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "Surrounded by allied warships , the USS Theodore Roosevelt steamed through the Philippine Sea last week as large-scale combined exercise Keen Sword 27 got underway."
+          },
+          {
+            "hull": "CVN-72",
+            "name": "USS Abraham Lincoln",
+            "locationName": "home",
+            "lat": 0,
+            "lon": 0,
+            "status": "port",
+            "precision": "none",
+            "confidence": "medium",
+            "evidenceQuote": "The carrier arrived back home on October 8 after being at sea for 321 days, less than a week short of the longest carrier deployment in the post-Vietnam era."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Middle East",
+            "lat": 23.5,
+            "lon": 59.5,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The two carriers enforcing the ongoing blockade of Iranian ports and coastal cities, USS George H.W. Bush and USS George Washington , have both been dark on AIS since arriving in the Middle East."
+          },
+          {
+            "hull": "CVN-74",
+            "name": "USS John C. Stennis",
+            "locationName": "Not stated",
+            "lat": 0,
+            "lon": 0,
+            "status": "maintenance",
+            "precision": "none",
+            "confidence": "high",
+            "evidenceQuote": "Also on the east coast, USS John C. Stennis has been undergoing maintenance since 2021."
+          },
+          {
+            "hull": "CVN-75",
+            "name": "USS Harry S. Truman",
+            "locationName": "Not stated",
+            "lat": 0,
+            "lon": 0,
+            "status": "maintenance",
+            "precision": "none",
+            "confidence": "medium",
+            "evidenceQuote": "However, USS Harry S. Truman recently moved to begin an RCOH, suggesting Stennis is nearing completion."
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "Naval Air Station North Island, San Diego",
+            "lat": 32.699,
+            "lon": -117.209,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Reagan moored at Kilo Pier at Naval Air Station North Island in San Diego on October 27 after finishing Fleet Replacement Squadron and Carrier Qualifications."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Middle East",
+            "lat": 23.5,
+            "lon": 59.5,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The two carriers enforcing the ongoing blockade of Iranian ports and coastal cities, USS George H.W. Bush and USS George Washington , have both been dark on AIS since arriving in the Middle East."
+          }
+        ]
+      }
+    },
     "gpt-5.6-sol|gonavy|http://www.gonavy.jp/CVLocation.html||a42c7e9f": {
       "sourceKey": "gonavy",
       "model": "gpt-5.6-sol",
@@ -3553,25 +3681,25 @@
         ]
       }
     },
-    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026|2026-10-27|eae13350": {
+    "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026|2026-10-27|0f850aed": {
       "sourceKey": "twz",
       "model": "gpt-5.6-sol",
       "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
       "publishedAt": "2026-10-27",
-      "createdAt": "2026-10-28T01:16:13.850Z",
+      "createdAt": "2026-10-28T15:58:00.134Z",
       "usage": {
-        "inputTokens": 3172,
+        "inputTokens": 3189,
         "cachedInputTokens": 0,
-        "outputTokens": 2699,
-        "reasoningTokens": 1895,
-        "totalTokens": 5871
+        "outputTokens": 2326,
+        "reasoningTokens": 1501,
+        "totalTokens": 5515
       },
       "result": {
         "carriers": [
           {
             "hull": "CVN-68",
             "name": "USS Nimitz",
-            "locationName": "Not stated",
+            "locationName": "Unspecified training area",
             "lat": 0,
             "lon": 0,
             "status": "deployed",
@@ -3582,20 +3710,20 @@
           {
             "hull": "CVN-69",
             "name": "USS Dwight D. Eisenhower",
-            "locationName": "Not stated",
+            "locationName": "Unspecified work-up area",
             "lat": 0,
             "lon": 0,
-            "status": "unknown",
+            "status": "deployed",
             "precision": "none",
-            "confidence": "medium",
+            "confidence": "high",
             "evidenceQuote": "USS Dwight D. Eisenhower, also based at NS Norfolk, left port for work ups on October 24."
           },
           {
             "hull": "CVN-70",
             "name": "USS Carl Vinson",
             "locationName": "San Diego",
-            "lat": 32.713,
-            "lon": -117.191,
+            "lat": 32.6992,
+            "lon": -117.2153,
             "status": "port",
             "precision": "port",
             "confidence": "high",
@@ -3605,8 +3733,8 @@
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
             "locationName": "Philippine Sea",
-            "lat": 18,
-            "lon": 132,
+            "lat": 20,
+            "lon": 135,
             "status": "deployed",
             "precision": "region",
             "confidence": "medium",
@@ -3615,7 +3743,7 @@
           {
             "hull": "CVN-72",
             "name": "USS Abraham Lincoln",
-            "locationName": "home",
+            "locationName": "Home port (unspecified)",
             "lat": 0,
             "lon": 0,
             "status": "port",
@@ -3627,8 +3755,8 @@
             "hull": "CVN-73",
             "name": "USS George Washington",
             "locationName": "Middle East",
-            "lat": 23.5,
-            "lon": 59.5,
+            "lat": 24.5,
+            "lon": 58.5,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
@@ -3637,7 +3765,7 @@
           {
             "hull": "CVN-74",
             "name": "USS John C. Stennis",
-            "locationName": "Not stated",
+            "locationName": "Unspecified maintenance location",
             "lat": 0,
             "lon": 0,
             "status": "maintenance",
@@ -3648,20 +3776,20 @@
           {
             "hull": "CVN-75",
             "name": "USS Harry S. Truman",
-            "locationName": "Not stated",
+            "locationName": "Unspecified RCOH location",
             "lat": 0,
             "lon": 0,
             "status": "maintenance",
             "precision": "none",
-            "confidence": "medium",
+            "confidence": "high",
             "evidenceQuote": "However, USS Harry S. Truman recently moved to begin an RCOH, suggesting Stennis is nearing completion."
           },
           {
             "hull": "CVN-76",
             "name": "USS Ronald Reagan",
             "locationName": "Naval Air Station North Island, San Diego",
-            "lat": 32.699,
-            "lon": -117.209,
+            "lat": 32.6992,
+            "lon": -117.2153,
             "status": "port",
             "precision": "port",
             "confidence": "high",
@@ -3671,8 +3799,8 @@
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
             "locationName": "Middle East",
-            "lat": 23.5,
-            "lon": 59.5,
+            "lat": 24.5,
+            "lon": 58.5,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",

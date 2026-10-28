@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-10-28T01:15:36.161Z",
-  "lastChangedAt": "2026-10-28T01:15:36.161Z",
+  "generatedAt": "2026-10-28T15:57:24.626Z",
+  "lastChangedAt": "2026-10-28T15:57:24.626Z",
   "carriers": [
     {
       "hull": "CVN-68",
       "name": "USS Nimitz",
       "status": "deployed",
-      "locationName": "Not stated",
+      "locationName": "Unspecified training area",
       "position": null,
       "positionPrecision": "unknown",
       "confidence": "medium",
       "evidence": "current",
       "lastSeen": "2026-10-27",
-      "summary": "Where Are The Aircraft Carriers?: October 27, 2026 places USS Nimitz in or near Not stated.",
+      "summary": "Where Are The Aircraft Carriers?: October 27, 2026 places USS Nimitz in or near Unspecified training area.",
       "sources": [
         {
           "role": "primary",
@@ -38,19 +38,19 @@
           "note": "Text context: CVN-68 USS Nimitz — latest entry: 08Oct2026, returned to Norfolk"
         }
       ],
-      "lastChangedAt": "2026-10-28T01:15:36.161Z"
+      "lastChangedAt": "2026-10-28T15:57:24.626Z"
     },
     {
       "hull": "CVN-69",
       "name": "USS Dwight D. Eisenhower",
-      "status": "unknown",
-      "locationName": "Unknown",
+      "status": "deployed",
+      "locationName": "Unspecified work-up area",
       "position": null,
       "positionPrecision": "unknown",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-10-28",
-      "summary": "Aircraft Carrier Locations places USS Dwight D. Eisenhower in or near Unknown.",
+      "lastSeen": "2026-10-27",
+      "summary": "Where Are The Aircraft Carriers?: October 27, 2026 places USS Dwight D. Eisenhower in or near Unspecified work-up area.",
       "sources": [
         {
           "role": "primary",
@@ -59,25 +59,6 @@
             "location",
             "summary"
           ],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-10-28",
-          "note": "Text context: CVN-69 USS Dwight D. Eisenhower — latest entry: 24Oct2026, departed Norfolk"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Oct. 26, 2026",
-          "url": "https://news.usni.org/2026/10/26/usni-news-fleet-and-marine-tracker-oct-26-2026",
-          "publishedAt": "2026-10-26",
-          "note": "Image estimate: The label “USS Dwight D. Eisenhower (CVN-69)” appears beside a yellow diamond at the Virginia coast.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_26_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
@@ -92,11 +73,30 @@
           "title": "USNI News Fleet and Marine Tracker: Oct. 26, 2026",
           "url": "https://news.usni.org/2026/10/26/usni-news-fleet-and-marine-tracker-oct-26-2026",
           "publishedAt": "2026-10-26",
+          "note": "Image estimate: The label “USS Dwight D. Eisenhower (CVN-69)” appears beside a yellow diamond at the Virginia coast.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_26_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-10-28",
+          "note": "Text context: CVN-69 USS Dwight D. Eisenhower — latest entry: 24Oct2026, departed Norfolk"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Oct. 26, 2026",
+          "url": "https://news.usni.org/2026/10/26/usni-news-fleet-and-marine-tracker-oct-26-2026",
+          "publishedAt": "2026-10-26",
           "note": "Text context: Aircraft carrier USS Dwight D. Eisenhower (CVN-69) departed Saturday from Norfolk, Va., according to ship spotters.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_26_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-10-27T16:30:56.911Z"
+      "lastChangedAt": "2026-10-28T15:57:24.626Z"
     },
     {
       "hull": "CVN-70",
@@ -104,8 +104,8 @@
       "status": "port",
       "locationName": "San Diego",
       "position": {
-        "lat": 32.713,
-        "lon": -117.191
+        "lat": 32.6992,
+        "lon": -117.2153
       },
       "positionPrecision": "port",
       "confidence": "medium",
@@ -138,7 +138,7 @@
           "note": "Text context: CVN-70 USS Carl Vinson — latest entry: 04Sep2026, returned to San Diego"
         }
       ],
-      "lastChangedAt": "2026-10-28T01:15:36.161Z"
+      "lastChangedAt": "2026-10-28T15:57:24.626Z"
     },
     {
       "hull": "CVN-71",
@@ -206,7 +206,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: The green carrier marker immediately adjacent to the label “USS THEODORE ROOSEVELT (CVN 71)” is east of Yokosuka, Japan.",
+          "note": "Image estimate: Green carrier silhouette labeled “USS THEODORE ROOSEVELT (CVN 71)” east of Yokosuka.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
         }
       ],
@@ -310,7 +310,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: A green carrier marker is directly adjacent to the label “USS GEORGE WASHINGTON (CVN 73)” west of India.",
+          "note": "Image estimate: Green carrier silhouette labeled “USS GEORGE WASHINGTON (CVN 73)” in the western Indian Ocean map area.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
         },
         {
@@ -330,13 +330,13 @@
       "hull": "CVN-74",
       "name": "USS John C. Stennis",
       "status": "maintenance",
-      "locationName": "Not stated",
+      "locationName": "Unspecified maintenance location",
       "position": null,
       "positionPrecision": "unknown",
       "confidence": "medium",
       "evidence": "current",
       "lastSeen": "2026-10-27",
-      "summary": "Where Are The Aircraft Carriers?: October 27, 2026 places USS John C. Stennis in or near Not stated.",
+      "summary": "Where Are The Aircraft Carriers?: October 27, 2026 places USS John C. Stennis in or near Unspecified maintenance location.",
       "sources": [
         {
           "role": "primary",
@@ -362,19 +362,19 @@
           "note": "Text context: CVN-74 USS John C. Stennis — latest entry: 08Apr2024, moved to an outfitting berth at Newport News Shipbuilding in Newport News, Virginia"
         }
       ],
-      "lastChangedAt": "2026-10-28T01:15:36.161Z"
+      "lastChangedAt": "2026-10-28T15:57:24.626Z"
     },
     {
       "hull": "CVN-75",
       "name": "USS Harry S. Truman",
       "status": "maintenance",
-      "locationName": "Not stated",
+      "locationName": "Unspecified RCOH location",
       "position": null,
       "positionPrecision": "unknown",
       "confidence": "medium",
       "evidence": "current",
       "lastSeen": "2026-10-27",
-      "summary": "Where Are The Aircraft Carriers?: October 27, 2026 places USS Harry S. Truman in or near Not stated.",
+      "summary": "Where Are The Aircraft Carriers?: October 27, 2026 places USS Harry S. Truman in or near Unspecified RCOH location.",
       "sources": [
         {
           "role": "primary",
@@ -400,7 +400,7 @@
           "note": "Text context: CVN-75 USS Harry S. Truman — latest entry: 30Sep2026, moved from Naval Station Norfolk to Newport News Shipbuilding , beginning the next major phase of the Refueling and Complex Overhaul (RCOH). The move to Newport News transitions from pre"
         }
       ],
-      "lastChangedAt": "2026-10-28T01:15:36.161Z"
+      "lastChangedAt": "2026-10-28T15:57:24.626Z"
     },
     {
       "hull": "CVN-76",
@@ -520,7 +520,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: A separate green carrier marker immediately above the label “USS GEORGE H.W. BUSH (CVN 77)” appears south of the George Washington marker.",
+          "note": "Image estimate: Green carrier silhouette labeled “USS GEORGE H.W. BUSH (CVN 77)” south of the George Washington symbol.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
         },
         {
