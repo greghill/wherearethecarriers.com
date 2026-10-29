@@ -1701,13 +1701,13 @@
       "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85",
       "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
       "publishedAt": "2026-10-27",
-      "createdAt": "2026-10-28T21:02:14.124Z",
+      "createdAt": "2026-10-29T00:52:28.559Z",
       "usage": {
         "inputTokens": 1385,
         "cachedInputTokens": 0,
-        "outputTokens": 3979,
-        "reasoningTokens": 3624,
-        "totalTokens": 5364
+        "outputTokens": 4437,
+        "reasoningTokens": 4039,
+        "totalTokens": 5822
       },
       "result": {
         "sourceKey": "twz",
@@ -1717,35 +1717,35 @@
           {
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
-            "locationName": "Western North Pacific east of Japan",
-            "lat": 35.5,
-            "lon": 158,
+            "locationName": "Northwest Pacific east of Japan",
+            "lat": 35.8,
+            "lon": 149.8,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)” east of Japan.",
-            "rationale": "Estimated from the center of the labeled green ship marker; the coordinate is in open Pacific water east of Honshu."
+            "evidenceText": "The green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)” appears east of the Yokosuka and Sasebo labels.",
+            "rationale": "Estimated from the carrier silhouette's central superstructure rather than the full length of the graphic; the resulting point is in open Pacific water east of Honshu."
           },
           {
             "hull": "CVN-73",
             "name": "USS George Washington",
-            "locationName": "Arabian Sea",
-            "lat": 16,
-            "lon": 66,
+            "locationName": "Western Indian Ocean east of Somalia",
+            "lat": -1.5,
+            "lon": 56.8,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)” between the Arabian Peninsula and India.",
-            "rationale": "Placed near the visual center of the labeled marker in the northern Arabian Sea, clear of adjacent land."
+            "evidenceText": "The green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)” is visible in the western Indian Ocean.",
+            "rationale": "The approximate marker center falls over open water east of Somalia, rather than on the nearby African or Arabian landmasses."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
-            "locationName": "Western Indian Ocean",
-            "lat": 4,
-            "lon": 70,
+            "locationName": "Southwest Indian Ocean east of Madagascar",
+            "lat": -18,
+            "lon": 58,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)” southwest of India.",
-            "rationale": "Estimated from the labeled marker below USS Boxer and USS George Washington; the coordinate lies over open western Indian Ocean water."
+            "evidenceText": "The green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)” appears well south of the George Washington marker.",
+            "rationale": "Estimated from the marker's central superstructure; the coordinate preserves the visible north-south separation and lies in open water east of Madagascar."
           }
         ]
       }

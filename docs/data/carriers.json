@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-10-28T20:59:36.917Z",
-  "lastChangedAt": "2026-10-28T20:59:36.917Z",
+  "generatedAt": "2026-10-29T00:50:57.464Z",
+  "lastChangedAt": "2026-10-29T00:50:57.464Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -210,7 +210,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)” east of Japan.",
+          "note": "Image estimate: The green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)” appears east of the Yokosuka and Sasebo labels.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
         }
       ],
@@ -220,43 +220,39 @@
       "hull": "CVN-72",
       "name": "USS Abraham Lincoln",
       "status": "port",
-      "locationName": "San Diego",
-      "position": {
-        "lat": 32.684,
-        "lon": -117.137
-      },
-      "positionPrecision": "port",
+      "locationName": "Home port (unspecified)",
+      "position": null,
+      "positionPrecision": "unknown",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-10-21",
-      "summary": "Aircraft Carrier Locations places USS Abraham Lincoln in San Diego.",
+      "lastSeen": "2026-10-27",
+      "summary": "Where Are The Aircraft Carriers?: October 27, 2026 places USS Abraham Lincoln in or near Home port (unspecified).",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
-            "position",
             "summary"
           ],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-10-21",
-          "note": "Text context: CVN-72 USS Abraham Lincoln — latest entry: 08Oct2026, returned to San Diego"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
           "note": "Text context: The carrier arrived back home on October 8 after being at sea for 321 days, less than a week short of the longest carrier deployment in the post-Vietnam era.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-10-21",
+          "note": "Text context: CVN-72 USS Abraham Lincoln — latest entry: 08Oct2026, returned to San Diego"
         }
       ],
-      "lastChangedAt": "2026-10-27T16:30:56.911Z"
+      "lastChangedAt": "2026-10-29T00:50:57.464Z"
     },
     {
       "hull": "CVN-73",
@@ -325,7 +321,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)” between the Arabian Peninsula and India.",
+          "note": "Image estimate: The green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)” is visible in the western Indian Ocean.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
         }
       ],
@@ -537,7 +533,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)” southwest of India.",
+          "note": "Image estimate: The green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)” appears well south of the George Washington marker.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
         }
       ],
