@@ -1701,13 +1701,13 @@
       "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85",
       "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
       "publishedAt": "2026-10-27",
-      "createdAt": "2026-10-30T00:53:19.674Z",
+      "createdAt": "2026-10-30T07:03:18.451Z",
       "usage": {
         "inputTokens": 1385,
         "cachedInputTokens": 0,
-        "outputTokens": 1981,
-        "reasoningTokens": 1601,
-        "totalTokens": 3366
+        "outputTokens": 3818,
+        "reasoningTokens": 3422,
+        "totalTokens": 5203
       },
       "result": {
         "sourceKey": "twz",
@@ -1715,37 +1715,37 @@
         "publishedAt": "2026-10-27",
         "carriers": [
           {
-            "hull": "CVN-73",
-            "name": "USS George Washington",
-            "locationName": "Arabian Sea",
-            "lat": 18.2,
-            "lon": 64,
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Western North Pacific southeast of Japan",
+            "lat": 28,
+            "lon": 153.5,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The green carrier symbol labeled “USS GEORGE WASHINGTON (CVN 73)*” appears in the northern Arabian Sea between Oman and India.",
-            "rationale": "Estimated from the center of the carrier symbol adjacent to the label; the coordinate is in open water west of India."
+            "evidenceText": "The green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)*” appears east-southeast of Japan.",
+            "rationale": "Estimated from the center of the labeled carrier symbol; the coordinate is in open Pacific water and remains distinct from the nearby Japanese port markers."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Arabian Sea east of Oman",
+            "lat": 18,
+            "lon": 60.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)*” appears in the northern Arabian Sea.",
+            "rationale": "Placed at the approximate center of the labeled symbol over water east of Oman, rather than on the nearby Arabian or Indian landmasses."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
-            "locationName": "Arabian Sea",
-            "lat": 7.8,
-            "lon": 66.8,
+            "locationName": "Central Arabian Sea",
+            "lat": 5,
+            "lon": 64,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The green carrier symbol labeled “USS GEORGE H.W. BUSH (CVN 77)*” appears farther south in the Arabian Sea.",
-            "rationale": "Placed at the visual center of the labeled symbol, preserving its separation south of CVN-73 and remaining over open water."
-          },
-          {
-            "hull": "CVN-71",
-            "name": "USS Theodore Roosevelt",
-            "locationName": "Western North Pacific east of Japan",
-            "lat": 35.5,
-            "lon": 153.2,
-            "overWater": true,
-            "confidence": "medium",
-            "evidenceText": "The green carrier symbol labeled “USS THEODORE ROOSEVELT (CVN 71)*” is shown east of Honshu and Yokosuka.",
-            "rationale": "Estimated from the center of the symbol immediately above the label; the coordinate lies in the open western North Pacific."
+            "evidenceText": "The green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)*” appears south of the George Washington marker in the Arabian Sea.",
+            "rationale": "Estimated from the center of its separate labeled carrier symbol, preserving the map’s clear north-south separation from CVN-73 and placing it over open water."
           }
         ]
       }
