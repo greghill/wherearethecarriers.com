@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-01T07:28:28.089Z",
-  "lastChangedAt": "2026-11-01T07:28:28.089Z",
+  "generatedAt": "2026-11-01T19:35:33.404Z",
+  "lastChangedAt": "2026-11-01T19:35:33.404Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -147,41 +147,31 @@
       "hull": "CVN-71",
       "name": "USS Theodore Roosevelt",
       "status": "deployed",
-      "locationName": "Philippine Sea",
+      "locationName": "Yokosuka, Japan",
       "position": {
-        "lat": 18.5,
-        "lon": 137
+        "lat": 35.3,
+        "lon": 139.8
       },
       "positionPrecision": "image_estimate",
-      "confidence": "high",
-      "evidence": "corroborated",
-      "lastSeen": "2026-10-28",
-      "summary": "Aircraft Carrier Locations places USS Theodore Roosevelt in or near Philippine Sea.",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-10-27",
+      "summary": "Where Are The Aircraft Carriers?: October 27, 2026 places USS Theodore Roosevelt near Yokosuka, Japan from a public tracker map image.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-10-28",
-          "note": "Text context: CVN-71 USS Theodore Roosevelt — latest entry: 21Oct-26Oct2026, participated with allies in multilateral exercise Keen Sword 27 in the Philippine Sea"
-        },
-        {
-          "role": "primary",
-          "usedFor": [
-            "coordinate_refinement"
-          ],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Oct. 26, 2026",
-          "url": "https://news.usni.org/2026/10/26/usni-news-fleet-and-marine-tracker-oct-26-2026",
-          "publishedAt": "2026-10-28",
-          "note": "Image estimate: A yellow diamond appears immediately below the “Theodore Roosevelt CSG” label east of the Philippines.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_26_26.jpg"
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers?: October 27, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
+          "publishedAt": "2026-10-27",
+          "note": "Image estimate: The green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)*” is anchored immediately beside the YOKOSUKA port label.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
         },
         {
           "role": "backup",
@@ -196,12 +186,21 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: October 27, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
-          "publishedAt": "2026-10-27",
-          "note": "Text context: Surrounded by allied warships , the USS Theodore Roosevelt steamed through the Philippine Sea last week as large-scale combined exercise Keen Sword 27 got underway.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-10-28",
+          "note": "Text context: CVN-71 USS Theodore Roosevelt — latest entry: 21Oct-26Oct2026, participated with allies in multilateral exercise Keen Sword 27 in the Philippine Sea"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Oct. 26, 2026",
+          "url": "https://news.usni.org/2026/10/26/usni-news-fleet-and-marine-tracker-oct-26-2026",
+          "publishedAt": "2026-10-28",
+          "note": "Image estimate: A yellow diamond appears immediately below the “Theodore Roosevelt CSG” label east of the Philippines.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/10/FT_10_26_26.jpg"
         },
         {
           "role": "backup",
@@ -210,11 +209,11 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)*” east-southeast of Japan.",
+          "note": "Text context: Surrounded by allied warships , the USS Theodore Roosevelt steamed through the Philippine Sea last week as large-scale combined exercise Keen Sword 27 got underway.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-01T07:28:28.089Z"
+      "lastChangedAt": "2026-11-01T19:35:33.404Z"
     },
     {
       "hull": "CVN-72",
@@ -321,7 +320,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)*” in the northwestern Indian Ocean near Oman.",
+          "note": "Image estimate: The green marker labeled “USS GEORGE WASHINGTON (CVN 73)*” begins over water immediately east of the Horn of Africa.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
         }
       ],
@@ -533,7 +532,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)*” south of the George Washington marker in the Arabian Sea.",
+          "note": "Image estimate: The green marker labeled “USS GEORGE H.W. BUSH (CVN 77)*” begins over the western Indian Ocean, southeast of the Horn of Africa.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
         }
       ],
