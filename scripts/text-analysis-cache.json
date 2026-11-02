@@ -1,6 +1,79 @@
 {
   "version": 1,
   "analyses": {
+    "gpt-5.6-sol|usni|https://news.usni.org/2026/10/26/usni-news-fleet-and-marine-tracker-oct-26-2026|2026-10-28|4c93344b": {
+      "sourceKey": "usni",
+      "model": "gpt-5.6-sol",
+      "articleUrl": "https://news.usni.org/2026/10/26/usni-news-fleet-and-marine-tracker-oct-26-2026",
+      "publishedAt": "2026-10-28",
+      "createdAt": "2026-10-28T20:59:53.557Z",
+      "usage": {
+        "inputTokens": 3689,
+        "cachedInputTokens": 0,
+        "outputTokens": 931,
+        "reasoningTokens": 516,
+        "totalTokens": 4620
+      },
+      "result": {
+        "carriers": [
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Philippine Sea",
+            "lat": 17,
+            "lon": 134,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) is underway in the Philippine Sea, participating with allies in multilateral exercise Keen Sword 27."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 65,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and USS Shoup (DDG-86), are operating in the Arabian Sea in support of U.S. operations in the Middle East."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 15,
+            "lon": 65,
+            "status": "deployed",
+            "precision": "region",
+            "confidence": "high",
+            "evidenceQuote": "The George H.W. Bush Carrier Strike Group is operating in the Arabian Sea in support of U.S. operations in the Middle East."
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "Eastern Pacific",
+            "lat": 30,
+            "lon": -125,
+            "status": "unknown",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "Aircraft carrier USS Ronald Reagan (CVN-76) departed Monday from San Diego, according to ship spotters ."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Western Atlantic",
+            "lat": 34,
+            "lon": -72,
+            "status": "unknown",
+            "precision": "region",
+            "confidence": "medium",
+            "evidenceQuote": "Aircraft carrier USS Dwight D. Eisenhower (CVN-69) departed Saturday from Norfolk, Va., according to ship spotters."
+          }
+        ]
+      }
+    },
     "gpt-5.6-sol|twz|https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026|2026-10-27|0f850aed": {
       "sourceKey": "twz",
       "model": "gpt-5.6-sol",
@@ -3809,31 +3882,31 @@
         ]
       }
     },
-    "gpt-5.6-sol|usni|https://news.usni.org/2026/10/26/usni-news-fleet-and-marine-tracker-oct-26-2026|2026-10-28|4c93344b": {
+    "gpt-5.6-sol|usni|https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026|2026-11-02|0f4f45d5": {
       "sourceKey": "usni",
       "model": "gpt-5.6-sol",
-      "articleUrl": "https://news.usni.org/2026/10/26/usni-news-fleet-and-marine-tracker-oct-26-2026",
-      "publishedAt": "2026-10-28",
-      "createdAt": "2026-10-28T20:59:53.557Z",
+      "articleUrl": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
+      "publishedAt": "2026-11-02",
+      "createdAt": "2026-11-02T23:27:38.826Z",
       "usage": {
-        "inputTokens": 3689,
+        "inputTokens": 3758,
         "cachedInputTokens": 0,
-        "outputTokens": 931,
+        "outputTokens": 1006,
         "reasoningTokens": 516,
-        "totalTokens": 4620
+        "totalTokens": 4764
       },
       "result": {
         "carriers": [
           {
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
-            "locationName": "Philippine Sea",
-            "lat": 17,
-            "lon": 134,
+            "locationName": "South China Sea",
+            "lat": 12,
+            "lon": 114,
             "status": "deployed",
             "precision": "region",
             "confidence": "high",
-            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) is underway in the Philippine Sea, participating with allies in multilateral exercise Keen Sword 27."
+            "evidenceQuote": "Aircraft carrier USS Theodore Roosevelt (CVN-71) is underway in the South China Sea following its participation in exercise Keen Sword 27."
           },
           {
             "hull": "CVN-73",
@@ -3862,22 +3935,33 @@
             "name": "USS Ronald Reagan",
             "locationName": "Eastern Pacific",
             "lat": 30,
-            "lon": -125,
+            "lon": -120,
             "status": "unknown",
             "precision": "region",
             "confidence": "medium",
-            "evidenceQuote": "Aircraft carrier USS Ronald Reagan (CVN-76) departed Monday from San Diego, according to ship spotters ."
+            "evidenceQuote": "Aircraft carrier USS Ronald Reagan (CVN-76) departed Thursday from San Diego, Calif., according to ship spotters ."
           },
           {
             "hull": "CVN-69",
             "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk, Va.",
+            "lat": 36.946,
+            "lon": -76.33,
+            "status": "port",
+            "precision": "port",
+            "confidence": "high",
+            "evidenceQuote": "Aircraft carrier USS Dwight D. Eisenhower (CVN-69) returned Friday to Norfolk, Va., according to ship spotters ."
+          },
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
             "locationName": "Western Atlantic",
-            "lat": 34,
+            "lat": 35,
             "lon": -72,
             "status": "unknown",
             "precision": "region",
             "confidence": "medium",
-            "evidenceQuote": "Aircraft carrier USS Dwight D. Eisenhower (CVN-69) departed Saturday from Norfolk, Va., according to ship spotters."
+            "evidenceQuote": "Aircraft carrier USS Nimitz (CVN-68) departed Tuesday from Norfolk, according to ship spotters ."
           }
         ]
       }

@@ -1772,19 +1772,107 @@
         ]
       }
     },
+    "gpt-5.6-sol|https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026|https://news.usni.org/wp-content/uploads/2026/11/FT_11_02_26-1.jpg|2026-11-02": {
+      "sourceKey": "usni",
+      "model": "gpt-5.6-sol",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_02_26-1.jpg",
+      "articleUrl": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
+      "publishedAt": "2026-11-02",
+      "createdAt": "2026-11-02T23:28:12.624Z",
+      "usage": {
+        "inputTokens": 3753,
+        "cachedInputTokens": 0,
+        "outputTokens": 2737,
+        "reasoningTokens": 2070,
+        "totalTokens": 6490
+      },
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
+        "publishedAt": "2026-11-02",
+        "carriers": [
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Western North Atlantic off the southeastern United States",
+            "lat": 33.5,
+            "lon": -73.5,
+            "overWater": true,
+            "confidence": "low",
+            "evidenceText": "The “USS Nimitz (CVN-68)” label is immediately beside a yellow diamond southeast of the Norfolk-labeled marker.",
+            "rationale": "The coarse map artwork makes the diamond appear displaced toward land; it is interpreted as an offshore Atlantic position consistent with its placement southeast of Norfolk."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Norfolk, Virginia",
+            "lat": 36.95,
+            "lon": -76.33,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "The map explicitly labels “USS Dwight D. Eisenhower (CVN-69) — Norfolk, Va.” beside a yellow diamond.",
+            "rationale": "Explicitly shown pierside at the named Norfolk port."
+          },
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "South China Sea",
+            "lat": 15.5,
+            "lon": 115.5,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "A yellow diamond adjacent to “Theodore Roosevelt CSG” appears between Vietnam and the Philippines.",
+            "rationale": "The marker is clearly over the central South China Sea and directly associated with the carrier label."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Arabian Sea east of Oman",
+            "lat": 19,
+            "lon": 60.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "“George Washington CSG” is one of two stacked carrier labels above a single yellow diamond east of Oman.",
+            "rationale": "The shared marker is over the northwestern Arabian Sea; the map does not visually separate it from the George H.W. Bush marker."
+          },
+          {
+            "hull": "CVN-76",
+            "name": "USS Ronald Reagan",
+            "locationName": "Eastern North Pacific west of California",
+            "lat": 39,
+            "lon": -132,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The “USS Ronald Reagan (CVN-76)” label sits immediately northeast of a yellow diamond well west of the U.S. West Coast.",
+            "rationale": "The returned point follows the offshore marker rather than a coastal or regional centroid."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea east of Oman",
+            "lat": 19,
+            "lon": 60.5,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "“George H.W. Bush CSG” is the second stacked carrier label associated with the yellow diamond east of Oman.",
+            "rationale": "Only one shared marker is visible for the two stacked CSG labels, so both are assigned the same approximate northwestern Arabian Sea position."
+          }
+        ]
+      }
+    },
     "gpt-5.6-sol|https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026|https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85|2026-10-27": {
       "sourceKey": "twz",
       "model": "gpt-5.6-sol",
       "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85",
       "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
       "publishedAt": "2026-10-27",
-      "createdAt": "2026-11-02T15:39:58.146Z",
+      "createdAt": "2026-11-02T23:28:58.608Z",
       "usage": {
         "inputTokens": 1385,
         "cachedInputTokens": 0,
-        "outputTokens": 3264,
-        "reasoningTokens": 2871,
-        "totalTokens": 4649
+        "outputTokens": 4014,
+        "reasoningTokens": 3619,
+        "totalTokens": 5399
       },
       "result": {
         "sourceKey": "twz",
@@ -1794,35 +1882,35 @@
           {
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
-            "locationName": "North Pacific Ocean east of Japan",
-            "lat": 40.5,
-            "lon": 164.5,
+            "locationName": "Western Pacific Ocean east of Japan",
+            "lat": 30.5,
+            "lon": 161,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)” appears east-northeast of Japan.",
-            "rationale": "Estimated from the center of the carrier symbol adjacent to the CVN-71 label; the coordinate is in open North Pacific water."
+            "evidenceText": "The map shows “USS THEODORE ROOSEVELT (CVN 71)” beside a green carrier marker east of Yokosuka.",
+            "rationale": "Estimated from the center of the carrier silhouette immediately above the label. The point is in open Pacific water and preserves its separation from the nearby Yokosuka and Sasebo port markers."
           },
           {
             "hull": "CVN-73",
             "name": "USS George Washington",
             "locationName": "Arabian Sea",
-            "lat": 7.5,
-            "lon": 64.5,
+            "lat": 15,
+            "lon": 60,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)” appears southwest of India in the Arabian Sea.",
-            "rationale": "Estimated from the center of the slanted carrier symbol immediately beside the CVN-73 label; the coordinate is over open water."
+            "evidenceText": "The map shows “USS GEORGE WASHINGTON (CVN 73)” beside the upper green carrier marker west of India.",
+            "rationale": "Estimated from the center of the upper carrier silhouette adjacent to its label, placing it over open water in the Arabian Sea."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
-            "locationName": "Central Indian Ocean",
-            "lat": -10.5,
-            "lon": 69,
+            "locationName": "Western Indian Ocean",
+            "lat": 1,
+            "lon": 64,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)” appears well south of India in the central Indian Ocean.",
-            "rationale": "Estimated from the center of the carrier symbol adjacent to the CVN-77 label, preserving its visible separation south of CVN-73; the coordinate is over open water."
+            "evidenceText": "The map shows “USS GEORGE H.W. BUSH (CVN 77)” beside the lower green carrier marker southwest of India.",
+            "rationale": "Estimated from the center of the lower carrier silhouette adjacent to its label. The coordinate lies over the western Indian Ocean and remains distinctly south of the George Washington marker."
           }
         ]
       }
