@@ -249,9 +249,12 @@ function markerOffsets(carriers) {
         return;
       }
 
-      const angle = (Math.PI * 2 * index) / count - Math.PI / 2;
-      const radius = window.innerWidth < 640 ? 5 : 7;
-      offsets.set(item.carrier.hull, L.point(Math.cos(angle) * radius, Math.sin(angle) * radius));
+      // Stack co-located markers vertically (one marker height apart), centered on
+      // the true position. Offsets are in screen pixels and recomputed on zoom, so
+      // the group always stays centered on the real coordinate.
+      const spacing = 36;
+      const y = (index - (count - 1) / 2) * spacing;
+      offsets.set(item.carrier.hull, L.point(0, y));
     });
   }
 
