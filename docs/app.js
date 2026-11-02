@@ -379,7 +379,16 @@ function renderSources(carrier) {
     return;
   }
 
+  // The same article is often analyzed twice (text + map image); show it once.
+  const groups = new Map();
   sources.forEach((source) => {
+    const key = source.url || `${source.publisher}|${source.title}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(source);
+  });
+
+  groups.forEach((group) => {
+    const source = group.find((entry) => entry.role === "primary") || group[0];
     const item = document.createElement("li");
     const publisher = document.createElement("span");
     const sourceClass = sourceClassName(source);
@@ -388,14 +397,17 @@ function renderSources(carrier) {
     const labelRow = document.createElement("div");
     labelRow.className = "source-label-row";
     labelRow.append(publisher);
-    const medium = sourceMediumLabel(source);
-    if (medium) {
+    const mediums = [...new Set(group.map(sourceMediumLabel).filter(Boolean))];
+    mediums.forEach((medium) => {
       const mediumBadge = document.createElement("span");
       mediumBadge.className = `source-medium ${medium}`;
       mediumBadge.textContent = medium;
       labelRow.append(mediumBadge);
-    }
-    const usedFor = usedForLabel(source);
+    });
+    const usedForLabels = [...new Set(group.map(usedForLabel).filter(Boolean))];
+    const usedFor = (usedForLabels.length > 1
+      ? usedForLabels.filter((label) => label !== "backup")
+      : usedForLabels).join(", ");
     if (usedFor) {
       const usage = document.createElement("span");
       usage.className = `source-use${usedFor === "backup" ? " backup" : ""}`;
@@ -412,7 +424,7 @@ function renderSources(carrier) {
     meta.textContent = [
       source.publisher,
       source.publishedAt ? formatDate(source.publishedAt) : null,
-      source.note
+      ...group.map((entry) => entry.note)
     ].filter(Boolean).join(" | ");
     item.append(labelRow, link, meta);
     els.sources.append(item);
