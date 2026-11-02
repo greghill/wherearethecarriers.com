@@ -25,7 +25,10 @@ const SOURCE_URLS = {
   // and the wp-content CDN are served without a challenge. content.rendered carries
   // the full article HTML, so the same parsers work on it unchanged.
   usniApi: "https://news.usni.org/wp-json/wp/v2/posts?categories=4137&per_page=10&_fields=date,modified,link,title,content",
-  stratforIndex: "https://worldview.stratfor.com/topic/tracking-us-naval-power",
+  // Stratfor Worldview became RANE Worldview (mid-2026); the old topic page now
+  // redirects to a generic /themes page and search is client-rendered, so the
+  // sitemap is the only server-side index that lists the weekly map articles.
+  stratforIndex: "https://worldview.ranenetwork.com/sitemap.xml",
   twzIndex: "https://www.twz.com/category/carrier-tracker"
 };
 
@@ -125,11 +128,20 @@ function firstUniqueUrl(items) {
   return null;
 }
 
-function findLatestStratforMapUrl(html) {
-  return firstUniqueUrl(
-    linksFromHtml(html, SOURCE_URLS.stratforIndex)
-      .filter((link) => /us-naval-update-map/i.test(link.url) || /U\.S\. Naval Update Map/i.test(link.text))
-  );
+function findLatestStratforMapUrl(sitemapXml) {
+  const candidates = [];
+  for (const match of sitemapXml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/gi)) {
+    const url = match[1].trim();
+    if (!/naval-update-map/i.test(url)) continue;
+    // New format: /content/analysis/2026-10-28/u-s-naval-update-map-oct-29-2026/<hash>
+    // Old format: /content/article/us-naval-update-map-june-18-2026
+    const pathDate = url.match(/\/(\d{4}-\d{2}-\d{2})\//)?.[1];
+    const slugDate = url.match(/naval-update-map-([a-z]+-\d{1,2}-\d{4})/i)?.[1];
+    const parsed = new Date(pathDate || (slugDate ? slugDate.replace(/-/g, " ") : NaN));
+    candidates.push({ url, time: Number.isNaN(parsed.getTime()) ? -1 : parsed.getTime() });
+  }
+  candidates.sort((a, b) => b.time - a.time);
+  return candidates[0]?.url || null;
 }
 
 // TWZ has renamed its tracker slugs before (where-are-the-carriers-as-of-…,
@@ -573,7 +585,9 @@ async function scrapeStratfor() {
     throw new Error(`${SOURCE_URLS.stratforIndex} returned no naval update map link`);
   }
   const articleHtml = await fetchText(articleUrl);
-  const title = stripTags(articleHtml.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1]) || "U.S. Naval Update Map";
+  const title = stripTags(articleHtml.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i)?.[1])
+    || extractMeta(articleHtml, "og:title")
+    || "U.S. Naval Update Map";
   const publishedAt = articleDateFromTitle(title) || articleDateFromTitle(stripTags(articleHtml));
   const imageUrl = bestMapImageUrl(articleHtml, articleUrl, "stratfor");
   return {
@@ -1527,6 +1541,7 @@ export {
   normalizeUsage,
   estimateUsageUsd,
   findLatestTwzUrl,
+  findLatestStratforMapUrl,
   twzDateToken,
   applyAssessment,
   effectiveConfidenceWeight,

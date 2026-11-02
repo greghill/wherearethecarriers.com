@@ -27,7 +27,7 @@ const shortNames = {
 const aboutSources = [
   { publisher: "GoNavy.jp", url: "http://www.gonavy.jp/CVLocation.html" },
   { publisher: "USNI News", url: "https://news.usni.org/category/fleet-tracker" },
-  { publisher: "Stratfor Worldview", url: "https://worldview.stratfor.com/topic/tracking-us-naval-power" },
+  { publisher: "Stratfor Worldview", url: "https://worldview.ranenetwork.com/" },
   { publisher: "The War Zone", url: "https://www.twz.com/category/carrier-tracker" }
 ];
 

@@ -6,6 +6,7 @@ import {
   normalizeUsage,
   estimateUsageUsd,
   findLatestTwzUrl,
+  findLatestStratforMapUrl,
   twzDateToken,
   applyAssessment,
   effectiveConfidenceWeight,
@@ -327,4 +328,18 @@ test("estimateUsageUsd discounts cached input and does not double-bill reasoning
     estimateUsageUsd({ inputTokens: 0, cachedInputTokens: 0, outputTokens: 0, reasoningTokens: 0 }),
     0
   );
+});
+
+test("findLatestStratforMapUrl picks the newest naval update map from the RANE sitemap", () => {
+  const xml = `<urlset>
+    <url><loc>https://worldview.ranenetwork.com/analysis</loc></url>
+    <url><loc>https://worldview.ranenetwork.com/content/analysis/2026-10-28/u-s-naval-update-map-oct-29-2026/2da4428359e68c14</loc></url>
+    <url><loc>https://worldview.ranenetwork.com/content/article/us-naval-update-map-june-18-2026</loc></url>
+    <url><loc>https://worldview.ranenetwork.com/content/analysis/2026-10-21/u-s-naval-update-map-oct-22-2026/c33c7b715cf18b09</loc></url>
+  </urlset>`;
+  assert.equal(
+    findLatestStratforMapUrl(xml),
+    "https://worldview.ranenetwork.com/content/analysis/2026-10-28/u-s-naval-update-map-oct-29-2026/2da4428359e68c14"
+  );
+  assert.equal(findLatestStratforMapUrl("<urlset></urlset>"), null);
 });
