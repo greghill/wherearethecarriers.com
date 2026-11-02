@@ -1695,19 +1695,96 @@
         ]
       }
     },
+    "gpt-5.6-sol|https://worldview.ranenetwork.com/content/analysis/2026-10-28/u-s-naval-update-map-oct-29-2026/2da4428359e68c14|https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261028-20display.png|2026-10-29": {
+      "sourceKey": "stratfor",
+      "model": "gpt-5.6-sol",
+      "imageUrl": "https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261028-20display.png",
+      "articleUrl": "https://worldview.ranenetwork.com/content/analysis/2026-10-28/u-s-naval-update-map-oct-29-2026/2da4428359e68c14",
+      "publishedAt": "2026-10-29",
+      "createdAt": "2026-11-02T14:56:03.212Z",
+      "usage": {
+        "inputTokens": 3456,
+        "cachedInputTokens": 0,
+        "outputTokens": 3652,
+        "reasoningTokens": 3106,
+        "totalTokens": 7108
+      },
+      "result": {
+        "sourceKey": "stratfor",
+        "imageUrl": "https://worldview.ranenetwork.com/content/analysis/2026-10-28/u-s-naval-update-map-oct-29-2026/2da4428359e68c14",
+        "publishedAt": "2026-10-29",
+        "carriers": [
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Philippine Sea",
+            "lat": 18.1,
+            "lon": 130.6,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "The orange current-position dot touching the CVN 71 label is east of Luzon; the orange dots extending northeast are historical positions.",
+            "rationale": "Estimated directly from the label-adjacent dark-orange dot, which lies over the Philippine Sea."
+          },
+          {
+            "hull": "CVN-69",
+            "name": "USS Dwight D. Eisenhower",
+            "locationName": "Western Atlantic off Virginia",
+            "lat": 37.7,
+            "lon": -75.3,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "The CVN 69 label is adjacent to the upper of two separate orange dots east of Norfolk.",
+            "rationale": "Placed on the upper label-adjacent marker over Atlantic water just off the Virginia–Delmarva coast."
+          },
+          {
+            "hull": "CVN-68",
+            "name": "USS Nimitz",
+            "locationName": "Western Atlantic off North Carolina",
+            "lat": 34.1,
+            "lon": -76.4,
+            "overWater": true,
+            "confidence": "high",
+            "evidenceText": "The CVN 68 label is adjacent to the lower orange dot southeast of Norfolk.",
+            "rationale": "Placed on the lower of the two distinct western Atlantic markers, over water off North Carolina."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Arabian Sea",
+            "lat": 14.8,
+            "lon": 61.2,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The CVN 73 label points to the western orange dot in the close pair in the Arabian Sea.",
+            "rationale": "Estimated from the western label-adjacent dot; kept separate from the nearby CVN 77 marker."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea",
+            "lat": 14.7,
+            "lon": 64.2,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The CVN 77 label is associated with the eastern orange dot, from which an orange historical trail extends southeast.",
+            "rationale": "Used the eastern current-position dot touching the label rather than averaging the historical trail."
+          }
+        ]
+      }
+    },
     "gpt-5.6-sol|https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026|https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85|2026-10-27": {
       "sourceKey": "twz",
       "model": "gpt-5.6-sol",
       "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85",
       "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
       "publishedAt": "2026-10-27",
-      "createdAt": "2026-11-02T05:54:42.825Z",
+      "createdAt": "2026-11-02T14:57:09.475Z",
       "usage": {
         "inputTokens": 1385,
         "cachedInputTokens": 0,
-        "outputTokens": 3476,
-        "reasoningTokens": 3106,
-        "totalTokens": 4861
+        "outputTokens": 3741,
+        "reasoningTokens": 3341,
+        "totalTokens": 5126
       },
       "result": {
         "sourceKey": "twz",
@@ -1715,37 +1792,37 @@
         "publishedAt": "2026-10-27",
         "carriers": [
           {
-            "hull": "CVN-73",
-            "name": "USS George Washington",
-            "locationName": "Arabian Sea",
-            "lat": 17,
-            "lon": 65,
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Northwestern Pacific east of Japan",
+            "lat": 40,
+            "lon": 151,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Visible green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)*” west of India.",
-            "rationale": "Estimated from the carrier glyph and adjacent label, placing the position in open water in the central Arabian Sea."
+            "evidenceText": "The green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)” appears east of the Yokosuka and Sasebo port symbols.",
+            "rationale": "Estimated from the center of the green carrier silhouette adjacent to the CVN-71 label; the coordinate is in open Pacific water east of Japan."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Indian Ocean south of Sri Lanka",
+            "lat": 4,
+            "lon": 78,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "A green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)” is visible immediately south of the Indian subcontinent.",
+            "rationale": "The oversized marker is centered close to Sri Lanka, so the estimate is anchored on its adjacent label and placed in open water just south of the island."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
-            "locationName": "Western Indian Ocean",
-            "lat": 7,
-            "lon": 66,
+            "locationName": "Central Indian Ocean",
+            "lat": -12,
+            "lon": 80,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Visible green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)*” southwest of India and south of the George Washington marker.",
-            "rationale": "Estimated from the adjacent carrier glyph and label; the coordinate preserves the visible north-south separation and lies over open Indian Ocean water."
-          },
-          {
-            "hull": "CVN-71",
-            "name": "USS Theodore Roosevelt",
-            "locationName": "Northwestern Pacific Ocean east of Japan",
-            "lat": 33,
-            "lon": 157,
-            "overWater": true,
-            "confidence": "medium",
-            "evidenceText": "Visible green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)*” east of Yokosuka, Japan.",
-            "rationale": "Estimated from the carrier glyph immediately above the label and placed over open Pacific water east of Japan."
+            "evidenceText": "The lower green carrier marker is labeled “USS GEORGE H.W. BUSH (CVN 77)” in the central Indian Ocean.",
+            "rationale": "Estimated from the center of the labeled green silhouette, preserving its clear southward separation from CVN-73 and placing it over open ocean."
           }
         ]
       }
