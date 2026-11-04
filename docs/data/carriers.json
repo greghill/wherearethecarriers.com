@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T15:01:31.955Z",
-  "lastChangedAt": "2026-11-03T15:01:31.955Z",
+  "generatedAt": "2026-11-04T01:16:49.684Z",
+  "lastChangedAt": "2026-11-04T01:16:49.684Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -156,8 +156,8 @@
         "lon": -117.2153
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-10-27",
       "summary": "Where Are The Aircraft Carriers?: October 27, 2026 places USS Carl Vinson in San Diego.",
       "sources": [
@@ -186,7 +186,7 @@
           "note": "Text context: CVN-70 USS Carl Vinson — latest entry: 04Sep2026, returned to San Diego"
         }
       ],
-      "lastChangedAt": "2026-10-28T15:57:24.626Z"
+      "lastChangedAt": "2026-11-04T01:16:49.684Z"
     },
     {
       "hull": "CVN-71",
@@ -264,7 +264,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: The green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)*” appears east-southeast of Yokosuka.",
+          "note": "Image estimate: The green carrier symbol labeled “USS THEODORE ROOSEVELT (CVN 71)” appears east of Japan in the North Pacific.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
         }
       ],
@@ -277,8 +277,8 @@
       "locationName": "Home port (unspecified)",
       "position": null,
       "positionPrecision": "unknown",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-10-27",
       "summary": "Where Are The Aircraft Carriers?: October 27, 2026 places USS Abraham Lincoln in or near Home port (unspecified).",
       "sources": [
@@ -306,7 +306,7 @@
           "note": "Text context: CVN-72 USS Abraham Lincoln — latest entry: 08Oct2026, returned to San Diego"
         }
       ],
-      "lastChangedAt": "2026-10-29T00:50:57.464Z"
+      "lastChangedAt": "2026-11-04T01:16:49.684Z"
     },
     {
       "hull": "CVN-73",
@@ -384,7 +384,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: The green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)*” appears in the northern Arabian Sea west of India.",
+          "note": "Image estimate: The green carrier symbol labeled “USS GEORGE WASHINGTON (CVN 73)” appears west of India in the Arabian Sea.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
         }
       ],
@@ -397,8 +397,8 @@
       "locationName": "Unspecified maintenance location",
       "position": null,
       "positionPrecision": "unknown",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-10-27",
       "summary": "Where Are The Aircraft Carriers?: October 27, 2026 places USS John C. Stennis in or near Unspecified maintenance location.",
       "sources": [
@@ -417,7 +417,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-10-28T15:57:24.626Z"
+      "lastChangedAt": "2026-11-04T01:16:49.684Z"
     },
     {
       "hull": "CVN-75",
@@ -426,8 +426,8 @@
       "locationName": "Unspecified RCOH location",
       "position": null,
       "positionPrecision": "unknown",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-10-27",
       "summary": "Where Are The Aircraft Carriers?: October 27, 2026 places USS Harry S. Truman in or near Unspecified RCOH location.",
       "sources": [
@@ -455,7 +455,7 @@
           "note": "Text context: CVN-75 USS Harry S. Truman — latest entry: 30Sep2026, moved from Naval Station Norfolk to Newport News Shipbuilding , beginning the next major phase of the Refueling and Complex Overhaul (RCOH). The move to Newport News transitions from pre"
         }
       ],
-      "lastChangedAt": "2026-10-28T15:57:24.626Z"
+      "lastChangedAt": "2026-11-04T01:16:49.684Z"
     },
     {
       "hull": "CVN-76",
@@ -595,7 +595,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: The green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)*” appears south of the George Washington marker in the Arabian Sea.",
+          "note": "Image estimate: The green carrier symbol labeled “USS GEORGE H.W. BUSH (CVN 77)” appears southwest of India in the western Indian Ocean.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
         }
       ],
