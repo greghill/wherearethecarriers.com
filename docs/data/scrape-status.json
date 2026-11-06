@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-06T10:44:49.866Z",
-  "lastRunAt": "2026-11-06T10:44:49.866Z",
+  "generatedAt": "2026-11-06T17:54:53.206Z",
+  "lastRunAt": "2026-11-06T17:54:53.206Z",
   "sourceOutageGraceDays": 3,
   "sourceStatus": {
     "usni": {
       "status": "ok",
-      "lastFetchedAt": "2026-11-06T10:44:50.719Z",
-      "lastSuccessAt": "2026-11-06T10:44:50.719Z",
+      "lastFetchedAt": "2026-11-06T17:54:54.168Z",
+      "lastSuccessAt": "2026-11-06T17:54:54.168Z",
       "firstErrorAt": null,
       "lastErrorAt": "2026-05-30T14:46:20.138Z",
       "consecutiveFailures": 0,
@@ -14,8 +14,8 @@
     },
     "stratfor": {
       "status": "ok",
-      "lastFetchedAt": "2026-11-06T10:44:54.892Z",
-      "lastSuccessAt": "2026-11-06T10:44:54.892Z",
+      "lastFetchedAt": "2026-11-06T17:54:54.428Z",
+      "lastSuccessAt": "2026-11-06T17:54:54.428Z",
       "firstErrorAt": null,
       "lastErrorAt": "2026-11-02T05:53:56.319Z",
       "consecutiveFailures": 0,
@@ -23,8 +23,8 @@
     },
     "twz": {
       "status": "ok",
-      "lastFetchedAt": "2026-11-06T10:44:55.506Z",
-      "lastSuccessAt": "2026-11-06T10:44:55.506Z",
+      "lastFetchedAt": "2026-11-06T17:54:54.503Z",
+      "lastSuccessAt": "2026-11-06T17:54:54.503Z",
       "firstErrorAt": null,
       "lastErrorAt": "2026-09-04T22:19:40.001Z",
       "consecutiveFailures": 0,
@@ -32,8 +32,8 @@
     },
     "gonavy": {
       "status": "ok",
-      "lastFetchedAt": "2026-11-06T10:44:55.985Z",
-      "lastSuccessAt": "2026-11-06T10:44:55.985Z",
+      "lastFetchedAt": "2026-11-06T17:54:55.033Z",
+      "lastSuccessAt": "2026-11-06T17:54:55.033Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
@@ -41,8 +41,8 @@
     },
     "openaiImages": {
       "status": "ok",
-      "lastFetchedAt": "2026-11-06T10:45:36.023Z",
-      "lastSuccessAt": "2026-11-06T10:45:36.023Z",
+      "lastFetchedAt": "2026-11-06T17:55:30.801Z",
+      "lastSuccessAt": "2026-11-06T17:55:30.801Z",
       "firstErrorAt": null,
       "lastErrorAt": null,
       "consecutiveFailures": 0,
