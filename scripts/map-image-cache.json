@@ -1943,13 +1943,13 @@
       "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85",
       "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
       "publishedAt": "2026-10-27",
-      "createdAt": "2026-11-06T02:21:19.551Z",
+      "createdAt": "2026-11-06T10:45:36.021Z",
       "usage": {
         "inputTokens": 1385,
         "cachedInputTokens": 0,
-        "outputTokens": 3809,
-        "reasoningTokens": 3398,
-        "totalTokens": 5194
+        "outputTokens": 3478,
+        "reasoningTokens": 3097,
+        "totalTokens": 4863
       },
       "result": {
         "sourceKey": "twz",
@@ -1957,37 +1957,37 @@
         "publishedAt": "2026-10-27",
         "carriers": [
           {
-            "hull": "CVN-73",
-            "name": "USS George Washington",
-            "locationName": "Arabian Sea west of India",
-            "lat": 15.5,
-            "lon": 68,
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Western Pacific east of Japan",
+            "lat": 35,
+            "lon": 150.5,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The green USS GEORGE WASHINGTON (CVN 73) marker is positioned in the Arabian Sea immediately west of India.",
-            "rationale": "The location is estimated from the left/anchored end of the ship symbol rather than its long silhouette, placing the carrier over open water west of the Indian coast."
+            "evidenceText": "The green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)*” appears immediately east of Japan.",
+            "rationale": "Estimated from the center of the labeled carrier silhouette; the coordinate is in open Pacific water east of Honshu."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Arabian Sea",
+            "lat": 10.5,
+            "lon": 57,
+            "overWater": true,
+            "confidence": "medium",
+            "evidenceText": "The green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)*” appears southwest of India and east of the Horn of Africa.",
+            "rationale": "Estimated from the labeled silhouette rather than the text baseline; the coordinate lies in open water in the western Arabian Sea."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
-            "locationName": "Central Indian Ocean southwest of India",
-            "lat": 2.5,
-            "lon": 69.5,
+            "locationName": "Western Indian Ocean",
+            "lat": -7,
+            "lon": 56.5,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "The green USS GEORGE H.W. BUSH (CVN 77) marker appears southwest of India and Sri Lanka, distinctly south of the George Washington marker.",
-            "rationale": "The estimate uses the anchored left end of the symbol and preserves the visible north-south separation from CVN-73. The coordinate is in open Indian Ocean water."
-          },
-          {
-            "hull": "CVN-71",
-            "name": "USS Theodore Roosevelt",
-            "locationName": "Yokosuka, Japan",
-            "lat": 35.29,
-            "lon": 139.68,
-            "overWater": true,
-            "confidence": "high",
-            "evidenceText": "The green USS THEODORE ROOSEVELT (CVN 71) symbol is anchored directly beside the map's YOKOSUKA port marker.",
-            "rationale": "The symbol's anchored end coincides with the named Yokosuka port area; the coordinate is placed in the naval-port waterfront rather than inland."
+            "evidenceText": "The green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)*” appears farther south in the western Indian Ocean.",
+            "rationale": "Estimated from the center of its separate labeled silhouette; the coordinate is over open water and preserves its north-south separation from CVN-73."
           }
         ]
       }
