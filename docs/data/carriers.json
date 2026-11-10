@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-11-05T06:35:26.092Z",
-  "lastChangedAt": "2026-11-05T06:35:26.092Z",
+  "generatedAt": "2026-11-10T01:27:58.721Z",
+  "lastChangedAt": "2026-11-10T01:27:58.721Z",
   "carriers": [
     {
       "hull": "CVN-68",
       "name": "USS Nimitz",
       "status": "deployed",
-      "locationName": "Virginia Capes Operating Area",
+      "locationName": "Western Atlantic",
       "position": {
-        "lat": 34.2,
-        "lon": -74.8
+        "lat": 36.95,
+        "lon": -76.32
       },
       "positionPrecision": "image_estimate",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-11-05",
-      "summary": "Aircraft Carrier Locations places USS Nimitz in or near Virginia Capes Operating Area.",
+      "lastSeen": "2026-11-09",
+      "summary": "USNI News Fleet and Marine Tracker: Nov. 9, 2026 places USS Nimitz in or near Western Atlantic.",
       "sources": [
         {
           "role": "primary",
@@ -24,23 +24,33 @@
             "location",
             "summary"
           ],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-11-04",
-          "note": "Text context: CVN-68 USS Nimitz — latest entry: 27Oct-02Nov2026, Carrier Air Traffic Control Center (CATCC) and other system certification with CVW-1 in the Virginia Capes Operating Area"
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Nov. 9, 2026",
+          "url": "https://news.usni.org/2026/11/09/usni-news-fleet-and-marine-tracker-nov-9-2026",
+          "publishedAt": "2026-11-09",
+          "note": "Text context: Aircraft carrier USS Nimitz (CVN-68) is underway conducting routine operations in the Western Atlantic.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_9_26.jpg"
         },
         {
           "role": "primary",
           "usedFor": [
             "coordinate_refinement"
           ],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: Nov. 5, 2026",
-          "url": "https://worldview.ranenetwork.com/content/analysis/2026-11-04/u-s-naval-update-map-nov-5-2026/fff4e3015afc59f8",
-          "publishedAt": "2026-11-05",
-          "note": "Image estimate: The CVN 68 label is adjacent to the lower of two separate orange/red dots east of the Virginia–North Carolina coast.",
-          "imageUrl": "https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261104-20display.png"
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Nov. 9, 2026",
+          "url": "https://news.usni.org/2026/11/09/usni-news-fleet-and-marine-tracker-nov-9-2026",
+          "publishedAt": "2026-11-09",
+          "note": "Image estimate: USS Nimitz (CVN-68)",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_9_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-11-04",
+          "note": "Text context: CVN-68 USS Nimitz — latest entry: 27Oct-02Nov2026, Carrier Air Traffic Control Center (CATCC) and other system certification with CVW-1 in the Virginia Capes Operating Area"
         },
         {
           "role": "backup",
@@ -50,45 +60,35 @@
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
           "note": "Text context: USS Nimitz , homeported in Norfolk, welcomed the public with tours during Naval Station Norfolk's Fleet Fest over the weekend, and got underway again for training on October 27.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         },
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Nov. 2, 2026",
-          "url": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
-          "publishedAt": "2026-11-02",
-          "note": "Text context: Aircraft carrier USS Nimitz (CVN-68) departed Tuesday from Norfolk, according to ship spotters .",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_02_26-1.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Nov. 2, 2026",
-          "url": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
-          "publishedAt": "2026-11-02",
-          "note": "Image estimate: The “USS Nimitz (CVN-68)” label is immediately beside a yellow diamond southeast of the Norfolk-labeled marker.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_02_26-1.jpg"
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: Nov. 5, 2026",
+          "url": "https://worldview.ranenetwork.com/content/analysis/2026-11-04/u-s-naval-update-map-nov-5-2026/fff4e3015afc59f8",
+          "publishedAt": "2026-11-05",
+          "note": "Image estimate: The CVN 68 label is adjacent to the lower of two separate orange/red dots east of the Virginia–North Carolina coast.",
+          "imageUrl": "https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261104-20display.png"
         }
       ],
-      "lastChangedAt": "2026-11-05T06:35:26.092Z"
+      "lastChangedAt": "2026-11-10T01:27:58.721Z"
     },
     {
       "hull": "CVN-69",
       "name": "USS Dwight D. Eisenhower",
       "status": "port",
-      "locationName": "Norfolk",
+      "locationName": "Norfolk, Va.",
       "position": {
-        "lat": 36.95,
+        "lat": 36.946,
         "lon": -76.33
       },
       "positionPrecision": "port",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-11-04",
-      "summary": "Aircraft Carrier Locations places USS Dwight D. Eisenhower in Norfolk.",
+      "lastSeen": "2026-11-09",
+      "summary": "USNI News Fleet and Marine Tracker: Nov. 9, 2026 places USS Dwight D. Eisenhower in Norfolk, Va..",
       "sources": [
         {
           "role": "primary",
@@ -98,6 +98,16 @@
             "position",
             "summary"
           ],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Nov. 9, 2026",
+          "url": "https://news.usni.org/2026/11/09/usni-news-fleet-and-marine-tracker-nov-9-2026",
+          "publishedAt": "2026-11-09",
+          "note": "Text context: Aircraft carrier USS Dwight D. Eisenhower (CVN-69) departed Wednesday and returned Thursday to Norfolk, Va., according to ship spotters.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_9_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
@@ -107,32 +117,12 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Nov. 2, 2026",
-          "url": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
-          "publishedAt": "2026-11-02",
-          "note": "Text context: Aircraft carrier USS Dwight D. Eisenhower (CVN-69) returned Friday to Norfolk, Va., according to ship spotters .",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_02_26-1.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Nov. 2, 2026",
-          "url": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
-          "publishedAt": "2026-11-02",
-          "note": "Image estimate: The map explicitly labels “USS Dwight D. Eisenhower (CVN-69) — Norfolk, Va.” beside a yellow diamond.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_02_26-1.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
           "note": "Text context: USS Dwight D. Eisenhower, also based at NS Norfolk, left port for work ups on October 24.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         },
         {
           "role": "backup",
@@ -145,7 +135,7 @@
           "imageUrl": "https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261104-20display.png"
         }
       ],
-      "lastChangedAt": "2026-11-03T15:01:31.955Z"
+      "lastChangedAt": "2026-11-10T01:27:58.721Z"
     },
     {
       "hull": "CVN-70",
@@ -175,7 +165,7 @@
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
           "note": "Text context: On the other side of the country, USS Carl Vinson is in port in San Diego.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         },
         {
           "role": "backup",
@@ -195,10 +185,10 @@
       "status": "deployed",
       "locationName": "South China Sea",
       "position": {
-        "lat": 11.7,
-        "lon": 109.2
+        "lat": 14,
+        "lon": 114
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
       "lastSeen": "2026-11-05",
@@ -207,20 +197,9 @@
         {
           "role": "primary",
           "usedFor": [
-            "coordinate_refinement"
-          ],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: Nov. 5, 2026",
-          "url": "https://worldview.ranenetwork.com/content/analysis/2026-11-04/u-s-naval-update-map-nov-5-2026/fff4e3015afc59f8",
-          "publishedAt": "2026-11-05",
-          "note": "Image estimate: The CVN 71 label sits directly below the dark orange/red endpoint dot off Vietnam; the lighter orange dots trail northeast toward Japan.",
-          "imageUrl": "https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261104-20display.png"
-        },
-        {
-          "role": "primary",
-          "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
           "publisher": "GoNavy.jp",
@@ -233,21 +212,31 @@
           "role": "backup",
           "usedFor": [],
           "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Nov. 2, 2026",
-          "url": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
-          "publishedAt": "2026-11-02",
-          "note": "Text context: Aircraft carrier USS Theodore Roosevelt (CVN-71) is underway in the South China Sea following its participation in exercise Keen Sword 27.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_02_26-1.jpg"
+          "title": "USNI News Fleet and Marine Tracker: Nov. 9, 2026",
+          "url": "https://news.usni.org/2026/11/09/usni-news-fleet-and-marine-tracker-nov-9-2026",
+          "publishedAt": "2026-11-09",
+          "note": "Image estimate: Theodore Roosevelt CSG",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_9_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: Nov. 5, 2026",
+          "url": "https://worldview.ranenetwork.com/content/analysis/2026-11-04/u-s-naval-update-map-nov-5-2026/fff4e3015afc59f8",
+          "publishedAt": "2026-11-05",
+          "note": "Image estimate: The CVN 71 label sits directly below the dark orange/red endpoint dot off Vietnam; the lighter orange dots trail northeast toward Japan.",
+          "imageUrl": "https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261104-20display.png"
         },
         {
           "role": "backup",
           "usedFor": [],
           "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Nov. 2, 2026",
-          "url": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
-          "publishedAt": "2026-11-02",
-          "note": "Image estimate: A yellow diamond adjacent to “Theodore Roosevelt CSG” appears between Vietnam and the Philippines.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_02_26-1.jpg"
+          "title": "USNI News Fleet and Marine Tracker: Nov. 9, 2026",
+          "url": "https://news.usni.org/2026/11/09/usni-news-fleet-and-marine-tracker-nov-9-2026",
+          "publishedAt": "2026-11-09",
+          "note": "Text context: Aircraft carrier USS Theodore Roosevelt (CVN-71) arrived Friday and departed Monday from Singapore and was operating in the Andaman Sea, according to ship spotters .",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_9_26.jpg"
         },
         {
           "role": "backup",
@@ -257,7 +246,7 @@
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
           "note": "Text context: Surrounded by allied warships , the USS Theodore Roosevelt steamed through the Philippine Sea last week as large-scale combined exercise Keen Sword 27 got underway.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         },
         {
           "role": "backup",
@@ -266,11 +255,11 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: The green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)*” appears offshore east of Yokosuka and Japan.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
+          "note": "Image estimate: Visible green carrier symbol labeled “USS THEODORE ROOSEVELT (CVN 71)*” immediately southwest of Indonesia.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-05T06:35:26.092Z"
+      "lastChangedAt": "2026-11-10T01:27:58.721Z"
     },
     {
       "hull": "CVN-72",
@@ -296,7 +285,7 @@
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
           "note": "Text context: The carrier arrived back home on October 8 after being at sea for 321 days, less than a week short of the longest carrier deployment in the post-Vietnam era.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         },
         {
           "role": "backup",
@@ -314,16 +303,16 @@
       "hull": "CVN-73",
       "name": "USS George Washington",
       "status": "deployed",
-      "locationName": "North Arabian Sea",
+      "locationName": "Arabian Sea",
       "position": {
-        "lat": 16.1,
-        "lon": 67
+        "lat": 16.2,
+        "lon": 58.4
       },
       "positionPrecision": "image_estimate",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-11-05",
-      "summary": "Aircraft Carrier Locations places USS George Washington in or near North Arabian Sea.",
+      "lastSeen": "2026-11-09",
+      "summary": "USNI News Fleet and Marine Tracker: Nov. 9, 2026 places USS George Washington in or near Arabian Sea.",
       "sources": [
         {
           "role": "primary",
@@ -332,6 +321,28 @@
             "location",
             "summary"
           ],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Nov. 9, 2026",
+          "url": "https://news.usni.org/2026/11/09/usni-news-fleet-and-marine-tracker-nov-9-2026",
+          "publishedAt": "2026-11-09",
+          "note": "Text context: Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and USS Shoup (DDG-86), are operating in the Arabian Sea in support of U.S. operations in the Middle East.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_9_26.jpg"
+        },
+        {
+          "role": "primary",
+          "usedFor": [
+            "coordinate_refinement"
+          ],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Nov. 9, 2026",
+          "url": "https://news.usni.org/2026/11/09/usni-news-fleet-and-marine-tracker-nov-9-2026",
+          "publishedAt": "2026-11-09",
+          "note": "Image estimate: George Washington CSG",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_9_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
@@ -339,10 +350,18 @@
           "note": "Text context: CVN-73 USS George Washington — latest entry: 21Aug-02Nov2026, North Arabian Sea in support of Operation Epic Fury"
         },
         {
-          "role": "primary",
-          "usedFor": [
-            "coordinate_refinement"
-          ],
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers?: October 27, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
+          "publishedAt": "2026-10-27",
+          "note": "Text context: The two carriers enforcing the ongoing blockade of Iranian ports and coastal cities, USS George H.W. Bush and USS George Washington , have both been dark on AIS since arriving in the Middle East.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: Nov. 5, 2026",
           "url": "https://worldview.ranenetwork.com/content/analysis/2026-11-04/u-s-naval-update-map-nov-5-2026/fff4e3015afc59f8",
@@ -353,45 +372,15 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Nov. 2, 2026",
-          "url": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
-          "publishedAt": "2026-11-02",
-          "note": "Text context: Aircraft carrier USS George Washington (CVN-73), along with embarked Carrier Air Wing (CVW) 5 and USS Shoup (DDG-86), are operating in the Arabian Sea in support of U.S. operations in the Middle East.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_02_26-1.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Text context: The two carriers enforcing the ongoing blockade of Iranian ports and coastal cities, USS George H.W. Bush and USS George Washington , have both been dark on AIS since arriving in the Middle East.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Nov. 2, 2026",
-          "url": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
-          "publishedAt": "2026-11-02",
-          "note": "Image estimate: “George Washington CSG” is one of two stacked carrier labels above a single yellow diamond east of Oman.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_02_26-1.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: October 27, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
-          "publishedAt": "2026-10-27",
-          "note": "Image estimate: The green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)*” is visible beside the Indian subcontinent.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
+          "note": "Image estimate: Visible green carrier symbol labeled “USS GEORGE WASHINGTON (CVN 73)*” in the northern Indian Ocean west of India.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-05T06:35:26.092Z"
+      "lastChangedAt": "2026-11-10T01:27:58.721Z"
     },
     {
       "hull": "CVN-74",
@@ -417,7 +406,7 @@
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
           "note": "Text context: Also on the east coast, USS John C. Stennis has been undergoing maintenance since 2021.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         }
       ],
       "lastChangedAt": "2026-11-04T01:16:49.684Z"
@@ -446,7 +435,7 @@
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
           "note": "Text context: However, USS Harry S. Truman recently moved to begin an RCOH, suggesting Stennis is nearing completion.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         },
         {
           "role": "backup",
@@ -463,17 +452,17 @@
     {
       "hull": "CVN-76",
       "name": "USS Ronald Reagan",
-      "status": "deployed",
-      "locationName": "EastPac",
+      "status": "port",
+      "locationName": "Bremerton, Wash.",
       "position": {
-        "lat": 25,
-        "lon": -130
+        "lat": 47.56,
+        "lon": -122.65
       },
-      "positionPrecision": "region",
+      "positionPrecision": "port",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-11-04",
-      "summary": "Aircraft Carrier Locations places USS Ronald Reagan in or near EastPac.",
+      "lastSeen": "2026-11-09",
+      "summary": "USNI News Fleet and Marine Tracker: Nov. 9, 2026 places USS Ronald Reagan in Bremerton, Wash..",
       "sources": [
         {
           "role": "primary",
@@ -483,6 +472,16 @@
             "position",
             "summary"
           ],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Nov. 9, 2026",
+          "url": "https://news.usni.org/2026/11/09/usni-news-fleet-and-marine-tracker-nov-9-2026",
+          "publishedAt": "2026-11-09",
+          "note": "Text context: Aircraft carrier USS Ronald Reagan (CVN-76) arrived Tuesday in Bremerton, Wash., according to ship spotters .",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_9_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
@@ -497,45 +496,25 @@
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
           "note": "Text context: Reagan moored at Kilo Pier at Naval Air Station North Island in San Diego on October 27 after finishing Fleet Replacement Squadron and Carrier Qualifications.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Nov. 2, 2026",
-          "url": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
-          "publishedAt": "2026-11-02",
-          "note": "Text context: Aircraft carrier USS Ronald Reagan (CVN-76) departed Thursday from San Diego, Calif., according to ship spotters .",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_02_26-1.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Nov. 2, 2026",
-          "url": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
-          "publishedAt": "2026-11-02",
-          "note": "Image estimate: The “USS Ronald Reagan (CVN-76)” label sits immediately northeast of a yellow diamond well west of the U.S. West Coast.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_02_26-1.jpg"
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-03T15:01:31.955Z"
+      "lastChangedAt": "2026-11-10T01:27:58.721Z"
     },
     {
       "hull": "CVN-77",
       "name": "USS George H.W. Bush",
       "status": "deployed",
-      "locationName": "North Arabian Sea",
+      "locationName": "Arabian Sea",
       "position": {
         "lat": 16.2,
-        "lon": 70.8
+        "lon": 58.4
       },
       "positionPrecision": "image_estimate",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-11-05",
-      "summary": "Aircraft Carrier Locations places USS George H.W. Bush in or near North Arabian Sea.",
+      "lastSeen": "2026-11-09",
+      "summary": "USNI News Fleet and Marine Tracker: Nov. 9, 2026 places USS George H.W. Bush in or near Arabian Sea.",
       "sources": [
         {
           "role": "primary",
@@ -544,6 +523,28 @@
             "location",
             "summary"
           ],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Nov. 9, 2026",
+          "url": "https://news.usni.org/2026/11/09/usni-news-fleet-and-marine-tracker-nov-9-2026",
+          "publishedAt": "2026-11-09",
+          "note": "Text context: The George H.W. Bush Carrier Strike Group is operating in the Arabian Sea in support of U.S. operations in the Middle East.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_9_26.jpg"
+        },
+        {
+          "role": "primary",
+          "usedFor": [
+            "coordinate_refinement"
+          ],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Nov. 9, 2026",
+          "url": "https://news.usni.org/2026/11/09/usni-news-fleet-and-marine-tracker-nov-9-2026",
+          "publishedAt": "2026-11-09",
+          "note": "Image estimate: George H.W. Bush CSG",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_9_26.jpg"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
@@ -551,10 +552,18 @@
           "note": "Text context: CVN-77 USS George H.W. Bush — latest entry: 13Oct-02Nov2026, North Arabian Sea in support of Operation Epic Fury"
         },
         {
-          "role": "primary",
-          "usedFor": [
-            "coordinate_refinement"
-          ],
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "The War Zone",
+          "title": "Where Are The Aircraft Carriers?: October 27, 2026",
+          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
+          "publishedAt": "2026-10-27",
+          "note": "Text context: The two carriers enforcing the ongoing blockade of Iranian ports and coastal cities, USS George H.W. Bush and USS George Washington , have both been dark on AIS since arriving in the Middle East.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "Stratfor Worldview",
           "title": "U.S. Naval Update Map: Nov. 5, 2026",
           "url": "https://worldview.ranenetwork.com/content/analysis/2026-11-04/u-s-naval-update-map-nov-5-2026/fff4e3015afc59f8",
@@ -565,45 +574,15 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Nov. 2, 2026",
-          "url": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
-          "publishedAt": "2026-11-02",
-          "note": "Text context: The George H.W. Bush Carrier Strike Group is operating in the Arabian Sea in support of U.S. operations in the Middle East.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_02_26-1.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Text context: The two carriers enforcing the ongoing blockade of Iranian ports and coastal cities, USS George H.W. Bush and USS George Washington , have both been dark on AIS since arriving in the Middle East.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Nov. 2, 2026",
-          "url": "https://news.usni.org/2026/11/02/usni-news-fleet-and-marine-tracker-nov-2-2026",
-          "publishedAt": "2026-11-02",
-          "note": "Image estimate: “George H.W. Bush CSG” is the second stacked carrier label associated with the yellow diamond east of Oman.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_02_26-1.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "The War Zone",
-          "title": "Where Are The Aircraft Carriers?: October 27, 2026",
-          "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
-          "publishedAt": "2026-10-27",
-          "note": "Image estimate: The green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)*” appears south of India and Sri Lanka.",
-          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/10/TWZ-Aircraft-Carrier-Fleet-Tracker-As-Of-October-17-2026-Topper.png?w=768&h=432&quality=85"
+          "note": "Image estimate: Visible green carrier symbol labeled “USS GEORGE H.W. BUSH (CVN 77)*” northeast of Madagascar.",
+          "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-05T06:35:26.092Z"
+      "lastChangedAt": "2026-11-10T01:27:58.721Z"
     },
     {
       "hull": "CVN-78",
