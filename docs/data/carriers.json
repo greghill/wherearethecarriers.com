@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-11T06:01:19.971Z",
-  "lastChangedAt": "2026-11-11T06:01:19.971Z",
+  "generatedAt": "2026-11-12T10:56:48.571Z",
+  "lastChangedAt": "2026-11-12T10:56:48.571Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -60,16 +60,6 @@
           "publishedAt": "2026-11-09",
           "note": "Image estimate: USS Nimitz (CVN-68)",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_9_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: Nov. 5, 2026",
-          "url": "https://worldview.ranenetwork.com/content/analysis/2026-11-04/u-s-naval-update-map-nov-5-2026/fff4e3015afc59f8",
-          "publishedAt": "2026-11-05",
-          "note": "Image estimate: The CVN 68 label is adjacent to the lower of two separate orange/red dots east of the Virginia–North Carolina coast.",
-          "imageUrl": "https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261104-20display.png"
         }
       ],
       "lastChangedAt": "2026-11-10T17:43:50.655Z"
@@ -122,16 +112,6 @@
           "publishedAt": "2026-10-27",
           "note": "Text context: USS Dwight D. Eisenhower, also based at NS Norfolk, left port for work ups on October 24.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: Nov. 5, 2026",
-          "url": "https://worldview.ranenetwork.com/content/analysis/2026-11-04/u-s-naval-update-map-nov-5-2026/fff4e3015afc59f8",
-          "publishedAt": "2026-11-05",
-          "note": "Image estimate: The CVN 69 label is immediately northeast of the upper orange/red dot near the Norfolk label.",
-          "imageUrl": "https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261104-20display.png"
         }
       ],
       "lastChangedAt": "2026-11-10T17:43:50.655Z"
@@ -184,21 +164,32 @@
       "status": "deployed",
       "locationName": "Andaman Sea",
       "position": {
-        "lat": 10.5,
-        "lon": 94.5
+        "lat": 7.6,
+        "lon": 90.3
       },
-      "positionPrecision": "region",
+      "positionPrecision": "image_estimate",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-11-11",
+      "lastSeen": "2026-11-12",
       "summary": "Aircraft Carrier Locations places USS Theodore Roosevelt in or near Andaman Sea.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
+            "coordinate_refinement"
+          ],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: Nov. 12, 2026",
+          "url": "https://worldview.ranenetwork.com/content/analysis/2026-11-11/u-s-naval-update-map-nov-12-2026/3a50660165b72765",
+          "publishedAt": "2026-11-12",
+          "note": "Image estimate: The orange label “CVN 71” is adjacent to the red current-week endpoint at the far-left edge of the map; the orange dots extending eastward are its historical trail.",
+          "imageUrl": "https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261111-20display.png"
+        },
+        {
+          "role": "primary",
+          "usedFor": [
             "status",
             "location",
-            "position",
             "summary"
           ],
           "publisher": "GoNavy.jp",
@@ -216,16 +207,6 @@
           "publishedAt": "2026-11-09",
           "note": "Image estimate: Theodore Roosevelt CSG",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_9_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: Nov. 5, 2026",
-          "url": "https://worldview.ranenetwork.com/content/analysis/2026-11-04/u-s-naval-update-map-nov-5-2026/fff4e3015afc59f8",
-          "publishedAt": "2026-11-05",
-          "note": "Image estimate: The CVN 71 label sits directly below the dark orange/red endpoint dot off Vietnam; the lighter orange dots trail northeast toward Japan.",
-          "imageUrl": "https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261104-20display.png"
         },
         {
           "role": "backup",
@@ -254,11 +235,11 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: The green carrier symbol labeled “USS THEODORE ROOSEVELT (CVN 71)” is drawn across the eastern Indian Ocean near Indonesia.",
+          "note": "Image estimate: Green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)” near western Indonesia.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-10T17:43:50.655Z"
+      "lastChangedAt": "2026-11-12T10:56:48.571Z"
     },
     {
       "hull": "CVN-72",
@@ -304,21 +285,32 @@
       "status": "deployed",
       "locationName": "North Arabian Sea",
       "position": {
-        "lat": 21,
-        "lon": 64
+        "lat": 15.3,
+        "lon": 62.5
       },
-      "positionPrecision": "region",
+      "positionPrecision": "image_estimate",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-11-11",
+      "lastSeen": "2026-11-12",
       "summary": "Aircraft Carrier Locations places USS George Washington in or near North Arabian Sea.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
+            "coordinate_refinement"
+          ],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: Nov. 12, 2026",
+          "url": "https://worldview.ranenetwork.com/content/analysis/2026-11-11/u-s-naval-update-map-nov-12-2026/3a50660165b72765",
+          "publishedAt": "2026-11-12",
+          "note": "Image estimate: The orange label “CVN 73” sits immediately left of the western of two separate orange/red carrier dots in the Arabian Sea.",
+          "imageUrl": "https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261111-20display.png"
+        },
+        {
+          "role": "primary",
+          "usedFor": [
             "status",
             "location",
-            "position",
             "summary"
           ],
           "publisher": "GoNavy.jp",
@@ -360,25 +352,15 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: Nov. 5, 2026",
-          "url": "https://worldview.ranenetwork.com/content/analysis/2026-11-04/u-s-naval-update-map-nov-5-2026/fff4e3015afc59f8",
-          "publishedAt": "2026-11-05",
-          "note": "Image estimate: The CVN 73 label terminates beside the left orange/red dot in the Arabian Sea cluster west of India.",
-          "imageUrl": "https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261104-20display.png"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: The green carrier symbol labeled “USS GEORGE WASHINGTON (CVN 73)” appears over the Arabian Sea.",
+          "note": "Image estimate: Green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)” in the Arabian Sea.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-10T17:43:50.655Z"
+      "lastChangedAt": "2026-11-12T10:56:48.571Z"
     },
     {
       "hull": "CVN-74",
@@ -514,13 +496,13 @@
       "status": "deployed",
       "locationName": "North Arabian Sea",
       "position": {
-        "lat": 21,
-        "lon": 64
+        "lat": 15.6,
+        "lon": 66.4
       },
-      "positionPrecision": "region",
+      "positionPrecision": "image_estimate",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-11-11",
+      "lastSeen": "2026-11-12",
       "summary": "Aircraft Carrier Locations places USS George H.W. Bush in or near North Arabian Sea.",
       "sources": [
         {
@@ -528,7 +510,6 @@
           "usedFor": [
             "status",
             "location",
-            "position",
             "summary"
           ],
           "publisher": "GoNavy.jp",
@@ -536,6 +517,18 @@
           "url": "http://www.gonavy.jp/CVLocation.html",
           "publishedAt": "2026-11-11",
           "note": "Text context: CVN-77 USS George H.W. Bush — latest entry: 13Oct-09Nov2026, North Arabian Sea in support of Operation Epic Fury"
+        },
+        {
+          "role": "primary",
+          "usedFor": [
+            "coordinate_refinement"
+          ],
+          "publisher": "Stratfor Worldview",
+          "title": "U.S. Naval Update Map: Nov. 12, 2026",
+          "url": "https://worldview.ranenetwork.com/content/analysis/2026-11-11/u-s-naval-update-map-nov-12-2026/3a50660165b72765",
+          "publishedAt": "2026-11-12",
+          "note": "Image estimate: The orange label “CVN 77” is positioned below the eastern of the two nearby orange/red carrier dots in the Arabian Sea.",
+          "imageUrl": "https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261111-20display.png"
         },
         {
           "role": "backup",
@@ -570,25 +563,15 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "Stratfor Worldview",
-          "title": "U.S. Naval Update Map: Nov. 5, 2026",
-          "url": "https://worldview.ranenetwork.com/content/analysis/2026-11-04/u-s-naval-update-map-nov-5-2026/fff4e3015afc59f8",
-          "publishedAt": "2026-11-05",
-          "note": "Image estimate: The CVN 77 label is below the right orange/red dot of the two-carrier cluster west of India.",
-          "imageUrl": "https://cdn.ranenetwork.com/2026/static/image/naval-20update-20map-2020261104-20display.png"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: The green carrier symbol labeled “USS GEORGE H.W. BUSH (CVN 77)” appears in the western-central Indian Ocean.",
+          "note": "Image estimate: Green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)” in the western Indian Ocean.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-10T17:43:50.655Z"
+      "lastChangedAt": "2026-11-12T10:56:48.571Z"
     },
     {
       "hull": "CVN-78",
