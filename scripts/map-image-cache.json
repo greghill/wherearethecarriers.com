@@ -2064,13 +2064,13 @@
       "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85",
       "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
       "publishedAt": "2026-10-27",
-      "createdAt": "2026-11-15T10:43:58.625Z",
+      "createdAt": "2026-11-15T17:41:01.324Z",
       "usage": {
         "inputTokens": 1385,
         "cachedInputTokens": 0,
-        "outputTokens": 3432,
-        "reasoningTokens": 3086,
-        "totalTokens": 4817
+        "outputTokens": 3415,
+        "reasoningTokens": 3058,
+        "totalTokens": 4800
       },
       "result": {
         "sourceKey": "twz",
@@ -2081,34 +2081,34 @@
             "hull": "CVN-73",
             "name": "USS George Washington",
             "locationName": "Arabian Sea",
-            "lat": 14.2,
-            "lon": 65.5,
+            "lat": 16.5,
+            "lon": 61,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Map label: “USS GEORGE WASHINGTON (CVN 73)”",
-            "rationale": "Estimated from the center of the adjacent green carrier symbol in the northern Arabian Sea; the coordinate is over open water."
+            "evidenceText": "Green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)” west of India.",
+            "rationale": "Estimated from the carrier graphic adjacent to the label and placed in open Arabian Sea water."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
             "locationName": "Central Indian Ocean",
-            "lat": -0.2,
-            "lon": 65.5,
+            "lat": 5,
+            "lon": 70.5,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Map label: “USS GEORGE H.W. BUSH (CVN 77)”",
-            "rationale": "Estimated from the center of the adjacent green carrier symbol near the equatorial central Indian Ocean; the coordinate is over open water."
+            "evidenceText": "Green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)” south-southwest of India.",
+            "rationale": "Estimated from the labeled carrier graphic, preserving its separation from CVN-73 and placing it over open Indian Ocean water."
           },
           {
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
-            "locationName": "Natuna Sea",
-            "lat": 0.7,
-            "lon": 106.6,
+            "locationName": "Eastern Indian Ocean west of Sumatra",
+            "lat": -3,
+            "lon": 99.5,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Map label: “USS THEODORE ROOSEVELT (CVN 71)”",
-            "rationale": "Estimated from the center of the adjacent green carrier symbol west of Borneo; the coordinate falls over water in the Natuna Sea."
+            "evidenceText": "Green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)” near western Indonesia.",
+            "rationale": "Anchored to the labeled graphic and adjusted slightly westward to remain over open water off Sumatra rather than over the island."
           }
         ]
       }
