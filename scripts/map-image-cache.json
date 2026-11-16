@@ -2058,19 +2058,74 @@
         ]
       }
     },
+    "gpt-5.6-sol|https://news.usni.org/2026/11/16/usni-news-fleet-and-marine-tracker-nov-16-2026|https://news.usni.org/wp-content/uploads/2026/11/FT_11_16_26.jpg|2026-11-16": {
+      "sourceKey": "usni",
+      "model": "gpt-5.6-sol",
+      "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_16_26.jpg",
+      "articleUrl": "https://news.usni.org/2026/11/16/usni-news-fleet-and-marine-tracker-nov-16-2026",
+      "publishedAt": "2026-11-16",
+      "createdAt": "2026-11-16T20:58:06.058Z",
+      "usage": {
+        "inputTokens": 3753,
+        "cachedInputTokens": 0,
+        "outputTokens": 2679,
+        "reasoningTokens": 2264,
+        "totalTokens": 6432
+      },
+      "result": {
+        "sourceKey": "usni",
+        "imageUrl": "https://news.usni.org/2026/11/16/usni-news-fleet-and-marine-tracker-nov-16-2026",
+        "publishedAt": "2026-11-16",
+        "carriers": [
+          {
+            "hull": "CVN-71",
+            "name": "USS Theodore Roosevelt",
+            "locationName": "Arabian Sea off southern Oman",
+            "lat": 15.8,
+            "lon": 54.2,
+            "overWater": true,
+            "confidence": "low",
+            "evidenceText": "The map visibly lists “Theodore Roosevelt CSG” in a three-carrier label cluster beside one yellow diamond near the Arabian Peninsula.",
+            "rationale": "The shared diamond appears displaced over or immediately beside the Arabian landmass. The estimate is moved to the nearest consistent open-water position in the Arabian Sea south of Oman."
+          },
+          {
+            "hull": "CVN-73",
+            "name": "USS George Washington",
+            "locationName": "Arabian Sea off southern Oman",
+            "lat": 15.8,
+            "lon": 54.2,
+            "overWater": true,
+            "confidence": "low",
+            "evidenceText": "The map visibly lists “George Washington CSG” in the same three-carrier label cluster beside one yellow diamond near the Arabian Peninsula.",
+            "rationale": "No separate marker is visible for this carrier; it shares the cluster’s diamond. Because that diamond appears over land, the coordinate is placed in the nearest consistent open water south of Oman."
+          },
+          {
+            "hull": "CVN-77",
+            "name": "USS George H.W. Bush",
+            "locationName": "Arabian Sea off southern Oman",
+            "lat": 15.8,
+            "lon": 54.2,
+            "overWater": true,
+            "confidence": "low",
+            "evidenceText": "The map visibly lists “George H.W. Bush CSG” in the same three-carrier label cluster beside one yellow diamond near the Arabian Peninsula.",
+            "rationale": "No distinct second marker is shown. The common marker appears land-overlapping, so the estimate is re-anchored to nearby open water in the Arabian Sea."
+          }
+        ]
+      }
+    },
     "gpt-5.6-sol|https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026|https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85|2026-10-27": {
       "sourceKey": "twz",
       "model": "gpt-5.6-sol",
       "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85",
       "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
       "publishedAt": "2026-10-27",
-      "createdAt": "2026-11-16T11:02:04.489Z",
+      "createdAt": "2026-11-16T20:58:41.109Z",
       "usage": {
         "inputTokens": 1385,
         "cachedInputTokens": 0,
-        "outputTokens": 2648,
-        "reasoningTokens": 2284,
-        "totalTokens": 4033
+        "outputTokens": 2594,
+        "reasoningTokens": 2202,
+        "totalTokens": 3979
       },
       "result": {
         "sourceKey": "twz",
@@ -2080,35 +2135,35 @@
           {
             "hull": "CVN-73",
             "name": "USS George Washington",
-            "locationName": "Arabian Sea southwest of India",
-            "lat": 6,
-            "lon": 65,
+            "locationName": "Arabian Sea",
+            "lat": 3.5,
+            "lon": 67,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Green carrier symbol labeled “USS GEORGE WASHINGTON (CVN 73)” west-southwest of India.",
-            "rationale": "Estimated from the center of the labeled carrier symbol; the coordinate is in open water in the Arabian Sea."
+            "evidenceText": "Green carrier silhouette labeled “USS GEORGE WASHINGTON (CVN 73)” in the central Arabian Sea, southwest of India.",
+            "rationale": "Estimated from the center of the labeled carrier symbol. The coordinate is in open Arabian Sea water; precision is limited by the oversized silhouette and absence of a discrete position dot."
           },
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
             "locationName": "Central Indian Ocean",
-            "lat": -9.5,
-            "lon": 67,
+            "lat": -13,
+            "lon": 69.5,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Green carrier symbol labeled “USS GEORGE H.W. BUSH (CVN 77)” in the central Indian Ocean.",
-            "rationale": "Placed at the visual center of the symbol adjacent to its label, well east of Madagascar and over open water."
+            "evidenceText": "Green carrier silhouette labeled “USS GEORGE H.W. BUSH (CVN 77)” in the central Indian Ocean, east of Madagascar.",
+            "rationale": "Estimated from the center of the labeled carrier symbol while excluding the nearby USS Boxer amphibious-ship symbol. The coordinate lies over open water."
           },
           {
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
-            "locationName": "Indian Ocean south of Java",
-            "lat": -10.2,
-            "lon": 113.5,
+            "locationName": "Eastern Indian Ocean south of Java",
+            "lat": -10,
+            "lon": 108.5,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Green carrier symbol labeled “USS THEODORE ROOSEVELT (CVN 71)” near Indonesia.",
-            "rationale": "The symbol appears along Java’s southern side; the estimate is moved slightly offshore into the Indian Ocean to avoid placing the carrier on Java."
+            "evidenceText": "Green carrier silhouette labeled “USS THEODORE ROOSEVELT (CVN 71)” south of Indonesia.",
+            "rationale": "Estimated from the center of the labeled carrier symbol. The point is placed in open Indian Ocean water south of Java rather than on the Indonesian landmass."
           }
         ]
       }
