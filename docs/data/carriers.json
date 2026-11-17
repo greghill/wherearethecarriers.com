@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-16T20:57:25.251Z",
-  "lastChangedAt": "2026-11-16T20:57:25.251Z",
+  "generatedAt": "2026-11-17T13:13:12.113Z",
+  "lastChangedAt": "2026-11-17T13:13:12.113Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -60,8 +60,8 @@
       "status": "port",
       "locationName": "Norfolk",
       "position": {
-        "lat": 36.946,
-        "lon": -76.303
+        "lat": 36.95,
+        "lon": -76.33
       },
       "positionPrecision": "port",
       "confidence": "medium",
@@ -94,7 +94,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-16T20:57:25.251Z"
+      "lastChangedAt": "2026-11-17T13:13:12.113Z"
     },
     {
       "hull": "CVN-70",
@@ -142,16 +142,16 @@
       "hull": "CVN-71",
       "name": "USS Theodore Roosevelt",
       "status": "deployed",
-      "locationName": "Arabian Sea",
+      "locationName": "North Arabian Sea",
       "position": {
-        "lat": 15,
-        "lon": 65
+        "lat": 23.5,
+        "lon": 64
       },
       "positionPrecision": "region",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-11-16",
-      "summary": "USNI News Fleet and Marine Tracker: Nov. 16, 2026 places USS Theodore Roosevelt in or near Arabian Sea.",
+      "lastSeen": "2026-11-18",
+      "summary": "Aircraft Carrier Locations places USS Theodore Roosevelt in or near North Arabian Sea.",
       "sources": [
         {
           "role": "primary",
@@ -161,6 +161,15 @@
             "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-11-18",
+          "note": "Text context: CVN-71 USS Theodore Roosevelt — latest entry: 16Nov2026, North Arabian Sea in support of U.S. operations in the Middle East"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Nov. 16, 2026",
           "url": "https://news.usni.org/2026/11/16/usni-news-fleet-and-marine-tracker-nov-16-2026",
@@ -181,15 +190,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-11-11",
-          "note": "Text context: CVN-71 USS Theodore Roosevelt — latest entry: 09Nov2026, Andaman Sea"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
@@ -204,7 +204,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Green carrier silhouette labeled “USS THEODORE ROOSEVELT (CVN 71)” south of Indonesia.",
+          "note": "Image estimate: Visible green ship graphic labeled “USS THEODORE ROOSEVELT (CVN 71)*”.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         },
         {
@@ -218,7 +218,7 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_16_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-11-16T20:57:25.251Z"
+      "lastChangedAt": "2026-11-17T13:13:12.113Z"
     },
     {
       "hull": "CVN-72",
@@ -262,16 +262,16 @@
       "hull": "CVN-73",
       "name": "USS George Washington",
       "status": "deployed",
-      "locationName": "Arabian Sea",
+      "locationName": "North Arabian Sea",
       "position": {
-        "lat": 15,
-        "lon": 65
+        "lat": 23.5,
+        "lon": 64
       },
       "positionPrecision": "region",
-      "confidence": "high",
-      "evidence": "corroborated",
-      "lastSeen": "2026-11-16",
-      "summary": "USNI News Fleet and Marine Tracker: Nov. 16, 2026 places USS George Washington in or near Arabian Sea.",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-11-18",
+      "summary": "Aircraft Carrier Locations places USS George Washington in or near North Arabian Sea.",
       "sources": [
         {
           "role": "primary",
@@ -281,6 +281,15 @@
             "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-11-18",
+          "note": "Text context: CVN-73 USS George Washington — latest entry: 21Aug-16Nov2026, North Arabian Sea in support of Operation Epic Fury"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Nov. 16, 2026",
           "url": "https://news.usni.org/2026/11/16/usni-news-fleet-and-marine-tracker-nov-16-2026",
@@ -301,15 +310,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-11-11",
-          "note": "Text context: CVN-73 USS George Washington — latest entry: 21Aug-09Nov2026, North Arabian Sea in support of Operation Epic Fury"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
@@ -324,7 +324,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Green carrier silhouette labeled “USS GEORGE WASHINGTON (CVN 73)” in the central Arabian Sea, southwest of India.",
+          "note": "Image estimate: Visible green ship graphic labeled “USS GEORGE WASHINGTON (CVN 73)*”.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         },
         {
@@ -338,7 +338,7 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_16_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-11-16T20:57:25.251Z"
+      "lastChangedAt": "2026-11-17T13:13:12.113Z"
     },
     {
       "hull": "CVN-74",
@@ -464,13 +464,13 @@
       "status": "deployed",
       "locationName": "North Arabian Sea",
       "position": {
-        "lat": 21,
+        "lat": 23.5,
         "lon": 64
       },
       "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-11-16",
+      "lastSeen": "2026-11-18",
       "summary": "Aircraft Carrier Locations places USS George H.W. Bush in or near North Arabian Sea.",
       "sources": [
         {
@@ -484,8 +484,8 @@
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-11-11",
-          "note": "Text context: CVN-77 USS George H.W. Bush — latest entry: 13Oct-09Nov2026, North Arabian Sea in support of Operation Epic Fury"
+          "publishedAt": "2026-11-18",
+          "note": "Text context: CVN-77 USS George H.W. Bush — latest entry: 13Oct-16Nov2026, North Arabian Sea in support of Operation Epic Fury"
         },
         {
           "role": "backup",
@@ -524,7 +524,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Green carrier silhouette labeled “USS GEORGE H.W. BUSH (CVN 77)” in the central Indian Ocean, east of Madagascar.",
+          "note": "Image estimate: Visible green ship graphic labeled “USS GEORGE H.W. BUSH (CVN 77)*”.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         },
         {
@@ -538,22 +538,22 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_16_26.jpg"
         }
       ],
-      "lastChangedAt": "2026-11-16T20:57:25.251Z"
+      "lastChangedAt": "2026-11-17T13:13:12.113Z"
     },
     {
       "hull": "CVN-78",
       "name": "USS Gerald R. Ford",
       "status": "maintenance",
-      "locationName": "Portsmouth, Virginia",
+      "locationName": "Norfolk Naval Shipyard, Portsmouth, Virginia",
       "position": {
-        "lat": 36.815,
-        "lon": -76.298
+        "lat": 36.82,
+        "lon": -76.3
       },
       "positionPrecision": "port",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-11-11",
-      "summary": "Aircraft Carrier Locations places USS Gerald R. Ford in Portsmouth, Virginia.",
+      "lastSeen": "2026-11-18",
+      "summary": "Aircraft Carrier Locations places USS Gerald R. Ford in Norfolk Naval Shipyard, Portsmouth, Virginia.",
       "sources": [
         {
           "role": "primary",
@@ -566,11 +566,11 @@
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-11-11",
-          "note": "Text context: CVN-78 USS Gerald R. Ford — latest entry: 07Jul-09Nov2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
+          "publishedAt": "2026-11-18",
+          "note": "Text context: CVN-78 USS Gerald R. Ford — latest entry: 07Jul-16Nov2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
         }
       ],
-      "lastChangedAt": "2026-11-10T17:43:50.655Z"
+      "lastChangedAt": "2026-11-17T13:13:12.113Z"
     }
   ]
 }
