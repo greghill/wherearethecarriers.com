@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-17T13:13:12.113Z",
-  "lastChangedAt": "2026-11-17T13:13:12.113Z",
+  "generatedAt": "2026-11-19T03:17:43.034Z",
+  "lastChangedAt": "2026-11-19T03:17:43.034Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -12,8 +12,8 @@
         "lon": -76.301
       },
       "positionPrecision": "port",
-      "confidence": "high",
-      "evidence": "corroborated",
+      "confidence": "medium",
+      "evidence": "current",
       "lastSeen": "2026-11-16",
       "summary": "USNI News Fleet and Marine Tracker: Nov. 16, 2026 places USS Nimitz in Norfolk, Va..",
       "sources": [
@@ -52,7 +52,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-16T20:57:25.251Z"
+      "lastChangedAt": "2026-11-19T03:17:43.034Z"
     },
     {
       "hull": "CVN-69",
@@ -64,8 +64,8 @@
         "lon": -76.33
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-11-11",
       "summary": "Aircraft Carrier Locations places USS Dwight D. Eisenhower in Norfolk.",
       "sources": [
@@ -94,7 +94,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-17T13:13:12.113Z"
+      "lastChangedAt": "2026-11-19T03:17:43.034Z"
     },
     {
       "hull": "CVN-70",
@@ -204,7 +204,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Visible green ship graphic labeled “USS THEODORE ROOSEVELT (CVN 71)*”.",
+          "note": "Image estimate: Green carrier silhouette labeled “USS THEODORE ROOSEVELT (CVN 71)” appears off southwestern Indonesia.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         },
         {
@@ -324,7 +324,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Visible green ship graphic labeled “USS GEORGE WASHINGTON (CVN 73)*”.",
+          "note": "Image estimate: Green carrier silhouette labeled “USS GEORGE WASHINGTON (CVN 73)” appears over the Arabian Sea west of India.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         },
         {
@@ -426,8 +426,8 @@
         "lon": -122.64
       },
       "positionPrecision": "port",
-      "confidence": "medium",
-      "evidence": "current",
+      "confidence": "low",
+      "evidence": "aging",
       "lastSeen": "2026-11-11",
       "summary": "Aircraft Carrier Locations places USS Ronald Reagan in Kitsap-Bremerton.",
       "sources": [
@@ -456,7 +456,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-16T20:57:25.251Z"
+      "lastChangedAt": "2026-11-19T03:17:43.034Z"
     },
     {
       "hull": "CVN-77",
@@ -524,7 +524,7 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Visible green ship graphic labeled “USS GEORGE H.W. BUSH (CVN 77)*”.",
+          "note": "Image estimate: Green carrier silhouette labeled “USS GEORGE H.W. BUSH (CVN 77)” appears in the central Indian Ocean east of Madagascar.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-Aircraft-Carrier-Fleet-Tracker-as-of-November-6-2026.png?w=768&h=432&quality=85"
         },
         {
