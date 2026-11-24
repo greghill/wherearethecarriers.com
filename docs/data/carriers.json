@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-24T00:45:55.985Z",
-  "lastChangedAt": "2026-11-24T00:45:55.985Z",
+  "generatedAt": "2026-11-24T21:06:49.800Z",
+  "lastChangedAt": "2026-11-24T21:06:49.800Z",
   "carriers": [
     {
       "hull": "CVN-68",
@@ -8,8 +8,8 @@
       "status": "port",
       "locationName": "Norfolk",
       "position": {
-        "lat": 36.95,
-        "lon": -76.33
+        "lat": 36.946,
+        "lon": -76.329
       },
       "positionPrecision": "port",
       "confidence": "low",
@@ -42,7 +42,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-American-Aircraft-Carrier-Fleet-Tracker-As-Of-November-20-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-24T00:45:55.985Z"
+      "lastChangedAt": "2026-11-24T21:06:49.800Z"
     },
     {
       "hull": "CVN-69",
@@ -50,13 +50,13 @@
       "status": "port",
       "locationName": "Norfolk",
       "position": {
-        "lat": 36.95,
-        "lon": -76.33
+        "lat": 36.946,
+        "lon": -76.329
       },
       "positionPrecision": "port",
-      "confidence": "low",
-      "evidence": "aging",
-      "lastSeen": "2026-11-11",
+      "confidence": "medium",
+      "evidence": "current",
+      "lastSeen": "2026-11-25",
       "summary": "Aircraft Carrier Locations places USS Dwight D. Eisenhower in Norfolk.",
       "sources": [
         {
@@ -70,8 +70,8 @@
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-11-11",
-          "note": "Text context: CVN-69 USS Dwight D. Eisenhower — latest entry: 05Nov2026, returned to Norfolk"
+          "publishedAt": "2026-11-25",
+          "note": "Text context: CVN-69 USS Dwight D. Eisenhower — latest entry: 19Nov2026, returned to Norfolk"
         },
         {
           "role": "backup",
@@ -84,7 +84,7 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-American-Aircraft-Carrier-Fleet-Tracker-As-Of-November-20-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-19T03:17:43.034Z"
+      "lastChangedAt": "2026-11-24T21:06:49.800Z"
     },
     {
       "hull": "CVN-70",
@@ -132,24 +132,34 @@
       "hull": "CVN-71",
       "name": "USS Theodore Roosevelt",
       "status": "deployed",
-      "locationName": "Arabian Sea",
+      "locationName": "North Arabian Sea",
       "position": {
-        "lat": 19.5,
-        "lon": 65.5
+        "lat": 22.5,
+        "lon": 64.5
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-11-23",
-      "summary": "USNI News Fleet and Marine Tracker: Nov. 23, 2026 places USS Theodore Roosevelt in or near Arabian Sea.",
+      "lastSeen": "2026-11-25",
+      "summary": "Aircraft Carrier Locations places USS Theodore Roosevelt in or near North Arabian Sea.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-11-25",
+          "note": "Text context: CVN-71 USS Theodore Roosevelt — latest entry: 16Nov-23Nov2026, North Arabian Sea in support of U.S. operations in the Middle East"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Nov. 23, 2026",
           "url": "https://news.usni.org/2026/11/23/usni-news-fleet-and-marine-tracker-nov-23-2026",
@@ -158,25 +168,14 @@
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_23_26.jpg"
         },
         {
-          "role": "primary",
-          "usedFor": [
-            "coordinate_refinement"
-          ],
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Nov. 23, 2026",
           "url": "https://news.usni.org/2026/11/23/usni-news-fleet-and-marine-tracker-nov-23-2026",
           "publishedAt": "2026-11-23",
           "note": "Image estimate: The map groups “Theodore Roosevelt CSG” with “George H.W. Bush CSG” above a single yellow diamond in the Arabian Sea.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_23_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-11-18",
-          "note": "Text context: CVN-71 USS Theodore Roosevelt — latest entry: 16Nov2026, North Arabian Sea in support of U.S. operations in the Middle East"
         },
         {
           "role": "backup",
@@ -205,11 +204,11 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Green carrier silhouette labeled “USS THEODORE ROOSEVELT (CVN 71)*” west of southern India.",
+          "note": "Image estimate: Green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)” in the western Arabian Sea.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-American-Aircraft-Carrier-Fleet-Tracker-As-Of-November-20-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-24T00:45:55.985Z"
+      "lastChangedAt": "2026-11-24T21:06:49.800Z"
     },
     {
       "hull": "CVN-72",
@@ -259,10 +258,10 @@
         "lon": 80
       },
       "positionPrecision": "region",
-      "confidence": "medium",
-      "evidence": "current",
-      "lastSeen": "2026-11-23",
-      "summary": "USNI News Fleet and Marine Tracker: Nov. 23, 2026 places USS George Washington in or near Indian Ocean.",
+      "confidence": "high",
+      "evidence": "corroborated",
+      "lastSeen": "2026-11-25",
+      "summary": "Aircraft Carrier Locations places USS George Washington in or near Indian Ocean.",
       "sources": [
         {
           "role": "primary",
@@ -272,6 +271,15 @@
             "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-11-25",
+          "note": "Text context: CVN-73 USS George Washington — latest entry: 19Nov-23Nov2026, Indian Ocean"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Nov. 23, 2026",
           "url": "https://news.usni.org/2026/11/23/usni-news-fleet-and-marine-tracker-nov-23-2026",
@@ -302,15 +310,6 @@
         {
           "role": "backup",
           "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-11-18",
-          "note": "Text context: CVN-73 USS George Washington — latest entry: 21Aug-16Nov2026, North Arabian Sea in support of Operation Epic Fury"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
           "publisher": "The War Zone",
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
@@ -325,11 +324,11 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Green carrier silhouette labeled “USS GEORGE WASHINGTON (CVN 73)*” in the central Indian Ocean.",
+          "note": "Image estimate: Green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)” farther south in the Arabian Sea.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-American-Aircraft-Carrier-Fleet-Tracker-As-Of-November-20-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-24T00:45:55.985Z"
+      "lastChangedAt": "2026-11-24T21:06:49.800Z"
     },
     {
       "hull": "CVN-74",
@@ -402,7 +401,7 @@
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
           "publishedAt": "2026-10-07",
-          "note": "Text context: CVN-75 USS Harry S. Truman — latest entry: 30Sep2026, moved from Naval Station Norfolk to Newport News Shipbuilding , beginning the next major phase of the Refueling and Complex Overhaul (RCOH). The move to Newport News transitions from pre"
+          "note": "Text context: CVN-75 USS Harry S. Truman — latest entry: 30Sep2026, moved from Naval Station Norfolk to Newport News Shipbuilding , beginning the next major phase of the Refueling and Complex Overhaul (RCOH)."
         }
       ],
       "lastChangedAt": "2026-11-11T06:01:19.971Z"
@@ -414,7 +413,7 @@
       "locationName": "Kitsap-Bremerton",
       "position": {
         "lat": 47.56,
-        "lon": -122.64
+        "lon": -122.643
       },
       "positionPrecision": "port",
       "confidence": "low",
@@ -447,57 +446,46 @@
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-American-Aircraft-Carrier-Fleet-Tracker-As-Of-November-20-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-19T03:17:43.034Z"
+      "lastChangedAt": "2026-11-24T21:06:49.800Z"
     },
     {
       "hull": "CVN-77",
       "name": "USS George H.W. Bush",
       "status": "deployed",
-      "locationName": "Arabian Sea",
+      "locationName": "North Arabian Sea",
       "position": {
-        "lat": 19.5,
-        "lon": 65.5
+        "lat": 22.5,
+        "lon": 64.5
       },
-      "positionPrecision": "image_estimate",
+      "positionPrecision": "region",
       "confidence": "high",
       "evidence": "corroborated",
-      "lastSeen": "2026-11-23",
-      "summary": "USNI News Fleet and Marine Tracker: Nov. 23, 2026 places USS George H.W. Bush in or near Arabian Sea.",
+      "lastSeen": "2026-11-25",
+      "summary": "Aircraft Carrier Locations places USS George H.W. Bush in or near North Arabian Sea.",
       "sources": [
         {
           "role": "primary",
           "usedFor": [
             "status",
             "location",
+            "position",
             "summary"
           ],
+          "publisher": "GoNavy.jp",
+          "title": "Aircraft Carrier Locations",
+          "url": "http://www.gonavy.jp/CVLocation.html",
+          "publishedAt": "2026-11-25",
+          "note": "Text context: CVN-77 USS George H.W. Bush — latest entry: 13Oct-23Nov2026, North Arabian Sea in support of U.S. operations in the Middle East"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
           "publisher": "USNI News",
           "title": "USNI News Fleet and Marine Tracker: Nov. 23, 2026",
           "url": "https://news.usni.org/2026/11/23/usni-news-fleet-and-marine-tracker-nov-23-2026",
           "publishedAt": "2026-11-23",
           "note": "Text context: The George H.W. Bush Carrier Strike Group is operating in the Arabian Sea in support of U.S. operations in the Middle East.",
           "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_23_26.jpg"
-        },
-        {
-          "role": "primary",
-          "usedFor": [
-            "coordinate_refinement"
-          ],
-          "publisher": "USNI News",
-          "title": "USNI News Fleet and Marine Tracker: Nov. 23, 2026",
-          "url": "https://news.usni.org/2026/11/23/usni-news-fleet-and-marine-tracker-nov-23-2026",
-          "publishedAt": "2026-11-23",
-          "note": "Image estimate: The map groups “George H.W. Bush CSG” with “Theodore Roosevelt CSG” above a single yellow diamond in the Arabian Sea.",
-          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_23_26.jpg"
-        },
-        {
-          "role": "backup",
-          "usedFor": [],
-          "publisher": "GoNavy.jp",
-          "title": "Aircraft Carrier Locations",
-          "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-11-18",
-          "note": "Text context: CVN-77 USS George H.W. Bush — latest entry: 13Oct-16Nov2026, North Arabian Sea in support of Operation Epic Fury"
         },
         {
           "role": "backup",
@@ -508,6 +496,16 @@
           "publishedAt": "2026-10-27",
           "note": "Text context: The two carriers enforcing the ongoing blockade of Iranian ports and coastal cities, USS George H.W. Bush and USS George Washington , have both been dark on AIS since arriving in the Middle East.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-American-Aircraft-Carrier-Fleet-Tracker-As-Of-November-20-2026.png?w=768&h=432&quality=85"
+        },
+        {
+          "role": "backup",
+          "usedFor": [],
+          "publisher": "USNI News",
+          "title": "USNI News Fleet and Marine Tracker: Nov. 23, 2026",
+          "url": "https://news.usni.org/2026/11/23/usni-news-fleet-and-marine-tracker-nov-23-2026",
+          "publishedAt": "2026-11-23",
+          "note": "Image estimate: The map groups “George H.W. Bush CSG” with “Theodore Roosevelt CSG” above a single yellow diamond in the Arabian Sea.",
+          "imageUrl": "https://news.usni.org/wp-content/uploads/2026/11/FT_11_23_26.jpg"
         },
         {
           "role": "backup",
@@ -526,26 +524,26 @@
           "title": "Where Are The Aircraft Carriers?: October 27, 2026",
           "url": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
           "publishedAt": "2026-10-27",
-          "note": "Image estimate: Green carrier silhouette labeled “USS GEORGE H.W. BUSH (CVN 77)*” near the northwestern Arabian Sea.",
+          "note": "Image estimate: Green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)” near the entrance to the Persian Gulf.",
           "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-American-Aircraft-Carrier-Fleet-Tracker-As-Of-November-20-2026.png?w=768&h=432&quality=85"
         }
       ],
-      "lastChangedAt": "2026-11-24T00:45:55.985Z"
+      "lastChangedAt": "2026-11-24T21:06:49.800Z"
     },
     {
       "hull": "CVN-78",
       "name": "USS Gerald R. Ford",
       "status": "maintenance",
-      "locationName": "Norfolk Naval Shipyard, Portsmouth, Virginia",
+      "locationName": "Norfolk Naval Shipyard (NNSY), Portsmouth, Virginia",
       "position": {
-        "lat": 36.82,
-        "lon": -76.3
+        "lat": 36.821,
+        "lon": -76.299
       },
       "positionPrecision": "port",
       "confidence": "medium",
       "evidence": "current",
-      "lastSeen": "2026-11-18",
-      "summary": "Aircraft Carrier Locations places USS Gerald R. Ford in Norfolk Naval Shipyard, Portsmouth, Virginia.",
+      "lastSeen": "2026-11-25",
+      "summary": "Aircraft Carrier Locations places USS Gerald R. Ford in Norfolk Naval Shipyard (NNSY), Portsmouth, Virginia.",
       "sources": [
         {
           "role": "primary",
@@ -558,11 +556,11 @@
           "publisher": "GoNavy.jp",
           "title": "Aircraft Carrier Locations",
           "url": "http://www.gonavy.jp/CVLocation.html",
-          "publishedAt": "2026-11-18",
-          "note": "Text context: CVN-78 USS Gerald R. Ford — latest entry: 07Jul-16Nov2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
+          "publishedAt": "2026-11-25",
+          "note": "Text context: CVN-78 USS Gerald R. Ford — latest entry: 07Jul-23Nov2026, Planned Incremental Availability (PIA) at Norfolk Naval Shipyard (NNSY) in Portsmouth, Virginia"
         }
       ],
-      "lastChangedAt": "2026-11-17T13:13:12.113Z"
+      "lastChangedAt": "2026-11-24T21:06:49.800Z"
     }
   ]
 }
