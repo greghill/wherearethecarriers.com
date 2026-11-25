@@ -2229,13 +2229,13 @@
       "imageUrl": "https://www.twz.com/wp-content/uploads/2026/11/TWZ-American-Aircraft-Carrier-Fleet-Tracker-As-Of-November-20-2026.png?w=768&h=432&quality=85",
       "articleUrl": "https://www.twz.com/sea/where-are-the-aircraft-carriers-october-27-2026",
       "publishedAt": "2026-10-27",
-      "createdAt": "2026-11-24T21:07:33.031Z",
+      "createdAt": "2026-11-25T04:10:46.323Z",
       "usage": {
         "inputTokens": 1385,
         "cachedInputTokens": 0,
-        "outputTokens": 2437,
-        "reasoningTokens": 2069,
-        "totalTokens": 3822
+        "outputTokens": 2953,
+        "reasoningTokens": 2588,
+        "totalTokens": 4338
       },
       "result": {
         "sourceKey": "twz",
@@ -2245,35 +2245,35 @@
           {
             "hull": "CVN-77",
             "name": "USS George H.W. Bush",
-            "locationName": "Gulf of Oman",
-            "lat": 25.8,
-            "lon": 57.3,
+            "locationName": "Persian Gulf",
+            "lat": 27,
+            "lon": 51.5,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Green carrier marker labeled “USS GEORGE H.W. BUSH (CVN 77)” near the entrance to the Persian Gulf.",
-            "rationale": "Estimated from the center of the labeled green carrier symbol; the coordinate is in Gulf of Oman waters east of the Strait of Hormuz."
+            "evidenceText": "The map shows a green carrier silhouette labeled “USS GEORGE H.W. BUSH (CVN 77)” in the Persian Gulf area.",
+            "rationale": "Approximate visual placement of the carrier icon, adjusted to central Persian Gulf water rather than adjacent land."
           },
           {
             "hull": "CVN-71",
             "name": "USS Theodore Roosevelt",
-            "locationName": "Arabian Sea",
-            "lat": 16.8,
-            "lon": 61,
+            "locationName": "Arabian Sea off Oman",
+            "lat": 18,
+            "lon": 57.5,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Green carrier marker labeled “USS THEODORE ROOSEVELT (CVN 71)” in the western Arabian Sea.",
-            "rationale": "Placed at the center of the carrier symbol adjacent to its label, over open water southeast of Oman."
+            "evidenceText": "The map shows a separate green carrier silhouette labeled “USS THEODORE ROOSEVELT (CVN 71)” south of the Bush marker.",
+            "rationale": "Approximate position of the icon and adjacent label, placed over Arabian Sea water just off Oman."
           },
           {
             "hull": "CVN-73",
             "name": "USS George Washington",
-            "locationName": "Arabian Sea",
-            "lat": 8.1,
-            "lon": 65.5,
+            "locationName": "Western Arabian Sea",
+            "lat": 9,
+            "lon": 60,
             "overWater": true,
             "confidence": "medium",
-            "evidenceText": "Green carrier marker labeled “USS GEORGE WASHINGTON (CVN 73)” farther south in the Arabian Sea.",
-            "rationale": "Estimated from the center of the labeled carrier symbol, preserving its visible separation from CVN-71 and placing it over open Arabian Sea water."
+            "evidenceText": "The map shows a third green carrier silhouette labeled “USS GEORGE WASHINGTON (CVN 73)” farther south in the western Indian Ocean.",
+            "rationale": "Approximate visual placement of the distinct southern carrier icon over open water in the western Arabian Sea."
           }
         ]
       }
